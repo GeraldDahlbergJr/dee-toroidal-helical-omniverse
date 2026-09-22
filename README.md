@@ -41,6 +41,8 @@ Author: **Gerald Dahlberg Jr.**
 
 ORCID: **0009-0001-0672-7636**
 
+DOI: [10.5281/zenodo.21477633](https://doi.org/10.5281/zenodo.21477633)
+
 ## Status
 
 This repository is under active development.
