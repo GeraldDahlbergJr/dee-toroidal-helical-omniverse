@@ -126,6 +126,25 @@ CSVs or the manuscript's numerical weak-field claim. That reproduction still
 requires the original source profiles and parameters or a newly derived,
 documented matter-source calculation.
 
+### Matter source consistency gate
+
+`dee_matter.py` evaluates Eqs. (8), (9), (14), and (15) of the manuscript in a
+local orthonormal frame with signature (-,+,+,+). It computes the tensor and
+its contraction with a specified null direction. Run
+`python matter_profile_check.py --output matter_profile_output` for a
+documented static radial profile example; its inputs are in
+`examples/matter_profile_config.json`. The output records the tensor, null
+contractions, and the field-equation and flat-cylindrical conservation
+residuals.
+
+The example Gaussian profiles are prescribed for diagnostics and **fail**
+the conservation and matter-equation checks. They must not be used as a
+self-consistent stationary harmonic-gauge Einstein source. The next scientific
+task is to find and verify actual matter field solutions, with boundary
+conditions and regularity specified, before comparing gravitational results
+with the archived manuscript CSVs. The example has radial gradients only;
+it does not represent a toroidal winding configuration.
+
 ## Scope and limitations
 
 The included relations and computations are theoretical and numerical tools for

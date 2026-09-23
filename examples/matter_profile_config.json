@@ -1,0 +1,13 @@
+{
+  "outer_radius": 6.0,
+  "width": 1.0,
+  "grid_points": 601,
+  "lambda_v": 4.0,
+  "v": 1.0,
+  "a": 0.3,
+  "b": 0.2,
+  "c": 0.1,
+  "rho_amplitude": 0.05,
+  "theta_amplitude": 0.2,
+  "psi_amplitude": -0.1
+}
