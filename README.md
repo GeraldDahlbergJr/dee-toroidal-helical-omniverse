@@ -145,6 +145,12 @@ conditions and regularity specified, before comparing gravitational results
 with the archived manuscript CSVs. The example has radial gradients only;
 it does not represent a toroidal winding configuration.
 
+For the regular static radial sector with a positive kinetic matrix and
+finite energy, see [the scaling and transport-current constraint](docs/static_radial_constraint.md).
+The only smooth localized on-shell solution under those restricted assumptions
+is the vacuum; a nontrivial source requires a different, explicitly specified
+field configuration and compatible gravitational calculation.
+
 ## Scope and limitations
 
 The included relations and computations are theoretical and numerical tools for

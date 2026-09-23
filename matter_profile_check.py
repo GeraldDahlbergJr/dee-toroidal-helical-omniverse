@@ -73,13 +73,22 @@ def run(config: dict, output_dir: Path) -> dict:
         "theta_equation": float(np.max(np.abs(transport_residuals[0][interior]))),
         "psi_equation": float(np.max(np.abs(transport_residuals[1][interior]))),
     }
+    tolerance = float(config.get("residual_tolerance", 1e-6))
+    if not np.isfinite(tolerance) or tolerance <= 0:
+        raise ValueError("residual_tolerance must be finite and positive")
+    passed = all(value <= tolerance for value in maxima.values())
     summary = {
-        "status": "diagnostic prescribed profile; not a self-consistent matter solution",
+        "status": "sampled residual gate passed" if passed else "sampled residual gate failed",
         "config": config,
         "minimum_radial_nec": float(np.min(radial_nec)),
         "minimum_azimuthal_nec": float(np.min(azimuthal_nec)),
         "max_abs_interior_residuals": maxima,
-        "warning": "Nonzero field/conservation residuals preclude using this profile as a stationary harmonic-gauge Einstein source.",
+        "residual_tolerance": tolerance,
+        "warning": (
+            "A sampled pass is necessary, not sufficient, for a global solution or gravitational consistency."
+            if passed else
+            "Nonzero field/conservation residuals preclude using this profile as a stationary harmonic-gauge Einstein source."
+        ),
     }
     output_dir.mkdir(parents=True, exist_ok=True)
     with (output_dir / "matter_profile.csv").open("w", newline="") as handle:

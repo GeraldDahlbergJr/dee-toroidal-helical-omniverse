@@ -45,6 +45,18 @@ class MatterTensorTests(unittest.TestCase):
         self.assertGreater(summary["max_abs_interior_residuals"]["conservation"], 0.01)
         self.assertGreater(summary["max_abs_interior_residuals"]["rho_equation"], 0.1)
         self.assertGreaterEqual(summary["minimum_radial_nec"], -1e-14)
+        self.assertEqual(summary["status"], "sampled residual gate failed")
+
+    def test_constant_vacuum_passes_residual_gate(self):
+        config = {
+            "outer_radius": 6.0, "width": 1.0, "grid_points": 301,
+            "lambda_v": 4.0, "v": 1.0, "a": 0.3, "b": 0.2, "c": 0.1,
+            "rho_amplitude": 0.0, "theta_amplitude": 0.0, "psi_amplitude": 0.0,
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            summary = run(config, Path(directory))
+        self.assertEqual(summary["status"], "sampled residual gate passed")
+        self.assertTrue(all(value == 0 for value in summary["max_abs_interior_residuals"].values()))
 
 
 if __name__ == "__main__":
