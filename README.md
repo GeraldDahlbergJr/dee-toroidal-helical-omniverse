@@ -33,15 +33,25 @@ The repository is intended to develop reproducible computational demonstrations 
 7. OpenUSD scene representation
 8. NVIDIA Omniverse visualization
 
-## Research Record
+## Associated Research
 
-The underlying theoretical work is archived through Zenodo with persistent DOI records.
+This computational repository accompanies the following open-access theoretical work:
+
+**Helical Perturbations in Finite-Matter Toroidal–Helical Transport: Nonlinear Distortion, Stability, and Dynamical Recovery**  
+Gerald Ted Dahlberg Jr. (2026) — Zenodo preprint  
+DOI: [10.5281/zenodo.22074096](https://doi.org/10.5281/zenodo.22074096)
+
+The paper develops a nonlinear perturbation framework for finite-matter toroidal–helical transport using four explicit control variables: perturbation amplitude \(A\), axial propagation parameter \(k_z\), azimuthal mode number \(m\), and characteristic temporal frequency \(\omega\).
+
+### Research Record
+
+Additional underlying theoretical work is archived through Zenodo with persistent DOI records.
 
 Author: **Gerald Dahlberg Jr.**
 
 ORCID: **0009-0001-0672-7636**
 
-DOI: [10.5281/zenodo.21477633](https://doi.org/10.5281/zenodo.21477633)
+DEE v2.1 DOI: [10.5281/zenodo.21477633](https://doi.org/10.5281/zenodo.21477633)
 
 ## Status
 
