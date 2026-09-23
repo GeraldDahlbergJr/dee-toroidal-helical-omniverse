@@ -151,6 +151,25 @@ The only smooth localized on-shell solution under those restricted assumptions
 is the vacuum; a nontrivial source requires a different, explicitly specified
 field configuration and compatible gravitational calculation.
 
+### Coupled time-dependent matter evolution
+
+Run `python dee_radial_dynamics.py --output dynamic_matter_output` using
+`examples/dynamic_matter_config.json`. This evolves the radial amplitude and
+two transport scalars using the manuscript's action on a **fixed flat
+background**, with regular-axis and reflecting outer radial fluxes. The code
+uses canonical momenta and a face-centered spatial Hamiltonian; it writes
+time-stamped matter profiles and reports energy drift, kinetic-matrix
+positivity, and sampled radial/azimuthal null contractions. The example
+contains nontrivial, localized initial pulses and no angular winding.
+
+This is a matter-only time evolution, not a coupled Einstein–matter solution.
+The profiles change over time; they cannot simply be inserted into the
+stationary radial Einstein equation used by the archived weak-field run.
+The gravitational follow-up needs a time-dependent metric solver with its
+gauge/constraint equations and matching boundary conditions. The archived
+CSV values are therefore not reproduced by this experiment.
+See [the run and resolution checks](docs/dynamic_matter_checkpoint.md).
+
 ## Scope and limitations
 
 The included relations and computations are theoretical and numerical tools for

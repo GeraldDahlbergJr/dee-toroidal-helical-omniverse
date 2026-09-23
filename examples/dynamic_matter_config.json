@@ -1,0 +1,16 @@
+{
+  "outer_radius": 8.0,
+  "width": 1.0,
+  "grid_points": 240,
+  "lambda_v": 4.0,
+  "v": 1.0,
+  "a": 0.3,
+  "b": 0.2,
+  "c": 0.1,
+  "rho_amplitude": 0.02,
+  "theta_amplitude": 0.2,
+  "psi_amplitude": -0.1,
+  "time_step": 0.0025,
+  "steps": 400,
+  "snapshot_interval": 100
+}
