@@ -112,6 +112,20 @@ a nonlinear general-relativity solution.
 mass expressions, kinetic-matrix positivity, NEC quadratic forms and scans,
 and second-order grid convergence of the radial integration for a smooth source.
 
+### Rerunnable weak-field solver checkpoint
+
+Run `python weak_field_checkpoint.py --output weak_field_output` to create
+`radial_profile.csv` and `summary.json` from the documented inputs in
+`examples/weak_field_config.json`. The compact polynomial source has an exact
+solution, so the output reports grid refinement errors and verifies linear
+source scaling. Change the JSON file or pass `--config` for another run.
+
+This is a **solver benchmark**. Its chosen source is not derived from the DEE
+matter action, and its output does not reproduce the historical supplementary
+CSVs or the manuscript's numerical weak-field claim. That reproduction still
+requires the original source profiles and parameters or a newly derived,
+documented matter-source calculation.
+
 ## Scope and limitations
 
 The included relations and computations are theoretical and numerical tools for

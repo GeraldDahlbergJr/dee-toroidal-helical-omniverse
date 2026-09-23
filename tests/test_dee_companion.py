@@ -2,6 +2,9 @@
 
 import unittest
 import warnings
+import json
+import tempfile
+from pathlib import Path
 
 import numpy as np
 
@@ -17,6 +20,7 @@ from linearized_einstein import (
     LinearizedCylindricalApproximationWarning,
     solve_cylindrical_linearized_field,
 )
+from weak_field_checkpoint import run
 from nec_scan import null_energy_quadratic_form, scan_transport_projections
 
 
@@ -119,6 +123,26 @@ class LinearizedEinsteinTests(unittest.TestCase):
             warnings.simplefilter("ignore", LinearizedCylindricalApproximationWarning)
             with self.assertRaisesRegex(ValueError, "broadcastable"):
                 solve_cylindrical_linearized_field(radius, stress, outer_boundary=np.ones(3))
+
+
+class CheckpointTests(unittest.TestCase):
+    def test_outputs_and_independent_exact_solution(self):
+        config = {
+            "outer_radius": 3.0,
+            "source_amplitude": 0.01,
+            "gravitational_constant": 1.0,
+            "source_scale": 1e-6,
+            "grid_points": [101, 201, 401],
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            summary = run(config, output)
+            self.assertEqual(json.loads((output / "summary.json").read_text()), summary)
+            self.assertEqual(len((output / "radial_profile.csv").read_text().splitlines()), 402)
+        errors = list(summary["max_absolute_error_by_grid"].values())
+        self.assertLess(errors[2], errors[1] / 3.9)
+        self.assertLess(errors[1], errors[0] / 3.9)
+        self.assertLess(summary["source_scaling_absolute_difference"], 1e-13)
 
 
 if __name__ == "__main__":

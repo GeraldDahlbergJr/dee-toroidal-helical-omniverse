@@ -1,0 +1,7 @@
+{
+  "outer_radius": 3.0,
+  "source_amplitude": 0.01,
+  "gravitational_constant": 1.0,
+  "source_scale": 0.000001,
+  "grid_points": [101, 201, 401]
+}
