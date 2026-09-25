@@ -59,6 +59,20 @@ This repository is under active development.
 
 The numerical models and visualizations presented here are computational investigations of the proposed theoretical framework. They should not be interpreted as experimental confirmation or independent physical validation of the theory.
 
+## Technical Scope & Validation Record
+
+The repository includes an explicitly scoped stationary, cylindrically symmetric, linearized weak-field radial module. Its core numerical integration architecture has been checked analytically against the differential equation that the module states it solves, and the automated test suite includes a smooth-source grid-convergence test.
+
+An adversarial AI-assisted technical audit conducted on 2026-09-24 examined the radial BVP formulation, finite-domain normalization, repository scope, stress-energy assumptions, and candidate tensor-aware treatment of angular/twist sectors. During that audit, earlier claims that the repository had been demonstrated to violate stress-energy conservation and that it exhibited a "fatal mathematical failure" were withdrawn after comparison with the actual implementation and its documented scope.
+
+The audit does **not** constitute independent peer review or experimental validation. In particular, a candidate tensor-aware twist-sector operator identified during the dialogue remains subject to independent derivation, gauge checks, analytic unit tests, numerical cross-validation, and review before it is incorporated into the production model. Likewise, a future self-consistent Einstein-matter or MHD extension would need to construct conserved stress-energy dynamically rather than rely solely on externally prescribed source profiles.
+
+The complete technical record, including verified results, withdrawn criticisms, remaining limitations, and proposed validation steps, is archived here:
+
+**[Adversarial AI Technical Audit — DEE Weak-Field Module](docs/AI_TECHNICAL_AUDIT_2026-09-24.md)**
+
+The purpose of preserving this record is reproducibility: demonstrated implementation behavior, modeling assumptions, unresolved questions, and future extensions are kept explicitly separate.
+
 ## License
 
 Software in this repository is released under the MIT License unless otherwise noted.
