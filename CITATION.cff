@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "Dynamic Equilibrium Events — Toroidal–Helical Transport"
+type: software
+authors:
+  - family-names: "Dahlberg"
+    given-names: "Gerald Ted"
+    name-suffix: "Jr."
+    orcid: "https://orcid.org/0009-0001-0672-7636"
+repository-code: "https://github.com/GeraldDahlbergJr/dee-toroidal-helical-omniverse"
+license: MIT
+keywords:
+  - Dynamic Equilibrium Events
+  - toroidal-helical transport
+  - computational physics
+  - general relativity
+  - Python
+  - NumPy
+  - NVIDIA Omniverse
+references:
+  - type: article
+    title: "Helical Perturbations in Finite-Matter Toroidal–Helical Transport: Nonlinear Distortion, Stability, and Dynamical Recovery"
+    authors:
+      - family-names: "Dahlberg"
+        given-names: "Gerald Ted"
+        name-suffix: "Jr."
+        orcid: "https://orcid.org/0009-0001-0672-7636"
+    doi: "10.5281/zenodo.22074096"
+  - type: generic
+    title: "Dynamic Equilibrium Events (DEE) v2.1"
+    authors:
+      - family-names: "Dahlberg"
+        given-names: "Gerald Ted"
+        name-suffix: "Jr."
+        orcid: "https://orcid.org/0009-0001-0672-7636"
+    doi: "10.5281/zenodo.21477633"
