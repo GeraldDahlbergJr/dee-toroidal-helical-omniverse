@@ -1,5 +1,7 @@
 # Dynamic Equilibrium Events — Toroidal–Helical Transport
 
+[![DOI](https://zenodo.org/badge/1381814823.svg)](https://doi.org/10.5281/zenodo.22998528)
+
 Computational research repository accompanying the theoretical physics work of Gerald Dahlberg Jr.
 
 ## Overview
@@ -39,7 +41,8 @@ This computational repository accompanies the following open-access theoretical 
 
 **Helical Perturbations in Finite-Matter Toroidal–Helical Transport: Nonlinear Distortion, Stability, and Dynamical Recovery**  
 Gerald Ted Dahlberg Jr. (2026) — Zenodo preprint  
-DOI: [10.5281/zenodo.22074096](https://doi.org/10.5281/zenodo.22074096)
+Publication DOI (v1): [10.5281/zenodo.22074096](https://doi.org/10.5281/zenodo.22074096)  
+All-versions DOI: [10.5281/zenodo.22074095](https://doi.org/10.5281/zenodo.22074095)
 
 The paper develops a nonlinear perturbation framework for finite-matter toroidal–helical transport using four explicit control variables: perturbation amplitude \(A\), axial propagation parameter \(k_z\), azimuthal mode number \(m\), and characteristic temporal frequency \(\omega\).
 
@@ -52,6 +55,10 @@ Author: **Gerald Dahlberg Jr.**
 ORCID: **0009-0001-0672-7636**
 
 DEE v2.1 DOI: [10.5281/zenodo.21477633](https://doi.org/10.5281/zenodo.21477633)
+
+### Repository archive
+
+Zenodo also archives released versions of this GitHub repository. The DOI badge at the top of this README resolves to the latest archived repository release; manuscript DOIs above identify the associated research publication separately.
 
 ## Status
 
