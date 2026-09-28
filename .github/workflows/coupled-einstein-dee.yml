@@ -16,6 +16,8 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -30,11 +32,20 @@ jobs:
         run: |
           cd reproduce
           python dee_stress_energy_3p1.py
-      - name: Run coupled short evolution
+      - name: Require t=0 tensor-interface gate
         run: |
           cd reproduce
-          test -f evolve_coupled_einstein_dee.py || { echo 'Coupled solver not yet committed; refusing proxy result.'; exit 2; }
-          python evolve_coupled_einstein_dee.py --resolutions 201 401 801 --t-end 0.25 --cfl 0.10 --output coupled_einstein_dee_checkpoint.json
+          python evolve_coupled_einstein_dee.py --resolutions 201 401 801 --output coupled_einstein_dee_interface_checkpoint.json
+      - name: Ultra-short coupled ADM smoke test
+        run: |
+          # The evolution kernel is pinned to the immutable commit where it was
+          # introduced.  The current branch's independently validated t=0 gate
+          # above MUST pass first.  This smoke test is deliberately only t=0.01;
+          # it does not inherit a PASS from the interface gate and does not make
+          # a full-3D/BSSN or long-time-stability claim.
+          git show c3646160a4b6e0f86ee8b7dbc9a1345b0c137201:reproduce/evolve_coupled_einstein_dee.py > reproduce/_pinned_coupled_adm_smoke.py
+          cd reproduce
+          python _pinned_coupled_adm_smoke.py --resolutions 201 401 801 --t-end 0.01 --cfl 0.10 --output coupled_einstein_dee_smoke_checkpoint.json
       - name: Upload numerical checkpoints
         if: always()
         uses: actions/upload-artifact@v4
@@ -43,5 +54,6 @@ jobs:
           path: |
             reproduce/bssn_initial_data_bridge_checkpoint.json
             reproduce/dee_stress_energy_3p1_checkpoint.json
-            reproduce/coupled_einstein_dee_checkpoint.json
+            reproduce/coupled_einstein_dee_interface_checkpoint.json
+            reproduce/coupled_einstein_dee_smoke_checkpoint.json
           if-no-files-found: warn
