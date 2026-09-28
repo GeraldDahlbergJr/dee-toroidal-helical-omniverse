@@ -1,0 +1,24 @@
+{
+  "scope": "first ADM Hamiltonian-constraint gate for archived DEE nonlinear matter model; not a full evolution",
+  "assumptions": [
+    "time-symmetric K_ij = 0 diagnostic slice",
+    "flat spatial metric gamma_ij = delta_ij for the deliberate naive-seed test",
+    "homogeneous rho = sqrt(0.945)",
+    "vanishing scalar momenta and spatial gradients in this first isolation test",
+    "G = 1 normalized units"
+  ],
+  "results": {
+    "rho_star_squared": 0.945,
+    "rho_star": 0.972111104761179,
+    "potential_energy_density": 0.0030250000000000055,
+    "flat_time_symmetric_hamiltonian_residual": -0.15205308443374627,
+    "vacuum_flat_control_residual": 0.0,
+    "matched_curvature_control": "R3=16*pi*G*E gives zero Hamiltonian residual by construction"
+  },
+  "interpretation": {
+    "naive_flat_seed_pass": false,
+    "meaning": "The nonlinear DEE matter point cannot simply be placed on an exactly flat, time-symmetric spatial slice. Positive matter energy requires nonzero spatial curvature and/or extrinsic-curvature terms so that the ADM constraints are solved.",
+    "dee_model_falsified": false,
+    "next_required_step": "solve the Hamiltonian and momentum constraints for gamma_ij and K_ij with the DEE rho/Theta/Psi source, then test residual convergence under grid refinement before any time evolution"
+  }
+}
