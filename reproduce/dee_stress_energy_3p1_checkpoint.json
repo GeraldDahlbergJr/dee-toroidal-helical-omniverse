@@ -1,0 +1,16 @@
+{
+  "checkpoint_name": "DEE full 3+1 stress-energy projection closure",
+  "samples": 10000,
+  "max_projection_disagreement": 6.394884621840902e-14,
+  "max_Sij_asymmetry": 2.4868995751603507e-14,
+  "max_trace_disagreement": 0.0,
+  "max_abs_Lambda_sampled": 0.22499109011678925,
+  "gate": {
+    "analytic_matches_independent_4d_tensor": true,
+    "Sij_symmetric": true,
+    "trace_consistent": true,
+    "mixed_theta_psi_sector_exercised": true
+  },
+  "scope": "matter-source algebra closure only; not a coupled evolution result",
+  "next_gate": "plug verified E, S_i, S_ij and S into the reduced BSSN RHS and run the first short three-resolution coupled Einstein-DEE evolution"
+}
