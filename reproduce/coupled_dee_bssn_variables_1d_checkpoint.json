@@ -1,0 +1,120 @@
+{
+  "scope": "plane-symmetric diagonal BSSN conformal variables, evolved connection and conformal Ricci; not full 3-D or toroidal geometry",
+  "parameters": {
+    "G": 0.005,
+    "L": 8.0,
+    "t_end": 0.12,
+    "cfl": 0.12
+  },
+  "runs": [
+    {
+      "n": 64,
+      "dt": 0.015,
+      "steps": 8,
+      "initial": {
+        "hamiltonian_l2": 8.878217701048474e-07,
+        "momentum_l2": 4.9065389333867974e-18,
+        "hamiltonian_max": 1.2501797790937809e-06,
+        "momentum_max": 6.938893903907228e-18,
+        "rho_min": 1.0,
+        "metric_min": 0.9999801850802698,
+        "kinetic_det_min": 1.55,
+        "conformal_det_max": 0.0,
+        "conformal_trace_max": 2.6021367750965365e-18,
+        "connection_constraint_l2": 0.0,
+        "connection_constraint_max": 0.0
+      },
+      "final": {
+        "hamiltonian_l2": 8.764813434338914e-07,
+        "momentum_l2": 2.4212236852295994e-08,
+        "hamiltonian_max": 1.2342104451836847e-06,
+        "momentum_max": 3.409493099195462e-08,
+        "rho_min": 0.9999969722529656,
+        "metric_min": 1.000983515052214,
+        "kinetic_det_min": 1.5499963667108927,
+        "conformal_det_max": 6.661338147750939e-16,
+        "conformal_trace_max": 8.200972995316136e-18,
+        "connection_constraint_l2": 2.922636938375173e-09,
+        "connection_constraint_max": 4.11556775821871e-09
+      }
+    },
+    {
+      "n": 128,
+      "dt": 0.0075,
+      "steps": 16,
+      "initial": {
+        "hamiltonian_l2": 2.233503629497915e-07,
+        "momentum_l2": 9.179293821800323e-18,
+        "hamiltonian_max": 3.158604710163402e-07,
+        "momentum_max": 1.3877787807814457e-17,
+        "rho_min": 1.0,
+        "metric_min": 0.999980051907288,
+        "kinetic_det_min": 1.55,
+        "conformal_det_max": 0.0,
+        "conformal_trace_max": 2.602136843835562e-18,
+        "connection_constraint_l2": 0.0,
+        "connection_constraint_max": 0.0
+      },
+      "final": {
+        "hamiltonian_l2": 2.204965808864446e-07,
+        "momentum_l2": 6.071353767546358e-09,
+        "hamiltonian_max": 3.118245961318847e-07,
+        "momentum_max": 8.586104533650875e-09,
+        "rho_min": 0.9999969599652939,
+        "metric_min": 1.0009845931064094,
+        "kinetic_det_min": 1.5499963519657465,
+        "conformal_det_max": 1.1102230246251565e-15,
+        "conformal_trace_max": 2.5770977420212088e-18,
+        "connection_constraint_l2": 7.328916452828245e-10,
+        "connection_constraint_max": 1.0364534651969125e-09
+      }
+    },
+    {
+      "n": 256,
+      "dt": 0.00375,
+      "steps": 32,
+      "initial": {
+        "hamiltonian_l2": 5.592513674478833e-08,
+        "momentum_l2": 1.2509268882771003e-17,
+        "hamiltonian_max": 7.908886714819622e-08,
+        "momentum_max": 2.7755575615628914e-17,
+        "rho_min": 1.0,
+        "metric_min": 0.9999800398862257,
+        "kinetic_det_min": 1.55,
+        "conformal_det_max": 0.0,
+        "conformal_trace_max": 2.6021340209693532e-18,
+        "connection_constraint_l2": 0.0,
+        "connection_constraint_max": 0.0
+      },
+      "final": {
+        "hamiltonian_l2": 5.5210520009640575e-08,
+        "momentum_l2": 1.5189819934512906e-09,
+        "hamiltonian_max": 7.80779391226985e-08,
+        "momentum_max": 2.148100835795301e-09,
+        "rho_min": 0.99999695814751,
+        "metric_min": 1.0009848836724011,
+        "kinetic_det_min": 1.5499963497844143,
+        "conformal_det_max": 1.6653345369377348e-15,
+        "conformal_trace_max": 2.622414004699314e-18,
+        "connection_constraint_l2": 1.8336246985550188e-10,
+        "connection_constraint_max": 2.5929549971160093e-10
+      }
+    }
+  ],
+  "adjacent_resolution_max_errors": [
+    6.20245069108934e-06,
+    1.5524724164936617e-06
+  ],
+  "observed_order": 1.9982707252375385,
+  "same_resolution_adm_max_differences": [
+    6.787521648551897e-08,
+    1.7152191107532022e-08,
+    4.294981136368503e-09
+  ],
+  "gates": {
+    "hamiltonian_refines": true,
+    "momentum_refines": true,
+    "connection_refines": true,
+    "positive_metric": true
+  }
+}
