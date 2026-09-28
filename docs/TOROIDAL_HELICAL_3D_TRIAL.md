@@ -2,6 +2,8 @@
 
 Run `PYTHONPATH=. python reproduce/toroidal_helical_initial_data.py` and
 `PYTHONPATH=.:reproduce python reproduce/evolve_dee_ring_3d.py`.
+For the second hierarchy, run
+`PYTHONPATH=.:reproduce python reproduce/evolve_dee_ring_3d.py --resolutions 16 32 64 --output coupled_dee_ring_3d_secondary_checkpoint.json`.
 
 This trial uses the archived three-scalar nonlinear action. It **chooses**
 a smooth finite-amplitude ring seed in a Cartesian periodic box of side 8:
@@ -48,3 +50,20 @@ at a demonstrably resolved hierarchy and with enough time steps. A
 successful target-geometry run would additionally need an appropriate
 gauge and outer boundary, a toroidal/helical spacetime seed and its
 constraint solve, curvature invariants, and trapped-surface diagnostics.
+
+## Independent cross-check and second hierarchy
+
+The 3-D RHS reduces to the separately implemented 1-D ADM RHS when fields
+depend on only one coordinate, to roundoff on a 12-point manufactured
+state. A flat-space manufactured momentum test and a conformal Ricci
+identity test also pass. A second predeclared 16/32/64 hierarchy using
+the **same ring seed and run time** has final Hamiltonian RMS residuals
+2.31e-5, 9.40e-6, and 2.74e-6, while momentum RMS residuals are
+3.58e-6, 3.70e-6, and 1.78e-6. Physical-state differences are
+0.01631 and 0.00906, giving order 0.847. The first momentum refinement
+still rises, so **the second hierarchy also fails the gate**. The full
+numbers are in `reproduce/coupled_dee_ring_3d_secondary_checkpoint.json`.
+The higher-resolution trend is promising but does not establish
+convergence. Resolving this trial calls for more efficient numerical
+geometry and sufficiently resolved grids; neither the original failed
+hierarchy nor this second result should be discarded.

@@ -6,7 +6,8 @@ import numpy as np
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'reproduce'))
 from toroidal_helical_initial_data import fields,solve,lap,L
-from evolve_dee_ring_3d import geometric,run
+from evolve_dee_ring_3d import geometric,run,rhs as rhs3
+from evolve_dee_adm_1d import initial as initial1,rhs as rhs1
 
 
 class RingTrialTest(unittest.TestCase):
@@ -48,6 +49,20 @@ class RingTrialTest(unittest.TestCase):
         expected=(np.sin(2*np.pi*h/L)/h)*np.sin(2*np.pi*x/L)[:,None,None]*np.ones((1,n,n))
         np.testing.assert_allclose(momentum[...,0],expected,atol=1e-13)
         np.testing.assert_allclose(momentum[...,1:],0,atol=1e-13)
+
+    def test_three_dimensional_rhs_reduces_to_independent_one_dimensional_rhs(self):
+        n=12;h=L/n;_,(g,k,f,p)=initial1(n)
+        metric=np.zeros((n,n,n,3,3));extrinsic=np.zeros_like(metric)
+        for i in range(3):
+            metric[...,i,i]=g[:,i,None,None]
+            extrinsic[...,i,i]=k[:,i,None,None]
+        fields=np.broadcast_to(f[:,None,None,:],(n,n,n,3)).copy()
+        momenta=np.broadcast_to(p[:,None,None,:],(n,n,n,3)).copy()
+        reduced=rhs1((g,k,f,p),h)
+        full=rhs3((metric,extrinsic,fields,momenta),h)
+        for i in range(4):
+            candidate=full[i][:,0,0].diagonal(axis1=-2,axis2=-1) if i<2 else full[i][:,0,0]
+            np.testing.assert_allclose(candidate,reduced[i],atol=2e-14)
 
 
 if __name__=='__main__': unittest.main()

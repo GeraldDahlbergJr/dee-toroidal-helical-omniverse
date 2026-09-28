@@ -4,6 +4,7 @@ General six-component spatial metric and extrinsic curvature; no imposed
 symmetry during evolution. Unit lapse, zero shift, short-time gate only.
 """
 from __future__ import annotations
+import argparse
 import json
 from pathlib import Path
 import numpy as np
@@ -113,9 +114,11 @@ def run(n):
     return state,dict(n=n,steps=steps,dt=dt,conformal_initial=conformal,
                       initial=start,final=diagnostics(state,h))
 
-def main():
+def main(resolutions=(12,24,48),output='coupled_dee_ring_3d_checkpoint.json'):
     rows=[];states=[]
-    for n in (12,24,48):
+    if len(resolutions)!=3 or resolutions[1]!=2*resolutions[0] or resolutions[2]!=2*resolutions[1]:
+        raise ValueError('resolutions must be three successively doubled grid sizes')
+    for n in resolutions:
         state,row=run(n);states.append(state);rows.append(row)
     errors=[]
     for coarse,fine in zip(states,states[1:]):
@@ -128,6 +131,11 @@ def main():
                         momentum_refines=all(rows[i+1]['final']['momentum_l2']<rows[i]['final']['momentum_l2'] for i in range(2)),
                         metric_positive=all(row['final']['metric_eigenvalue_min']>0 for row in rows),
                         finite_branch=all(row['final']['rho_min']>0 for row in rows)))
-    Path(__file__).with_name('coupled_dee_ring_3d_checkpoint.json').write_text(json.dumps(out,indent=2)+'\n')
+    Path(__file__).with_name(output).write_text(json.dumps(out,indent=2)+'\n')
     print(json.dumps(out,indent=2))
-if __name__=='__main__':main()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--resolutions',nargs=3,type=int,default=(12,24,48))
+    parser.add_argument('--output',default='coupled_dee_ring_3d_checkpoint.json')
+    args=parser.parse_args()
+    main(args.resolutions,args.output)
