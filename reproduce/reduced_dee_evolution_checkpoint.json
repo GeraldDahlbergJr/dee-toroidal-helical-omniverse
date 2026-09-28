@@ -1,5 +1,15 @@
 {
-  "scope": "reduced nonlinear DEE matter evolution on fixed local background; not full Einstein-matter evolution",
+  "checkpoint_name": "Reduced Fixed-Background Nonlinear DEE Matter Evolution",
+  "status": "passed within stated reduced scope",
+  "scope": "nonlinear DEE matter evolution on a fixed local background",
+  "scope_limitation": "This checkpoint does not evolve the spacetime metric or extrinsic curvature and therefore does not establish stability, constraint preservation, or survival of the coupled Einstein-DEE system under gravitational backreaction.",
+  "not_claimed": [
+    "coupled Einstein-DEE time evolution",
+    "nonlinear gravitational stability",
+    "global toroidal stability",
+    "experimental validation",
+    "proof of the complete DEE physical framework"
+  ],
   "rho_star_squared": 0.945,
   "rho_star": 0.972111104761179,
   "perturbation_amplitude": 0.02,
@@ -16,5 +26,6 @@
     "finite_branch_remains_positive": true,
     "bounded_over_interval": true,
     "refinement_error_decreases": true
-  }
+  },
+  "next_gate": "Coupled Einstein-DEE evolution of the constraint-satisfying dynamical initial data with independent monitoring of Hamiltonian and momentum constraints, metric signature, curvature, trapped surfaces, and finite-branch persistence."
 }
