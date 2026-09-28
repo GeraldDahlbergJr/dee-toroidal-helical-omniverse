@@ -1,0 +1,32 @@
+{
+  "scope": "restricted local cylindrical-annulus conformally-flat time-symmetric nonlinear 3+1 DEE initial-data gate",
+  "not_claimed": "full 3-D Einstein-matter evolution or nonlinear stability",
+  "parameters": {
+    "G": 0.005,
+    "rho_squared": 0.945,
+    "r_min": 0.5,
+    "r_max": 8.0,
+    "m_theta": 1.0,
+    "m_psi": -1.0,
+    "k_theta": 0.25,
+    "k_psi": 0.2
+  },
+  "solution": {
+    "psi_min": 1.0,
+    "psi_max": 1.2015286627022799,
+    "inner_neumann_abs": 0.0,
+    "outer_dirichlet_abs": 0.0
+  },
+  "refinement": [
+    {"points": 201, "hamiltonian_max_abs": 0.00094064302805974, "hamiltonian_rms": 0.00010322554173669518, "hamiltonian_observed_order": null, "momentum_max_abs": 0.0},
+    {"points": 401, "hamiltonian_max_abs": 0.0002738560479242924, "hamiltonian_rms": 0.00002774170882536366, "hamiltonian_observed_order": 1.780062, "momentum_max_abs": 0.0},
+    {"points": 801, "hamiltonian_max_abs": 0.0000740887608913221, "hamiltonian_rms": 0.000007189370108868205, "hamiltonian_observed_order": 1.885803, "momentum_max_abs": 0.0},
+    {"points": 1601, "hamiltonian_max_abs": 0.00001928236691250973, "hamiltonian_rms": 0.0000018298535939213867, "hamiltonian_observed_order": 1.942087, "momentum_max_abs": 0.0},
+    {"points": 3201, "hamiltonian_max_abs": 0.000004919465142694257, "hamiltonian_rms": 0.00000046165309806319636, "hamiltonian_observed_order": 1.970557, "momentum_max_abs": 0.0}
+  ],
+  "gate": {
+    "hamiltonian_residual_decreases": true,
+    "asymptotic_order_above_1_9": true,
+    "momentum_constraint_exact_in_restricted_time_symmetric_sector": true
+  }
+}

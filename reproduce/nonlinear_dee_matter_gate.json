@@ -1,0 +1,32 @@
+{
+  "scope": "action-derived nonlinear DEE matter-sector gate; not a full nonlinear Einstein evolution",
+  "source": "archived DEE manuscript minimal illustrative point",
+  "parameters": {
+    "lambda_V": 4.0,
+    "v": 1.0,
+    "a": 0.30,
+    "b": 0.20,
+    "c": 0.10,
+    "X_Theta": 0.60,
+    "X_Psi": 0.40,
+    "X_ThetaPsi": -0.20
+  },
+  "results": {
+    "rho_star_squared": 0.945,
+    "finite_branch_stationarity_residual": -1.942890293094024e-16,
+    "m_eff_squared": 7.56,
+    "kinetic_matrix": [[1.2835, 0.0945], [0.0945, 1.189]],
+    "kinetic_eigenvalues": [1.13059579, 1.34190421],
+    "random_nec_projected_samples": 100000,
+    "minimum_sampled_transport_quadratic_form": 7.633685057399838e-05
+  },
+  "gate": {
+    "finite_branch_residual_pass": true,
+    "positive_radial_curvature_pass": true,
+    "positive_definite_transport_kinetic_matrix_pass": true,
+    "sampled_nec_regression_pass": true,
+    "matter_sector_gate_pass": true,
+    "full_nonlinear_einstein_matter_survival_test_pass": null
+  },
+  "next_required_gate": "construct/solve constraint-satisfying 3+1 initial data and evolve the coupled Einstein-three-scalar system while monitoring constraints, curvature, rho_min, null cone, signature, and trapped-surface diagnostics"
+}

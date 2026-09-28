@@ -1,0 +1,34 @@
+{
+  "scope": "reduced local cylindrical-annulus conformal dynamical nonlinear DEE initial-data gate",
+  "not_claimed": "full 3-D evolution, global toroidal solution, or nonlinear stability",
+  "parameters": {
+    "G": 0.005,
+    "rho_squared": 0.945,
+    "pi_theta": 0.12,
+    "pi_psi": -0.04,
+    "k_theta": 0.25,
+    "k_psi": 0.2,
+    "S_z": 0.030316000000000006
+  },
+  "solution": {
+    "psi_min": 1.0,
+    "psi_max": 1.0422825030593783,
+    "max_abs_S_i": 0.030316000000000006,
+    "max_abs_K_rz": 0.01727025070304095
+  },
+  "refinement": [
+    {"points":201,"hamiltonian_max_abs":6.276632817263372e-06,"hamiltonian_rms":7.156682722694036e-07,"hamiltonian_observed_order":null,"momentum_max_abs":1.131513236452171e-06,"momentum_rms":1.2852981047601902e-07,"momentum_observed_order":null},
+    {"points":401,"hamiltonian_max_abs":1.803560006060495e-06,"hamiltonian_rms":1.908838220051361e-07,"hamiltonian_observed_order":1.7991433901115765,"momentum_max_abs":3.2533956117629034e-07,"momentum_rms":3.430156520857505e-08,"momentum_observed_order":1.7982352919946434},
+    {"points":801,"hamiltonian_max_abs":4.846756123007279e-07,"hamiltonian_rms":4.9289282130383434e-08,"hamiltonian_observed_order":1.8957560271492795,"momentum_max_abs":8.745522342380393e-08,"momentum_rms":8.859616070101335e-09,"momentum_observed_order":1.8953298048126819},
+    {"points":1601,"hamiltonian_max_abs":1.2575702043604586e-07,"hamiltonian_rms":1.2554721539746473e-08,"hamiltonian_observed_order":1.9463805501136597,"momentum_max_abs":2.2687363588052428e-08,"momentum_rms":2.255631079683149e-09,"momentum_observed_order":1.9466555856655705},
+    {"points":3201,"hamiltonian_max_abs":3.202926058404332e-08,"hamiltonian_rms":3.500134705297329e-09,"hamiltonian_observed_order":1.9731765432352257,"momentum_max_abs":5.7713879304983895e-09,"momentum_rms":6.172912434132527e-10,"momentum_observed_order":1.9748987568724756}
+  ],
+  "gate": {
+    "matter_momentum_nonzero": true,
+    "extrinsic_curvature_nonzero": true,
+    "hamiltonian_residual_decreases": true,
+    "momentum_residual_decreases": true,
+    "hamiltonian_asymptotic_order_above_1_9": true,
+    "momentum_asymptotic_order_above_1_9": true
+  }
+}
