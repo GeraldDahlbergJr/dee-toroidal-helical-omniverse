@@ -78,7 +78,11 @@ A subsequent reproducibility checkpoint evolves the nonlinear DEE radial matter 
 
 This checkpoint is intentionally limited: **the spacetime metric and extrinsic curvature are not evolved.** It therefore does not establish stability of the coupled Einstein–DEE system, preservation of the Einstein constraints during evolution, global toroidal stability, or survival under gravitational backreaction. The machine-readable record is `reproduce/reduced_dee_evolution_checkpoint.json`, and the executable checkpoint is `reproduce/evolve_dee_reduced.py`.
 
-The next validation gate is coupled Einstein–DEE time evolution from the already constraint-satisfying dynamical initial data, with independent monitoring of the Hamiltonian and momentum constraints, metric signature, curvature, trapped-surface diagnostics, and persistence of the finite DEE branch.
+### First Restricted Coupled Einstein–DEE Evolution
+
+The [3+1 source derivation](docs/DEE_3PLUS1_SOURCE_PROJECTION.md) implements and independently checks the full nonlinear matter projections, including the mixed Theta–Psi kinetic term. A [short plane-symmetric ADM evolution](docs/COUPLED_ADM_1D_CHECKPOINT.md) then evolves the diagonal spatial metric, extrinsic curvature, and all three DEE scalars together on a periodic domain. Across 64, 128, and 256 grid points through `t=0.12`, the Hamiltonian and momentum constraint residuals decrease on refinement, with observed state convergence order 1.998. The [executable](reproduce/evolve_dee_adm_1d.py) and [machine-readable results](reproduce/coupled_dee_adm_1d_checkpoint.json) record the calculation.
+
+This is a plane-symmetric, short-duration test with unit lapse and zero shift. It is **not** a toroidal/helical BSSN evolution and makes no claim of a wormhole solution or nonlinear stability. The remaining validation gate is a full geometric formulation and gauge appropriate to the target geometry, constraint-satisfying data in that geometry, and independently monitored longer three-resolution evolution including curvature and trapped-surface diagnostics.
 
 An adversarial AI-assisted technical audit conducted on 2026-09-24 examined the radial BVP formulation, finite-domain normalization, repository scope, stress-energy assumptions, and candidate tensor-aware treatment of angular/twist sectors. During that audit, earlier claims that the repository had been demonstrated to violate stress-energy conservation and that it exhibited a "fatal mathematical failure" were withdrawn after comparison with the actual implementation and its documented scope.
 
