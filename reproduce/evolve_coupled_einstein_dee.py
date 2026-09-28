@@ -269,6 +269,44 @@ def norms(H,M,trim=8):
 def run(n,t_end,cfl):
     r,state=initial_state(n); initial=tuple(x.copy() for x in state)
     h=r[1]-r[0]; dt=cfl*h; steps=int(np.ceil(t_end/dt)); dt=t_end/steps
+    # HARD t=0 interface gate.  The evolved state originates in the reduced
+    # cylindrical conformal solver, so timestep 1 is forbidden unless its
+    # independently validated constraint evaluator is reproduced first.
+    sol=solve_initial()
+    from solve_dynamical_dee_constraints import independent_residuals
+    ref_h,ref_hr,ref_m,ref_mr=independent_residuals(sol,n)
+    # Evaluate the identical reduced conformal operators from the fields that
+    # were handed to the evolution code (not by reusing the BVP derivatives).
+    psi=np.power(state[0][:,0,0],0.25)
+    Krz=state[1][:,0,2]
+    dW=psi**2*Krz
+    ri=r[1:-1]; p=psi[1:-1]
+    dp=(psi[2:]-psi[:-2])/(2*h)
+    ddp=(psi[2:]-2*psi[1:-1]+psi[:-2])/h**2
+    ddw=(dW[2:]-2*dW[1:-1]+dW[:-2])/h**2
+    lap_p=ddp+dp/ri
+    lap_w=ddw+dW[1:-1]/ri
+    abar2=2*dW[1:-1]**2
+    from solve_dynamical_dee_constraints import energy, S_Z
+    Hred=-8*p**-5*lap_p-p**-12*abar2-16*np.pi*G*energy(p)
+    Mred=p**-10*lap_w-8*np.pi*G*p**-4*S_Z
+    evo_h=float(np.max(np.abs(Hred))); evo_m=float(np.max(np.abs(Mred)))
+    # Same second-order stencil and same physical conventions should agree
+    # closely with the independent evaluator; tolerance is deliberately tight.
+    rel_h=abs(evo_h-ref_h)/max(ref_h,1e-30)
+    rel_m=abs(evo_m-ref_m)/max(ref_m,1e-30)
+    interface_pass=(rel_h < 0.03 and rel_m < 0.03)
+    if not interface_pass:
+        return {"points":n,"interface_pass":False,
+                "reference_hamiltonian_max_abs":ref_h,
+                "evolution_t0_hamiltonian_max_abs":evo_h,
+                "reference_momentum_max_abs":ref_m,
+                "evolution_t0_momentum_max_abs":evo_m,
+                "hamiltonian_relative_mismatch":rel_h,
+                "momentum_relative_mismatch":rel_m,
+                "finite":True,"aborted_before_timestep_1":True}
+    # Keep the generic ADM evaluator as a diagnostic, but do not confuse it
+    # with the validated reduced-conformal t=0 gate.
     H0,M0,*_=constraints(*state,h); n0=norms(H0,M0)
     maxH=n0[0]; maxM=n0[2]; rho_min=float(np.min(state[2][:,0]))
     min_det=float(np.min(np.linalg.det(state[0])))
@@ -283,7 +321,7 @@ def run(n,t_end,cfl):
             break
     H,M,*_=constraints(*state,h); nf=norms(H,M)
     return {
-        "points":n,"dt":dt,"steps":steps,
+        "points":n,"dt":dt,"steps":steps,"interface_pass":True,"aborted_before_timestep_1":False,\n        "reference_hamiltonian_max_abs":ref_h,"evolution_t0_hamiltonian_max_abs":evo_h,\n        "reference_momentum_max_abs":ref_m,"evolution_t0_momentum_max_abs":evo_m,\n        "hamiltonian_relative_mismatch":rel_h,"momentum_relative_mismatch":rel_m,
         "initial_hamiltonian_max_abs":n0[0],"initial_momentum_max_abs":n0[2],
         "final_hamiltonian_max_abs":nf[0],"final_hamiltonian_rms":nf[1],
         "final_momentum_max_abs":nf[2],"final_momentum_rms":nf[3],
@@ -301,15 +339,30 @@ def main():
     ap.add_argument("--output",default="coupled_einstein_dee_checkpoint.json")
     args=ap.parse_args()
     rows=[run(n,args.t_end,args.cfl) for n in args.resolutions]
-    # convergence of final independent residuals
+    # Convergence of the t=0 interface itself is always recorded.
+    for key in ("reference_hamiltonian","reference_momentum","evolution_t0_hamiltonian","evolution_t0_momentum"):
+        prev=None
+        for row in rows:
+            cur=row[f"{key}_max_abs"]
+            row[f"{key}_observed_order"]=None if prev is None else float(np.log(prev/cur)/np.log(2))
+            prev=cur
+    if not all(x.get("interface_pass",False) for x in rows):
+        out={"checkpoint_name":"Coupled Einstein-DEE t=0 interface gate",
+             "status":"INCONCLUSIVE","scope":"pre-evolution cylindrical conformal consistency gate",
+             "runs":rows,
+             "gate":{"t0_interface_consistent":False},
+             "next_gate":"No timestep permitted until this passes."}
+        Path(args.output).write_text(json.dumps(out,indent=2)+"\\n")
+        print(json.dumps(out,indent=2))
+        raise SystemExit(3)
+    # Only after the hard interface gate passes do we assess evolved residuals.
     for key in ("hamiltonian","momentum"):
         prev=None
         for row in rows:
             cur=row[f"final_{key}_max_abs"]
             row[f"{key}_observed_order"]=None if prev is None else float(np.log(prev/cur)/np.log(2))
             prev=cur
-    gate={
-        "all_runs_finite":all(x["finite"] for x in rows),
+    gate={\n        "t0_interface_consistent":all(x.get("interface_pass",False) for x in rows),\n        "all_runs_finite":all(x["finite"] for x in rows),
         "metric_positive":all(x["min_det_gamma"]>0 for x in rows),
         "finite_branch_positive":all(x["rho_min"]>0 for x in rows),
         "hamiltonian_refines":all(rows[i]["final_hamiltonian_max_abs"]<rows[i-1]["final_hamiltonian_max_abs"] for i in range(1,len(rows))),
