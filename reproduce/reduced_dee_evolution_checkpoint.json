@@ -1,0 +1,31 @@
+{
+  "checkpoint_name": "Reduced Fixed-Background Nonlinear DEE Matter Evolution",
+  "status": "passed within stated reduced scope",
+  "scope": "nonlinear DEE matter evolution on a fixed local background",
+  "scope_limitation": "This checkpoint does not evolve the spacetime metric or extrinsic curvature and therefore does not establish stability, constraint preservation, or survival of the coupled Einstein-DEE system under gravitational backreaction.",
+  "not_claimed": [
+    "coupled Einstein-DEE time evolution",
+    "nonlinear gravitational stability",
+    "global toroidal stability",
+    "experimental validation",
+    "proof of the complete DEE physical framework"
+  ],
+  "rho_star_squared": 0.945,
+  "rho_star": 0.972111104761179,
+  "perturbation_amplitude": 0.02,
+  "t_end": 8.0,
+  "runs": [
+    {"points":201,"dt":0.007497656982193065,"steps":1067,"initial_max_deviation":0.01998967208904956,"final_max_deviation":0.016900724131500677,"max_deviation_over_run":0.027325808189552325,"rho_min":0.9552103806296783,"rho_max":0.97544520242399},
+    {"points":401,"dt":0.0037488284910965324,"steps":2134,"initial_max_deviation":0.019997417522116034,"final_max_deviation":0.016893543739070704,"max_deviation_over_run":0.02728000375799322,"rho_min":0.9552175610221083,"rho_max":0.9754488665233239},
+    {"points":801,"dt":0.0018748535270681978,"steps":4267,"initial_max_deviation":0.01999935434926481,"final_max_deviation":0.016891750153251284,"max_deviation_over_run":0.027269071133324108,"rho_min":0.9552193546079277,"rho_max":0.9754497791279952},
+    {"points":1601,"dt":0.0009374267635340989,"steps":8534,"initial_max_deviation":0.01999983858536214,"final_max_deviation":0.016891301899373934,"max_deviation_over_run":0.027266387326823516,"rho_min":0.9552198028618051,"rho_max":0.9754500069555675}
+  ],
+  "coarse_to_finest_max_errors": [8.618343382249538e-05,2.048935144793873e-05,4.09487364116945e-06],
+  "observed_orders": [2.0725362618975476,2.3229834800041687],
+  "gate": {
+    "finite_branch_remains_positive": true,
+    "bounded_over_interval": true,
+    "refinement_error_decreases": true
+  },
+  "next_gate": "Coupled Einstein-DEE evolution of the constraint-satisfying dynamical initial data with independent monitoring of Hamiltonian and momentum constraints, metric signature, curvature, trapped surfaces, and finite-branch persistence."
+}
