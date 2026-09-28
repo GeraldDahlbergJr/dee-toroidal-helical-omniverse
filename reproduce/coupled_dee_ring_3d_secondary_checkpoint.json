@@ -1,0 +1,123 @@
+{
+  "scope": "second predeclared resolution hierarchy for same ring seed; failed 12/24/48 result retained",
+  "runs": [
+    {
+      "n": 16,
+      "steps": 2,
+      "dt": 0.06,
+      "conformal_initial": {
+        "n": 16,
+        "iterations": 3,
+        "hamiltonian_rms": 9.72796210527516e-15,
+        "hamiltonian_max": 3.3479217884163035e-14,
+        "psi_min": 0.9999866331083261,
+        "psi_max": 1.0000448959470483,
+        "rho_min": 0.9756546530324832,
+        "kinetic_det_min": 1.521256872061019,
+        "k": -0.006757697650776162,
+        "momentum_max": 0.0
+      },
+      "initial": {
+        "hamiltonian_l2": 2.3182505837584638e-05,
+        "momentum_l2": 4.763025474395733e-19,
+        "hamiltonian_max": 0.00023912548791702446,
+        "momentum_max": 1.734736710866608e-18,
+        "rho_min": 0.9756546530324832,
+        "metric_eigenvalue_min": 0.9999465335053378,
+        "transport_det_min": 1.521256872061019,
+        "curvature_scalar_max_abs": 0.0006302736784765156
+      },
+      "final": {
+        "hamiltonian_l2": 2.3148956292422886e-05,
+        "momentum_l2": 3.5794730335098983e-06,
+        "hamiltonian_max": 0.0002564833733182903,
+        "momentum_max": 4.510870933260222e-05,
+        "rho_min": 0.9776203743846025,
+        "metric_eigenvalue_min": 1.0004871812766856,
+        "transport_det_min": 1.5235428981615426,
+        "curvature_scalar_max_abs": 0.000664550892072257
+      }
+    },
+    {
+      "n": 32,
+      "steps": 3,
+      "dt": 0.04,
+      "conformal_initial": {
+        "n": 32,
+        "iterations": 3,
+        "hamiltonian_rms": 3.850673682409523e-14,
+        "hamiltonian_max": 1.4499149493876762e-13,
+        "psi_min": 0.9999834938700795,
+        "psi_max": 1.000054387225849,
+        "rho_min": 0.9750307249974571,
+        "kinetic_det_min": 1.5205325476954012,
+        "k": -0.007551849334006353,
+        "momentum_max": 0.0
+      },
+      "initial": {
+        "hamiltonian_l2": 1.3364261477016084e-05,
+        "momentum_l2": 9.643585135877188e-19,
+        "hamiltonian_max": 0.0001816749658677066,
+        "momentum_max": 4.3368219248318186e-18,
+        "rho_min": 0.9750307249974571,
+        "metric_eigenvalue_min": 0.9999339771150138,
+        "transport_det_min": 1.5205325476954012,
+        "curvature_scalar_max_abs": 0.0009697315200589238
+      },
+      "final": {
+        "hamiltonian_l2": 9.402008475127464e-06,
+        "momentum_l2": 3.699965651669147e-06,
+        "hamiltonian_max": 0.00010065166773504152,
+        "momentum_max": 7.670383024573681e-05,
+        "rho_min": 0.9774188692823483,
+        "metric_eigenvalue_min": 1.0005381650866692,
+        "transport_det_min": 1.523308279253267,
+        "curvature_scalar_max_abs": 0.0010655668860647073
+      }
+    },
+    {
+      "n": 64,
+      "steps": 5,
+      "dt": 0.024,
+      "conformal_initial": {
+        "n": 64,
+        "iterations": 4,
+        "hamiltonian_rms": 1.5335837965604928e-13,
+        "hamiltonian_max": 5.997182773241736e-13,
+        "psi_min": 0.9999823183064983,
+        "psi_max": 1.000057923099783,
+        "rho_min": 0.9750000019994727,
+        "kinetic_det_min": 1.520496896851382,
+        "k": -0.007828691214738259,
+        "momentum_max": 0.0
+      },
+      "initial": {
+        "hamiltonian_l2": 5.682048680017028e-06,
+        "momentum_l2": 4.682984053884201e-18,
+        "hamiltonian_max": 9.68552026359335e-05,
+        "momentum_max": 1.040844673497925e-17,
+        "rho_min": 0.9750000019994727,
+        "metric_eigenvalue_min": 0.9999292751018248,
+        "transport_det_min": 1.520496896851382,
+        "curvature_scalar_max_abs": 0.0011469863927528537
+      },
+      "final": {
+        "hamiltonian_l2": 2.7386544153679757e-06,
+        "momentum_l2": 1.778668268389252e-06,
+        "hamiltonian_max": 3.126832296712059e-05,
+        "momentum_max": 4.4541458871927265e-05,
+        "rho_min": 0.9775415965901811,
+        "metric_eigenvalue_min": 1.0005556130067923,
+        "transport_det_min": 1.5234511670217652,
+        "curvature_scalar_max_abs": 0.0012210360751344104
+      }
+    }
+  ],
+  "adjacent_resolution_max_errors": [
+    0.016309188994703502,
+    0.009064953798510834
+  ],
+  "observed_order": 0.8473134709966416,
+  "hamiltonian_refines": true,
+  "momentum_refines": false
+}
