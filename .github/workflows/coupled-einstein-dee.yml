@@ -1,0 +1,47 @@
+name: Coupled Einstein-DEE validation
+
+on:
+  push:
+    branches: [coupled-einstein-dee-evolution]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install numerical dependencies
+        run: python -m pip install --upgrade pip numpy scipy
+      - name: Verify BSSN initial-data bridge
+        run: |
+          cd reproduce
+          python bssn_initial_data_bridge.py
+      - name: Verify full DEE 3+1 matter source
+        run: |
+          cd reproduce
+          python dee_stress_energy_3p1.py
+      - name: Run coupled short evolution
+        run: |
+          cd reproduce
+          test -f evolve_coupled_einstein_dee.py || { echo 'Coupled solver not yet committed; refusing proxy result.'; exit 2; }
+          python evolve_coupled_einstein_dee.py --resolutions 201 401 801 --t-end 0.25 --cfl 0.10 --output coupled_einstein_dee_checkpoint.json
+      - name: Upload numerical checkpoints
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coupled-einstein-dee-checkpoints
+          path: |
+            reproduce/bssn_initial_data_bridge_checkpoint.json
+            reproduce/dee_stress_energy_3p1_checkpoint.json
+            reproduce/coupled_einstein_dee_checkpoint.json
+          if-no-files-found: warn
