@@ -1,11 +1,16 @@
 """Coupled nonlinear DEE initial-data constraint checkpoint.
 
-Reduced local cylindrical-annulus gate.  Unlike the preceding time-symmetric
+Reduced local cylindrical-annulus gate. Unlike the preceding time-symmetric
 checkpoint this uses nonzero transport-field normal momenta, S_z != 0, and a
 nonzero conformal vector potential W_z, hence K_rz != 0.
 
 Conformal ansatz: gamma_ij=psi^4 delta_ij, K=0,
-K^ij=psi^-10 (L W)^ij.  The active vector component is W_z(r).
+K^ij=psi^-10 (L W)^ij. The active vector component is W_z(r).
+
+Sign convention: Pi_A = n^mu d_mu phi_A and
+S_i = -gamma_i^mu n^nu T_munu = -K_AB Pi_A D_i phi_B, matching
+`dee_stress_energy_3p1.projections`. This sign is part of the constraint data,
+not an evolution-time convention choice.
 """
 from __future__ import annotations
 import json
@@ -21,8 +26,9 @@ K_THETA=0.25; K_PSI=0.20
 PI_THETA=0.12; PI_PSI=-0.04
 Q=KT*K_THETA**2+KP*K_PSI**2+2*MIX*K_THETA*K_PSI
 PI_KIN=KT*PI_THETA**2+KP*PI_PSI**2+2*MIX*PI_THETA*PI_PSI
-S_Z=(KT*PI_THETA*K_THETA+KP*PI_PSI*K_PSI
-     +MIX*(PI_THETA*K_PSI+PI_PSI*K_THETA))
+# Physical lower-index matter momentum from the action-derived 3+1 convention.
+S_Z=-(KT*PI_THETA*K_THETA+KP*PI_PSI*K_PSI
+      +MIX*(PI_THETA*K_PSI+PI_PSI*K_THETA))
 
 def energy(psi):
     return POT+0.5*PI_KIN+0.5*psi**-4*Q
@@ -74,6 +80,7 @@ def main():
     r=np.linspace(RMIN,RMAX,5000); psi,_,_,dW=sol.sol(r)
     out={'scope':'reduced local cylindrical-annulus conformal dynamical nonlinear DEE initial-data gate',
          'not_claimed':'full 3-D evolution, global toroidal solution, or nonlinear stability',
+         'convention':'Pi_A=n^mu d_mu phi_A; S_i=-K_AB Pi_A D_i phi_B',
          'parameters':{'G':G,'rho_squared':RHO2,'pi_theta':PI_THETA,'pi_psi':PI_PSI,
                        'k_theta':K_THETA,'k_psi':K_PSI,'S_z':S_Z},
          'solution':{'psi_min':float(np.min(psi)),'psi_max':float(np.max(psi)),
