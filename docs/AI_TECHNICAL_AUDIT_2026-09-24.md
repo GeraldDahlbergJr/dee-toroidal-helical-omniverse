@@ -25,11 +25,11 @@ This audit tested the repository's 1D radial boundary-value problem (BVP) integr
 - **Radial integrator:** The core integral architecture was found to solve the differential equation it explicitly claims to solve under the stated regular-axis assumptions.
 - **Potential normalization:** The finite-domain condition
 
-  \[
-  \bar h_{\mu\nu}(R_{\max})=0
-  \]
+$$
+\bar h_{\mu\nu}(R_{\max})=0
+$$
 
-  is mathematically consistent as a reference normalization for the stated finite computational BVP. Its use should not, by itself, be interpreted as a complete physical exterior solution.
+is mathematically consistent as a reference normalization for the stated finite computational BVP. Its use should not, by itself, be interpreted as a complete physical exterior solution.
 
 ### 3. Modeling Limitations and Unimplemented Extensions
 
@@ -38,11 +38,11 @@ Several issues initially characterized during the dialogue as structural failure
 - **Angular/twist sector:** The repository currently applies its stated uncoupled radial scalar operator as part of a deliberately restricted weak-field model. During the audit, a Cartesian-basis cross-check identified a candidate tensor-aware twist-sector operator that differs from the scalar radial operator. This result is a **candidate extension requiring independent verification before implementation**, not a basis for retroactively claiming that the existing numerical routine fails to solve its documented equation.
 - **Stress-energy conservation:** The repository accepts stress-energy profiles as external modeling inputs rather than constructing a closed Einstein-matter system internally. Accordingly, no repository line was identified that demonstrates a violation of
 
-  \[
-  \nabla^{(0)}_\mu T^{\mu\nu}=0.
-  \]
+$$
+\nabla^{(0)}_\mu T^{\mu\nu}=0.
+$$
 
-  A conservation-enforcing matter closure remains an important requirement for a future self-consistent Einstein-matter or MHD extension.
+A conservation-enforcing matter closure remains an important requirement for a future self-consistent Einstein-matter or MHD extension.
 
 ### 4. Material Revisions and Withdrawn Criticisms
 
@@ -64,19 +64,19 @@ The audit identified several areas requiring further work before stronger physic
 
 1. **Independent tensor-operator verification.** A Cartesian transformation exercise produced the candidate twist-sector relation
 
-   \[
-   H''-\frac{1}{r}H'=-16\pi G\,T_{\text{twist}}.
-   \]
+$$
+H''-\frac{1}{r}H'=-16\pi G\,T_{\text{twist}}.
+$$
 
-   Before this relation is adopted in the repository, it should be independently re-derived from the full background-covariant tensor equations, checked against gauge assumptions, and validated by analytic and numerical unit tests.
+Before this relation is adopted in the repository, it should be independently re-derived from the full background-covariant tensor equations, checked against gauge assumptions, and validated by analytic and numerical unit tests.
 
 2. **Self-consistent matter dynamics.** A future closed matter/gravity or MHD extension should generate stress-energy from dynamical fields and verify
 
-   \[
-   \nabla^{(0)}_\mu T^{\mu\nu}=0
-   \]
+$$
+\nabla^{(0)}_\mu T^{\mu\nu}=0
+$$
 
-   rather than relying solely on prescribed external profiles.
+rather than relying solely on prescribed external profiles.
 
 3. **Exterior matching.** Stronger claims about an isolated cylindrical gravitational configuration would require physically justified matching between the finite computational domain and an appropriate exterior solution rather than interpreting finite-domain normalization alone as physical asymptotics.
 
