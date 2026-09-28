@@ -50,6 +50,10 @@ jobs:
         run: |
           cd reproduce
           python _pinned_coupled_adm_smoke.py --resolutions 201 401 801 --t-end 0.025 --cfl 0.10 --output coupled_einstein_dee_t0025_checkpoint.json
+      - name: Diagnose momentum-constraint growth localization
+        run: |
+          cd reproduce
+          python diagnose_coupled_adm_momentum.py --resolutions 201 401 801 --t-end 0.025 --cfl 0.10 --output coupled_einstein_dee_momentum_diagnostic.json
       - name: Upload numerical checkpoints
         if: always()
         uses: actions/upload-artifact@v4
@@ -61,4 +65,5 @@ jobs:
             reproduce/coupled_einstein_dee_interface_checkpoint.json
             reproduce/coupled_einstein_dee_smoke_checkpoint.json
             reproduce/coupled_einstein_dee_t0025_checkpoint.json
+            reproduce/coupled_einstein_dee_momentum_diagnostic.json
           if-no-files-found: warn
