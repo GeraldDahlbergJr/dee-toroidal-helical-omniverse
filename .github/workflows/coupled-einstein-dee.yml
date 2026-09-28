@@ -54,6 +54,10 @@ jobs:
         run: |
           cd reproduce
           python diagnose_coupled_adm_momentum.py --resolutions 201 401 801 --t-end 0.025 --cfl 0.10 --output coupled_einstein_dee_momentum_diagnostic.json
+      - name: Compare reduced ADM boundary treatments
+        run: |
+          cd reproduce
+          python compare_coupled_adm_boundaries.py --resolutions 201 401 801 --t-end 0.025 --cfl 0.10 --output coupled_einstein_dee_boundary_comparison.json
       - name: Upload numerical checkpoints
         if: always()
         uses: actions/upload-artifact@v4
@@ -66,4 +70,5 @@ jobs:
             reproduce/coupled_einstein_dee_smoke_checkpoint.json
             reproduce/coupled_einstein_dee_t0025_checkpoint.json
             reproduce/coupled_einstein_dee_momentum_diagnostic.json
+            reproduce/coupled_einstein_dee_boundary_comparison.json
           if-no-files-found: warn
