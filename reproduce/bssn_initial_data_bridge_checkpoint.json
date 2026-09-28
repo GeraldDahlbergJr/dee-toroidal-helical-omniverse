@@ -1,0 +1,15 @@
+{
+  "checkpoint_name": "BSSN initial-data bridge for coupled Einstein-DEE evolution",
+  "scope": "conversion/reconstruction of the reduced cylindrical constraint-satisfying data; no time evolution",
+  "rows": [
+    {"points":201,"hamiltonian_max_abs":6.275841593669784e-06,"momentum_max_abs":6.821221954337025e-06,"hamiltonian_observed_order":null,"momentum_observed_order":null},
+    {"points":401,"hamiltonian_max_abs":1.8034480642852013e-06,"momentum_max_abs":1.9587280796549804e-06,"hamiltonian_observed_order":1.79905106122493,"momentum_observed_order":1.800113077498635},
+    {"points":801,"hamiltonian_max_abs":4.846606887660976e-07,"momentum_max_abs":5.262554805089692e-07,"hamiltonian_observed_order":1.8957109028171801,"momentum_observed_order":1.8960818715992065},
+    {"points":1601,"hamiltonian_max_abs":1.2575509266560259e-07,"momentum_max_abs":1.3648927754336682e-07,"hamiltonian_observed_order":1.9463582434536055,"momentum_observed_order":1.946975733750015},
+    {"points":3201,"hamiltonian_max_abs":3.2029015578638464e-08,"momentum_max_abs":3.4761971579901074e-08,"hamiltonian_observed_order":1.9731654633509357,"momentum_observed_order":1.9732058046606247}
+  ],
+  "reconstruction": {"psi_max_abs_error":0.0,"K_rz_max_abs_error":3.469446951953614e-18,"det_gtilde_error":0.0,"tracefree_error":0.0},
+  "gate": {"exact_field_reconstruction":true,"bssn_algebraic_constraints":true,"hamiltonian_decreases":true,"momentum_decreases":true,"hamiltonian_final_order_above_1_9":true,"momentum_final_order_above_1_9":true},
+  "passed": true,
+  "next_gate": "short-duration coupled Einstein-DEE evolution"
+}
