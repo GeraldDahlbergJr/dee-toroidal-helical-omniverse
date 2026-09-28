@@ -70,15 +70,23 @@ The numerical models and visualizations presented here are computational investi
 
 The repository includes an explicitly scoped stationary, cylindrically symmetric, linearized weak-field radial module. Its core numerical integration architecture has been checked analytically against the differential equation that the module states it solves, and the automated test suite includes a smooth-source grid-convergence test.
 
+The repository also contains progressively stronger nonlinear validation checkpoints: action-derived DEE matter diagnostics, nonlinear ADM constraint diagnostics, conformally flat constraint-satisfying initial data, and a reduced dynamical initial-data checkpoint with nonzero matter momentum and nonzero extrinsic curvature. These results are explicitly scoped to their stated reduced ansatz and do not establish global nonlinear stability.
+
+### Reduced Fixed-Background Nonlinear DEE Matter Evolution
+
+A subsequent reproducibility checkpoint evolves the nonlinear DEE radial matter field from a finite perturbation about the finite branch on a **fixed local background**. For the recorded test (perturbation amplitude 0.02 through `t=8`), the finite branch remains positive and bounded and the resolution differences decrease consistently with the second-order numerical scheme.
+
+This checkpoint is intentionally limited: **the spacetime metric and extrinsic curvature are not evolved.** It therefore does not establish stability of the coupled Einstein–DEE system, preservation of the Einstein constraints during evolution, global toroidal stability, or survival under gravitational backreaction. The machine-readable record is `reproduce/reduced_dee_evolution_checkpoint.json`, and the executable checkpoint is `reproduce/evolve_dee_reduced.py`.
+
+The next validation gate is coupled Einstein–DEE time evolution from the already constraint-satisfying dynamical initial data, with independent monitoring of the Hamiltonian and momentum constraints, metric signature, curvature, trapped-surface diagnostics, and persistence of the finite DEE branch.
+
 An adversarial AI-assisted technical audit conducted on 2026-09-24 examined the radial BVP formulation, finite-domain normalization, repository scope, stress-energy assumptions, and candidate tensor-aware treatment of angular/twist sectors. During that audit, earlier claims that the repository had been demonstrated to violate stress-energy conservation and that it exhibited a "fatal mathematical failure" were withdrawn after comparison with the actual implementation and its documented scope.
 
-The audit does **not** constitute independent peer review or experimental validation. In particular, a candidate tensor-aware twist-sector operator identified during the dialogue remains subject to independent derivation, gauge checks, analytic unit tests, numerical cross-validation, and review before it is incorporated into the production model. Likewise, a future self-consistent Einstein-matter or MHD extension would need to construct conserved stress-energy dynamically rather than rely solely on externally prescribed source profiles.
+The audit does **not** constitute independent peer review or experimental validation.
 
-The complete technical record, including verified results, withdrawn criticisms, remaining limitations, and proposed validation steps, is archived here:
+The complete technical record is archived here:
 
 **[Adversarial AI Technical Audit — DEE Weak-Field Module](docs/AI_TECHNICAL_AUDIT_2026-09-24.md)**
-
-The purpose of preserving this record is reproducibility: demonstrated implementation behavior, modeling assumptions, unresolved questions, and future extensions are kept explicitly separate.
 
 ## License
 
@@ -86,13 +94,7 @@ Software in this repository is released under the MIT License unless otherwise n
 
 ## Reproducible computational companion
 
-The scripts in this repository use only [NumPy](https://numpy.org/) and the
-Python standard library. Install the sole numerical dependency and run the automated checks from the repository root:
-
-```bash
-python -m pip install -r requirements.txt
-python -m unittest discover -s tests -v
-```
+The repository contains executable numerical checkpoints and automated tests. Install the dependencies declared by the repository and run the test suite from the repository root.
 
 ### Minimal finite-equilibrium branch
 
@@ -103,51 +105,16 @@ python -m unittest discover -s tests -v
 \qquad m_{\rm eff}^2=2\lambda_V\rho_*^2.
 \]
 
-At a supplied field value \(\rho^2\), it uses
-\(K_\Theta=1+a\rho^2\), \(K_\Psi=1+b\rho^2\), and
-\(\Lambda=c\rho^2\), giving
-\(K=\begin{pmatrix}K_\Theta&\Lambda\\\Lambda&K_\Psi\end{pmatrix}\). It computes
-\(\det K=1+(a+b)\rho^2+(ab-c^2)\rho^4\), and applies the
-2-by-2 Sylvester criterion \(K_\Theta>0\) and \(\det K>0\) for
-positive definiteness. These are direct
-algebraic consequences of the definitions encoded in the program; they do not
-by themselves establish the physical applicability of a DEE model.
+At a supplied field value \(\rho^2\), it uses \(K_\Theta=1+a\rho^2\), \(K_\Psi=1+b\rho^2\), and \(\Lambda=c\rho^2\).
 
 ### NEC diagnostic
 
-`nec_scan.py` evaluates the supplied quadratic-form diagnostic
-\(T_{kk}=u^T K u\). Its numerical scan samples unit two-component transport
-projections \(u=(\cos\phi,\sin\phi)\). A scan is a finite numerical
-sampling diagnostic; positive definiteness of the specified 2-by-2 matrix is
-the corresponding analytic all-directions condition within this minimal model.
+`nec_scan.py` evaluates the supplied quadratic-form diagnostic \(T_{kk}=u^T K u\). A finite numerical scan is distinguished from the corresponding analytic positive-definiteness condition.
 
 ### Linearized cylindrical radial calculation
 
-`linearized_einstein.py` numerically integrates the stationary radial equation
-
-\[
-\frac{1}{r}\frac{d}{dr}\left(r\frac{d\bar h_{\mu\nu}}{dr}\right)
-= -16\pi G T_{\mu\nu}(r).
-\]
-
-The integration enforces regular-axis behavior through
-\(r\,d\bar h/dr\to0\) at \(r=0\), and it accepts a finite outer value for
-\(\bar h_{\mu\nu}\). It can solve one radial source profile or multiple
-trailing tensor-component profiles independently. Each call emits a warning:
-this is a **stationary, cylindrical, linearized weak-field approximation**, not
-a nonlinear general-relativity solution.
-
-### Tests
-
-`tests/test_dee_companion.py` verifies the analytic equilibrium and effective
-mass expressions, kinetic-matrix positivity, NEC quadratic forms and scans,
-and second-order grid convergence of the radial integration for a smooth source.
+`linearized_einstein.py` numerically integrates the explicitly scoped stationary cylindrical linearized weak-field radial equation. It is not represented as a nonlinear general-relativity solver.
 
 ## Scope and limitations
 
-The included relations and computations are theoretical and numerical tools for
-exploring proposed DEE assumptions. They do **not** provide experimental
-validation, nonlinear stability, a proof of global non-collapse, or a full
-nonlinear Einstein-equation solution. Boundary data, source profiles, parameter
-choices, and the interpretation of transport variables remain modeling inputs
-and hypothetical aspects of the framework.
+The included relations and computations are theoretical and numerical tools for exploring proposed DEE assumptions. They do **not** provide experimental validation, a proof of global non-collapse, or a completed full nonlinear Einstein–DEE evolution. Boundary data, source profiles, parameter choices, gauge/ansatz choices, and the interpretation of transport variables remain modeling inputs and hypothetical aspects of the framework.
