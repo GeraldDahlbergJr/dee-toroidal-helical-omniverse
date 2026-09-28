@@ -46,6 +46,10 @@ jobs:
           git show c3646160a4b6e0f86ee8b7dbc9a1345b0c137201:reproduce/evolve_coupled_einstein_dee.py > reproduce/_pinned_coupled_adm_smoke.py
           cd reproduce
           python _pinned_coupled_adm_smoke.py --resolutions 201 401 801 --t-end 0.01 --cfl 0.10 --output coupled_einstein_dee_smoke_checkpoint.json
+      - name: t=0.025 coupled ADM convergence gate
+        run: |
+          cd reproduce
+          python _pinned_coupled_adm_smoke.py --resolutions 201 401 801 --t-end 0.025 --cfl 0.10 --output coupled_einstein_dee_t0025_checkpoint.json
       - name: Upload numerical checkpoints
         if: always()
         uses: actions/upload-artifact@v4
