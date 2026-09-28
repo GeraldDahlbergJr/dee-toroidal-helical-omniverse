@@ -56,4 +56,5 @@ jobs:
             reproduce/dee_stress_energy_3p1_checkpoint.json
             reproduce/coupled_einstein_dee_interface_checkpoint.json
             reproduce/coupled_einstein_dee_smoke_checkpoint.json
+            reproduce/coupled_einstein_dee_t0025_checkpoint.json
           if-no-files-found: warn
