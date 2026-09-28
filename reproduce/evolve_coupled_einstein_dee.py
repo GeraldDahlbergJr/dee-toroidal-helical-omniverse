@@ -321,7 +321,10 @@ def run(n,t_end,cfl):
             break
     H,M,*_=constraints(*state,h); nf=norms(H,M)
     return {
-        "points":n,"dt":dt,"steps":steps,"interface_pass":True,"aborted_before_timestep_1":False,\n        "reference_hamiltonian_max_abs":ref_h,"evolution_t0_hamiltonian_max_abs":evo_h,\n        "reference_momentum_max_abs":ref_m,"evolution_t0_momentum_max_abs":evo_m,\n        "hamiltonian_relative_mismatch":rel_h,"momentum_relative_mismatch":rel_m,
+        "points":n,"dt":dt,"steps":steps,"interface_pass":True,"aborted_before_timestep_1":False,
+        "reference_hamiltonian_max_abs":ref_h,"evolution_t0_hamiltonian_max_abs":evo_h,
+        "reference_momentum_max_abs":ref_m,"evolution_t0_momentum_max_abs":evo_m,
+        "hamiltonian_relative_mismatch":rel_h,"momentum_relative_mismatch":rel_m,
         "initial_hamiltonian_max_abs":n0[0],"initial_momentum_max_abs":n0[2],
         "final_hamiltonian_max_abs":nf[0],"final_hamiltonian_rms":nf[1],
         "final_momentum_max_abs":nf[2],"final_momentum_rms":nf[3],
@@ -362,7 +365,9 @@ def main():
             cur=row[f"final_{key}_max_abs"]
             row[f"{key}_observed_order"]=None if prev is None else float(np.log(prev/cur)/np.log(2))
             prev=cur
-    gate={\n        "t0_interface_consistent":all(x.get("interface_pass",False) for x in rows),\n        "all_runs_finite":all(x["finite"] for x in rows),
+    gate={
+        "t0_interface_consistent":all(x.get("interface_pass",False) for x in rows),
+        "all_runs_finite":all(x["finite"] for x in rows),
         "metric_positive":all(x["min_det_gamma"]>0 for x in rows),
         "finite_branch_positive":all(x["rho_min"]>0 for x in rows),
         "hamiltonian_refines":all(rows[i]["final_hamiltonian_max_abs"]<rows[i-1]["final_hamiltonian_max_abs"] for i in range(1,len(rows))),
