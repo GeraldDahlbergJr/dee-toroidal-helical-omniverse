@@ -73,6 +73,14 @@ jobs:
           # sequence unchanged so this is a clean persistence/convergence test.
           cd reproduce
           python diagnose_coupled_adm_momentum.py --resolutions 201 401 801 --t-end 0.10 --cfl 0.10 --output coupled_einstein_dee_t0100_boundary_distance_checkpoint.json
+      - name: t=0.20 controlled matched-distance extension
+        run: |
+          # Next controlled gate: double only the evolution duration from the
+          # frozen t=0.10 checkpoint. Keep the pinned reduced ADM kernel,
+          # equations, initial data, RK4/CFL, frozen two-cell boundary
+          # treatment, and 201/401/801 refinement sequence unchanged.
+          cd reproduce
+          python diagnose_coupled_adm_momentum.py --resolutions 201 401 801 --t-end 0.20 --cfl 0.10 --output coupled_einstein_dee_t0200_boundary_distance_checkpoint.json
       - name: Upload numerical checkpoints
         if: always()
         uses: actions/upload-artifact@v4
@@ -88,5 +96,8 @@ jobs:
             reproduce/coupled_einstein_dee_boundary_comparison.json
             reproduce/coupled_einstein_dee_t0050_boundary_distance_checkpoint.json
             reproduce/coupled_einstein_dee_t0100_boundary_distance_checkpoint.json
+            reproduce/coupled_einstein_dee_t0200_boundary_distance_checkpoint.json
             reproduce/coupled_einstein_dee_t0025_frozen_checkpoint.json
+            reproduce/coupled_einstein_dee_t0050_frozen_checkpoint.json
+            reproduce/coupled_einstein_dee_t0100_frozen_checkpoint.json
           if-no-files-found: warn
