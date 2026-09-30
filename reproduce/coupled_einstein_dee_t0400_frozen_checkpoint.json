@@ -1,0 +1,37 @@
+{
+  "checkpoint_name": "Run #33 t=0.40 exact-time persistence checkpoint",
+  "status": "FROZEN",
+  "source_run": {
+    "run_number": 33,
+    "run_id": 36769485472,
+    "source_commit": "5fa190302453ac63ac61f10f72bcdc9bab7dfe1d",
+    "artifact_id": 11124476785,
+    "artifact_digest": "sha256:064ee2ece52605846966de6cd1a848fbe5658f0a53e210dc6212725ce3fb9114"
+  },
+  "scope": "Pinned reduced cylindrical-annulus ADM evolution with frozen two-cell boundary treatment; this checkpoint does not claim full 3-D BSSN evolution or physical validation.",
+  "setup": {
+    "t_end": 0.4,
+    "cfl_ceiling": 0.1,
+    "resolutions": [201, 401, 801],
+    "sample_times": [0.2, 0.25, 0.3, 0.4],
+    "exact_time_alignment": true,
+    "time_offsets": 0.0
+  },
+  "result": {
+    "all_runs_finite": true,
+    "interior_persistence": "At t=0.40 the matched physical 8%, 12%, and 16% regions retain approximately second-order convergence on the 401->801 refinement pair.",
+    "boundary_behavior": "Boundary-associated contamination has propagated inward. At t=0.40 the 4% matched physical region no longer exhibits second-order convergence and is explicitly retained as a negative/limiting result.",
+    "t0400_401_to_801_orders": {
+      "0.04": {"momentum": 0.018363932926511357, "hamiltonian": 0.08749527500590583},
+      "0.08": {"momentum": 2.007943101773852, "hamiltonian": 2.00203421323136},
+      "0.12": {"momentum": 2.000960665902052, "hamiltonian": 2.000551833804622},
+      "0.16": {"momentum": 2.000435636270314, "hamiltonian": 2.000260761449145}
+    },
+    "t0400_8pct_residuals": {
+      "momentum": {"201": 0.00033584524271167317, "401": 0.00010180275090111425, "801": 0.00002531094792987578},
+      "hamiltonian": {"201": 0.0011786638227853571, "401": 0.000338000944269206, "801": 0.00008438117391900563}
+    }
+  },
+  "interpretation": "Freeze both observations together: persistent clean O(h^2) interior convergence at 8-16% through t=0.40, and loss of convergence at 4% as the boundary-contaminated region moves inward. The boundary limitation is part of the checkpoint and must not be omitted from later reporting.",
+  "next_gate": "Use this frozen persistence result to design the next boundary/causal-boundary justification or longer-duration/multidimensional validation without altering this record."
+}
