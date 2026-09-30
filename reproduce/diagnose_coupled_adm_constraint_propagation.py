@@ -71,8 +71,8 @@ def main():
         "t_end":a.t_end,"cfl":a.cfl,"resolutions":a.resolutions,
         "sample_times":a.sample_times,
         "runs":rows,
-        "momentum_convergence":convergence(rows,"Mmax"),
-        "hamiltonian_convergence":convergence(rows,"Hmax"),
+        "momentum_convergence":convergence(rows,"M_max"),
+        "hamiltonian_convergence":convergence(rows,"H_max"),
     }
     out=Path(a.output)
     out.write_text(json.dumps(payload,indent=2)+"\n")
