@@ -21,16 +21,28 @@ def run(n,t_end,cfl,sample_times):
     r,state=adm.initial_state(n); initial=tuple(x.copy() for x in state)
     h=float(r[1]-r[0]); dt0=cfl*h; steps=int(np.ceil(t_end/dt0)); dt=t_end/steps
     targets=sorted(set([0.0]+[float(x) for x in sample_times if 0 < x <= t_end]+[float(t_end)]))
-    snaps=[]; ti=0
+    snaps=[]; ti=0; t=0.0
     if targets and targets[0]==0.0:
         snaps.append(snapshot(state,r,h,0.0,0.0)); ti=1
-    for step in range(1,steps+1):
-        state=adm.rk4_step(state,dt,h,initial)
-        t=step*dt
-        while ti < len(targets) and t+0.5*dt >= targets[ti]:
+    # Keep the nominal CFL step as a ceiling, but shorten the step whenever
+    # necessary so every requested diagnostic time is hit exactly.
+    while t < t_end:
+        next_target=targets[ti] if ti < len(targets) else t_end
+        step_dt=min(dt, next_target-t, t_end-t)
+        if step_dt <= 0.0:
+            if ti < len(targets) and abs(t-targets[ti]) <= 32*np.finfo(float).eps*max(1.0,abs(t)):
+                snaps.append(snapshot(state,r,h,targets[ti],targets[ti])); ti+=1
+                continue
+            break
+        state=adm.rk4_step(state,step_dt,h,initial)
+        t += step_dt
+        tol=32*np.finfo(float).eps*max(1.0,abs(t))
+        if ti < len(targets) and abs(t-targets[ti]) <= tol:
+            t=targets[ti]
             snaps.append(snapshot(state,r,h,t,targets[ti])); ti+=1
     return {"points":n,"h":h,"dt":float(dt),"steps":steps,
             "finite":bool(all(np.all(np.isfinite(x)) for x in state)),
+            "max_nominal_dt":float(dt),
             "snapshots":snaps}
 
 def convergence(rows,key):
