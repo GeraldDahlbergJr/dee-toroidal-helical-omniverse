@@ -108,6 +108,16 @@ jobs:
         run: |
           test -s reproduce/coupled_einstein_dee_t0400_constraint_propagation.json
           python -m json.tool reproduce/coupled_einstein_dee_t0400_constraint_propagation.json > /dev/null
+      - name: Boundary-contamination-front gate
+        run: |
+          # Diagnostic only: quantify the inward convergence-loss front without
+          # changing equations, initial data, CFL, refinement, or boundaries.
+          cd reproduce
+          python diagnose_coupled_adm_boundary_front.py --resolutions 201 401 801 --t-end 0.40 --cfl 0.10 --sample-times 0.05 0.10 0.15 0.20 0.25 0.30 0.35 0.40 --output coupled_einstein_dee_boundary_front.json
+      - name: Require boundary-front artifact
+        run: |
+          test -s reproduce/coupled_einstein_dee_boundary_front.json
+          python -m json.tool reproduce/coupled_einstein_dee_boundary_front.json > /dev/null
       - name: Upload numerical checkpoints
         if: always()
         uses: actions/upload-artifact@v4
@@ -126,6 +136,7 @@ jobs:
             reproduce/coupled_einstein_dee_t0200_boundary_distance_checkpoint.json
             reproduce/coupled_einstein_dee_constraint_propagation.json
             reproduce/coupled_einstein_dee_t0400_constraint_propagation.json
+            reproduce/coupled_einstein_dee_boundary_front.json
             reproduce/coupled_einstein_dee_constraint_propagation_frozen_checkpoint.json
             reproduce/coupled_einstein_dee_t0200_frozen_checkpoint.json
             reproduce/coupled_einstein_dee_t0025_frozen_checkpoint.json
