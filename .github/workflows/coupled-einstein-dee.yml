@@ -89,6 +89,12 @@ jobs:
           # of boundary-associated contamination.
           cd reproduce
           python diagnose_coupled_adm_constraint_propagation.py --resolutions 201 401 801 --t-end 0.20 --cfl 0.10 --sample-times 0.025 0.05 0.10 0.15 0.20 --output coupled_einstein_dee_constraint_propagation.json
+      - name: Require propagation checkpoint artifact
+        run: |
+          # Hard packaging gate: a green run is not acceptable unless the
+          # corrected time-aligned propagation JSON actually exists and parses.
+          test -s reproduce/coupled_einstein_dee_constraint_propagation.json
+          python -m json.tool reproduce/coupled_einstein_dee_constraint_propagation.json > /dev/null
       - name: Upload numerical checkpoints
         if: always()
         uses: actions/upload-artifact@v4
