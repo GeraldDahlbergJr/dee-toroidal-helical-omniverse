@@ -1,0 +1,30 @@
+{
+  "checkpoint_name": "Einstein-DEE reduced ADM exact-time constraint-propagation checkpoint",
+  "source_workflow_run": 31,
+  "source_workflow_run_id": 36668607976,
+  "source_commit": "c99c86e082033e4fcdf313ba863c73d8d117f44d",
+  "artifact_id": 11077433983,
+  "artifact_digest": "sha256:386d502fc14c624b3f08f1a91c066d58aa02389377994256823f541bd6876d42",
+  "t_end": 0.20,
+  "cfl_ceiling": 0.10,
+  "resolutions": [201, 401, 801],
+  "sample_times": [0.0, 0.025, 0.05, 0.10, 0.15, 0.20],
+  "time_alignment": "exact at every requested sample time for all three resolutions; recorded offsets are zero",
+  "boundary_treatment": "frozen two-cell buffer",
+  "status": "frozen",
+  "scope": "pinned reduced cylindrical-annulus ADM evolution; numerical checkpoint only",
+  "interpretation": "Exact-time propagation sampling confirms that the 401-to-801 Hamiltonian and momentum constraint convergence remains approximately second-order through t=0.20 from the 4% physical cut outward. The 1%-2% near-boundary region becomes contaminated as evolution proceeds; 4% is transitional at late time and 8%-16% remains cleanly second-order.",
+  "representative_t0200_401_to_801_orders": {
+    "physical_cut_0.01": {"M_max": 0.05742031153175606, "H_max": 0.17904040171073118},
+    "physical_cut_0.02": {"M_max": 0.08393379150945944, "H_max": -0.002987675146315479},
+    "physical_cut_0.04": {"M_max": 2.292660454476872, "H_max": 2.0301060605429018},
+    "physical_cut_0.08": {"M_max": 2.0007687425135714, "H_max": 2.0004746748606292},
+    "physical_cut_0.12": {"M_max": 2.0003349730838784, "H_max": 2.0002479590355238},
+    "physical_cut_0.16": {"M_max": 2.0001670995708034, "H_max": 2.0001492911938588}
+  },
+  "representative_t0200_8pct_residuals": {
+    "M_max": [[201, 0.00011896721809653911], [401, 0.0000353619266363324], [801, 0.000008835772248170695]],
+    "H_max": [[201, 0.0008006818524672228], [401, 0.0002303041656815906], [801, 0.00005755710089373062]]
+  },
+  "next_gate": "Advance beyond the reduced-ADM propagation checkpoint to the next numerical-validation stage without altering this frozen record."
+}
