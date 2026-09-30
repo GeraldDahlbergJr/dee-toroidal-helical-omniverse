@@ -118,6 +118,17 @@ jobs:
         run: |
           test -s reproduce/coupled_einstein_dee_boundary_front.json
           python -m json.tool reproduce/coupled_einstein_dee_boundary_front.json > /dev/null
+      - name: 3-D toroidal/helical geometry precursor gate
+        run: |
+          # Additive kinematic gate only. Validate the toroidal chart and the
+          # existing helical-path convention before constructing 3-D
+          # constraint-satisfying Einstein-DEE initial data.
+          cd reproduce
+          python validate_toroidal_helical_geometry.py
+      - name: Require 3-D geometry precursor artifact
+        run: |
+          test -s reproduce/toroidal_helical_geometry_gate.json
+          python -m json.tool reproduce/toroidal_helical_geometry_gate.json > /dev/null
       - name: Upload numerical checkpoints
         if: always()
         uses: actions/upload-artifact@v4
@@ -137,6 +148,7 @@ jobs:
             reproduce/coupled_einstein_dee_constraint_propagation.json
             reproduce/coupled_einstein_dee_t0400_constraint_propagation.json
             reproduce/coupled_einstein_dee_boundary_front.json
+            reproduce/toroidal_helical_geometry_gate.json
             reproduce/coupled_einstein_dee_constraint_propagation_frozen_checkpoint.json
             reproduce/coupled_einstein_dee_t0200_frozen_checkpoint.json
             reproduce/coupled_einstein_dee_t0025_frozen_checkpoint.json
