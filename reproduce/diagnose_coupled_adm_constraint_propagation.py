@@ -37,15 +37,12 @@ def convergence(rows,key):
     targets=sorted({s["target_time"] for row in rows for s in row["snapshots"]})
     out=[]
     for target in targets:
-        by_frac=[]
-        selected=[]
+        by_frac=[]; selected=[]
         for row in rows:
             s=next(x for x in row["snapshots"] if x["target_time"]==target)
             selected.append(s)
         for frac in PHYSICAL_FRACTIONS:
-            vals=[]
-            actual_times=[]
-            offsets=[]
+            vals=[]; actual_times=[]; offsets=[]
             for row,s in zip(rows,selected):
                 d=next(x for x in s["physical_trims"] if x["target_fraction_of_domain"]==frac)
                 vals.append((row["points"],d[key]))
@@ -59,3 +56,28 @@ def convergence(rows,key):
         out.append({"target_time":target,"physical_convergence":by_frac})
     return out
 
+def main():
+    p=argparse.ArgumentParser()
+    p.add_argument("--resolutions",nargs="+",type=int,default=[201,401,801])
+    p.add_argument("--t-end",type=float,default=0.20)
+    p.add_argument("--cfl",type=float,default=0.10)
+    p.add_argument("--sample-times",nargs="+",type=float,default=[0.025,0.05,0.10,0.15,0.20])
+    p.add_argument("--output",default="coupled_einstein_dee_constraint_propagation.json")
+    a=p.parse_args()
+    rows=[run(n,a.t_end,a.cfl,a.sample_times) for n in a.resolutions]
+    payload={
+        "diagnostic":"time-resolved constraint propagation at matched physical boundary distances",
+        "scope":"pinned reduced cylindrical-annulus ADM evolution; frozen two-cell boundary treatment",
+        "t_end":a.t_end,"cfl":a.cfl,"resolutions":a.resolutions,
+        "sample_times":a.sample_times,
+        "runs":rows,
+        "momentum_convergence":convergence(rows,"Mmax"),
+        "hamiltonian_convergence":convergence(rows,"Hmax"),
+    }
+    out=Path(a.output)
+    out.write_text(json.dumps(payload,indent=2)+"\n")
+    print(json.dumps(payload,indent=2))
+    print(f"Wrote {out.resolve()}")
+
+if __name__=="__main__":
+    main()
