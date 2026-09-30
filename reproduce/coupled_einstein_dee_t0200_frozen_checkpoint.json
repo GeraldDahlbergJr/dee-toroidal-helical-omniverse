@@ -1,0 +1,24 @@
+{
+  "checkpoint_name": "Einstein-DEE reduced ADM t=0.20 matched-physical-distance checkpoint",
+  "source_workflow_run": 23,
+  "source_workflow_run_id": 36649135065,
+  "source_commit": "f7675c529a1a042bdf2773ac6a057872430bd626",
+  "artifact_id": 11070047888,
+  "artifact_digest": "sha256:8a80450764fba821facac00acf9514ea277a75fd75c9f0e12a8bb725906a76cb",
+  "t_end": 0.20,
+  "cfl": 0.10,
+  "resolutions": [201, 401, 801],
+  "boundary_treatment": "frozen two-cell buffer",
+  "status": "frozen",
+  "scope": "reduced cylindrical-annulus ADM evolution; numerical checkpoint only",
+  "interpretation": "At matched physical interior distances, the 401-to-801 refinement remains approximately second-order for Hamiltonian and momentum constraints through t=0.20 from the 4% physical cut outward. The 1% and 2% regions are boundary-treatment contaminated; the 4% cut is transitional and the 8%-16% cuts are cleanly second-order.",
+  "representative_401_to_801_orders": {
+    "physical_cut_0.01": {"M_max": 0.05776926930106341, "H_max": 0.1798872072208218},
+    "physical_cut_0.02": {"M_max": 0.0835207702973475, "H_max": -0.002881558050542705},
+    "physical_cut_0.04": {"M_max": 2.292909941972308, "H_max": 2.0302414489295777},
+    "physical_cut_0.08": {"M_max": 2.00076833405222, "H_max": 2.000474663160355},
+    "physical_cut_0.12": {"M_max": 2.000335439751874, "H_max": 2.000247907594273},
+    "physical_cut_0.16": {"M_max": 2.0001687722435118, "H_max": 2.000149521219817}
+  },
+  "next_gate": "Measure constraint propagation versus time and matched physical boundary distance before any further duration extension or formulation change."
+}
