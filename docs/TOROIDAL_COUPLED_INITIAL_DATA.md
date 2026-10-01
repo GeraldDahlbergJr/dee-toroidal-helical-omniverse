@@ -118,3 +118,37 @@ second derivatives, distinguish scalar Laplacian and discrete-commutator
 contributions, and separate radial from angular refinement. Any proposed remedy
 must be checked through a fresh solve and an independent audit rather than
 changing the acceptance criterion or merely reducing the solver tolerance.
+
+## Direct Hessian candidate and directional derivative audit
+
+`solve_toroidal_direct_hessian_candidate.py` forms `grad(div W)` from direct
+chart second derivatives, mixed derivatives, and the toroidal connection,
+then rotates the Hessian to Cartesian components. It retains the scalar solver,
+Run42 continuum equations, matter seed, geometry, boundaries and tolerances.
+The production solver remains unchanged. Manufactured inner-first-row and
+inner-band operator orders are 2.2755 and 2.1099 on the 9/17 radial pair.
+An independent Cartesian polynomial test also converges; all 28 tests pass.
+
+Three fresh candidate solves completed, but the original boundary criterion
+still fails: inner-band momentum orders 0.50824 and 0.85244, versus Run42's
+0.45277 and 0.82146. Independent flux-Hamiltonian orders remain 1.48876 and
+1.73541. Outer-band criteria pass. Fourth-order momentum auditing is
+supplementary: inner orders 2.62185 and 3.06471 do not replace the primary gate.
+The candidate fields, hashes and diagnostics are saved separately and are not
+promoted, frozen, or tagged.
+
+`diagnose_toroidal_derivative_directions.py` isolates differentiation order in
+the saved fields without changing or interpolating them. For frozen Run42,
+using fourth-order radial derivatives with second-order angular derivatives
+gives inner-band momentum orders 1.18688 and 1.78079. Fourth-order angular
+derivatives with second-order radial derivatives give 0.39066 and 0.76111.
+The direct-Hessian candidate shows the same pattern. This supports radial
+differentiation as a major contributor to the measured inner-boundary problem;
+it is not independent radial/angular *grid refinement* or proof of a remedy.
+
+Before another solver change, the next useful check is controlled radial
+refinement with angular resolution fixed, followed by the complementary angular
+refinement, using an independent boundary derivative implementation. The
+Hamiltonian coarse-pair limitation also needs investigation. Lowering solver
+tolerances or substituting the supplementary audit would not establish the
+original boundary gate.

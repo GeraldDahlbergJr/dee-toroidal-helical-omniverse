@@ -1,0 +1,31 @@
+{
+  "rows": [
+    {
+      "resolution": [
+        9,
+        8,
+        8
+      ],
+      "inner_first_row_rms": 0.04580304112178097,
+      "inner_band_rms": 0.05715866237634026
+    },
+    {
+      "resolution": [
+        17,
+        16,
+        16
+      ],
+      "inner_first_row_rms": 0.009460164603103819,
+      "inner_band_rms": 0.013241246288860194
+    }
+  ],
+  "orders": {
+    "inner_first_row_rms": [
+      2.275506198932822
+    ],
+    "inner_band_rms": [
+      2.1099332374912834
+    ]
+  },
+  "gate": true
+}

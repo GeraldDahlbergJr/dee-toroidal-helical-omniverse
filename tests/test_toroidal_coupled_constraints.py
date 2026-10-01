@@ -8,6 +8,7 @@ from solve_toroidal_helical_coupled_constraints import Grid
 from diagnose_toroidal_boundary_convergence import Audit, radial_matrix
 from investigate_toroidal_inner_operator import endpoint_cubic_matrix, expanded
 from solve_toroidal_matched_endpoint_candidate import CandidateGrid
+from solve_toroidal_direct_hessian_candidate import DirectHessianGrid, manufactured_check
 from dee_stress_energy_3p1 import projections
 from validate_toroidal_helical_dee_source import RHO,PI,KTH,KPS,M,metric
 
@@ -71,6 +72,23 @@ class ToroidalOperators(unittest.TestCase):
         actual=expanded(a,w.reshape((3,)+g.shape)).reshape(3,-1)[:,g.idx]
         expected=(g.vector@w[:,g.idx].ravel()).reshape(3,-1)
         np.testing.assert_allclose(actual,expected,atol=2e-11,rtol=1e-10)
+
+    def test_direct_hessian_manufactured_inner_boundary_converges(self):
+        result=manufactured_check()
+        self.assertTrue(result['gate'],result['orders'])
+
+    def test_direct_hessian_polynomial_converges_and_preserves_matter(self):
+        errors=[]
+        for n in (8,16):
+            g=DirectHessianGrid(n+1,n,n)
+            x=g.q*np.cos(g.p);y=g.q*np.sin(g.p);z=g.r*np.sin(g.t)
+            f=x*x+y*y+z*z
+            actual=sum(g.hessian[i][i]@f for i in range(3))
+            errors.append(np.sqrt(np.mean((actual[g.idx]-6.)**2)))
+            a=Audit(g.shape)
+            np.testing.assert_allclose(g.S,a.S.reshape(3,-1),atol=1e-14)
+            np.testing.assert_allclose(g.energy(np.ones(g.size)),(.5*a.temporal+.5*a.spatial+g.U).ravel(),atol=1e-14)
+        self.assertGreater(np.log2(errors[0]/errors[1]),1.5)
 
     def test_source_uses_physical_inverse_metric(self):
         g=Grid(9,8,8); u=np.full(g.size,1.07)

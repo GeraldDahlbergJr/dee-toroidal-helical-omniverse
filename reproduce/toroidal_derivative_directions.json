@@ -1,0 +1,135 @@
+{
+  "status": "SUPPLEMENTARY_DIRECTION_AUDIT_ONLY",
+  "families": {
+    "frozen_run42": {
+      "rows": [
+        {
+          "resolution": [
+            9,
+            8,
+            8
+          ],
+          "field_sha256": "0fb7d00db5d2c026035e60209bbaa702aaaed670ce8358e6f806cefe64c22913",
+          "inner_band_momentum_rms": {
+            "radial2_angular2": 0.001016054895268989,
+            "radial4_angular2": 0.0012690807324434062,
+            "radial2_angular4": 0.0009580030642694601,
+            "radial4_angular4": 0.0008000849630849014
+          }
+        },
+        {
+          "resolution": [
+            17,
+            16,
+            16
+          ],
+          "field_sha256": "cffab271465e5e26b19aac8e6bca96dd1d0810a05e687723233b6d48f3badfb6",
+          "inner_band_momentum_rms": {
+            "radial2_angular2": 0.0007423681627878038,
+            "radial4_angular2": 0.0005574460137023891,
+            "radial2_angular4": 0.0007307481352627649,
+            "radial4_angular4": 0.00011781568427176918
+          }
+        },
+        {
+          "resolution": [
+            33,
+            32,
+            32
+          ],
+          "field_sha256": "595707c9f91b47e26078f03a17ca6b3ca07f4de9d924470f19076a690a823414",
+          "inner_band_momentum_rms": {
+            "radial2_angular2": 0.00042008194387954645,
+            "radial4_angular2": 0.00016222973345736687,
+            "radial2_angular4": 0.0004311733071707421,
+            "radial4_angular4": 2.3556285655834903e-05
+          }
+        }
+      ],
+      "orders": {
+        "radial2_angular2": [
+          0.4527716044741412,
+          0.8214640636559046
+        ],
+        "radial4_angular2": [
+          1.1868798510236735,
+          1.7807938319985708
+        ],
+        "radial2_angular4": [
+          0.39065602803558985,
+          0.7611063752193237
+        ],
+        "radial4_angular4": [
+          2.7636216001899996,
+          2.32234763271998
+        ]
+      }
+    },
+    "direct_hessian_candidate": {
+      "rows": [
+        {
+          "resolution": [
+            9,
+            8,
+            8
+          ],
+          "field_sha256": "050d004d98380863cf35eaff4a25d30c3055b38aa7be2a1e3ae78d645407dca9",
+          "inner_band_momentum_rms": {
+            "radial2_angular2": 0.0010894173468137698,
+            "radial4_angular2": 0.0013469804513300842,
+            "radial2_angular4": 0.0010183392441947652,
+            "radial4_angular4": 0.0008883983860431912
+          }
+        },
+        {
+          "resolution": [
+            17,
+            16,
+            16
+          ],
+          "field_sha256": "ea5c4780ccce2ffe8d63528b6e2158dfdccc5b35abbb94edd5ad43238cf6095f",
+          "inner_band_momentum_rms": {
+            "radial2_angular2": 0.0007659464372309891,
+            "radial4_angular2": 0.0005889646101950256,
+            "radial2_angular4": 0.0007369381620280101,
+            "radial4_angular4": 0.0001443283639769753
+          }
+        },
+        {
+          "resolution": [
+            33,
+            32,
+            32
+          ],
+          "field_sha256": "24b21cd31277dd62877a55fb05ed10e3ca77b0780c5fac7af92f385f2171e3aa",
+          "inner_band_momentum_rms": {
+            "radial2_angular2": 0.000424216935317014,
+            "radial4_angular2": 0.00017219573011787473,
+            "radial2_angular4": 0.0004311767216520859,
+            "radial4_angular4": 1.7249756763552085e-05
+          }
+        }
+      ],
+      "orders": {
+        "radial2_angular2": [
+          0.508241331662885,
+          0.8524412913934938
+        ],
+        "radial4_angular2": [
+          1.1934760603110044,
+          1.7741315786233633
+        ],
+        "radial2_angular4": [
+          0.466602783292398,
+          0.7732642728967712
+        ],
+        "radial4_angular4": [
+          2.6218519201491883,
+          3.064706927885884
+        ]
+      }
+    }
+  },
+  "diagnostic_sha256": "5aee2730569d063c3b6d851bd727b6bec94fe366456ba33450dfba9b5c3e5073",
+  "scope": "Only differentiation of hash-verified saved fields changes. This is not directional grid refinement, does not modify the fields or independent gate, and cannot establish a solver remedy."
+}
