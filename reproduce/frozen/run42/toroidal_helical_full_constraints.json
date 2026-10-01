@@ -1,0 +1,149 @@
+{
+  "observed_refinement_orders": {
+    "manufactured_vector_operator_rms": [
+      1.9479742429297453,
+      1.9881807609584259
+    ],
+    "manufactured_scalar_operator_rms": [
+      2.015088350261222,
+      2.009040428978604
+    ],
+    "independent_flux_H_rms": [
+      1.4977700205788829,
+      1.7398558331857383
+    ]
+  },
+  "checkpoint_name": "Coupled nonlinear toroidal Hamiltonian and three momentum benchmark",
+  "status": "SOLVER_PASS_VALIDATION_PENDING",
+  "source_baseline_commit": "2ff3b7ecbd01ad8e2aede2823864d6627275ab43",
+  "assumptions": {
+    "G": 0.001,
+    "K": 0,
+    "metric": "psi^4 times Euclidean toroidal metric",
+    "A": "psi^-10 LW, Cartesian components",
+    "radial_boundary": "psi=1 and W=0 at both shell radii",
+    "angular_boundaries": "periodic",
+    "matter": "Run 38 fixed Pi and gradients, energy recomputed in physical metric"
+  },
+  "rows": [
+    {
+      "resolution": [
+        9,
+        16,
+        16
+      ],
+      "solver_converged": true,
+      "all_finite": true,
+      "psi_min": 1.0,
+      "psi_max": 1.0001624145596393,
+      "W_max_abs": 2.6003820631200338e-05,
+      "physical_ADM_H_max_abs": 1.8527241993793067e-09,
+      "conformal_momentum_solve_max_abs": [
+        3.8472698984937104e-11,
+        3.847219114463951e-11,
+        6.19961200432062e-11
+      ],
+      "independent_flux_H_rms": 0.0005797804579135926,
+      "manufactured_vector_operator_rms": 0.14282923540195766,
+      "manufactured_scalar_operator_rms": 0.13680690930210043,
+      "independent_momentum_matched_band_rms": [
+        0.00024591748719782647,
+        0.00024591748719782913,
+        0.0003252809848576017
+      ],
+      "independent_tensor_momentum_bulk_rms": [
+        0.00024627717088098865,
+        0.0002462771708809913,
+        0.0003257550597231561
+      ],
+      "independent_tensor_momentum_full_rms": [
+        0.00023344632386488185,
+        0.00023344632386488822,
+        0.00028114889845841514
+      ]
+    },
+    {
+      "resolution": [
+        17,
+        32,
+        32
+      ],
+      "solver_converged": true,
+      "all_finite": true,
+      "psi_min": 1.0,
+      "psi_max": 1.0001655262464857,
+      "W_max_abs": 2.613325856575116e-05,
+      "physical_ADM_H_max_abs": 5.430565479515898e-09,
+      "conformal_momentum_solve_max_abs": [
+        3.2911312564110062e-12,
+        3.2938651806091457e-12,
+        4.8528504415973504e-12
+      ],
+      "independent_flux_H_rms": 0.00020530043526281866,
+      "manufactured_vector_operator_rms": 0.03701846730086194,
+      "manufactured_scalar_operator_rms": 0.0338458943315546,
+      "independent_momentum_matched_band_rms": [
+        4.382840734822738e-05,
+        4.382840734822093e-05,
+        5.722114526083501e-05
+      ],
+      "independent_tensor_momentum_bulk_rms": [
+        0.00017703884959327992,
+        0.00017703884959328932,
+        0.00024272228044814267
+      ],
+      "independent_tensor_momentum_full_rms": [
+        0.00019931774822830062,
+        0.00019931774822831014,
+        0.0002565418391633877
+      ]
+    },
+    {
+      "resolution": [
+        33,
+        64,
+        64
+      ],
+      "solver_converged": true,
+      "all_finite": true,
+      "psi_min": 1.0,
+      "psi_max": 1.000166826078415,
+      "W_max_abs": 2.631807324349782e-05,
+      "physical_ADM_H_max_abs": 1.2517891585078088e-10,
+      "conformal_momentum_solve_max_abs": [
+        2.393918396847994e-16,
+        2.498001805406602e-16,
+        2.3678975447083417e-16
+      ],
+      "independent_flux_H_rms": 6.146686682369099e-05,
+      "manufactured_vector_operator_rms": 0.00933074643550698,
+      "manufactured_scalar_operator_rms": 0.00840861682839666,
+      "independent_momentum_matched_band_rms": [
+        9.599867699757532e-06,
+        9.599867699757568e-06,
+        1.2474520397379926e-05
+      ],
+      "independent_tensor_momentum_bulk_rms": [
+        8.241126597608153e-05,
+        8.24112659760815e-05,
+        0.00011410224890177467
+      ],
+      "independent_tensor_momentum_full_rms": [
+        0.00012491453316879989,
+        0.00012491453316879986,
+        0.0001660631026177963
+      ]
+    }
+  ],
+  "gate": {
+    "all_solver_constraints_small": true,
+    "positive_finite_metric": true,
+    "manufactured_operators_refine": true,
+    "independent_residuals_refine": true
+  },
+  "limitations": [
+    "Frozen seed stress is phi-independent; generic phi-dependent matter remains untested.",
+    "Independent tensor-divergence residual and boundary convergence must be assessed before claiming constraint-satisfying continuum data.",
+    "Finite-shell benchmark boundaries and G=0.001 are numerical assumptions."
+  ]
+}
