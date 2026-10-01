@@ -7,6 +7,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'reproduce'))
 from solve_toroidal_helical_coupled_constraints import Grid
 from diagnose_toroidal_boundary_convergence import Audit, radial_matrix
 from investigate_toroidal_inner_operator import endpoint_cubic_matrix, expanded
+from solve_toroidal_matched_endpoint_candidate import CandidateGrid
 from dee_stress_energy_3p1 import projections
 from validate_toroidal_helical_dee_source import RHO,PI,KTH,KPS,M,metric
 
@@ -57,6 +58,18 @@ class ToroidalOperators(unittest.TestCase):
         w=np.array([.3*f,-.4*f,.5*f])
         expected=(g.vector@w[:,g.idx].ravel()).reshape(3,-1)
         actual=expanded(a,w.reshape((3,)+g.shape)).reshape(3,-1)[:,g.idx]
+        np.testing.assert_allclose(actual,expected,atol=2e-11,rtol=1e-10)
+
+    def test_candidate_preserves_source_and_matches_independent_operator(self):
+        base=Grid(9,8,8);g=CandidateGrid(9,8,8);a=Audit(g.shape)
+        a.drad[2]=endpoint_cubic_matrix(9,a.dr,matched=True)
+        np.testing.assert_array_equal(g.S,base.S)
+        np.testing.assert_array_equal(g.energy(np.ones(g.size)),base.energy(np.ones(g.size)))
+        np.testing.assert_allclose((g.L-base.L).toarray(),0,atol=1e-12)
+        f=(g.r-.05)*(.25-g.r)*np.exp(8*(g.r-.05))
+        w=np.array([.3*f,-.4*f,.5*f])
+        actual=expanded(a,w.reshape((3,)+g.shape)).reshape(3,-1)[:,g.idx]
+        expected=(g.vector@w[:,g.idx].ravel()).reshape(3,-1)
         np.testing.assert_allclose(actual,expected,atol=2e-11,rtol=1e-10)
 
     def test_source_uses_physical_inverse_metric(self):

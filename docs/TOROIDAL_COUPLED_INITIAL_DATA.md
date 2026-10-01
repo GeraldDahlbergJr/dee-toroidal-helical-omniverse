@@ -91,3 +91,30 @@ relabeling the existing result is not justified. Endpoint compatibility,
 angular resolution near the small tube radius, and stability remain to be
 checked. Two additional tests verify cubic composition and reproduce the
 production vector operator independently; all 25 local unit tests pass.
+
+## Fresh matched-endpoint candidate: rejected as a standalone remedy
+
+`OPENBLAS_NUM_THREADS=1 python reproduce/solve_toroidal_matched_endpoint_candidate.py`
+performs fresh solves on `9x8x8`, `17x16x16`, and `33x32x32`. A separate subclass
+changes only both radial first-derivative endpoint closures and reconstructs
+the vector operator. The original production solver, equations, seed, geometry,
+boundary values, tolerances, and independent acceptance criterion are preserved.
+Candidate NPZ fields and their hashes are recorded separately.
+
+The result is **CANDIDATE_BOUNDARY_GATE_NOT_MET**. The original independent
+inner-band momentum orders are 0.452768 and 0.821458, essentially unchanged.
+The supplementary matched-endpoint audit gives 0.813589 and 1.330309, also below
+the 1.5 threshold. Inner-band independent Hamiltonian orders remain 1.488759
+and 1.735411; the outer band passes. Conformal-factor changes are at roundoff,
+and the maximum Cartesian vector-potential change is below 4.7e-10 across all
+three grids. The algebraic solves converged; this candidate fails the scientific
+boundary gate and is not promoted, frozen, or tagged. All 26 local tests pass,
+including unchanged matter/scalar-interior checks and an independent comparison
+of the candidate expanded operator.
+
+The isolated endpoint correction is therefore insufficient for these fields.
+The next investigation should test a vector discretization with compatible
+second derivatives, distinguish scalar Laplacian and discrete-commutator
+contributions, and separate radial from angular refinement. Any proposed remedy
+must be checked through a fresh solve and an independent audit rather than
+changing the acceptance criterion or merely reducing the solver tolerance.
