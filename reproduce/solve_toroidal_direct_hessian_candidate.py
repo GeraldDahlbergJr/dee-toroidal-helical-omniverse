@@ -5,7 +5,7 @@ from chart Hessians with toroidal connection terms and direct second derivatives
 instead of composing discrete Cartesian first derivatives. No production change.
 """
 from pathlib import Path
-import hashlib,json
+import hashlib,json,os
 import numpy as np
 from scipy import sparse as sp
 from solve_toroidal_helical_coupled_constraints import Grid,derivative
@@ -72,8 +72,9 @@ def main():
                  'candidate_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
         progress_path.write_text(json.dumps(payload,indent=2)+'\\n')
     # Main solve first; analytic operator tests are independently callable.
+    levels=tuple(int(x) for x in os.environ.get('DEE_CANDIDATE_LEVELS','8,16,32,64').split(',') if x.strip())
     preserve_progress()
-    for n in (8,16,32,64):
+    for n in levels:
         preserve_progress([n+1,n,n])
         print(f'Direct Hessian solve {n+1} x {n} x {n}',flush=True)
         g=DirectHessianGrid(n+1,n,n);u,w,iterations=g.solve()
@@ -86,6 +87,17 @@ def main():
         hashes[name]=hashlib.sha256(p.read_bytes()).hexdigest()
         preserve_progress()
         print(json.dumps({'resolution':list(g.shape),'expanded_residual':row['solver_diagnostics']['expanded_momentum_solver_max_abs']}),flush=True)
+    # A single-resolution job intentionally emits fields/diagnostics only; convergence
+    # is assessed after combining it with the retained lower-resolution evidence.
+    if len(rows) < 2:
+        out={'status':'SINGLE_RESOLUTION_COMPLETE','candidate':'direct Cartesian Hessian from toroidal chart second derivatives and connection terms',
+             'production_solver_changed':False,'equations_and_seed':'Run42 continuum equations, G, geometry, fields, boundaries and validated solver tolerances retained',
+             'rows':rows,'raw_field_sha256':hashes,'candidate_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+             'limitations':['Single-resolution execution; combine with retained lower-resolution evidence before convergence assessment.','No production promotion, freeze or tag.']}
+        (root/'toroidal_direct_hessian_candidate.json').write_text(json.dumps(out,indent=2)+'\\n')
+        preserve_progress(completed=True)
+        print(json.dumps({'status':out['status'],'completed_resolutions':out['rows'][0]['resolution'] if rows else []},indent=2),flush=True)
+        return
     orders={}
     for region in ('inner_boundary_band','bulk','outer_boundary_band'):
         orders[region]={}
