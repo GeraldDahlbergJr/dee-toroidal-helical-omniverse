@@ -1,0 +1,54 @@
+{
+  "checkpoint_name": "Frozen Run #38 — 3-D toroidal/helical DEE source/operator baseline",
+  "frozen": true,
+  "source": {
+    "workflow_run_number": 38,
+    "workflow_run_id": 36800511059,
+    "source_commit": "2ff3b7ecbd01ad8e2aede2823864d6627275ab43",
+    "artifact_id": 11136021917,
+    "artifact_name": "coupled-einstein-dee-checkpoints",
+    "artifact_digest": "sha256:8cb672a9d22c93d2fdc1f4d5fc24ff9ff7a8361b83cb445e1967a22b9b66b019"
+  },
+  "verified_from_uploaded_artifact": true,
+  "result": {
+    "status": "PASS",
+    "diagnostics": {
+      "E_min": 1.5058126262626261,
+      "E_max": 1.9183708483708481,
+      "max_norm_S_i": 0.09586755698387257,
+      "max_Sij_asymmetry": 0,
+      "max_trace_error": 0,
+      "analytic_background_scalar_curvature": 0
+    },
+    "gate": {
+      "all_sources_finite": true,
+      "positive_energy_density_on_sampled_shell": true,
+      "nonzero_matter_momentum": true,
+      "Sij_symmetric": true,
+      "stress_trace_consistent": true,
+      "euclidean_toroidal_background_R3_zero": true
+    }
+  },
+  "geometry": {
+    "major_radius": 1,
+    "r_interval": [
+      0.05,
+      0.25
+    ],
+    "helical_mode": 3
+  },
+  "matter_seed": {
+    "rho_squared": 0.945,
+    "Pi": [
+      0,
+      0.12,
+      -0.04
+    ],
+    "phase": "chi=theta-3*phi",
+    "Theta_gradient_scale": 0.25,
+    "Psi_gradient_scale": 0.2
+  },
+  "scope": "Frozen reproducible 3-D toroidal/helical DEE source and constraint-operator baseline; not a constraint-satisfying initial-data solution.",
+  "interpretation": "The benchmark helical matter ansatz is frozen as the Run #38 numerical baseline only. Freezing this record does not promote it to a unique or experimentally validated physical DEE configuration.",
+  "next_gate": "Nonlinear 3-D Hamiltonian plus three momentum constraint solve, with independent residual recomputation and multidimensional refinement; substantive new physical assumptions remain explicit."
+}

@@ -161,6 +161,7 @@ jobs:
             reproduce/coupled_einstein_dee_boundary_front.json
             reproduce/toroidal_helical_geometry_gate.json
             reproduce/toroidal_helical_dee_source_baseline.json
+            reproduce/toroidal_helical_dee_source_run38_frozen_checkpoint.json
             reproduce/coupled_einstein_dee_constraint_propagation_frozen_checkpoint.json
             reproduce/coupled_einstein_dee_t0200_frozen_checkpoint.json
             reproduce/coupled_einstein_dee_t0025_frozen_checkpoint.json
