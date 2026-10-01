@@ -150,6 +150,14 @@ jobs:
         run: |
           test -s reproduce/toroidal_helical_nonlinear_hamiltonian.json
           python -m json.tool reproduce/toroidal_helical_nonlinear_hamiltonian.json > /dev/null
+      - name: Coupled nonlinear toroidal Hamiltonian and momentum benchmark
+        run: |
+          cd reproduce
+          OPENBLAS_NUM_THREADS=1 python solve_toroidal_helical_full_constraints.py
+      - name: Require coupled nonlinear benchmark artifact
+        run: |
+          test -s reproduce/toroidal_helical_full_constraints.json
+          python -m json.tool reproduce/toroidal_helical_full_constraints.json > /dev/null
       - name: Upload numerical checkpoints
         if: always()
         uses: actions/upload-artifact@v4
@@ -173,6 +181,7 @@ jobs:
             reproduce/toroidal_helical_dee_source_baseline.json
             reproduce/toroidal_helical_dee_source_run38_frozen_checkpoint.json
             reproduce/toroidal_helical_nonlinear_hamiltonian.json
+            reproduce/toroidal_helical_full_constraints.json
             reproduce/coupled_einstein_dee_constraint_propagation_frozen_checkpoint.json
             reproduce/coupled_einstein_dee_t0200_frozen_checkpoint.json
             reproduce/coupled_einstein_dee_t0025_frozen_checkpoint.json

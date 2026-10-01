@@ -1,0 +1,82 @@
+{
+  "checkpoint_name": "Nonlinear 3-D toroidal/helical Hamiltonian initial-data precursor",
+  "status": "PASS",
+  "scope": "nonlinear Hamiltonian solve on frozen Run #38 benchmark; momentum constraints explicitly unsolved",
+  "assumptions": {
+    "conformal_background": "verified Euclidean toroidal chart",
+    "mean_curvature_K": 0.0,
+    "tracefree_extrinsic_curvature": "zero in this precursor",
+    "radial_boundary": "psi=1 Dirichlet benchmark",
+    "angular_boundaries": "periodic",
+    "matter_energy": "recomputed using inverse conformal metric; Pi and coordinate gradients fixed",
+    "G": 0.001
+  },
+  "rows": [
+    {
+      "resolution": [
+        9,
+        16,
+        16
+      ],
+      "all_finite": true,
+      "psi_min": 1.0,
+      "psi_max": 1.0001624144791987,
+      "hamiltonian_residual_max_abs": 2.2682752898184333e-10,
+      "physical_ADM_H_max_abs": 1.8136036006310974e-09,
+      "independent_flux_H_rms": 0.0005797803359242662,
+      "hamiltonian_residual_rms": 8.199544340854747e-11,
+      "momentum_residual_max_abs": [
+        0.0,
+        0.0007619241830898255,
+        0.0022857725492694764
+      ]
+    },
+    {
+      "resolution": [
+        17,
+        32,
+        32
+      ],
+      "all_finite": true,
+      "psi_min": 1.0,
+      "psi_max": 1.000165526165703,
+      "hamiltonian_residual_max_abs": 5.802722885528411e-10,
+      "physical_ADM_H_max_abs": 4.639064271616533e-09,
+      "independent_flux_H_rms": 0.0002053003846533953,
+      "hamiltonian_residual_rms": 1.7093804428371206e-10,
+      "momentum_residual_max_abs": [
+        0.0,
+        0.0007619241830898255,
+        0.0022857725492694764
+      ]
+    },
+    {
+      "resolution": [
+        33,
+        64,
+        64
+      ],
+      "all_finite": true,
+      "psi_min": 1.0,
+      "psi_max": 1.0001668259932404,
+      "hamiltonian_residual_max_abs": 6.35063997916907e-10,
+      "physical_ADM_H_max_abs": 5.077330333946861e-09,
+      "independent_flux_H_rms": 6.146683497757703e-05,
+      "hamiltonian_residual_rms": 1.5128663123834023e-10,
+      "momentum_residual_max_abs": [
+        0.0,
+        0.0007619241830898255,
+        0.0022857725492694764
+      ]
+    }
+  ],
+  "gate": {
+    "finite_solution": true,
+    "positive_conformal_factor": true,
+    "hamiltonian_solved": true,
+    "independent_residual_decreases": true,
+    "momentum_not_silently_claimed_solved": true
+  },
+  "not_claimed": "full 3-D constraint-satisfying initial data, physical boundary condition, evolution, or experimental validation",
+  "next_gate": "introduce vector potential and solve the three momentum constraints together with Hamiltonian constraint; then independent multidimensional refinement"
+}
