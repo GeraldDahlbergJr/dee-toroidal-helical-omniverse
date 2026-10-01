@@ -32,3 +32,27 @@ The previous scalar stencil composed centered first derivatives and set radial d
 ## Measured local result
 
 The three-grid bulk benchmark passed. Independent vector momentum RMS was 8.73680837e-4, 2.50880457e-4, and 6.57976734e-5, with observed orders 1.8001 and 1.9309. On the finest grid the physical Hamiltonian maximum was 1.3842e-10, and the expanded vector solver maximum was 2.8476e-13. Independent full-interior component maxima remained about 9e-4 near the radial boundaries. All 21 unittest-discovered tests passed, including the two new manufactured/source checks. These values support the scoped bulk benchmark; they do not justify a uniform whole-shell or general nonaxisymmetric claim.
+
+## Frozen Run42 boundary audit
+
+Run `python reproduce/diagnose_toroidal_boundary_convergence.py` to audit the
+hash-verified Run42 archive without changing equations, matter seed, boundary
+values, or solved fields. The audit reproduces the archived bulk norm and uses
+fixed physical radial bands. Its primary gate requires both independent
+face-flux Hamiltonian and second-order tensor-divergence momentum RMS to have
+observed order at least 1.5 on both refinement pairs in each boundary band.
+
+The result is **BOUNDARY_GATE_NOT_MET**. The inner band `[0.05,0.10]` has
+Hamiltonian orders 1.4888 and 1.7354, and momentum orders 0.4528 and 0.8215.
+The outer band `[0.20,0.25]` passes the declared criterion: Hamiltonian orders
+2.1439 and 2.0575, momentum orders 1.8450 and 1.9681. Bulk momentum retains
+orders 1.8001 and 1.9309. Radial endpoints are reported separately because
+Dirichlet values alone do not enforce endpoint PDE compatibility.
+
+A supplementary fourth-order derivative audit gives inner-band momentum orders
+2.7636 and 2.3223. This suggests derivative truncation contributes to the inner
+boundary behavior; it does not correct the second-order solved fields or replace
+the primary gate. The next investigation should isolate the inner boundary
+operator with manufactured solutions before changing the solver. A green CI
+run means the diagnostic completed and passed integrity checks; the JSON's
+scientific status remains explicitly unresolved.
