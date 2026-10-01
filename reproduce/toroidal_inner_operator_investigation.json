@@ -1,0 +1,369 @@
+{
+  "status": "INVESTIGATION_ONLY_NO_SOLVER_CHANGE",
+  "source_run": 42,
+  "archive_digest": "sha256:e4ff6524b8c42a94b5cfd4a2446a584ed3a70a6bba893e7067a64b7ff48f368a",
+  "investigation_sha256": "79c78f8e458dca2f2ad2abf29d63d5f82410f6b2630830a42153c4162fa84684",
+  "manufactured_field": "W=c*(r-rmin)*(rmax-r)*exp(8*(r-rmin)); c=(0.3,-0.4,0.5); exact Cartesian vector Laplacian derived from Hessian(r)",
+  "manufactured_rows": [
+    {
+      "resolution": [
+        9,
+        8,
+        8
+      ],
+      "standard_tensor_error": {
+        "inner_first_row": 0.42761850511284955,
+        "inner_band": 0.38637355533279955,
+        "bulk": 0.4576216512684129,
+        "outer_band": 0.9328040428171189
+      },
+      "expanded_error": {
+        "inner_first_row": 0.09295678264825831,
+        "inner_band": 0.09665269593127607,
+        "bulk": 0.19249665980324834,
+        "outer_band": 0.23297169157201084
+      },
+      "cubic_endpoint_tensor_error": {
+        "inner_first_row": 0.3321543567380907,
+        "inner_band": 0.34380194925463275,
+        "bulk": 0.4576216512684129,
+        "outer_band": 0.4438159513245799
+      },
+      "matched_endpoint_tensor_error": {
+        "inner_first_row": 0.284820033442501,
+        "inner_band": 0.32509037566042925,
+        "bulk": 0.4576216512684129,
+        "outer_band": 0.39115590003608175
+      }
+    },
+    {
+      "resolution": [
+        17,
+        16,
+        16
+      ],
+      "standard_tensor_error": {
+        "inner_first_row": 0.12304366550824235,
+        "inner_band": 0.09662151438400207,
+        "bulk": 0.11316417941514174,
+        "outer_band": 0.44083552760582145
+      },
+      "expanded_error": {
+        "inner_first_row": 0.023628474382730757,
+        "inner_band": 0.02341246718509217,
+        "bulk": 0.04653455398848469,
+        "outer_band": 0.0870279043313854
+      },
+      "cubic_endpoint_tensor_error": {
+        "inner_first_row": 0.0939637517511873,
+        "inner_band": 0.09012296262405957,
+        "bulk": 0.11316417941514174,
+        "outer_band": 0.1856743189136336
+      },
+      "matched_endpoint_tensor_error": {
+        "inner_first_row": 0.07955475259891341,
+        "inner_band": 0.08741473170272766,
+        "bulk": 0.11316417941514174,
+        "outer_band": 0.13112098136369582
+      }
+    },
+    {
+      "resolution": [
+        33,
+        32,
+        32
+      ],
+      "standard_tensor_error": {
+        "inner_first_row": 0.03751619891384341,
+        "inner_band": 0.02425861165294252,
+        "bulk": 0.028110022962405525,
+        "outer_band": 0.1773031868541897
+      },
+      "expanded_error": {
+        "inner_first_row": 0.006523728551773081,
+        "inner_band": 0.005779591447191342,
+        "bulk": 0.01144039369110014,
+        "outer_band": 0.03284531198054931
+      },
+      "cubic_endpoint_tensor_error": {
+        "inner_first_row": 0.02655014430976963,
+        "inner_band": 0.02291833954940161,
+        "bulk": 0.028110022962405525,
+        "outer_band": 0.06770437771577958
+      },
+      "matched_endpoint_tensor_error": {
+        "inner_first_row": 0.021124997440378043,
+        "inner_band": 0.02240473765881763,
+        "bulk": 0.028110022962405525,
+        "outer_band": 0.03732533454994763
+      }
+    },
+    {
+      "resolution": [
+        65,
+        64,
+        64
+      ],
+      "standard_tensor_error": {
+        "inner_first_row": 0.01249205331897986,
+        "inner_band": 0.006123713825182841,
+        "bulk": 0.007002753411131523,
+        "outer_band": 0.06667267390090156
+      },
+      "expanded_error": {
+        "inner_first_row": 0.002020829366551295,
+        "inner_band": 0.0014423903474165413,
+        "bulk": 0.0028362230545822195,
+        "outer_band": 0.012115819841869036
+      },
+      "cubic_endpoint_tensor_error": {
+        "inner_first_row": 0.007781744668099989,
+        "inner_band": 0.005775679139815648,
+        "bulk": 0.007002753411131523,
+        "outer_band": 0.023928733737047993
+      },
+      "matched_endpoint_tensor_error": {
+        "inner_first_row": 0.005454814783108934,
+        "inner_band": 0.005658863098905994,
+        "bulk": 0.007002753411131523,
+        "outer_band": 0.009928551841277028
+      }
+    }
+  ],
+  "radial_closure_rows": [
+    {
+      "nr": 9,
+      "standard_first_inner_abs": 0.20940841506218588,
+      "cubic_endpoint_first_inner_abs": 0.08866688375143073,
+      "matched_endpoint_first_inner_abs": 0.028296118096047373
+    },
+    {
+      "nr": 17,
+      "standard_first_inner_abs": 0.060924405103027546,
+      "cubic_endpoint_first_inner_abs": 0.02414992567201768,
+      "matched_endpoint_first_inner_abs": 0.005762685956509195
+    },
+    {
+      "nr": 33,
+      "standard_first_inner_abs": 0.022041040441226123,
+      "cubic_endpoint_first_inner_abs": 0.00821201156027751,
+      "matched_endpoint_first_inner_abs": 0.0012974971198032037
+    },
+    {
+      "nr": 65,
+      "standard_first_inner_abs": 0.009180266117739588,
+      "cubic_endpoint_first_inner_abs": 0.003265189305048377,
+      "matched_endpoint_first_inner_abs": 0.0003076508987276405
+    },
+    {
+      "nr": 129,
+      "standard_first_inner_abs": 0.004160435535243812,
+      "cubic_endpoint_first_inner_abs": 0.0014367399014394433,
+      "matched_endpoint_first_inner_abs": 7.489208454436458e-05
+    },
+    {
+      "nr": 257,
+      "standard_first_inner_abs": 0.001976427334752673,
+      "cubic_endpoint_first_inner_abs": 0.000671125573759257,
+      "matched_endpoint_first_inner_abs": 1.8474693362025008e-05
+    }
+  ],
+  "frozen_rows": [
+    {
+      "resolution": [
+        9,
+        8,
+        8
+      ],
+      "field_sha256": "0fb7d00db5d2c026035e60209bbaa702aaaed670ce8358e6f806cefe64c22913",
+      "standard_physical_M": {
+        "inner_first_row": 0.001304055461787988,
+        "inner_band": 0.001016054895268989,
+        "bulk": 0.000873680836975615,
+        "outer_band": 0.00087506730966816
+      },
+      "expanded_vs_tensor_defect": {
+        "inner_first_row": 0.0013040554617921214,
+        "inner_band": 0.0010160548952681697,
+        "bulk": 0.0008736808369747475,
+        "outer_band": 0.0008750673096692116
+      },
+      "composed_vs_direct_laplacian_defect": {
+        "inner_first_row": 0.000475240933934879,
+        "inner_band": 0.0006707684857599333,
+        "bulk": 0.0005153989943935476,
+        "outer_band": 0.0004717819633432963
+      },
+      "cartesian_derivative_commutator": {
+        "inner_first_row": 0.0017345973844799354,
+        "inner_band": 0.0011365518429277603,
+        "bulk": 0.0004122882318246191,
+        "outer_band": 0.0004051250199064121
+      },
+      "audit_only_cubic_endpoint_M": {
+        "inner_first_row": 0.0023073859416685863,
+        "inner_band": 0.0016078187499089381,
+        "bulk": 0.000873680836975615,
+        "outer_band": 0.0009036866599439271
+      },
+      "audit_only_matched_endpoint_M": {
+        "inner_first_row": 0.002822802692361319,
+        "inner_band": 0.0019282520783634332,
+        "bulk": 0.000873680836975615,
+        "outer_band": 0.0009184203087591468
+      }
+    },
+    {
+      "resolution": [
+        17,
+        16,
+        16
+      ],
+      "field_sha256": "cffab271465e5e26b19aac8e6bca96dd1d0810a05e687723233b6d48f3badfb6",
+      "standard_physical_M": {
+        "inner_first_row": 0.0003807600186027773,
+        "inner_band": 0.0007423681627878038,
+        "bulk": 0.00025088045709472235,
+        "outer_band": 0.00024358482229358823
+      },
+      "expanded_vs_tensor_defect": {
+        "inner_first_row": 0.0003807600185986834,
+        "inner_band": 0.0007423681627860868,
+        "bulk": 0.00025088045709469546,
+        "outer_band": 0.00024358482229353868
+      },
+      "composed_vs_direct_laplacian_defect": {
+        "inner_first_row": 0.0010193525528615314,
+        "inner_band": 0.000703321451331276,
+        "bulk": 0.0001325954179436466,
+        "outer_band": 0.00013194568114876918
+      },
+      "cartesian_derivative_commutator": {
+        "inner_first_row": 0.0011771841311021042,
+        "inner_band": 0.0005505480942213063,
+        "bulk": 0.0001250551798963989,
+        "outer_band": 0.00011234970232661371
+      },
+      "audit_only_cubic_endpoint_M": {
+        "inner_first_row": 0.0013220845435136675,
+        "inner_band": 0.0009269666256879682,
+        "bulk": 0.00025088045709472235,
+        "outer_band": 0.00024878965566540887
+      },
+      "audit_only_matched_endpoint_M": {
+        "inner_first_row": 0.0018813072422113274,
+        "inner_band": 0.001097113614437756,
+        "bulk": 0.00025088045709472235,
+        "outer_band": 0.00025156043433389574
+      }
+    },
+    {
+      "resolution": [
+        33,
+        32,
+        32
+      ],
+      "field_sha256": "595707c9f91b47e26078f03a17ca6b3ca07f4de9d924470f19076a690a823414",
+      "standard_physical_M": {
+        "inner_first_row": 0.0006771026719210255,
+        "inner_band": 0.00042008194387954645,
+        "bulk": 6.579767341667996e-05,
+        "outer_band": 6.225819227647629e-05
+      },
+      "expanded_vs_tensor_defect": {
+        "inner_first_row": 0.0006771026719156698,
+        "inner_band": 0.00042008194387848307,
+        "bulk": 6.579767341673089e-05,
+        "outer_band": 6.225819227649518e-05
+      },
+      "composed_vs_direct_laplacian_defect": {
+        "inner_first_row": 0.001148822995855216,
+        "inner_band": 0.00043037478252082334,
+        "bulk": 3.403914713002575e-05,
+        "outer_band": 3.391735224396242e-05
+      },
+      "cartesian_derivative_commutator": {
+        "inner_first_row": 0.0004994314391964537,
+        "inner_band": 0.00018739840684148595,
+        "bulk": 3.301928728986869e-05,
+        "outer_band": 2.8614516966657156e-05
+      },
+      "audit_only_cubic_endpoint_M": {
+        "inner_first_row": 0.00032536564019433216,
+        "inner_band": 0.00038045940687748964,
+        "bulk": 6.579767341667996e-05,
+        "outer_band": 6.330984049886532e-05
+      },
+      "audit_only_matched_endpoint_M": {
+        "inner_first_row": 0.00078293516883872,
+        "inner_band": 0.0004363129846678382,
+        "bulk": 6.579767341667996e-05,
+        "outer_band": 6.391200142009358e-05
+      }
+    }
+  ],
+  "manufactured_inner_orders": {
+    "standard_tensor_error": [
+      1.7971538993973002,
+      1.7135848187485039,
+      1.5865030312745618
+    ],
+    "expanded_error": [
+      1.9760336541307804,
+      1.8567578231955382,
+      1.6907492441346472
+    ],
+    "cubic_endpoint_tensor_error": [
+      1.8216776147781824,
+      1.8233846152861912,
+      1.77055415363529
+    ],
+    "matched_endpoint_tensor_error": [
+      1.84003060018819,
+      1.9129969531062736,
+      1.953349050451146
+    ]
+  },
+  "frozen_inner_band_orders": {
+    "standard_physical_M": [
+      0.4527716044741412,
+      0.8214640636559046
+    ],
+    "expanded_vs_tensor_defect": [
+      0.45277160447631487,
+      0.8214640636562198
+    ],
+    "audit_only_cubic_endpoint_M": [
+      0.7945154776492581,
+      1.284774863726651
+    ],
+    "audit_only_matched_endpoint_M": [
+      0.8135807304064875,
+      1.330277621445058
+    ]
+  },
+  "radial_first_inner_orders": {
+    "standard_first_inner_abs": [
+      1.7812272541110157,
+      1.466827931269601,
+      1.2635844473065505,
+      1.1418014102984653,
+      1.0738396507546155
+    ],
+    "cubic_endpoint_first_inner_abs": [
+      1.8763766232933796,
+      1.5562111852978542,
+      1.3305690214106975,
+      1.184367728168353,
+      1.0981442705018334
+    ],
+    "matched_endpoint_first_inner_abs": [
+      2.2957908395326863,
+      2.1510100646404062,
+      2.0763652239360453,
+      2.038409055756794,
+      2.019262827052865
+    ]
+  },
+  "scope": "Cubic endpoint comparison changes only the audit operator. Frozen solved fields and production equations, source, boundaries and solver remain unchanged. A modified solver and fresh convergence study would be required for a remedy."
+}

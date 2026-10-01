@@ -56,3 +56,38 @@ the primary gate. The next investigation should isolate the inner boundary
 operator with manufactured solutions before changing the solver. A green CI
 run means the diagnostic completed and passed integrity checks; the JSON's
 scientific status remains explicitly unresolved.
+
+## Inner operator investigation during Run44
+
+`python reproduce/investigate_toroidal_inner_operator.py` records manufactured
+fields, six radial refinements, and hash-verified Run42 field comparisons in
+`toroidal_inner_operator_investigation.json`. No production solver is changed.
+
+The physical inner-band momentum residual is reproduced by the difference
+between the independently differentiated longitudinal tensor and the expanded
+vector operator: RMS 1.0160549e-3, 7.4236816e-4, and 4.2008194e-4. This points to
+operator consistency, rather than insufficient convergence of the algebraic
+vector solve. The difference decomposes into a composed-versus-direct scalar
+Laplacian defect and noncommuting discrete Cartesian derivatives. Their vector
+norms must not be added as scalars; cancellation is present.
+
+At the first interior radial row, composing centered first derivatives uses an
+endpoint derivative whose leading truncation term differs from the interior.
+The usual endpoint formula has error `-h² f'''/3`, versus `+h² f'''/6` for the
+centered formula. Differentiating that error jump produces an O(h) term. Even a
+third-order endpoint derivative leaves a mismatch with the centered interior.
+A four-point audit closure matching the centered leading term restores roughly
+second-order composition in the isolated radial test: the last refinement pair
+has order 2.0193, versus 1.0738 for the original closure. In the full manufactured
+vector test the matched closure gives first-inner-row orders 1.8400, 1.9130,
+and 1.9533.
+
+This is not yet a remedy for the frozen solution. Changing only the endpoint
+formula in its audit improves inner-band orders from 0.4528/0.8215 to
+0.8136/1.3303, still below the declared 1.5 gate. The production expanded
+operator itself also uses composed derivatives in `grad(div W)`. A consistent
+candidate vector operator needs a new solve and independent boundary study;
+relabeling the existing result is not justified. Endpoint compatibility,
+angular resolution near the small tube radius, and stability remain to be
+checked. Two additional tests verify cubic composition and reproduce the
+production vector operator independently; all 25 local unit tests pass.
