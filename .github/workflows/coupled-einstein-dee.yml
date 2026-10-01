@@ -164,6 +164,24 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_toroidal_coupled_constraints.py' -v
           python reproduce/solve_toroidal_helical_coupled_constraints.py
+      - name: Run #43 finer inner-boundary candidate audit
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: |
+          # Experimental only. Preserve the failed coarse-grid evidence and
+          # unchanged physical residual diagnostics while adding a 65x64x64
+          # level to test whether the direct-Hessian boundary treatment enters
+          # a consistent finer-grid convergence regime. Do not freeze or tag.
+          python reproduce/solve_toroidal_direct_hessian_candidate.py
+      - name: Preserve Run #43 candidate audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: run43-finer-inner-boundary-candidate
+          path: |
+            reproduce/toroidal_direct_hessian_candidate.json
+            reproduce/toroidal_direct_hessian_fields_*.npz
+          if-no-files-found: warn
       - name: Require coupled toroidal checkpoint and raw fields
         run: |
           test -s reproduce/toroidal_helical_coupled_constraints.json
