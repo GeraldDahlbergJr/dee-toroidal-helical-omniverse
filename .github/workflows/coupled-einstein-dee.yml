@@ -228,6 +228,7 @@ jobs:
           name: run43-finer-inner-boundary-candidate
           path: |
             reproduce/toroidal_direct_hessian_candidate.json
+            reproduce/toroidal_direct_hessian_candidate_progress.json
             reproduce/toroidal_direct_hessian_fields_*.npz
           if-no-files-found: warn
 
