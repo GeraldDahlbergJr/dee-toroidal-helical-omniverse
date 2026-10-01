@@ -129,6 +129,17 @@ jobs:
         run: |
           test -s reproduce/toroidal_helical_geometry_gate.json
           python -m json.tool reproduce/toroidal_helical_geometry_gate.json > /dev/null
+      - name: 3-D toroidal/helical DEE source baseline
+        run: |
+          # First initial-data construction precursor. This must not be labeled
+          # constraint-satisfying; it validates the full matter source and the
+          # toroidal constraint-operator background before the nonlinear solve.
+          cd reproduce
+          python validate_toroidal_helical_dee_source.py
+      - name: Require 3-D DEE source baseline artifact
+        run: |
+          test -s reproduce/toroidal_helical_dee_source_baseline.json
+          python -m json.tool reproduce/toroidal_helical_dee_source_baseline.json > /dev/null
       - name: Upload numerical checkpoints
         if: always()
         uses: actions/upload-artifact@v4
@@ -149,6 +160,7 @@ jobs:
             reproduce/coupled_einstein_dee_t0400_constraint_propagation.json
             reproduce/coupled_einstein_dee_boundary_front.json
             reproduce/toroidal_helical_geometry_gate.json
+            reproduce/toroidal_helical_dee_source_baseline.json
             reproduce/coupled_einstein_dee_constraint_propagation_frozen_checkpoint.json
             reproduce/coupled_einstein_dee_t0200_frozen_checkpoint.json
             reproduce/coupled_einstein_dee_t0025_frozen_checkpoint.json
