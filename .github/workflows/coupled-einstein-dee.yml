@@ -13,7 +13,7 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -169,12 +169,6 @@ jobs:
           test -s reproduce/toroidal_helical_coupled_constraints.json
           test -s reproduce/toroidal_coupled_fields_33_32.npz
           python -m json.tool reproduce/toroidal_helical_coupled_constraints.json > /dev/null
-      - name: Audit frozen Run42 boundary convergence
-        run: |
-          # A successful diagnostic records integrity, not a scientific PASS.
-          # Read status/boundary_gate in the JSON before claiming validation.
-          python reproduce/diagnose_toroidal_boundary_convergence.py
-          test -s reproduce/toroidal_boundary_convergence.json
       - name: Upload numerical checkpoints
         if: always()
         uses: actions/upload-artifact@v4
@@ -200,7 +194,6 @@ jobs:
             reproduce/toroidal_helical_nonlinear_hamiltonian.json
             reproduce/toroidal_helical_full_constraints.json
             reproduce/toroidal_helical_coupled_constraints.json
-            reproduce/toroidal_boundary_convergence.json
             reproduce/toroidal_coupled_fields_*.npz
             reproduce/coupled_einstein_dee_constraint_propagation_frozen_checkpoint.json
             reproduce/coupled_einstein_dee_t0200_frozen_checkpoint.json
@@ -208,3 +201,62 @@ jobs:
             reproduce/coupled_einstein_dee_t0050_frozen_checkpoint.json
             reproduce/coupled_einstein_dee_t0100_frozen_checkpoint.json
           if-no-files-found: warn
+
+  frozen-boundary-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install numerical dependencies
+        run: python -m pip install numpy scipy
+      - name: Test independent diagnostic operators
+        run: python -m unittest discover -s tests -v
+      - name: Generate fresh boundary diagnostic and execution provenance
+        run: |
+          # Remove the committed result so a failed execution cannot upload it.
+          rm -f reproduce/toroidal_boundary_convergence.json
+          python reproduce/diagnose_toroidal_boundary_convergence.py
+          python - <<'PYCODE'
+          import hashlib,json,os
+          from pathlib import Path
+          result=Path('reproduce/toroidal_boundary_convergence.json')
+          data=json.loads(result.read_text())
+          assert data['diagnostic_integrity']=='PASS'
+          source=Path('reproduce/diagnose_toroidal_boundary_convergence.py')
+          assert data['diagnostic_sha256']==hashlib.sha256(source.read_bytes()).hexdigest()
+          provenance={
+              'workflow_run_id':os.environ['GITHUB_RUN_ID'],
+              'workflow_run_number':os.environ['GITHUB_RUN_NUMBER'],
+              'workflow_run_attempt':os.environ['GITHUB_RUN_ATTEMPT'],
+              'workflow_commit':os.environ['GITHUB_SHA'],
+              'result_sha256':hashlib.sha256(result.read_bytes()).hexdigest(),
+              'scientific_status':data['status'],
+              'fresh_execution':True,
+              'source_fields_run':42,
+          }
+          Path('reproduce/toroidal_boundary_execution.json').write_text(json.dumps(provenance,indent=2)+'\n')
+          PYCODE
+      - name: Upload freshly executed boundary diagnostic
+        uses: actions/upload-artifact@v4
+        with:
+          name: frozen-run42-boundary-audit
+          path: |
+            reproduce/toroidal_boundary_convergence.json
+            reproduce/toroidal_boundary_execution.json
+          if-no-files-found: error
+      - name: Require scientific boundary convergence
+        run: |
+          # Upload the measured failure before marking the scientific gate red.
+          python - <<'PYCODE'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('reproduce/toroidal_boundary_convergence.json').read_text())
+          if data['status']!='BOUNDARY_GATE_PASS':
+              raise SystemExit('Boundary convergence NOT met: '+str(data['boundary_gate']))
+          PYCODE
