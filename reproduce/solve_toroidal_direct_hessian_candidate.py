@@ -64,7 +64,7 @@ def manufactured_check(levels=(8,16)):
 def main():
     root=Path(__file__).parent;rows=[];hashes={}
     # Main solve first; analytic operator tests are independently callable.
-    for n in (8,16,32):
+    for n in (8,16,32,64):
         print(f'Direct Hessian solve {n+1} x {n} x {n}',flush=True)
         g=DirectHessianGrid(n+1,n,n);u,w,iterations=g.solve()
         scalar=u.reshape(g.shape);vector=w.reshape((3,)+g.shape)
@@ -84,10 +84,10 @@ def main():
     gate={region:all(p>=1.5 for metric in ('independent_flux_H','independent_tensor_M_order2') for p in orders[region][metric]) for region in ('inner_boundary_band','outer_boundary_band')}
     out={'status':'CANDIDATE_BOUNDARY_GATE_PASS_VALIDATION_PENDING' if all(gate.values()) else 'CANDIDATE_BOUNDARY_GATE_NOT_MET',
          'candidate':'direct Cartesian Hessian from toroidal chart second derivatives and connection terms',
-         'production_solver_changed':False,'equations_and_seed':'Run42 continuum equations, G, geometry, fields, boundaries and solver tolerances retained',
+         'production_solver_changed':False,'equations_and_seed':'Run42 continuum equations, G, geometry, fields, boundaries and validated solver tolerances retained',
          'rows':rows,'observed_orders':orders,'original_boundary_gate':gate,'raw_field_sha256':hashes,
          'candidate_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-         'limitations':['Experimental discretization; no production promotion, freeze or tag.','Original independent second-order audit and order>=1.5 gate retained; fourth-order audit is supplementary.','Finite shell with axisymmetric stress; no general 3D or evolution validation.']}
+         'coarse_grid_audit_retained':True,'fine_grid_assessment':'Report all refinement pairs separately; a coarse-pair failure is preserved rather than erased.','limitations':['Experimental discretization; no production promotion, freeze or tag.','Original independent second-order audit and order>=1.5 gate retained; fourth-order audit is supplementary.','Finite shell with axisymmetric stress; no general 3D or evolution validation.']}
     (root/'toroidal_direct_hessian_candidate.json').write_text(json.dumps(out,indent=2)+'\n')
     print(json.dumps({'status':out['status'],'gate':gate,'orders':orders},indent=2),flush=True)
 
