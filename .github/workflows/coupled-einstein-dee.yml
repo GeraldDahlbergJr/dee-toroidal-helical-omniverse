@@ -140,6 +140,16 @@ jobs:
         run: |
           test -s reproduce/toroidal_helical_dee_source_baseline.json
           python -m json.tool reproduce/toroidal_helical_dee_source_baseline.json > /dev/null
+      - name: Nonlinear 3-D Hamiltonian initial-data precursor
+        run: |
+          # First nonlinear 3-D solve. Momentum constraints remain explicit
+          # residuals until the vector-potential solve is introduced.
+          cd reproduce
+          python solve_toroidal_helical_nonlinear_constraints.py
+      - name: Require nonlinear 3-D Hamiltonian artifact
+        run: |
+          test -s reproduce/toroidal_helical_nonlinear_hamiltonian.json
+          python -m json.tool reproduce/toroidal_helical_nonlinear_hamiltonian.json > /dev/null
       - name: Upload numerical checkpoints
         if: always()
         uses: actions/upload-artifact@v4
@@ -162,6 +172,7 @@ jobs:
             reproduce/toroidal_helical_geometry_gate.json
             reproduce/toroidal_helical_dee_source_baseline.json
             reproduce/toroidal_helical_dee_source_run38_frozen_checkpoint.json
+            reproduce/toroidal_helical_nonlinear_hamiltonian.json
             reproduce/coupled_einstein_dee_constraint_propagation_frozen_checkpoint.json
             reproduce/coupled_einstein_dee_t0200_frozen_checkpoint.json
             reproduce/coupled_einstein_dee_t0025_frozen_checkpoint.json
