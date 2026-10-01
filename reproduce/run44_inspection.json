@@ -1,0 +1,32 @@
+{
+  "run_number": 44,
+  "run_id": 36898580496,
+  "source_commit": "a25e8e134976c0ccd825944f474cf2bd3ce4c009",
+  "jobs": {
+    "validate": "success",
+    "frozen_boundary_audit": "failure"
+  },
+  "scientific_status": "BOUNDARY_GATE_NOT_MET",
+  "regression_artifact": {
+    "id": 11181987126,
+    "digest": "sha256:8c0bf8a5e0356765adb8d12deec1d1af507034a8995f5ce7c1f352d575a5fe0b"
+  },
+  "boundary_artifact": {
+    "id": 11180811587,
+    "digest": "sha256:1c8dc735e6cf906061cb7a656a6461775b5314b346c93c99a9f0b6287787c1db"
+  },
+  "inspection": {
+    "archive_crc_and_digest": true,
+    "unchanged_Run42_solver_and_assumptions": true,
+    "raw_field_hashes_and_finite_positive_psi": true,
+    "bulk_norms_reproduced_with_rtol": 1e-7,
+    "bulk_orders": [
+      1.8001062541203154,
+      1.9308916163342766
+    ],
+    "boundary_execution_provenance_verified": true
+  },
+  "frozen": false,
+  "tagged": false,
+  "scope": "Regression success reproduces the scoped bulk benchmark. The independent inner-boundary gate remains unmet. No whole-shell or generic 3D validation claimed."
+}
