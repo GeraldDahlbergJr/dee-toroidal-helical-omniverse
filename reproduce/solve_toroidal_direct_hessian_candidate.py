@@ -63,8 +63,18 @@ def manufactured_check(levels=(8,16)):
 
 def main():
     root=Path(__file__).parent;rows=[];hashes={}
+    progress_path=root/'toroidal_direct_hessian_candidate_progress.json'
+    def preserve_progress(active_resolution=None, completed=False):
+        payload={'status':'COMPLETE' if completed else 'IN_PROGRESS',
+                 'active_resolution':active_resolution,
+                 'completed_resolutions':[r['resolution'] for r in rows],
+                 'rows':rows,'raw_field_sha256':hashes,
+                 'candidate_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
+        progress_path.write_text(json.dumps(payload,indent=2)+'\\n')
     # Main solve first; analytic operator tests are independently callable.
+    preserve_progress()
     for n in (8,16,32,64):
+        preserve_progress([n+1,n,n])
         print(f'Direct Hessian solve {n+1} x {n} x {n}',flush=True)
         g=DirectHessianGrid(n+1,n,n);u,w,iterations=g.solve()
         scalar=u.reshape(g.shape);vector=w.reshape((3,)+g.shape)
@@ -74,6 +84,7 @@ def main():
         rows.append(row);name=f'toroidal_direct_hessian_fields_{n+1}_{n}.npz';p=root/name
         np.savez_compressed(p,psi=scalar,W_cartesian=vector,resolution=g.shape)
         hashes[name]=hashlib.sha256(p.read_bytes()).hexdigest()
+        preserve_progress()
         print(json.dumps({'resolution':list(g.shape),'expanded_residual':row['solver_diagnostics']['expanded_momentum_solver_max_abs']}),flush=True)
     orders={}
     for region in ('inner_boundary_band','bulk','outer_boundary_band'):
@@ -88,7 +99,8 @@ def main():
          'rows':rows,'observed_orders':orders,'original_boundary_gate':gate,'raw_field_sha256':hashes,
          'candidate_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
          'coarse_grid_audit_retained':True,'fine_grid_assessment':'Report all refinement pairs separately; a coarse-pair failure is preserved rather than erased.','limitations':['Experimental discretization; no production promotion, freeze or tag.','Original independent second-order audit and order>=1.5 gate retained; fourth-order audit is supplementary.','Finite shell with axisymmetric stress; no general 3D or evolution validation.']}
-    (root/'toroidal_direct_hessian_candidate.json').write_text(json.dumps(out,indent=2)+'\n')
+    (root/'toroidal_direct_hessian_candidate.json').write_text(json.dumps(out,indent=2)+'\\n')
+    preserve_progress(completed=True)
     print(json.dumps({'status':out['status'],'gate':gate,'orders':orders},indent=2),flush=True)
 
 if __name__=='__main__':main()
