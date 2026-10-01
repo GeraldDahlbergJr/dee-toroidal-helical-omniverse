@@ -164,24 +164,6 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_toroidal_coupled_constraints.py' -v
           python reproduce/solve_toroidal_helical_coupled_constraints.py
-      - name: Run #43 finer inner-boundary candidate audit
-        env:
-          OPENBLAS_NUM_THREADS: '1'
-        run: |
-          # Experimental only. Preserve the failed coarse-grid evidence and
-          # unchanged physical residual diagnostics while adding a 65x64x64
-          # level to test whether the direct-Hessian boundary treatment enters
-          # a consistent finer-grid convergence regime. Do not freeze or tag.
-          python reproduce/solve_toroidal_direct_hessian_candidate.py
-      - name: Preserve Run #43 candidate audit
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: run43-finer-inner-boundary-candidate
-          path: |
-            reproduce/toroidal_direct_hessian_candidate.json
-            reproduce/toroidal_direct_hessian_fields_*.npz
-          if-no-files-found: warn
       - name: Require coupled toroidal checkpoint and raw fields
         run: |
           test -s reproduce/toroidal_helical_coupled_constraints.json
@@ -219,6 +201,36 @@ jobs:
             reproduce/coupled_einstein_dee_t0050_frozen_checkpoint.json
             reproduce/coupled_einstein_dee_t0100_frozen_checkpoint.json
           if-no-files-found: warn
+
+  run43-finer-boundary-candidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install numerical dependencies
+        run: python -m pip install numpy scipy
+      - name: Execute isolated Run #43 finer inner-boundary candidate
+        run: |
+          # Experimental only: preserve Run #42 equations/data and the failed
+          # coarse-grid evidence. Add the 65x64x64 level without relaxing
+          # solver tolerances or physical residual diagnostics. Do not freeze/tag.
+          python reproduce/solve_toroidal_direct_hessian_candidate.py
+      - name: Preserve isolated Run #43 candidate artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: run43-finer-inner-boundary-candidate
+          path: |
+            reproduce/toroidal_direct_hessian_candidate.json
+            reproduce/toroidal_direct_hessian_fields_*.npz
+          if-no-files-found: warn
+
 
   frozen-boundary-audit:
     runs-on: ubuntu-latest
