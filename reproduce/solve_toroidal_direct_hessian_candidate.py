@@ -5,7 +5,7 @@ from chart Hessians with toroidal connection terms and direct second derivatives
 instead of composing discrete Cartesian first derivatives. No production change.
 """
 from pathlib import Path
-import hashlib,json,os
+import hashlib,json,os,time
 import numpy as np
 from scipy import sparse as sp
 from scipy.sparse.linalg import LinearOperator, gmres
@@ -15,9 +15,13 @@ from validate_toroidal_helical_dee_source import RMIN,RMAX
 
 class DirectHessianGrid(Grid):
     def __init__(self,nr,nt,nph):
+        t0=time.perf_counter()
+        print(json.dumps({'timing':'candidate_init_enter','shape':[nr,nt,nph]}),flush=True)
         # Candidate replaces Grid.vector below; skip only the baseline block
         # operator assembly that would otherwise be constructed and discarded.
         super().__init__(nr,nt,nph,build_vector=False)
+        print(json.dumps({'timing':'base_grid_complete','elapsed_s':time.perf_counter()-t0}),flush=True)
+        th=time.perf_counter()
         kron=lambda a,b,c:sp.kron(sp.kron(a,b,format='csr'),c,format='csr')
         ir,it,ip=[sp.eye(n,format='csr') for n in self.shape]
         drr=kron(derivative(nr,(RMAX-RMIN)/(nr-1),second=True),it,ip)
@@ -38,13 +42,18 @@ class DirectHessianGrid(Grid):
         # This LinearOperator applies the identical discrete operator matrix-free;
         # equations, stencils, source, tolerances and boundary conditions are unchanged.
         self._hessian_components=components
+        print(json.dumps({'timing':'candidate_hessian_complete','elapsed_s':time.perf_counter()-th,'total_s':time.perf_counter()-t0}),flush=True)
         self._cartesian_hessian_coefficients=[
             [[er[i]*er[j],et[i]*et[j],ep[i]*ep[j],
               er[i]*et[j]+et[i]*er[j],er[i]*ep[j]+ep[i]*er[j],
               et[i]*ep[j]+ep[i]*et[j]] for j in range(3)] for i in range(3)]
         self._vector_lap=self.lap[self.idx]@self.inject
         nint=len(self.idx)
+        self._matvec_calls=0
         def vector_matvec(x):
+            self._matvec_calls+=1
+            tm=time.perf_counter()
+            print(json.dumps({'timing':'matvec_enter','call':self._matvec_calls}),flush=True)
             xin=np.asarray(x).reshape(3,nint)
             # Batch the three Cartesian components through each sparse operator.
             # This is algebraically the same matrix-free operator as the scalar
@@ -63,13 +72,24 @@ class DirectHessianGrid(Grid):
                     hij=sum(coeff[k]*np.asarray(hc[k][:,j]).reshape(-1) for k in range(6))
                     yi=yi+hij[self.idx]/3
                 out.append(yi)
-            return np.concatenate(out)
+            result=np.concatenate(out)
+            print(json.dumps({'timing':'matvec_exit','call':self._matvec_calls,'elapsed_s':time.perf_counter()-tm}),flush=True)
+            return result
         self.vector=LinearOperator((3*nint,3*nint),matvec=vector_matvec,dtype=float)
+        print(json.dumps({'timing':'candidate_init_complete','total_s':time.perf_counter()-t0}),flush=True)
 
 
     def solve_vector(self,u,x0=None,max_cycles=None):
         rhs=(8*np.pi*G*u[self.idx]**6*self.S[:,self.idx]).ravel(); n=len(self.idx)
-        pre=LinearOperator((3*n,3*n),matvec=lambda x:np.concatenate([self.lu.solve(y) for y in x.reshape(3,n)]))
+        pre_calls={'n':0}
+        def pre_matvec(x):
+            pre_calls['n']+=1
+            tp=time.perf_counter()
+            print(json.dumps({'timing':'preconditioner_enter','call':pre_calls['n']}),flush=True)
+            y=np.concatenate([self.lu.solve(v) for v in x.reshape(3,n)])
+            print(json.dumps({'timing':'preconditioner_exit','call':pre_calls['n'],'elapsed_s':time.perf_counter()-tp}),flush=True)
+            return y
+        pre=LinearOperator((3*n,3*n),matvec=pre_matvec)
         cycles=100 if max_cycles is None else max_cycles
         # Fine-grid execution is partitioned into shorter restart blocks so a
         # hosted runner can persist progress between attempts.  This changes
@@ -77,7 +97,10 @@ class DirectHessianGrid(Grid):
         # operator, source, preconditioner, and convergence tolerances remain
         # unchanged.  The final solution must still satisfy the frozen gates.
         restart=int(os.environ.get('DEE_GMRES_RESTART','60'))
+        tg=time.perf_counter()
+        print(json.dumps({'timing':'gmres_enter','restart':restart,'maxiter':cycles}),flush=True)
         x,info=gmres(self.vector,rhs,M=pre,x0=None if x0 is None else x0[:,self.idx].ravel(),rtol=1e-10,atol=1e-13,restart=restart,maxiter=cycles)
+        print(json.dumps({'timing':'gmres_exit','elapsed_s':time.perf_counter()-tg,'info':int(info)}),flush=True)
         w=np.zeros((3,self.size)); w[:,self.idx]=x.reshape(3,n)
         if info and max_cycles is None: raise RuntimeError(f'vector GMRES failed: {info}')
         return w,info
