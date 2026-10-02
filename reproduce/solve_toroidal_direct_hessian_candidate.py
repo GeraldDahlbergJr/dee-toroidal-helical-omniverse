@@ -59,12 +59,30 @@ class DirectHessianGrid(Grid):
         self.vector=LinearOperator((3*nint,3*nint),matvec=vector_matvec,dtype=float)
 
 
-    def solve_vector(self,u,x0=None):
+    def solve_vector(self,u,x0=None,max_cycles=None):
         rhs=(8*np.pi*G*u[self.idx]**6*self.S[:,self.idx]).ravel(); n=len(self.idx)
         pre=LinearOperator((3*n,3*n),matvec=lambda x:np.concatenate([self.lu.solve(y) for y in x.reshape(3,n)]))
-        x,info=gmres(self.vector,rhs,M=pre,x0=None if x0 is None else x0[:,self.idx].ravel(),rtol=1e-10,atol=1e-13,restart=60,maxiter=100)
-        if info: raise RuntimeError(f'vector GMRES failed: {info}')
-        w=np.zeros((3,self.size)); w[:,self.idx]=x.reshape(3,n); return w
+        cycles=100 if max_cycles is None else max_cycles
+        x,info=gmres(self.vector,rhs,M=pre,x0=None if x0 is None else x0[:,self.idx].ravel(),rtol=1e-10,atol=1e-13,restart=60,maxiter=cycles)
+        w=np.zeros((3,self.size)); w[:,self.idx]=x.reshape(3,n)
+        if info and max_cycles is None: raise RuntimeError(f'vector GMRES failed: {info}')
+        return w,info
+
+    def solve_vector_persisted(self,u,x0,stage_path,label):
+        stage_path=Path(stage_path); guess=x0
+        if stage_path.exists():
+            z=np.load(stage_path)
+            if str(z['label'])==label:
+                guess=z['w']
+                print(f'Resuming {label} GMRES from persisted restart boundary',flush=True)
+        cycles=int(os.environ.get('DEE_GMRES_CYCLES_PER_STAGE','0')) or None
+        w,info=self.solve_vector(u,guess,cycles)
+        if info:
+            np.savez_compressed(stage_path,label=label,w=w)
+            print(json.dumps({'status':'GMRES_STAGE_COMPLETE','label':label,'gmres_info':int(info)}),flush=True)
+            return w,False
+        if stage_path.exists(): stage_path.unlink()
+        return w,True
 
     def solve_restartable(self, checkpoint_path, max_new_iterations=None):
         checkpoint_path=Path(checkpoint_path); u=np.ones(self.size); w=None; start=0
@@ -72,8 +90,11 @@ class DirectHessianGrid(Grid):
             z=np.load(checkpoint_path); u=z['u']; w=z['w']; start=int(z['next_iteration'])
             print(f'Resuming coupled solve at iteration {start}',flush=True)
         stop=30 if max_new_iterations is None else min(30,start+max_new_iterations)
+        stage_path=checkpoint_path.with_name(checkpoint_path.stem+'_gmres.npz')
         for iteration in range(start,stop):
-            w=self.solve_vector(u,w); a=self.longitudinal(w); a2=np.sum(a*a,axis=(0,1))
+            w,done=self.solve_vector_persisted(u,w,stage_path,f'outer-{iteration}-first')
+            if not done: return u,w,iteration,False
+            a=self.longitudinal(w); a2=np.sum(a*a,axis=(0,1))
             for _ in range(12):
                 e=self.energy(u); f=self.lap@(u-1)+a2*u**-7/8+2*np.pi*G*e*u**5; residual=f[self.idx]
                 if np.max(abs(residual))<1e-10: break
@@ -84,7 +105,9 @@ class DirectHessianGrid(Grid):
                 while np.min(u[self.idx]+alpha*step)<=0: alpha/=2
                 u[self.idx]+=alpha*step
             else: raise RuntimeError('Hamiltonian Newton failed')
-            wnew=self.solve_vector(u,w); change=np.max(abs(wnew-w)); w=wnew
+            wnew,done=self.solve_vector_persisted(u,w,stage_path,f'outer-{iteration}-second')
+            if not done: return u,w,iteration,False
+            change=np.max(abs(wnew-w)); w=wnew
             anew=self.longitudinal(w); a2=np.sum(anew*anew,axis=(0,1))
             h=(self.lap@(u-1)+a2*u**-7/8+2*np.pi*G*self.energy(u)*u**5)[self.idx]
             np.savez_compressed(checkpoint_path,u=u,w=w,next_iteration=iteration+1,change=change,hmax=np.max(abs(h)))
