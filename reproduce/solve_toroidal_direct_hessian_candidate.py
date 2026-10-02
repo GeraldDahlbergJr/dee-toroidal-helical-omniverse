@@ -44,15 +44,21 @@ class DirectHessianGrid(Grid):
         nint=len(self.idx)
         def vector_matvec(x):
             xin=np.asarray(x).reshape(3,nint)
-            full=[self.inject@xin[j] for j in range(3)]
-            # Apply each chart Hessian component once per input component.
-            hc=[[op@full[j] for op in self._hessian_components] for j in range(3)]
+            # Batch the three Cartesian components through each sparse operator.
+            # This is algebraically the same matrix-free operator as the scalar
+            # component loop below used previously, but reduces Python/SciPy
+            # dispatch from 18 Hessian sparse matvecs to 6 sparse matmat calls.
+            # No stencil, coefficient, source, boundary condition or tolerance
+            # is changed; only the execution path is batched.
+            full=self.inject@xin.T
+            hc=[op@full for op in self._hessian_components]
+            lap=self._vector_lap@xin.T
             out=[]
             for i in range(3):
-                yi=self._vector_lap@xin[i]
+                yi=np.asarray(lap[:,i]).reshape(-1)
                 for j in range(3):
                     coeff=self._cartesian_hessian_coefficients[i][j]
-                    hij=sum(coeff[k]*hc[j][k] for k in range(6))
+                    hij=sum(coeff[k]*np.asarray(hc[k][:,j]).reshape(-1) for k in range(6))
                     yi=yi+hij[self.idx]/3
                 out.append(yi)
             return np.concatenate(out)
