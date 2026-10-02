@@ -8,6 +8,7 @@ from pathlib import Path
 import hashlib,json,os
 import numpy as np
 from scipy import sparse as sp
+from scipy.sparse.linalg import LinearOperator, gmres
 from solve_toroidal_helical_coupled_constraints import Grid,derivative
 from diagnose_toroidal_boundary_convergence import Audit
 from validate_toroidal_helical_dee_source import RMIN,RMAX
@@ -40,6 +41,38 @@ class DirectHessianGrid(Grid):
         L=self.lap[self.idx]@self.inject
         self.vector=sp.bmat([[(L if i==j else sp.csr_matrix(L.shape))+self.hessian[i][j][self.idx]@self.inject/3 for j in range(3)] for i in range(3)],format='csr')
 
+
+    def solve_vector(self,u,x0=None):
+        rhs=(8*np.pi*G*u[self.idx]**6*self.S[:,self.idx]).ravel(); n=len(self.idx)
+        pre=LinearOperator((3*n,3*n),matvec=lambda x:np.concatenate([self.lu.solve(y) for y in x.reshape(3,n)]))
+        x,info=gmres(self.vector,rhs,M=pre,x0=None if x0 is None else x0[:,self.idx].ravel(),rtol=1e-10,atol=1e-13,restart=60,maxiter=100)
+        if info: raise RuntimeError(f'vector GMRES failed: {info}')
+        w=np.zeros((3,self.size)); w[:,self.idx]=x.reshape(3,n); return w
+
+    def solve_restartable(self, checkpoint_path):
+        checkpoint_path=Path(checkpoint_path); u=np.ones(self.size); w=None; start=0
+        if checkpoint_path.exists():
+            z=np.load(checkpoint_path); u=z['u']; w=z['w']; start=int(z['next_iteration'])
+            print(f'Resuming coupled solve at iteration {start}',flush=True)
+        for iteration in range(start,30):
+            w=self.solve_vector(u,w); a=self.longitudinal(w); a2=np.sum(a*a,axis=(0,1))
+            for _ in range(12):
+                e=self.energy(u); f=self.lap@(u-1)+a2*u**-7/8+2*np.pi*G*e*u**5; residual=f[self.idx]
+                if np.max(abs(residual))<1e-10: break
+                de=-2*self.spatial*u**-5
+                jac=self.L+sp.diags((-7*a2*u**-8/8+2*np.pi*G*(de*u**5+5*e*u**4))[self.idx])
+                from scipy.sparse.linalg import splu
+                step=splu(jac.tocsc()).solve(-residual); alpha=1.
+                while np.min(u[self.idx]+alpha*step)<=0: alpha/=2
+                u[self.idx]+=alpha*step
+            else: raise RuntimeError('Hamiltonian Newton failed')
+            wnew=self.solve_vector(u,w); change=np.max(abs(wnew-w)); w=wnew
+            anew=self.longitudinal(w); a2=np.sum(anew*anew,axis=(0,1))
+            h=(self.lap@(u-1)+a2*u**-7/8+2*np.pi*G*self.energy(u)*u**5)[self.idx]
+            np.savez_compressed(checkpoint_path,u=u,w=w,next_iteration=iteration+1,change=change,hmax=np.max(abs(h)))
+            print(json.dumps({'checkpoint_iteration':iteration+1,'change':float(change),'Hmax':float(np.max(abs(h)))}),flush=True)
+            if change<1e-12 and np.max(abs(h))<1e-9: return u,w,iteration+1
+        raise RuntimeError('coupled iteration failed')
 
 def manufactured_check(levels=(8,16)):
     rows=[];c=np.array([.3,-.4,.5])[:,None]
@@ -77,7 +110,7 @@ def main():
     for n in levels:
         preserve_progress([n+1,n,n])
         print(f'Direct Hessian solve {n+1} x {n} x {n}',flush=True)
-        g=DirectHessianGrid(n+1,n,n);u,w,iterations=g.solve()
+        g=DirectHessianGrid(n+1,n,n); checkpoint=root/f'toroidal_direct_hessian_restart_{n+1}_{n}.npz'; u,w,iterations=g.solve_restartable(checkpoint)
         scalar=u.reshape(g.shape);vector=w.reshape((3,)+g.shape)
         audit=Audit(g.shape);regions=audit.summarize(scalar,vector)
         row={'resolution':list(g.shape),'coupled_iterations':iterations,
