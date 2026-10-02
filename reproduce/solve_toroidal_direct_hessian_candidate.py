@@ -191,7 +191,7 @@ def main():
                  'completed_resolutions':[r['resolution'] for r in rows],
                  'rows':rows,'raw_field_sha256':hashes,
                  'candidate_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
-        progress_path.write_text(json.dumps(payload,indent=2)+'\\n')
+        progress_path.write_text(json.dumps(payload,indent=2)+'\n')
     # Main solve first; analytic operator tests are independently callable.
     levels=tuple(int(x) for x in os.environ.get('DEE_CANDIDATE_LEVELS','8,16,32,64').split(',') if x.strip())
     preserve_progress()
