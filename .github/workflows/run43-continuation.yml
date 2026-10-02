@@ -5,6 +5,7 @@ on:
     branches: [coupled-einstein-dee-evolution]
     paths:
       - '.github/workflows/run43-continuation.yml'
+      - 'reproduce/solve_toroidal_direct_hessian_candidate.py'
   workflow_dispatch:
 
 permissions:
