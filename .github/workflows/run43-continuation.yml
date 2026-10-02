@@ -1,0 +1,101 @@
+name: Run43 automatic 65-grid continuation
+
+on:
+  push:
+    branches: [coupled-einstein-dee-evolution]
+    paths:
+      - '.github/workflows/run43-continuation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: run43-65-grid-continuation
+  cancel-in-progress: false
+
+jobs:
+  continue-65-grid:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      DEE_CANDIDATE_LEVELS: '64'
+      DEE_MAX_NEW_ITERATIONS: '1'
+      DEE_GMRES_CYCLES_PER_STAGE: '1'
+      # Keep each Krylov block comfortably below observed hosted-runner
+      # reclamation time. Final frozen tolerances/gates remain unchanged.
+      DEE_GMRES_RESTART: '5'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install numerical dependencies
+        run: python -m pip install numpy scipy
+
+      - name: Restore latest Run43 65-grid state
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            reproduce/toroidal_direct_hessian_restart_65_64.npz
+            reproduce/toroidal_direct_hessian_restart_65_64_gmres.npz
+          key: run43-auto-65-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            run43-auto-65-
+            run43-65-state-
+
+      - name: Execute one bounded GMRES checkpoint block
+        run: python reproduce/solve_toroidal_direct_hessian_candidate.py
+
+      # Save immediately after the bounded numerical block. Do not rely on a
+      # post-job cache hook: prior hosted runners were reclaimed before post
+      # steps could persist the newly computed state.
+      - name: Save Run43 state immediately
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            reproduce/toroidal_direct_hessian_restart_65_64.npz
+            reproduce/toroidal_direct_hessian_restart_65_64_gmres.npz
+          key: run43-auto-65-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: Preserve stage evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: run43-auto-stage-${{ github.run_id }}-${{ github.run_attempt }}
+          if-no-files-found: warn
+          path: |
+            reproduce/toroidal_direct_hessian_candidate.json
+            reproduce/toroidal_direct_hessian_candidate_progress.json
+            reproduce/toroidal_direct_hessian_restart_65_64.npz
+            reproduce/toroidal_direct_hessian_restart_65_64_gmres.npz
+            reproduce/toroidal_direct_hessian_fields_65_64.npz
+
+      - name: Read continuation state
+        id: state
+        shell: bash
+        run: |
+          python - <<'PYCODE' >> "$GITHUB_OUTPUT"
+          import json
+          from pathlib import Path
+          p=Path('reproduce/toroidal_direct_hessian_candidate_progress.json')
+          if not p.exists():
+              raise SystemExit('Run43 progress file missing after bounded stage')
+          d=json.loads(p.read_text())
+          print('status='+str(d.get('status','UNKNOWN')))
+          PYCODE
+
+      - name: Queue next bounded continuation
+        if: steps.state.outputs.status == 'IN_PROGRESS'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST             repos/${{ github.repository }}/actions/workflows/run43-continuation.yml/dispatches             -f ref='${{ github.ref_name }}'
+
+      - name: Stop automatic continuation at completed candidate
+        if: steps.state.outputs.status == 'COMPLETE'
+        run: |
+          echo 'Run43 65-grid candidate completed. Automatic continuation stops here.'
+          echo 'Human scientific validation is required before any freeze, tag, or promotion.'
