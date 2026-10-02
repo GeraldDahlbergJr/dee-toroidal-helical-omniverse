@@ -36,7 +36,7 @@ def derivative(n, h, periodic=False, second=False):
     return a.tocsr()
 
 class Grid:
-    def __init__(self,nr,nt,nph):
+    def __init__(self,nr,nt,nph,build_vector=True):
         self.shape=(nr,nt,nph)
         r=np.linspace(RMIN,RMAX,nr); t=np.arange(nt)*2*np.pi/nt; p=np.arange(nph)*2*np.pi/nph
         rr,tt,pp=np.meshgrid(r,t,p,indexing='ij'); q=R+rr*np.cos(tt)
@@ -59,7 +59,11 @@ class Grid:
         L=self.lap[self.idx]@self.inject
         self.L=L.tocsc(); self.lu=splu(self.L)
         # Delta_L W = Delta W + 1/3 grad(div W) in Cartesian components.
-        self.vector=sp.bmat([[(L if i==j else sp.csr_matrix(L.shape))+(self.grad[i]@self.grad[j])[self.idx]@self.inject/3 for j in range(3)] for i in range(3)],format='csr')
+        # The frozen/default solver still assembles the original block operator.
+        # Experimental subclasses that replace self.vector may skip only this
+        # otherwise-discarded assembly; all Grid geometry/operators remain identical.
+        if build_vector:
+            self.vector=sp.bmat([[(L if i==j else sp.csr_matrix(L.shape))+(self.grad[i]@self.grad[j])[self.idx]@self.inject/3 for j in range(3)] for i in range(3)],format='csr')
         k1,k2,c=coeffs(RHO); kinetic=np.array([[1,0,0],[0,k1,c],[0,c,k2]])
         # Chart covectors -> Cartesian covectors using the reciprocal basis.
         D=np.zeros((3,3,self.size)); direction=et/self.r-M*ep/self.q
