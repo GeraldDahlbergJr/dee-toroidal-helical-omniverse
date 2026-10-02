@@ -8,8 +8,8 @@ from pathlib import Path
 import hashlib,json,os,time
 import numpy as np
 from scipy import sparse as sp
-from scipy.sparse.linalg import LinearOperator, gmres
-from solve_toroidal_helical_coupled_constraints import Grid,derivative
+from scipy.sparse.linalg import LinearOperator, gmres, spilu
+from solve_toroidal_helical_coupled_constraints import Grid,derivative,G
 from diagnose_toroidal_boundary_convergence import Audit
 from validate_toroidal_helical_dee_source import RMIN,RMAX
 
