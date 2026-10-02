@@ -230,6 +230,7 @@ jobs:
           path: |
             reproduce/toroidal_direct_hessian_candidate.json
             reproduce/toroidal_direct_hessian_candidate_progress.json
+          reproduce/toroidal_direct_hessian_restart_65_64.npz
             reproduce/toroidal_direct_hessian_fields_65_64.npz
 
 
