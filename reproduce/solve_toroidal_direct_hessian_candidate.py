@@ -66,12 +66,13 @@ class DirectHessianGrid(Grid):
         if info: raise RuntimeError(f'vector GMRES failed: {info}')
         w=np.zeros((3,self.size)); w[:,self.idx]=x.reshape(3,n); return w
 
-    def solve_restartable(self, checkpoint_path):
+    def solve_restartable(self, checkpoint_path, max_new_iterations=None):
         checkpoint_path=Path(checkpoint_path); u=np.ones(self.size); w=None; start=0
         if checkpoint_path.exists():
             z=np.load(checkpoint_path); u=z['u']; w=z['w']; start=int(z['next_iteration'])
             print(f'Resuming coupled solve at iteration {start}',flush=True)
-        for iteration in range(start,30):
+        stop=30 if max_new_iterations is None else min(30,start+max_new_iterations)
+        for iteration in range(start,stop):
             w=self.solve_vector(u,w); a=self.longitudinal(w); a2=np.sum(a*a,axis=(0,1))
             for _ in range(12):
                 e=self.energy(u); f=self.lap@(u-1)+a2*u**-7/8+2*np.pi*G*e*u**5; residual=f[self.idx]
@@ -88,7 +89,9 @@ class DirectHessianGrid(Grid):
             h=(self.lap@(u-1)+a2*u**-7/8+2*np.pi*G*self.energy(u)*u**5)[self.idx]
             np.savez_compressed(checkpoint_path,u=u,w=w,next_iteration=iteration+1,change=change,hmax=np.max(abs(h)))
             print(json.dumps({'checkpoint_iteration':iteration+1,'change':float(change),'Hmax':float(np.max(abs(h)))}),flush=True)
-            if change<1e-12 and np.max(abs(h))<1e-9: return u,w,iteration+1
+            if change<1e-12 and np.max(abs(h))<1e-9: return u,w,iteration+1,True
+        if max_new_iterations is not None:
+            return u,w,stop,False
         raise RuntimeError('coupled iteration failed')
 
 def manufactured_check(levels=(8,16)):
@@ -127,7 +130,13 @@ def main():
     for n in levels:
         preserve_progress([n+1,n,n])
         print(f'Direct Hessian solve {n+1} x {n} x {n}',flush=True)
-        g=DirectHessianGrid(n+1,n,n); checkpoint=root/f'toroidal_direct_hessian_restart_{n+1}_{n}.npz'; u,w,iterations=g.solve_restartable(checkpoint)
+        g=DirectHessianGrid(n+1,n,n); checkpoint=root/f'toroidal_direct_hessian_restart_{n+1}_{n}.npz'
+        max_new=int(os.environ.get('DEE_MAX_NEW_ITERATIONS','0')) or None
+        u,w,iterations,converged=g.solve_restartable(checkpoint,max_new)
+        if not converged:
+            print(json.dumps({'status':'CHECKPOINT_STAGE_COMPLETE','resolution':list(g.shape),'next_iteration':iterations}),flush=True)
+            preserve_progress([n+1,n,n])
+            return
         scalar=u.reshape(g.shape);vector=w.reshape((3,)+g.shape)
         audit=Audit(g.shape);regions=audit.summarize(scalar,vector)
         row={'resolution':list(g.shape),'coupled_iterations':iterations,
