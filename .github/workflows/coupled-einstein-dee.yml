@@ -207,7 +207,7 @@ jobs:
     timeout-minutes: 90
     env:
       OPENBLAS_NUM_THREADS: '1'
-      DEE_CANDIDATE_LEVELS: '64'
+      DEE_CANDIDATE_LEVELS: '64' # matrix-free 65-grid restart
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
