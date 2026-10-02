@@ -15,7 +15,9 @@ from validate_toroidal_helical_dee_source import RMIN,RMAX
 
 class DirectHessianGrid(Grid):
     def __init__(self,nr,nt,nph):
-        # Candidate replaces Grid.vector below; skip only the baseline block\n        # operator assembly that would otherwise be constructed and discarded.\n        super().__init__(nr,nt,nph,build_vector=False)
+        # Candidate replaces Grid.vector below; skip only the baseline block
+        # operator assembly that would otherwise be constructed and discarded.
+        super().__init__(nr,nt,nph,build_vector=False)
         kron=lambda a,b,c:sp.kron(sp.kron(a,b,format='csr'),c,format='csr')
         ir,it,ip=[sp.eye(n,format='csr') for n in self.shape]
         drr=kron(derivative(nr,(RMAX-RMIN)/(nr-1),second=True),it,ip)
