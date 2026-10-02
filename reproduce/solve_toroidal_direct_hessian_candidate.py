@@ -81,12 +81,20 @@ class DirectHessianGrid(Grid):
 
     def solve_vector(self,u,x0=None,max_cycles=None):
         rhs=(8*np.pi*G*u[self.idx]**6*self.S[:,self.idx]).ravel(); n=len(self.idx)
+        # Candidate-only sparse incomplete LU preconditioner: avoids the
+        # prohibitively expensive exact SuperLU factorization at 65^3.
+        # It changes only Krylov preconditioning, not A, rhs, or final tolerances.
+        tpbuild=time.perf_counter()
+        print(json.dumps({'timing':'candidate_spilu_enter'}),flush=True)
+        ilu=spilu(self.L,drop_tol=float(os.environ.get('DEE_ILU_DROP_TOL','1e-4')),
+                   fill_factor=float(os.environ.get('DEE_ILU_FILL_FACTOR','10')))
+        print(json.dumps({'timing':'candidate_spilu_exit','elapsed_s':time.perf_counter()-tpbuild}),flush=True)
         pre_calls={'n':0}
         def pre_matvec(x):
             pre_calls['n']+=1
             tp=time.perf_counter()
             print(json.dumps({'timing':'preconditioner_enter','call':pre_calls['n']}),flush=True)
-            y=np.concatenate([self.lu.solve(v) for v in x.reshape(3,n)])
+            y=np.concatenate([ilu.solve(v) for v in x.reshape(3,n)])
             print(json.dumps({'timing':'preconditioner_exit','call':pre_calls['n'],'elapsed_s':time.perf_counter()-tp}),flush=True)
             return y
         pre=LinearOperator((3*n,3*n),matvec=pre_matvec)
