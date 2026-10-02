@@ -63,7 +63,13 @@ class DirectHessianGrid(Grid):
         rhs=(8*np.pi*G*u[self.idx]**6*self.S[:,self.idx]).ravel(); n=len(self.idx)
         pre=LinearOperator((3*n,3*n),matvec=lambda x:np.concatenate([self.lu.solve(y) for y in x.reshape(3,n)]))
         cycles=100 if max_cycles is None else max_cycles
-        x,info=gmres(self.vector,rhs,M=pre,x0=None if x0 is None else x0[:,self.idx].ravel(),rtol=1e-10,atol=1e-13,restart=60,maxiter=cycles)
+        # Fine-grid execution is partitioned into shorter restart blocks so a
+        # hosted runner can persist progress between attempts.  This changes
+        # only the Krylov checkpoint cadence: continuum equations, discrete
+        # operator, source, preconditioner, and convergence tolerances remain
+        # unchanged.  The final solution must still satisfy the frozen gates.
+        restart=int(os.environ.get('DEE_GMRES_RESTART','60'))
+        x,info=gmres(self.vector,rhs,M=pre,x0=None if x0 is None else x0[:,self.idx].ravel(),rtol=1e-10,atol=1e-13,restart=restart,maxiter=cycles)
         w=np.zeros((3,self.size)); w[:,self.idx]=x.reshape(3,n)
         if info and max_cycles is None: raise RuntimeError(f'vector GMRES failed: {info}')
         return w,info
