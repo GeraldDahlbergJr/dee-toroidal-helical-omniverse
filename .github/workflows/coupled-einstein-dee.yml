@@ -207,7 +207,8 @@ jobs:
     timeout-minutes: 90
     env:
       OPENBLAS_NUM_THREADS: '1'
-      DEE_CANDIDATE_LEVELS: '64' # matrix-free 65-grid restart
+      DEE_CANDIDATE_LEVELS: '64'
+      DEE_MAX_NEW_ITERATIONS: '1'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -216,16 +217,23 @@ jobs:
           cache: 'pip'
       - name: Install numerical dependencies
         run: python -m pip install numpy scipy
-      - name: Execute isolated 65x64x64 Run43 candidate
+      - name: Restore latest persisted 65-grid stage
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: run43-65-grid-stage-*
+          merge-multiple: true
+          path: reproduce
+      - name: Execute one persisted 65x64x64 coupled iteration
         run: |
-          # Run only the expensive fine level. Lower-grid failed/coarse evidence remains
-          # in history; equations, seed, tolerances and residual diagnostics are unchanged.
+          # Exactly one outer coupled iteration per workflow run. The scientific
+          # equations, source, stencils, tolerances and gates are unchanged.
           python reproduce/solve_toroidal_direct_hessian_candidate.py
       - name: Preserve isolated 65-grid Run43 candidate
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: run43-65-grid-boundary-candidate
+          name: run43-65-grid-stage-${{ github.run_id }}
           if-no-files-found: warn
           path: |
             reproduce/toroidal_direct_hessian_candidate.json
