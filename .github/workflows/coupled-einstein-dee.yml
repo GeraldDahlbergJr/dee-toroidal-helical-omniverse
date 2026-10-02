@@ -210,6 +210,7 @@ jobs:
       DEE_CANDIDATE_LEVELS: '64'
       DEE_MAX_NEW_ITERATIONS: '1'
       DEE_GMRES_CYCLES_PER_STAGE: '1'
+      DEE_GMRES_RESTART: '20'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
