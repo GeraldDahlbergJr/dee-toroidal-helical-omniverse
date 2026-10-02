@@ -11,6 +11,7 @@ import argparse
 import hashlib
 import json
 import subprocess
+import time
 from pathlib import Path
 import numpy as np
 from scipy import sparse as sp
@@ -37,6 +38,11 @@ def derivative(n, h, periodic=False, second=False):
 
 class Grid:
     def __init__(self,nr,nt,nph,build_vector=True):
+        _trace = not build_vector
+        _t0=time.perf_counter()
+        def _mark(stage):
+            if _trace:
+                print(json.dumps({'timing':'base_'+stage,'elapsed_s':time.perf_counter()-_t0}),flush=True)
         self.shape=(nr,nt,nph)
         r=np.linspace(RMIN,RMAX,nr); t=np.arange(nt)*2*np.pi/nt; p=np.arange(nph)*2*np.pi/nph
         rr,tt,pp=np.meshgrid(r,t,p,indexing='ij'); q=R+rr*np.cos(tt)
@@ -51,13 +57,26 @@ class Grid:
         kron=lambda a,b,c:sp.kron(sp.kron(a,b,format='csr'),c,format='csr')
         ir,it,ip=[sp.eye(n,format='csr') for n in self.shape]
         dr=r[1]-r[0]; dt=2*np.pi/nt; dp=2*np.pi/nph
+        _mark('derivatives_enter')
         self.d=[kron(derivative(nr,dr),it,ip),kron(ir,derivative(nt,dt,True),ip),kron(ir,it,derivative(nph,dp,True))]
+        _mark('derivatives_exit')
+        _mark('second_derivatives_enter')
         d2=[kron(derivative(nr,dr,second=True),it,ip),kron(ir,derivative(nt,dt,True,True),ip),kron(ir,it,derivative(nph,dp,True,True))]
+        _mark('second_derivatives_exit')
         diag=sp.diags
+        _mark('laplacian_enter')
         self.lap=(d2[0]+diag(1/self.r+np.cos(self.t)/self.q)@self.d[0]+diag(1/self.r**2)@d2[1]-diag(np.sin(self.t)/(self.r*self.q))@self.d[1]+diag(1/self.q**2)@d2[2]).tocsr()
+        _mark('laplacian_exit')
+        _mark('gradients_enter')
         self.grad=[(diag(er[i])@self.d[0]+diag(et[i]/self.r)@self.d[1]+diag(ep[i]/self.q)@self.d[2]).tocsr() for i in range(3)]
+        _mark('gradients_exit')
+        _mark('interior_laplacian_enter')
         L=self.lap[self.idx]@self.inject
-        self.L=L.tocsc(); self.lu=splu(self.L)
+        self.L=L.tocsc()
+        _mark('interior_laplacian_exit')
+        _mark('splu_enter')
+        self.lu=splu(self.L)
+        _mark('splu_exit')
         # Delta_L W = Delta W + 1/3 grad(div W) in Cartesian components.
         # The frozen/default solver still assembles the original block operator.
         # Experimental subclasses that replace self.vector may skip only this
