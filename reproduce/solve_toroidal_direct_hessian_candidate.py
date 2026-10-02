@@ -107,8 +107,11 @@ class DirectHessianGrid(Grid):
         restart=int(os.environ.get('DEE_GMRES_RESTART','60'))
         tg=time.perf_counter()
         print(json.dumps({'timing':'gmres_enter','restart':restart,'maxiter':cycles}),flush=True)
-        x,info=gmres(self.vector,rhs,M=pre,x0=None if x0 is None else x0[:,self.idx].ravel(),rtol=1e-10,atol=1e-13,restart=restart,maxiter=cycles)
-        print(json.dumps({'timing':'gmres_exit','elapsed_s':time.perf_counter()-tg,'info':int(info)}),flush=True)
+        residual_history=[]
+        def gmres_callback(pr_norm):
+            residual_history.append(float(pr_norm))
+        x,info=gmres(self.vector,rhs,M=pre,x0=None if x0 is None else x0[:,self.idx].ravel(),rtol=1e-10,atol=1e-13,restart=restart,maxiter=cycles,callback=gmres_callback,callback_type='pr_norm')
+        print(json.dumps({'timing':'gmres_exit','elapsed_s':time.perf_counter()-tg,'info':int(info),'residual_iterations':len(residual_history),'residual_first':residual_history[0] if residual_history else None,'residual_last':residual_history[-1] if residual_history else None,'residual_min':min(residual_history) if residual_history else None}),flush=True)
         w=np.zeros((3,self.size)); w[:,self.idx]=x.reshape(3,n)
         if info and max_cycles is None: raise RuntimeError(f'vector GMRES failed: {info}')
         return w,info
