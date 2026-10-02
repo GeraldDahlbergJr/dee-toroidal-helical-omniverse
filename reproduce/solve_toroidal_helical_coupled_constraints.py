@@ -74,9 +74,15 @@ class Grid:
         L=self.lap[self.idx]@self.inject
         self.L=L.tocsc()
         _mark('interior_laplacian_exit')
-        _mark('splu_enter')
-        self.lu=splu(self.L)
-        _mark('splu_exit')
+        if build_vector:
+            _mark('splu_enter')
+            self.lu=splu(self.L)
+            _mark('splu_exit')
+        else:
+            # Experimental candidate supplies its own preconditioner. Avoid the
+            # otherwise-unused direct factorization; frozen/default path is unchanged.
+            self.lu=None
+            _mark('splu_skipped_candidate')
         # Delta_L W = Delta W + 1/3 grad(div W) in Cartesian components.
         # The frozen/default solver still assembles the original block operator.
         # Experimental subclasses that replace self.vector may skip only this
