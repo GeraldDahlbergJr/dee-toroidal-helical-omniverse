@@ -30,16 +30,33 @@ class DirectHessianGrid(Grid):
             diag(1/q)@(dr@dp)-diag(np.cos(t)/q**2)@dp,
             diag(1/(r*q))@(dt@dp)+diag(np.sin(t)/q**2)@dp]
         er,et,ep=self.basis
-        self.hessian=[]
-        for i in range(3):
-            row=[]
-            for j in range(3):
-                coefficients=[er[i]*er[j],et[i]*et[j],ep[i]*ep[j],
-                    er[i]*et[j]+et[i]*er[j],er[i]*ep[j]+ep[i]*er[j],et[i]*ep[j]+ep[i]*et[j]]
-                row.append(sum(diag(c)@op for c,op in zip(coefficients,components)).tocsr())
-            self.hessian.append(row)
-        L=self.lap[self.idx]@self.inject
-        self.vector=sp.bmat([[(L if i==j else sp.csr_matrix(L.shape))+self.hessian[i][j][self.idx]@self.inject/3 for j in range(3)] for i in range(3)],format='csr')
+        # Keep the six chart-Hessian operators, but do not assemble nine Cartesian
+        # Hessian matrices plus a 3x3 block matrix at fine resolution.  The 65^3
+        # hosted runner was being reclaimed during that memory-heavy construction.
+        # This LinearOperator applies the identical discrete operator matrix-free;
+        # equations, stencils, source, tolerances and boundary conditions are unchanged.
+        self._hessian_components=components
+        self._cartesian_hessian_coefficients=[
+            [[er[i]*er[j],et[i]*et[j],ep[i]*ep[j],
+              er[i]*et[j]+et[i]*er[j],er[i]*ep[j]+ep[i]*er[j],
+              et[i]*ep[j]+ep[i]*et[j]] for j in range(3)] for i in range(3)]
+        self._vector_lap=self.lap[self.idx]@self.inject
+        nint=len(self.idx)
+        def vector_matvec(x):
+            xin=np.asarray(x).reshape(3,nint)
+            full=[self.inject@xin[j] for j in range(3)]
+            # Apply each chart Hessian component once per input component.
+            hc=[[op@full[j] for op in self._hessian_components] for j in range(3)]
+            out=[]
+            for i in range(3):
+                yi=self._vector_lap@xin[i]
+                for j in range(3):
+                    coeff=self._cartesian_hessian_coefficients[i][j]
+                    hij=sum(coeff[k]*hc[j][k] for k in range(6))
+                    yi=yi+hij[self.idx]/3
+                out.append(yi)
+            return np.concatenate(out)
+        self.vector=LinearOperator((3*nint,3*nint),matvec=vector_matvec,dtype=float)
 
 
     def solve_vector(self,u,x0=None):
