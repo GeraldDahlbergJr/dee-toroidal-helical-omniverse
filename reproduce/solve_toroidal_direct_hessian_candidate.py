@@ -111,7 +111,11 @@ class DirectHessianGrid(Grid):
         def gmres_callback(pr_norm):
             residual_history.append(float(pr_norm))
         x,info=gmres(self.vector,rhs,M=pre,x0=None if x0 is None else x0[:,self.idx].ravel(),rtol=1e-10,atol=1e-13,restart=restart,maxiter=cycles,callback=gmres_callback,callback_type='pr_norm')
-        print(json.dumps({'timing':'gmres_exit','elapsed_s':time.perf_counter()-tg,'info':int(info),'residual_iterations':len(residual_history),'residual_first':residual_history[0] if residual_history else None,'residual_last':residual_history[-1] if residual_history else None,'residual_min':min(residual_history) if residual_history else None}),flush=True)
+        true_residual=rhs-self.vector.matvec(x)
+        true_residual_norm=float(np.linalg.norm(true_residual))
+        rhs_norm=float(np.linalg.norm(rhs))
+        true_relative_residual=true_residual_norm/rhs_norm if rhs_norm else true_residual_norm
+        print(json.dumps({'timing':'gmres_exit','elapsed_s':time.perf_counter()-tg,'info':int(info),'residual_iterations':len(residual_history),'residual_first':residual_history[0] if residual_history else None,'residual_last':residual_history[-1] if residual_history else None,'residual_min':min(residual_history) if residual_history else None,'true_residual_norm':true_residual_norm,'rhs_norm':rhs_norm,'true_relative_residual':true_relative_residual}),flush=True)
         w=np.zeros((3,self.size)); w[:,self.idx]=x.reshape(3,n)
         if info and max_cycles is None: raise RuntimeError(f'vector GMRES failed: {info}')
         return w,info
