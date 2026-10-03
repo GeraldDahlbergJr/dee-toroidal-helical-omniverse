@@ -126,15 +126,29 @@ class DirectHessianGrid(Grid):
             z=np.load(stage_path)
             if str(z['label'])==label:
                 guess=z['w']
+                # A converged Krylov result is deliberately consumed on the
+                # *next* bounded workflow invocation.  This lets the current
+                # invocation exit immediately after convergence so Actions can
+                # persist the state before expensive post-GMRES bookkeeping.
+                # Only checkpoint cadence changes; equations, operator, source,
+                # tolerances and validation gates are unchanged.
+                if bool(z['converged']) if 'converged' in z.files else False:
+                    print(json.dumps({'status':'GMRES_CONVERGED_RESTORED','label':label}),flush=True)
+                    stage_path.unlink()
+                    return guess,True
                 print(f'Resuming {label} GMRES from persisted restart boundary',flush=True)
         cycles=int(os.environ.get('DEE_GMRES_CYCLES_PER_STAGE','0')) or None
         w,info=self.solve_vector(u,guess,cycles)
         if info:
-            np.savez_compressed(stage_path,label=label,w=w)
+            np.savez_compressed(stage_path,label=label,w=w,converged=False)
             print(json.dumps({'status':'GMRES_STAGE_COMPLETE','label':label,'gmres_info':int(info)}),flush=True)
             return w,False
-        if stage_path.exists(): stage_path.unlink()
-        return w,True
+        # Persist a successful GMRES boundary and yield immediately.  The
+        # workflow cache/artifact steps can now run before hosted-runner
+        # reclamation; the next invocation resumes after this exact solution.
+        np.savez_compressed(stage_path,label=label,w=w,converged=True)
+        print(json.dumps({'status':'GMRES_CONVERGED_CHECKPOINT','label':label,'gmres_info':0}),flush=True)
+        return w,False
 
     def solve_restartable(self, checkpoint_path, max_new_iterations=None):
         checkpoint_path=Path(checkpoint_path); u=np.ones(self.size); w=None; start=0
