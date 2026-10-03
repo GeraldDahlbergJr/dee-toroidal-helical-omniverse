@@ -166,8 +166,26 @@ class DirectHessianGrid(Grid):
                 if np.max(abs(residual))<1e-10: break
                 de=-2*self.spatial*u**-5
                 jac=self.L+sp.diags((-7*a2*u**-8/8+2*np.pi*G*(de*u**5+5*e*u**4))[self.idx])
-                from scipy.sparse.linalg import splu
-                step=splu(jac.tocsc()).solve(-residual); alpha=1.
+                # Fine-grid execution only: avoid the memory-heavy exact SuperLU
+                # factorization that hosted runners repeatedly reclaim after the
+                # preserved momentum solve.  Solve the identical Newton Jacobian
+                # equation iteratively, with ILU used only as a preconditioner.
+                # The nonlinear equations and frozen residual gates are unchanged.
+                from scipy.sparse.linalg import spilu, LinearOperator, gmres
+                jilu=spilu(jac.tocsc(),
+                           drop_tol=float(os.environ.get('DEE_NEWTON_ILU_DROP_TOL','1e-4')),
+                           fill_factor=float(os.environ.get('DEE_NEWTON_ILU_FILL_FACTOR','8')))
+                jpre=LinearOperator(jac.shape,matvec=jilu.solve,dtype=float)
+                step,jinfo=gmres(jac,-residual,M=jpre,rtol=1e-11,atol=1e-13,
+                                 restart=int(os.environ.get('DEE_NEWTON_GMRES_RESTART','30')),
+                                 maxiter=int(os.environ.get('DEE_NEWTON_GMRES_CYCLES','20')))
+                jtrue=jac@step+residual
+                jrel=float(np.linalg.norm(jtrue)/max(np.linalg.norm(residual),1e-300))
+                print(json.dumps({'timing':'newton_linear_exit','iteration':iteration,
+                                  'gmres_info':int(jinfo),'true_relative_residual':jrel}),flush=True)
+                if jinfo or jrel>1e-10:
+                    raise RuntimeError(f'Hamiltonian Newton linear solve failed: info={jinfo}, rel={jrel}')
+                alpha=1.
                 while np.min(u[self.idx]+alpha*step)<=0: alpha/=2
                 u[self.idx]+=alpha*step
             else: raise RuntimeError('Hamiltonian Newton failed')
