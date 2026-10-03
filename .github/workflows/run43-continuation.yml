@@ -20,14 +20,16 @@ concurrency:
 jobs:
   continue-65-grid:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # Give a successful bounded solve enough runway to finish bookkeeping and
+    # persistence. This changes execution headroom only; scientific settings
+    # and validation gates remain frozen.
+    timeout-minutes: 60
     env:
       OPENBLAS_NUM_THREADS: '1'
       DEE_CANDIDATE_LEVELS: '64'
       DEE_MAX_NEW_ITERATIONS: '1'
       DEE_GMRES_CYCLES_PER_STAGE: '1'
-      # Keep each Krylov block comfortably below observed hosted-runner
-      # reclamation time. Final frozen tolerances/gates remain unchanged.
+      # Keep each Krylov block bounded. Final frozen tolerances/gates remain unchanged.
       DEE_GMRES_RESTART: '20'
     steps:
       - uses: actions/checkout@v4
