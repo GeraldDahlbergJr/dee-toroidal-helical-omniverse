@@ -8,6 +8,12 @@ on:
       - 'reproduce/solve_toroidal_direct_hessian_candidate.py'
       - 'reproduce/solve_toroidal_helical_coupled_constraints.py'
   workflow_dispatch:
+  # Watchdog: if a hosted runner is reclaimed/cancelled before it can queue the
+  # next stage, a periodic trigger restarts from the newest persisted checkpoint.
+  # Concurrency below serializes these runs, so the watchdog cannot overlap the
+  # active numerical stage.
+  schedule:
+    - cron: '*/15 * * * *'
 
 permissions:
   contents: read
