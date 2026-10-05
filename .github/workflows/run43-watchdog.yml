@@ -1,0 +1,111 @@
+name: Run43 continuation watchdog
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  keep-run43-moving:
+    runs-on: ubuntu-latest
+    env:
+      TARGET_BRANCH: coupled-einstein-dee-evolution
+      CONTINUATION_WORKFLOW: run43-continuation.yml
+    steps:
+      - name: Check Run43 and recover stalled continuation
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+
+          REPO="${GITHUB_REPOSITORY}"
+          TMP="${RUNNER_TEMP}/run43-watchdog"
+          mkdir -p "${TMP}"
+
+          gh api "repos/${REPO}/actions/workflows/${CONTINUATION_WORKFLOW}/runs?branch=${TARGET_BRANCH}&per_page=20" > "${TMP}/runs.json"
+
+          python - "${TMP}/runs.json" "${TMP}/decision.json" <<'PY'
+          import json, sys
+          from pathlib import Path
+
+          runs = json.loads(Path(sys.argv[1]).read_text()).get("workflow_runs", [])
+          active_states = {"queued", "in_progress", "waiting", "requested", "pending"}
+          active = [r for r in runs if r.get("status") in active_states]
+          latest = runs[0] if runs else None
+          successful = next((r for r in runs if r.get("status") == "completed" and r.get("conclusion") == "success"), None)
+
+          out = {
+              "active": bool(active),
+              "latest_id": latest.get("id") if latest else None,
+              "latest_status": latest.get("status") if latest else None,
+              "latest_conclusion": latest.get("conclusion") if latest else None,
+              "latest_success_id": successful.get("id") if successful else None,
+          }
+          Path(sys.argv[2]).write_text(json.dumps(out))
+          print(json.dumps(out))
+          PY
+
+          ACTIVE="$(python -c 'import json,sys; print(str(json.load(open(sys.argv[1]))["active"]).lower())' "${TMP}/decision.json")"
+          if [[ "${ACTIVE}" == "true" ]]; then
+            echo "Run43 already has an active continuation. Nothing to do."
+            exit 0
+          fi
+
+          LATEST_ID="$(python -c 'import json,sys; x=json.load(open(sys.argv[1])); print(x.get("latest_id") or "")' "${TMP}/decision.json")"
+          LATEST_CONCLUSION="$(python -c 'import json,sys; x=json.load(open(sys.argv[1])); print(x.get("latest_conclusion") or "")' "${TMP}/decision.json")"
+          SUCCESS_ID="$(python -c 'import json,sys; x=json.load(open(sys.argv[1])); print(x.get("latest_success_id") or "")' "${TMP}/decision.json")"
+
+          # If the newest continuation was cancelled/failed, immediately resume
+          # from the last immutable saved cache/checkpoint.
+          if [[ "${LATEST_CONCLUSION}" == "cancelled" || "${LATEST_CONCLUSION}" == "failure" || "${LATEST_CONCLUSION}" == "timed_out" ]]; then
+            echo "Latest Run43 continuation ${LATEST_ID} ended as ${LATEST_CONCLUSION}; dispatching recovery."
+            gh api --method POST               "repos/${REPO}/actions/workflows/${CONTINUATION_WORKFLOW}/dispatches"               -f ref="${TARGET_BRANCH}"
+            exit 0
+          fi
+
+          # A successful stage normally dispatches its successor itself. If that
+          # handoff was interrupted, inspect the saved progress artifact and
+          # restart only when the candidate is still IN_PROGRESS.
+          if [[ -n "${SUCCESS_ID}" ]]; then
+            gh api "repos/${REPO}/actions/runs/${SUCCESS_ID}/artifacts?per_page=100" > "${TMP}/artifacts.json"
+            ARTIFACT_ID="$(python - "${TMP}/artifacts.json" "${SUCCESS_ID}" <<'PY'
+          import json, sys
+          data=json.load(open(sys.argv[1]))
+          run_id=sys.argv[2]
+          prefix=f"run43-auto-stage-{run_id}-"
+          for a in data.get("artifacts", []):
+              if not a.get("expired") and str(a.get("name","")).startswith(prefix):
+                  print(a["id"])
+                  break
+          PY
+            )"
+
+            if [[ -n "${ARTIFACT_ID}" ]]; then
+              gh api "repos/${REPO}/actions/artifacts/${ARTIFACT_ID}/zip" > "${TMP}/stage.zip"
+              mkdir -p "${TMP}/stage"
+              unzip -q -o "${TMP}/stage.zip" -d "${TMP}/stage"
+
+              PROGRESS="$(find "${TMP}/stage" -name toroidal_direct_hessian_candidate_progress.json -print -quit)"
+              if [[ -n "${PROGRESS}" ]]; then
+                STATUS="$(python -c 'import json,sys; print(json.load(open(sys.argv[1])).get("status","UNKNOWN"))' "${PROGRESS}")"
+                echo "Last preserved Run43 status: ${STATUS}"
+                if [[ "${STATUS}" == "COMPLETE" ]]; then
+                  echo "Run43 candidate is complete. Watchdog will not restart it."
+                  exit 0
+                fi
+                if [[ "${STATUS}" == "IN_PROGRESS" ]]; then
+                  echo "Run43 is stalled between stages; dispatching continuation."
+                  gh api --method POST                     "repos/${REPO}/actions/workflows/${CONTINUATION_WORKFLOW}/dispatches"                     -f ref="${TARGET_BRANCH}"
+                  exit 0
+                fi
+              fi
+            fi
+          fi
+
+          echo "No active run and no definitive COMPLETE marker; dispatching a conservative recovery continuation."
+          gh api --method POST             "repos/${REPO}/actions/workflows/${CONTINUATION_WORKFLOW}/dispatches"             -f ref="${TARGET_BRANCH}"
