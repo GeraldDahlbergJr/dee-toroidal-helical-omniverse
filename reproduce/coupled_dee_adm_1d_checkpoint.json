@@ -1,0 +1,96 @@
+{
+  "scope": "plane-symmetric diagonal 3+1 ADM, geodesic slicing, periodic domain; not toroidal BSSN",
+  "parameters": {
+    "G": 0.005,
+    "L": 8.0,
+    "t_end": 0.12,
+    "cfl": 0.12,
+    "a": 0.3,
+    "b": 0.2,
+    "c": 0.1
+  },
+  "runs": [
+    {
+      "n": 64,
+      "dt": 0.015,
+      "steps": 8,
+      "initial": {
+        "hamiltonian_l2": 8.878217701048446e-07,
+        "momentum_l2": 0.0,
+        "hamiltonian_max": 1.2501797790938419e-06,
+        "momentum_max": 0.0,
+        "rho_min": 1.0,
+        "metric_min": 0.9999801850802698,
+        "kinetic_det_min": 1.55
+      },
+      "final": {
+        "hamiltonian_l2": 8.579624624535063e-07,
+        "momentum_l2": 1.1334024562957657e-07,
+        "hamiltonian_max": 1.2081333148616822e-06,
+        "momentum_max": 1.5959941560574992e-07,
+        "rho_min": 0.9999969722529786,
+        "metric_min": 1.0009835101982147,
+        "kinetic_det_min": 1.549996366710908
+      }
+    },
+    {
+      "n": 128,
+      "dt": 0.0075,
+      "steps": 16,
+      "initial": {
+        "hamiltonian_l2": 2.2335036294979288e-07,
+        "momentum_l2": 0.0,
+        "hamiltonian_max": 3.158604710163402e-07,
+        "momentum_max": 0.0,
+        "rho_min": 1.0,
+        "metric_min": 0.999980051907288,
+        "kinetic_det_min": 1.55
+      },
+      "final": {
+        "hamiltonian_l2": 2.1579743824125538e-07,
+        "momentum_l2": 2.8595550291257833e-08,
+        "hamiltonian_max": 3.051791327278886e-07,
+        "momentum_max": 4.043964405468687e-08,
+        "rho_min": 0.9999969599652974,
+        "metric_min": 1.0009845918803446,
+        "kinetic_det_min": 1.5499963519657505
+      }
+    },
+    {
+      "n": 256,
+      "dt": 0.00375,
+      "steps": 32,
+      "initial": {
+        "hamiltonian_l2": 5.592513674478907e-08,
+        "momentum_l2": 0.0,
+        "hamiltonian_max": 7.908886714819622e-08,
+        "momentum_max": 0.0,
+        "rho_min": 1.0,
+        "metric_min": 0.9999800398862257,
+        "kinetic_det_min": 1.55
+      },
+      "final": {
+        "hamiltonian_l2": 5.403135673810876e-08,
+        "momentum_l2": 7.165265382333262e-09,
+        "hamiltonian_max": 7.641077362178638e-08,
+        "momentum_max": 1.0133182917158382e-08,
+        "rho_min": 0.9999969581475107,
+        "metric_min": 1.0009848833654238,
+        "kinetic_det_min": 1.549996349784415
+      }
+    }
+  ],
+  "adjacent_resolution_max_errors": [
+    6.2024346508737435e-06,
+    1.5524683647104472e-06
+  ],
+  "observed_order": 1.9982707595467935,
+  "gates": {
+    "positive_metric": true,
+    "positive_kinetic_matrix": true,
+    "finite_branch": true,
+    "refinement_error_decreases": true,
+    "final_hamiltonian_refines": true,
+    "final_momentum_refines": true
+  }
+}

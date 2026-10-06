@@ -35,12 +35,63 @@ def matter_energy_density(rho, pi_rho, grad_rho, pi_theta, grad_theta,
 def matter_momentum_density(rho, pi_rho, grad_rho, pi_theta, grad_theta,
                             pi_psi, grad_psi, a=0.30, b=0.20, c=0.10):
     """S_i=-gamma_i^mu n^nu T_munu; sign follows Pi=-n^mu d_mu field."""
+    rho, pi_rho, pi_theta, pi_psi = map(np.asarray,
+                                         (rho, pi_rho, pi_theta, pi_psi))
     kt, kp, lam = kinetic_coefficients(rho, a, b, c)
     return (pi_rho[..., None]*grad_rho
             + kt[..., None]*pi_theta[..., None]*grad_theta
             + kp[..., None]*pi_psi[..., None]*grad_psi
             + lam[..., None]*(pi_theta[..., None]*grad_psi
                               + pi_psi[..., None]*grad_theta))
+
+
+def matter_spatial_stress(rho, pi_rho, grad_rho, pi_theta, grad_theta,
+                          pi_psi, grad_psi, gamma, gamma_inv,
+                          lambda_v=4.0, v=1.0, a=0.30, b=0.20, c=0.10):
+    """Covariant S_ij = gamma_i^mu gamma_j^nu T_munu.
+
+    Pi_A=-n^mu partial_mu phi_A; gradients are covariant spatial derivatives.
+    The mixed kinetic term contributes to both the dyads and the pressure.
+    """
+    rho, pi_rho, pi_theta, pi_psi = map(np.asarray,
+                                         (rho, pi_rho, pi_theta, pi_psi))
+    kt, kp, lam = kinetic_coefficients(rho, a, b, c)
+    def spatial_dot(x, y):
+        return np.einsum('...i,...ij,...j->...', x, gamma_inv, y)
+    def dyad(x, y):
+        return np.einsum('...i,...j->...ij', x, y)
+    lagrangian = (0.5*(pi_rho**2-spatial_dot(grad_rho, grad_rho))
+                  + 0.5*kt*(pi_theta**2-spatial_dot(grad_theta, grad_theta))
+                  + 0.5*kp*(pi_psi**2-spatial_dot(grad_psi, grad_psi))
+                  + lam*(pi_theta*pi_psi-spatial_dot(grad_theta, grad_psi))
+                  - potential(rho, lambda_v, v))
+    return (dyad(grad_rho, grad_rho)
+            + kt[..., None, None]*dyad(grad_theta, grad_theta)
+            + kp[..., None, None]*dyad(grad_psi, grad_psi)
+            + lam[..., None, None]*(dyad(grad_theta, grad_psi)
+                                     + dyad(grad_psi, grad_theta))
+            + lagrangian[..., None, None]*gamma)
+
+
+def matter_projections(rho, pi_rho, grad_rho, pi_theta, grad_theta,
+                       pi_psi, grad_psi, gamma, gamma_inv, **parameters):
+    """Return (E, S_i, S_ij, S) for an Eulerian 3+1 Einstein source.
+
+    S is gamma^ij S_ij; the lapse and shift enter through the definition of
+    Pi, so they must not be applied to these projections a second time.
+    """
+    energy = matter_energy_density(rho, pi_rho, grad_rho, pi_theta,
+                                   grad_theta, pi_psi, grad_psi, gamma_inv,
+                                   **parameters)
+    momentum = matter_momentum_density(rho, pi_rho, grad_rho, pi_theta,
+                                       grad_theta, pi_psi, grad_psi,
+                                       **{k: parameters[k] for k in ('a', 'b', 'c')
+                                          if k in parameters})
+    stress = matter_spatial_stress(rho, pi_rho, grad_rho, pi_theta,
+                                   grad_theta, pi_psi, grad_psi, gamma,
+                                   gamma_inv, **parameters)
+    trace = np.einsum('...ij,...ij->...', gamma_inv, stress)
+    return energy, momentum, stress, trace
 
 
 def hamiltonian_residual(R3, Kij, gamma_inv, energy, G=1.0):
