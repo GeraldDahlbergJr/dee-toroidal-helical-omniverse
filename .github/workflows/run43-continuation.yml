@@ -8,10 +8,9 @@ on:
       - 'reproduce/solve_toroidal_direct_hessian_candidate.py'
       - 'reproduce/solve_toroidal_helical_coupled_constraints.py'
   workflow_dispatch:
-  # Watchdog: if a hosted runner is reclaimed/cancelled before it can queue the
-  # next stage, a periodic trigger restarts from the newest persisted checkpoint.
-  # Concurrency below serializes these runs, so the watchdog cannot overlap the
-  # active numerical stage.
+  # Recovery watchdog. Scheduled invocations use the same concurrency group as
+  # ordinary continuations, so they can recover a stalled chain but cannot
+  # overlap an active numerical stage.
   schedule:
     - cron: '*/15 * * * *'
 
@@ -26,16 +25,13 @@ concurrency:
 jobs:
   continue-65-grid:
     runs-on: ubuntu-latest
-    # Give a successful bounded solve enough runway to finish bookkeeping and
-    # persistence. This changes execution headroom only; scientific settings
-    # and validation gates remain frozen.
+    # Execution headroom only; scientific settings and validation gates frozen.
     timeout-minutes: 60
     env:
       OPENBLAS_NUM_THREADS: '1'
       DEE_CANDIDATE_LEVELS: '64'
       DEE_MAX_NEW_ITERATIONS: '1'
       DEE_GMRES_CYCLES_PER_STAGE: '1'
-      # Keep each Krylov block bounded. Final frozen tolerances/gates remain unchanged.
       DEE_GMRES_RESTART: '20'
     steps:
       - uses: actions/checkout@v4
@@ -60,9 +56,6 @@ jobs:
       - name: Execute one bounded GMRES checkpoint block
         run: python reproduce/solve_toroidal_direct_hessian_candidate.py
 
-      # Save immediately after the bounded numerical block. Do not rely on a
-      # post-job cache hook: prior hosted runners were reclaimed before post
-      # steps could persist the newly computed state.
       - name: Save Run43 state immediately
         uses: actions/cache/save@v4
         with:
@@ -102,7 +95,19 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh api --method POST             repos/${{ github.repository }}/actions/workflows/run43-continuation.yml/dispatches             -f ref='${{ github.ref_name }}'
+          # Retry only the infrastructure dispatch. This does not alter the
+          # numerical state, equations, seed, tolerances, or validation gates.
+          for attempt in 1 2 3 4; do
+            if gh api --method POST \
+              repos/${{ github.repository }}/actions/workflows/run43-continuation.yml/dispatches \
+              -f ref='${{ github.ref_name }}'; then
+              exit 0
+            fi
+            echo "Continuation dispatch attempt $attempt failed; retrying."
+            sleep $((attempt * 10))
+          done
+          echo "Unable to queue next continuation after infrastructure retries."
+          exit 1
 
       - name: Stop automatic continuation at completed candidate
         if: steps.state.outputs.status == 'COMPLETE'
