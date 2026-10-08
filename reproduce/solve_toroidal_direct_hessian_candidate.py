@@ -151,52 +151,69 @@ class DirectHessianGrid(Grid):
         return w,False
 
     def solve_restartable(self, checkpoint_path, max_new_iterations=None):
-        checkpoint_path=Path(checkpoint_path); u=np.ones(self.size); w=None; start=0
+        checkpoint_path=Path(checkpoint_path); u=np.ones(self.size); w=None; start=0; phase='first'
         if checkpoint_path.exists():
             z=np.load(checkpoint_path); u=z['u']; w=z['w']; start=int(z['next_iteration'])
-            print(f'Resuming coupled solve at iteration {start}',flush=True)
+            phase=str(z['phase']) if 'phase' in z.files else 'first'
+            print(json.dumps({'status':'RESUME','iteration':start,'phase':phase}),flush=True)
         stop=30 if max_new_iterations is None else min(30,start+max_new_iterations)
         stage_path=checkpoint_path.with_name(checkpoint_path.stem+'_gmres.npz')
         for iteration in range(start,stop):
-            w,done=self.solve_vector_persisted(u,w,stage_path,f'outer-{iteration}-first')
-            if not done: return u,w,iteration,False
-            a=self.longitudinal(w); a2=np.sum(a*a,axis=(0,1))
-            for _ in range(12):
-                e=self.energy(u); f=self.lap@(u-1)+a2*u**-7/8+2*np.pi*G*e*u**5; residual=f[self.idx]
-                if np.max(abs(residual))<1e-10: break
-                de=-2*self.spatial*u**-5
-                jac=self.L+sp.diags((-7*a2*u**-8/8+2*np.pi*G*(de*u**5+5*e*u**4))[self.idx])
-                # Fine-grid execution only: avoid the memory-heavy exact SuperLU
-                # factorization that hosted runners repeatedly reclaim after the
-                # preserved momentum solve.  Solve the identical Newton Jacobian
-                # equation iteratively, with ILU used only as a preconditioner.
-                # The nonlinear equations and frozen residual gates are unchanged.
-                from scipy.sparse.linalg import spilu, LinearOperator, gmres
-                jilu=spilu(jac.tocsc(),
-                           drop_tol=float(os.environ.get('DEE_NEWTON_ILU_DROP_TOL','1e-4')),
-                           fill_factor=float(os.environ.get('DEE_NEWTON_ILU_FILL_FACTOR','8')))
-                jpre=LinearOperator(jac.shape,matvec=jilu.solve,dtype=float)
-                step,jinfo=gmres(jac,-residual,M=jpre,rtol=1e-11,atol=1e-13,
-                                 restart=int(os.environ.get('DEE_NEWTON_GMRES_RESTART','30')),
-                                 maxiter=int(os.environ.get('DEE_NEWTON_GMRES_CYCLES','20')))
-                jtrue=jac@step+residual
-                jrel=float(np.linalg.norm(jtrue)/max(np.linalg.norm(residual),1e-300))
-                print(json.dumps({'timing':'newton_linear_exit','iteration':iteration,
-                                  'gmres_info':int(jinfo),'true_relative_residual':jrel}),flush=True)
-                if jinfo or jrel>1e-10:
-                    raise RuntimeError(f'Hamiltonian Newton linear solve failed: info={jinfo}, rel={jrel}')
-                alpha=1.
-                while np.min(u[self.idx]+alpha*step)<=0: alpha/=2
-                u[self.idx]+=alpha*step
-            else: raise RuntimeError('Hamiltonian Newton failed')
-            wnew,done=self.solve_vector_persisted(u,w,stage_path,f'outer-{iteration}-second')
-            if not done: return u,w,iteration,False
-            change=np.max(abs(wnew-w)); w=wnew
-            anew=self.longitudinal(w); a2=np.sum(anew*anew,axis=(0,1))
-            h=(self.lap@(u-1)+a2*u**-7/8+2*np.pi*G*self.energy(u)*u**5)[self.idx]
-            np.savez_compressed(checkpoint_path,u=u,w=w,next_iteration=iteration+1,change=change,hmax=np.max(abs(h)))
-            print(json.dumps({'checkpoint_iteration':iteration+1,'change':float(change),'Hmax':float(np.max(abs(h)))}),flush=True)
-            if change<1e-12 and np.max(abs(h))<1e-9: return u,w,iteration+1,True
+            if phase == 'first':
+                w,done=self.solve_vector_persisted(u,w,stage_path,f'outer-{iteration}-first')
+                if not done:
+                    np.savez_compressed(checkpoint_path,u=u,w=w,next_iteration=iteration,
+                                        phase='first',change=np.nan,hmax=np.nan)
+                    return u,w,iteration,False
+                phase='newton'
+            if phase == 'newton':
+                a=self.longitudinal(w); a2=np.sum(a*a,axis=(0,1))
+                for _ in range(12):
+                    e=self.energy(u); f=self.lap@(u-1)+a2*u**-7/8+2*np.pi*G*e*u**5; residual=f[self.idx]
+                    if np.max(abs(residual))<1e-10: break
+                    de=-2*self.spatial*u**-5
+                    jac=self.L+sp.diags((-7*a2*u**-8/8+2*np.pi*G*(de*u**5+5*e*u**4))[self.idx])
+                    # Fine-grid execution only: avoid the memory-heavy exact SuperLU
+                    # factorization that hosted runners repeatedly reclaim after the
+                    # preserved momentum solve.  Solve the identical Newton Jacobian
+                    # equation iteratively, with ILU used only as a preconditioner.
+                    # The nonlinear equations and frozen residual gates are unchanged.
+                    from scipy.sparse.linalg import spilu, LinearOperator, gmres
+                    jilu=spilu(jac.tocsc(),
+                               drop_tol=float(os.environ.get('DEE_NEWTON_ILU_DROP_TOL','1e-4')),
+                               fill_factor=float(os.environ.get('DEE_NEWTON_ILU_FILL_FACTOR','8')))
+                    jpre=LinearOperator(jac.shape,matvec=jilu.solve,dtype=float)
+                    step,jinfo=gmres(jac,-residual,M=jpre,rtol=1e-11,atol=1e-13,
+                                     restart=int(os.environ.get('DEE_NEWTON_GMRES_RESTART','30')),
+                                     maxiter=int(os.environ.get('DEE_NEWTON_GMRES_CYCLES','20')))
+                    jtrue=jac@step+residual
+                    jrel=float(np.linalg.norm(jtrue)/max(np.linalg.norm(residual),1e-300))
+                    print(json.dumps({'timing':'newton_linear_exit','iteration':iteration,
+                                      'gmres_info':int(jinfo),'true_relative_residual':jrel}),flush=True)
+                    if jinfo or jrel>1e-10:
+                        raise RuntimeError(f'Hamiltonian Newton linear solve failed: info={jinfo}, rel={jrel}')
+                    alpha=1.
+                    while np.min(u[self.idx]+alpha*step)<=0: alpha/=2
+                    u[self.idx]+=alpha*step
+                else:
+                    raise RuntimeError('Hamiltonian Newton failed')
+                phase='second'
+                np.savez_compressed(checkpoint_path,u=u,w=w,next_iteration=iteration,
+                                    phase='second',change=np.nan,hmax=np.nan)
+            if phase == 'second':
+                wnew,done=self.solve_vector_persisted(u,w,stage_path,f'outer-{iteration}-second')
+                if not done:
+                    np.savez_compressed(checkpoint_path,u=u,w=w,next_iteration=iteration,
+                                        phase='second',change=np.nan,hmax=np.nan)
+                    return u,w,iteration,False
+                change=np.max(abs(wnew-w)); w=wnew
+                anew=self.longitudinal(w); a2=np.sum(anew*anew,axis=(0,1))
+                h=(self.lap@(u-1)+a2*u**-7/8+2*np.pi*G*self.energy(u)*u**5)[self.idx]
+                np.savez_compressed(checkpoint_path,u=u,w=w,next_iteration=iteration+1,
+                                    phase='first',change=change,hmax=np.max(abs(h)))
+                print(json.dumps({'checkpoint_iteration':iteration+1,'change':float(change),'Hmax':float(np.max(abs(h)))}),flush=True)
+                if change<1e-12 and np.max(abs(h))<1e-9: return u,w,iteration+1,True
+                phase='first'
         if max_new_iterations is not None:
             return u,w,stop,False
         raise RuntimeError('coupled iteration failed')
