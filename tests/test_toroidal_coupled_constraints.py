@@ -83,7 +83,7 @@ class ToroidalOperators(unittest.TestCase):
             g=DirectHessianGrid(n+1,n,n)
             x=g.q*np.cos(g.p);y=g.q*np.sin(g.p);z=g.r*np.sin(g.t)
             f=x*x+y*y+z*z
-            actual=sum(g.hessian[i][i]@f for i in range(3))
+            actual=sum(sum(g._cartesian_hessian_coefficients[i][i][k]*(g._hessian_components[k]@f) for k in range(6)) for i in range(3))
             errors.append(np.sqrt(np.mean((actual[g.idx]-6.)**2)))
             a=Audit(g.shape)
             np.testing.assert_allclose(g.S,a.S.reshape(3,-1),atol=1e-14)
