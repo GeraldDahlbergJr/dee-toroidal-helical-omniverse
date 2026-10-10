@@ -190,7 +190,25 @@ class DirectHessianGrid(Grid):
                     jrel=float(np.linalg.norm(jtrue)/max(np.linalg.norm(residual),1e-300))
                     print(json.dumps({'timing':'newton_linear_exit','iteration':iteration,
                                       'gmres_info':int(jinfo),'true_relative_residual':jrel}),flush=True)
+                    # Check the unpreconditioned residual, not just GMRES's status.
+                    # Iterative refinement preserves the original 1e-10 acceptance
+                    # criterion rather than silently relaxing the physics gate.
                     if jinfo or jrel>1e-10:
+                        for refine in range(3):
+                            correction,cinfo=gmres(jac,-jtrue,M=jpre,rtol=1e-11,atol=1e-13,
+                                                   restart=int(os.environ.get('DEE_NEWTON_GMRES_RESTART','30')),
+                                                   maxiter=int(os.environ.get('DEE_NEWTON_GMRES_CYCLES','20')))
+                            candidate=step+correction
+                            candidate_true=jac@candidate+residual
+                            candidate_rel=float(np.linalg.norm(candidate_true)/max(np.linalg.norm(residual),1e-300))
+                            print(json.dumps({'timing':'newton_refinement','pass':refine+1,
+                                              'gmres_info':int(cinfo),'true_relative_residual':candidate_rel}),flush=True)
+                            if not np.isfinite(candidate_rel) or candidate_rel>=jrel:
+                                break
+                            step,jtrue,jrel=candidate,candidate_true,candidate_rel
+                            if jrel<=1e-10:
+                                break
+                    if jrel>1e-10:
                         raise RuntimeError(f'Hamiltonian Newton linear solve failed: info={jinfo}, rel={jrel}')
                     alpha=1.
                     while np.min(u[self.idx]+alpha*step)<=0: alpha/=2
