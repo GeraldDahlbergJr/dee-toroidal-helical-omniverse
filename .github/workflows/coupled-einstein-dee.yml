@@ -2,7 +2,7 @@ name: Coupled Einstein-DEE validation
 
 on:
   push:
-    branches: [coupled-einstein-dee-evolution]
+    branches: [coupled-einstein-dee-evolution, run43-hessian-newton-precision-fix]
   pull_request:
     branches: [main]
   workflow_dispatch:
