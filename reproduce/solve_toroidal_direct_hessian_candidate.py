@@ -183,7 +183,10 @@ class DirectHessianGrid(Grid):
                                drop_tol=float(os.environ.get('DEE_NEWTON_ILU_DROP_TOL','1e-4')),
                                fill_factor=float(os.environ.get('DEE_NEWTON_ILU_FILL_FACTOR','8')))
                     jpre=LinearOperator(jac.shape,matvec=jilu.solve,dtype=float)
-                    # A fixed 1e-13 absolute floor can report success while the\n                    # true relative residual exceeds the frozen 1e-10 gate when\n                    # the Newton RHS is tiny. Use relative stopping only.\n                    step,jinfo=gmres(jac,-residual,M=jpre,rtol=1e-11,atol=0.0,
+                    # A fixed 1e-13 absolute floor can report success while the
+                    # true relative residual exceeds the frozen 1e-10 gate when
+                    # the Newton RHS is tiny. Use relative stopping only.
+                    step,jinfo=gmres(jac,-residual,M=jpre,rtol=1e-11,atol=0.0,
                                      restart=int(os.environ.get('DEE_NEWTON_GMRES_RESTART','30')),
                                      maxiter=int(os.environ.get('DEE_NEWTON_GMRES_CYCLES','20')))
                     jtrue=jac@step+residual
