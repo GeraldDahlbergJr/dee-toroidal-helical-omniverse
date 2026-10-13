@@ -4,6 +4,11 @@
 
 Computational research repository accompanying the theoretical physics work of Gerald Dahlberg Jr.
 
+**Research author:** Gerald Dahlberg Jr. — Theoretical Physics Author and Researcher  
+**Focus:** Theoretical and computational general relativity; Einstein–matter systems; toroidal–helical perturbations  
+**Professional program membership:** NVIDIA Developer Program Member (not an NVIDIA employment or institutional affiliation)  
+**ORCID:** [0009-0001-0672-7636](https://orcid.org/0009-0001-0672-7636)
+
 ## Overview
 
 This repository explores computational implementations of Dynamic Equilibrium Events (DEE) in coupled toroidal–helical transport geometries.
