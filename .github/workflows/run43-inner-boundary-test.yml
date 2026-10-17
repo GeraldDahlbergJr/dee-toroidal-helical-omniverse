@@ -1,0 +1,27 @@
+name: Run43 inner-boundary manufactured diagnostic
+on:
+  push:
+    branches: [run43-boundary-diagnostic-20261016]
+    paths:
+      - '.github/workflows/run43-inner-boundary-test.yml'
+  workflow_dispatch:
+jobs:
+  manufactured-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install numerical dependencies
+        run: python -m pip install numpy
+      - name: Run independent manufactured inner-boundary diagnostic
+        run: python reproduce/test_run43_inner_boundary_manufactured.py | tee run43-inner-boundary-manufactured.json
+      - name: Preserve diagnostic output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: run43-inner-boundary-manufactured
+          path: run43-inner-boundary-manufactured.json
+          if-no-files-found: warn
