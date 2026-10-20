@@ -9,7 +9,7 @@ permissions:
   actions: write
 concurrency:
   group: run43-archival-storage-cleanup
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   archive_1:
     runs-on: ubuntu-latest
