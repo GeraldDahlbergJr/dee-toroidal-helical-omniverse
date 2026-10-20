@@ -1,0 +1,82 @@
+name: Run43 archive and clear Actions storage
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/run43-archive-storage-cleanup.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: run43-archival-storage-cleanup
+  cancel-in-progress: false
+jobs:
+  archive_1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - name: Archive and verify original data before removing obsolete Actions copies
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/maintenance/run43_archive_cleanup.py
+
+  archive_2:
+    needs: archive_1
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - name: Archive and verify original data before removing obsolete Actions copies
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/maintenance/run43_archive_cleanup.py
+
+  archive_3:
+    needs: archive_2
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - name: Archive and verify original data before removing obsolete Actions copies
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/maintenance/run43_archive_cleanup.py
+
+  archive_4:
+    needs: archive_3
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - name: Archive and verify original data before removing obsolete Actions copies
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/maintenance/run43_archive_cleanup.py
+
+  archive_5:
+    needs: archive_4
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - name: Archive and verify original data before removing obsolete Actions copies
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/maintenance/run43_archive_cleanup.py
+
+  archive_6:
+    needs: archive_5
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - name: Archive and verify original data before removing obsolete Actions copies
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/maintenance/run43_archive_cleanup.py
