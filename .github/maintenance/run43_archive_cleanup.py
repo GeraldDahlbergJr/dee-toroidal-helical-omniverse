@@ -14,9 +14,13 @@ ROOT.mkdir(exist_ok=True)
 def command(args, raw=False, output=None):
     while True:
         if time.monotonic() > DEADLINE: raise TimeoutError("Safe batch budget reached")
-        with open(output, "wb") if output else io.BytesIO() as sink:
-            p = subprocess.run(args, stdout=sink, stderr=subprocess.PIPE, timeout=600)
-            result = b"" if output else sink.getvalue()
+        if output:
+            with open(output,"wb") as sink:
+                p=subprocess.run(args,stdout=sink,stderr=subprocess.PIPE,timeout=600)
+            result=b""
+        else:
+            p=subprocess.run(args,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=600)
+            result=p.stdout
         if p.returncode == 0:
             return result if raw else (json.loads(result) if result else None)
         error = p.stderr.decode(errors="replace")
