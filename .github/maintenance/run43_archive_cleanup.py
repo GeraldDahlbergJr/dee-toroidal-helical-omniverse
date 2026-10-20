@@ -118,7 +118,6 @@ def flush():
     writer.close()
     local_hash=sha(pack)
     asset_name=pack.name
-    upload=api("https://uploads.github.com/repos/"+REPO+"/releases/"+str(release_id)+"/assets?name="+asset_name,"POST",raw=True) if False else None
     upload=command(["gh","api","--method","POST","https://uploads.github.com/repos/"+REPO+"/releases/"+str(release_id)+"/assets?name="+asset_name,"-H","Content-Type: application/zip","--input",str(pack)])
     remote=ROOT/"remote-check.zip"
     api("/releases/assets/"+str(upload["id"]),raw=True,output=remote,headers=("Accept: application/octet-stream",))
@@ -127,6 +126,16 @@ def flush():
     api("/releases/assets/"+str(upload["id"]),"PATCH",{"label":"Verified SHA-256 "+local_hash})
     report["verified_archives"]+=1
     print("Verified recovery archive "+asset_name+" before deleting any source runs.",flush=True)
+    # Reserve enough API budget to publish counters after the entire deletion batch.
+    while True:
+        quota=command(["gh","api","rate_limit"])["resources"]["core"]
+        if quota["remaining"] >= len(batch)*5+20: break
+        delay=max(5,quota["reset"]-int(time.time())+5)
+        if time.monotonic()+delay+180>DEADLINE:
+            raise TimeoutError("Preserving verified archive and all source runs until next job's rate window")
+        print("Waiting for GitHub API budget before the next deletion batch.",flush=True)
+        end=time.monotonic()+delay
+        while time.monotonic()<end: time.sleep(min(60,end-time.monotonic()))
     # Fresh status and artifact inventory guards prevent deleting newly active or changed runs.
     for run,aa,logsize in batch:
         rid=run["id"]
