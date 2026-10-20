@@ -1,0 +1,133 @@
+name: Run43 verified storage cleanup
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/run43-verified-storage-cleanup.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: write
+concurrency:
+  group: run43-storage-cleanup
+  cancel-in-progress: false
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - name: Verify recovery checkpoint and remove only proven obsolete data
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import collections, hashlib, io, json, os, subprocess, zipfile
+          REPO = os.environ["GITHUB_REPOSITORY"]
+          PREFIX = "repos/" + REPO
+          report = {"runs_deleted": 0, "artifacts_deleted": 0, "artifact_bytes_recovered": 0, "preserved_unknown_runs": 0, "errors": []}
+          def api(path, method="GET", raw=False):
+              p = subprocess.run(["gh", "api", "--method", method, PREFIX + path], capture_output=True)
+              if p.returncode:
+                  raise RuntimeError(p.stderr.decode(errors="replace")[-600:])
+              if raw: return p.stdout
+              return json.loads(p.stdout) if p.stdout else None
+          def pages(path, key):
+              out = []
+              for n in range(1, 201):
+                  d = api(path + ("&" if "?" in path else "?") + "per_page=100&page=" + str(n))
+                  a = d[key]
+                  out.extend(a)
+                  if len(a) < 100: return out
+              raise RuntimeError("Inventory pagination incomplete; no deletions allowed")
+          def verified(a):
+              data = api("/actions/artifacts/" + str(a["id"]) + "/zip", raw=True)
+              assert a.get("digest") == "sha256:" + hashlib.sha256(data).hexdigest(), "Artifact digest mismatch"
+              with zipfile.ZipFile(io.BytesIO(data)) as z:
+                  assert z.testzip() is None, "Corrupt artifact ZIP"
+              return data
+          try:
+              latest = api("/actions/runs/38463009735")
+              assert latest["status"] == "completed" and latest["conclusion"] == "success"
+              a = api("/actions/runs/38463009735/artifacts?per_page=100")["artifacts"]
+              checkpoint = next(x for x in a if x["id"] == 11847550871 and not x["expired"])
+              assert checkpoint["digest"] == "sha256:65606d49c0f9467d40e5ad8ea4856ae572adad24f986a71abd2d7b543101bf02"
+              data = verified(checkpoint)
+              with zipfile.ZipFile(io.BytesIO(data)) as z:
+                  names = set(z.namelist())
+                  assert {"toroidal_direct_hessian_restart_65_64.npz", "toroidal_direct_hessian_fields_65_64.npz", "toroidal_direct_hessian_candidate.json", "toroidal_direct_hessian_candidate_progress.json"} <= names
+                  progress = json.loads(z.read("toroidal_direct_hessian_candidate_progress.json"))
+                  assert progress["status"] == "COMPLETE" and [65,64,64] in progress["completed_resolutions"]
+                  assert hashlib.sha256(z.read("toroidal_direct_hessian_fields_65_64.npz")).hexdigest() == "ce31cb67deecb174f7cd9d3148ffd2829a7864197b6e47f2dd278fd1b5971543"
+                  for name in ["toroidal_direct_hessian_restart_65_64.npz","toroidal_direct_hessian_fields_65_64.npz"]:
+                      with zipfile.ZipFile(io.BytesIO(z.read(name))) as nested:
+                          assert nested.testzip() is None
+              print("Verified retained COMPLETE 65x64x64 checkpoint and fields before deletion.", flush=True)
+              runs = pages("/actions/runs", "workflow_runs")
+              artifacts = pages("/actions/artifacts", "artifacts")
+              runs.sort(key=lambda r:(r["created_at"],r["id"]), reverse=True)
+              by_workflow = collections.defaultdict(list)
+              for r in runs: by_workflow[r["workflow_id"]].append(r)
+              keep = {r["id"] for r in runs[:10]}
+              for rr in by_workflow.values(): keep.update(r["id"] for r in rr[:10])
+              keep.add(38463009735)
+              by_run = collections.defaultdict(list)
+              for a in artifacts: by_run[a["workflow_run"]["id"]].append(a)
+              run_map = {r["id"]:r for r in runs}
+              groups = collections.defaultdict(list)
+              for a in artifacts:
+                  r = run_map.get(a["workflow_run"]["id"])
+                  if (r and r["workflow_id"] == 373133785 and r["status"] == "completed"
+                      and not a["expired"] and a.get("digest","").startswith("sha256:")
+                      and a["name"].startswith("run43-auto-stage-")):
+                      groups[a["digest"]].append(a)
+              duplicates = {}
+              for digest, aa in groups.items():
+                  if len(aa) < 2: continue
+                  aa.sort(key=lambda a:(a["workflow_run"]["id"] in keep,a["created_at"],a["id"]),reverse=True)
+                  representative = aa[0]
+                  try:
+                      verified(representative)
+                  except Exception as exc:
+                      report["errors"].append("Preserved duplicate group: " + str(exc))
+                      continue
+                  keep.add(representative["workflow_run"]["id"])
+                  for old in aa[1:]:
+                      if old["workflow_run"]["id"] not in keep:
+                          duplicates[old["id"]] = representative["id"]
+              for r in runs:
+                  if r["id"] in keep or r["status"] != "completed": continue
+                  aa = by_run.get(r["id"], [])
+                  watchdog = r["workflow_id"] == 375805394 and r["conclusion"] == "success" and not aa
+                  duplicate_stage = r["workflow_id"] == 373133785 and aa and all(a["id"] in duplicates for a in aa)
+                  if not (watchdog or duplicate_stage):
+                      report["preserved_unknown_runs"] += 1
+                      continue
+                  try:
+                      current = api("/actions/runs/" + str(r["id"]))
+                      if current["status"] != "completed": continue
+                      current_a = api("/actions/runs/" + str(r["id"]) + "/artifacts?per_page=100")
+                      if current_a["total_count"] != len(aa) or {x["id"] for x in current_a["artifacts"]} != {x["id"] for x in aa}:
+                          continue
+                      for old in aa:
+                          rep = api("/actions/artifacts/" + str(duplicates[old["id"]]))
+                          assert not rep["expired"] and rep["digest"] == old["digest"]
+                      api("/actions/runs/" + str(r["id"]), method="DELETE")
+                      report["runs_deleted"] += 1
+                      report["artifacts_deleted"] += len(aa)
+                      report["artifact_bytes_recovered"] += sum(x["size_in_bytes"] for x in aa)
+                      print(json.dumps(report), flush=True)
+                  except Exception as exc:
+                      report["errors"].append(str(exc))
+                      break
+          except Exception as exc:
+              report["errors"].append(str(exc))
+          finally:
+              report["protected_checkpoint_run"] = 38463009735
+              report["protected_checkpoint_artifact"] = 11847550871
+              report["policy"] = "Latest 10 per workflow and overall kept; all unique or uncertain artifacts and science evidence kept; source, caches, solver workflows and watchdog unchanged."
+              print("CLEANUP_REPORT=" + json.dumps(report), flush=True)
+              with open(os.environ["GITHUB_STEP_SUMMARY"],"a") as f:
+                  f.write("## Run43 conservative storage cleanup\n\n```json\n" + json.dumps(report,indent=2) + "\n```\n")
+              if report["errors"]: raise SystemExit(1)
+          
+          PY
