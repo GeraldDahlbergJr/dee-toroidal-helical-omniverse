@@ -1,5 +1,10 @@
 name: Run43 independent inner and outer boundary validation
 on:
+  push:
+    branches: [coupled-einstein-dee-evolution]
+    paths:
+      - '.github/workflows/run43-boundary-validation.yml'
+      - 'reproduce/validate_run43_final_boundaries.py'
   workflow_dispatch:
 permissions:
   contents: read
