@@ -57,7 +57,6 @@ jobs:
         run: python reproduce/solve_toroidal_direct_hessian_candidate.py
 
       - name: Save Run43 state immediately
-        if: ${{ always() }}
         uses: actions/cache/save@v4
         with:
           path: |
@@ -66,7 +65,6 @@ jobs:
           key: run43-auto-65-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Preserve stage evidence
-        if: ${{ always() }}
         uses: actions/upload-artifact@v4
         with:
           name: run43-auto-stage-${{ github.run_id }}-${{ github.run_attempt }}

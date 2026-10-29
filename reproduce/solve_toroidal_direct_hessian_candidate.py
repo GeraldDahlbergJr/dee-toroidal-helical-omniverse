@@ -183,9 +183,6 @@ class DirectHessianGrid(Grid):
                                drop_tol=float(os.environ.get('DEE_NEWTON_ILU_DROP_TOL','1e-4')),
                                fill_factor=float(os.environ.get('DEE_NEWTON_ILU_FILL_FACTOR','8')))
                     jpre=LinearOperator(jac.shape,matvec=jilu.solve,dtype=float)
-                    # A fixed 1e-13 absolute floor can report success while the
-                    # true relative residual exceeds the frozen 1e-10 gate when
-                    # the Newton RHS is tiny. Use relative stopping only.
                     step,jinfo=gmres(jac,-residual,M=jpre,rtol=1e-11,atol=0.0,
                                      restart=int(os.environ.get('DEE_NEWTON_GMRES_RESTART','30')),
                                      maxiter=int(os.environ.get('DEE_NEWTON_GMRES_CYCLES','20')))
@@ -298,7 +295,7 @@ def main():
              'production_solver_changed':False,'equations_and_seed':'Run42 continuum equations, G, geometry, fields, boundaries and validated solver tolerances retained',
              'rows':rows,'raw_field_sha256':hashes,'candidate_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
              'limitations':['Single-resolution execution; combine with retained lower-resolution evidence before convergence assessment.','No production promotion, freeze or tag.']}
-        (root/'toroidal_direct_hessian_candidate.json').write_text(json.dumps(out,indent=2)+'\\n')
+        (root/'toroidal_direct_hessian_candidate.json').write_text(json.dumps(out,indent=2)+'\n')
         preserve_progress(completed=True)
         print(json.dumps({'status':out['status'],'completed_resolutions':out['rows'][0]['resolution'] if rows else []},indent=2),flush=True)
         return
@@ -315,7 +312,7 @@ def main():
          'rows':rows,'observed_orders':orders,'original_boundary_gate':gate,'raw_field_sha256':hashes,
          'candidate_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
          'coarse_grid_audit_retained':True,'fine_grid_assessment':'Report all refinement pairs separately; a coarse-pair failure is preserved rather than erased.','limitations':['Experimental discretization; no production promotion, freeze or tag.','Original independent second-order audit and order>=1.5 gate retained; fourth-order audit is supplementary.','Finite shell with axisymmetric stress; no general 3D or evolution validation.']}
-    (root/'toroidal_direct_hessian_candidate.json').write_text(json.dumps(out,indent=2)+'\\n')
+    (root/'toroidal_direct_hessian_candidate.json').write_text(json.dumps(out,indent=2)+'\n')
     preserve_progress(completed=True)
     print(json.dumps({'status':out['status'],'gate':gate,'orders':orders},indent=2),flush=True)
 
