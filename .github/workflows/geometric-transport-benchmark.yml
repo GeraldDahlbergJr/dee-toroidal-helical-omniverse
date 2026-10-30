@@ -1,0 +1,66 @@
+name: Geometric transport benchmark (separate from Run43)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'geometric_timeline_test/**'
+      - '.github/workflows/geometric-transport-benchmark.yml'
+  pull_request:
+    paths:
+      - 'geometric_timeline_test/**'
+      - '.github/workflows/geometric-transport-benchmark.yml'
+  schedule:
+    - cron: '43 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+concurrency:
+  group: geometric-transport-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      MPLBACKEND: Agg
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install benchmark dependencies
+        run: python -m pip install -r geometric_timeline_test/requirements.txt
+      - name: Record installed environment
+        run: python -m pip freeze > geometric_timeline_test/environment.txt
+      - name: Verify original kinematic benchmark
+        run: python geometric_timeline_test/test_transition.py 2>&1 | tee geometric_timeline_test/benchmark.log
+      - name: Verify geometric timeline and isolated input handling
+        if: ${{ !cancelled() }}
+        run: python geometric_timeline_test/geometric_timeline.py 2>&1 | tee geometric_timeline_test/timeline.log
+      - name: Record checks and provenance
+        if: ${{ always() }}
+        run: python geometric_timeline_test/ci_report.py
+      - name: Preserve diagnostics including failures
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: geometric-transport-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            geometric_timeline_test/*.csv
+            geometric_timeline_test/*.json
+            geometric_timeline_test/*.png
+            geometric_timeline_test/*.log
+            geometric_timeline_test/environment.txt
