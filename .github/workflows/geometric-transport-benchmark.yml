@@ -52,7 +52,9 @@ jobs:
         if: ${{ always() }}
         run: python geometric_timeline_test/ci_report.py
       - name: Preserve diagnostics including failures
+        id: artifacts
         if: ${{ always() }}
+        continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
           name: geometric-transport-${{ github.run_id }}-${{ github.run_attempt }}
@@ -64,3 +66,6 @@ jobs:
             geometric_timeline_test/*.png
             geometric_timeline_test/*.log
             geometric_timeline_test/environment.txt
+      - name: Preserve exact diagnostic ZIP in logs if artifact upload fails
+        if: ${{ always() && steps.artifacts.outcome != 'success' }}
+        run: python geometric_timeline_test/preserve_diagnostics.py

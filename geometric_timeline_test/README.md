@@ -109,6 +109,17 @@ environment. Diagnostics are uploaded even when tests fail and retained for
 14 days. GitHub scheduling can be delayed and runs depend on runner availability,
 Actions permissions and account quotas.
 
+If artifact upload fails (including account storage exhaustion), the fallback
+step writes an exact ZIP of the selected diagnostics into the job log as base64,
+with its SHA256 checksum, byte count and file list. It verifies every file against
+the ZIP before printing. Download the job logs, strip their timestamp prefixes,
+join the base64 lines between `BEGIN_GEOMETRIC_DIAGNOSTIC_ZIP_BASE64` and
+`END_GEOMETRIC_DIAGNOSTIC_ZIP_BASE64`, decode, and verify SHA256 before extraction.
+This copy survives for the repository's configured workflow-log retention period.
+The fallback stops with an error above 8 MiB. Upload failure is disclosed in the
+job summary; scientific failures still fail the workflow regardless of storage
+success. No older data are deleted and no other workflow is retried.
+
 This workflow executes only this benchmark. It does not write repository
 contents, modify Run 43, launch its workflows, change physical sources or accept
 these checks as physical validation. The repository's existing Run 43 automations
