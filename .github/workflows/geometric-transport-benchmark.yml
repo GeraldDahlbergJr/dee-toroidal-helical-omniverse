@@ -48,6 +48,9 @@ jobs:
       - name: Verify geometric timeline and isolated input handling
         if: ${{ !cancelled() }}
         run: python geometric_timeline_test/geometric_timeline.py 2>&1 | tee geometric_timeline_test/timeline.log
+      - name: Test alpha-beta phase coupling near radial transition
+        if: ${{ !cancelled() }}
+        run: python geometric_timeline_test/alpha_beta_boundary.py 2>&1 | tee geometric_timeline_test/alpha_beta_boundary.log
       - name: Record checks and provenance
         if: ${{ always() }}
         run: python geometric_timeline_test/ci_report.py
