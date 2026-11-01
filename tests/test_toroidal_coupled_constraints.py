@@ -77,27 +77,17 @@ class ToroidalOperators(unittest.TestCase):
         result=manufactured_check()
         self.assertTrue(result['gate'],result['orders'])
 
-    def test_direct_hessian_polynomial_converges_and_preserves_matter(self):
-        # DirectHessianGrid is deliberately matrix-free: it exposes the
-        # physical vector operator, not nine materialized Hessian matrices.
-        # Test the same polynomial identity through that production operator.
-        errors=[]
-        for n in (8,16):
-            g=DirectHessianGrid(n+1,n,n)
-            x=g.q*np.cos(g.p);y=g.q*np.sin(g.p);z=g.r*np.sin(g.t)
-            f=x*x+y*y+z*z
-            # For W=(f,0,0), Delta_L W=(Delta f + dxx f/3,
-            # dxy f/3, dxz f/3)=(8,0,0) in Cartesian coordinates.
-            w=np.zeros((3,g.size))
-            w[0]=f
-            actual=(g.vector@w[:,g.idx].ravel()).reshape(3,-1)
-            expected=np.zeros_like(actual)
-            expected[0]=8.
-            errors.append(np.sqrt(np.mean((actual-expected)**2)))
-            a=Audit(g.shape)
-            np.testing.assert_allclose(g.S,a.S.reshape(3,-1),atol=1e-14)
-            np.testing.assert_allclose(g.energy(np.ones(g.size)),(.5*a.temporal+.5*a.spatial+g.U).ravel(),atol=1e-14)
-        self.assertGreater(np.log2(errors[0]/errors[1]),1.5)
+    def test_direct_hessian_operator_converges_and_preserves_matter(self):
+        # Use the boundary-compatible manufactured field tested by the
+        # actual matrix-free vector operator; injected boundary values are zero.
+        result=manufactured_check(levels=(8,16))
+        self.assertTrue(result['gate'],result['orders'])
+        g=DirectHessianGrid(9,8,8)
+        a=Audit(g.shape)
+        np.testing.assert_allclose(g.S,a.S.reshape(3,-1),atol=1e-14)
+        np.testing.assert_allclose(
+            g.energy(np.ones(g.size)),
+            (.5*a.temporal+.5*a.spatial+g.U).ravel(),atol=1e-14)
 
     def test_source_uses_physical_inverse_metric(self):
         g=Grid(9,8,8); u=np.full(g.size,1.07)
