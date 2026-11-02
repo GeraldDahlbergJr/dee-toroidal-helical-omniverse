@@ -1,0 +1,129 @@
+{
+  "audit_git_blob": "5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22",
+  "passed": 11,
+  "total": 12,
+  "status": "FAIL",
+  "checks": [
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.4887588628759698,
+      "passed": false
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.7354112536483581,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.8670579606876239,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.8754257197704465,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9702786490319857,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9947318979036752,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 2.1438668612791347,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 2.057522319164751,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 2.024785564595777,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 2.2291429137362506,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 2.1324627654298633,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 2.0712569161178456,
+      "passed": true
+    }
+  ],
+  "scope": "Independent array re-evaluation of frozen numerical gate; not independent scientific replication or continuum proof."
+}

@@ -1,0 +1,757 @@
+﻿2026-11-02T04:07:54.3271983Z Current runner version: '2.338.2'
+2026-11-02T04:07:54.3323633Z ##[group]Runner Image Provisioner
+2026-11-02T04:07:54.3325365Z Hosted Compute Agent
+2026-11-02T04:07:54.3326428Z Version: 20261021.618
+2026-11-02T04:07:54.3328228Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-11-02T04:07:54.3329623Z Build Date: 2026-10-21T00:45:21Z
+2026-11-02T04:07:54.3330823Z Worker ID: {352ff7e4-7c38-4bab-93ec-0b2f5fd59065}
+2026-11-02T04:07:54.3332256Z Region: westus
+2026-11-02T04:07:54.3333197Z Cloud: Azure
+2026-11-02T04:07:54.3334236Z ##[endgroup]
+2026-11-02T04:07:54.3336786Z ##[group]Operating System
+2026-11-02T04:07:54.3338203Z Ubuntu
+2026-11-02T04:07:54.3339323Z 26.04.1
+2026-11-02T04:07:54.3340232Z LTS
+2026-11-02T04:07:54.3341076Z ##[endgroup]
+2026-11-02T04:07:54.3342204Z ##[group]Runner Image
+2026-11-02T04:07:54.3343242Z Image: ubuntu-26.04
+2026-11-02T04:07:54.3344983Z Version: 20261025.179.1
+2026-11-02T04:07:54.3347577Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261025.179/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-02T04:07:54.3350810Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261025.179
+2026-11-02T04:07:54.3352566Z ##[endgroup]
+2026-11-02T04:07:54.3355083Z ##[group]GITHUB_TOKEN Permissions
+2026-11-02T04:07:54.3358570Z Contents: read
+2026-11-02T04:07:54.3359690Z Metadata: read
+2026-11-02T04:07:54.3360661Z ##[endgroup]
+2026-11-02T04:07:54.3363967Z Secret source: Actions
+2026-11-02T04:07:54.3365702Z Cache mode: write
+2026-11-02T04:07:54.3367549Z Prepare workflow directory
+2026-11-02T04:07:54.4168552Z Prepare all required actions
+2026-11-02T04:07:54.4243709Z Getting action download info
+2026-11-02T04:07:54.7928940Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-02T04:07:54.9039729Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-02T04:07:54.9725490Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-02T04:07:55.1975808Z Complete job name: numerical-research
+2026-11-02T04:07:55.3020868Z ##[group]Run actions/checkout@v4
+2026-11-02T04:07:55.3021844Z with:
+2026-11-02T04:07:55.3022482Z   repository: GeraldDahlbergJr/dee-toroidal-helical-omniverse
+2026-11-02T04:07:55.3027633Z   token: ***
+2026-11-02T04:07:55.3028125Z   ssh-strict: true
+2026-11-02T04:07:55.3028629Z   ssh-user: git
+2026-11-02T04:07:55.3029133Z   persist-credentials: true
+2026-11-02T04:07:55.3029683Z   clean: true
+2026-11-02T04:07:55.3030187Z   sparse-checkout-cone-mode: true
+2026-11-02T04:07:55.3030781Z   fetch-depth: 1
+2026-11-02T04:07:55.3031262Z   fetch-tags: false
+2026-11-02T04:07:55.3031761Z   show-progress: true
+2026-11-02T04:07:55.3032265Z   lfs: false
+2026-11-02T04:07:55.3032735Z   submodules: false
+2026-11-02T04:07:55.3033253Z   set-safe-directory: true
+2026-11-02T04:07:55.3033839Z   allow-unsafe-pr-checkout: false
+2026-11-02T04:07:55.3034760Z env:
+2026-11-02T04:07:55.3035252Z   OPENBLAS_NUM_THREADS: 1
+2026-11-02T04:07:55.3035896Z   DEE_EXPERIMENT: actions-stabilized-flux
+2026-11-02T04:07:55.3036623Z   DEE_SCALAR_ORDER: flux
+2026-11-02T04:07:55.3037411Z   DEE_PRECONDITIONER: fourier
+2026-11-02T04:07:55.3037976Z ##[endgroup]
+2026-11-02T04:07:55.7031545Z Syncing repository: GeraldDahlbergJr/dee-toroidal-helical-omniverse
+2026-11-02T04:07:55.7035037Z ##[group]Getting Git version info
+2026-11-02T04:07:55.7036697Z Working directory is '/home/runner/work/dee-toroidal-helical-omniverse/dee-toroidal-helical-omniverse'
+2026-11-02T04:07:55.7112241Z [command]/usr/bin/git version
+2026-11-02T04:07:55.7482389Z git version 2.56.0
+2026-11-02T04:07:55.7492566Z ##[endgroup]
+2026-11-02T04:07:55.7501497Z Temporarily overriding HOME='/home/runner/work/_temp/754c1f40-8e1c-48b4-8663-0c8e9c2607b2' before making global git config changes
+2026-11-02T04:07:55.7504233Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-02T04:07:55.7507257Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/dee-toroidal-helical-omniverse/dee-toroidal-helical-omniverse
+2026-11-02T04:07:55.7568048Z Deleting the contents of '/home/runner/work/dee-toroidal-helical-omniverse/dee-toroidal-helical-omniverse'
+2026-11-02T04:07:55.7582600Z ##[group]Initializing the repository
+2026-11-02T04:07:55.7584647Z [command]/usr/bin/git init /home/runner/work/dee-toroidal-helical-omniverse/dee-toroidal-helical-omniverse
+2026-11-02T04:07:55.7789759Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-02T04:07:55.7792829Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-02T04:07:55.7794778Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-02T04:07:55.7796670Z hint: call:
+2026-11-02T04:07:55.7797829Z hint:
+2026-11-02T04:07:55.7798901Z hint: 	git config --global init.defaultBranch <name>
+2026-11-02T04:07:55.7825432Z hint:
+2026-11-02T04:07:55.7827120Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-02T04:07:55.7829340Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-02T04:07:55.7830938Z hint:
+2026-11-02T04:07:55.7831862Z hint: 	git branch -m <name>
+2026-11-02T04:07:55.7832795Z hint:
+2026-11-02T04:07:55.7834028Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-02T04:07:55.7836534Z Initialized empty Git repository in /home/runner/work/dee-toroidal-helical-omniverse/dee-toroidal-helical-omniverse/.git/
+2026-11-02T04:07:55.7841853Z [command]/usr/bin/git remote add origin https://github.com/GeraldDahlbergJr/dee-toroidal-helical-omniverse
+2026-11-02T04:07:55.7969056Z ##[endgroup]
+2026-11-02T04:07:55.7970898Z ##[group]Disabling automatic garbage collection
+2026-11-02T04:07:55.7972611Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-02T04:07:55.8035593Z ##[endgroup]
+2026-11-02T04:07:55.8037702Z ##[group]Setting up auth
+2026-11-02T04:07:55.8064915Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-02T04:07:55.8109581Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-02T04:07:55.8837270Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-02T04:07:55.8889372Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-02T04:07:55.9228037Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-02T04:07:55.9279455Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-02T04:07:55.9600609Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-02T04:07:55.9653961Z ##[endgroup]
+2026-11-02T04:07:55.9656409Z ##[group]Fetching the repository
+2026-11-02T04:07:55.9670321Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4e3d4d5944a41b827aaa6e6f322b5b6f29c97f55:refs/remotes/origin/research/run43-consistent-momentum-20261102
+2026-11-02T04:07:56.4477941Z From https://github.com/GeraldDahlbergJr/dee-toroidal-helical-omniverse
+2026-11-02T04:07:56.4489372Z  * [new ref]         4e3d4d5944a41b827aaa6e6f322b5b6f29c97f55 -> origin/research/run43-consistent-momentum-20261102
+2026-11-02T04:07:56.4497843Z ##[endgroup]
+2026-11-02T04:07:56.4500563Z ##[group]Determining the checkout info
+2026-11-02T04:07:56.4503628Z ##[endgroup]
+2026-11-02T04:07:56.4505915Z [command]/usr/bin/git sparse-checkout disable
+2026-11-02T04:07:56.4573158Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-02T04:07:56.4630064Z ##[group]Checking out the ref
+2026-11-02T04:07:56.4635322Z [command]/usr/bin/git checkout --progress --force -B research/run43-consistent-momentum-20261102 refs/remotes/origin/research/run43-consistent-momentum-20261102
+2026-11-02T04:07:56.4830146Z Switched to a new branch 'research/run43-consistent-momentum-20261102'
+2026-11-02T04:07:56.4837136Z branch 'research/run43-consistent-momentum-20261102' set up to track 'origin/research/run43-consistent-momentum-20261102'.
+2026-11-02T04:07:56.4855444Z ##[endgroup]
+2026-11-02T04:07:56.4905588Z [command]/usr/bin/git log -1 --format=%H
+2026-11-02T04:07:56.4938832Z 4e3d4d5944a41b827aaa6e6f322b5b6f29c97f55
+2026-11-02T04:07:56.5385335Z ##[group]Run actions/setup-python@v5
+2026-11-02T04:07:56.5386625Z with:
+2026-11-02T04:07:56.5387657Z   python-version: 3.12
+2026-11-02T04:07:56.5388627Z   check-latest: false
+2026-11-02T04:07:56.5399563Z   token: ***
+2026-11-02T04:07:56.5400474Z   update-environment: true
+2026-11-02T04:07:56.5401529Z   allow-prereleases: false
+2026-11-02T04:07:56.5402556Z   freethreaded: false
+2026-11-02T04:07:56.5403449Z env:
+2026-11-02T04:07:56.5493470Z   OPENBLAS_NUM_THREADS: 1
+2026-11-02T04:07:56.5495709Z   DEE_EXPERIMENT: actions-stabilized-flux
+2026-11-02T04:07:56.5497845Z   DEE_SCALAR_ORDER: flux
+2026-11-02T04:07:56.5499456Z   DEE_PRECONDITIONER: fourier
+2026-11-02T04:07:56.5501380Z ##[endgroup]
+2026-11-02T04:07:56.7213422Z ##[group]Installed versions
+2026-11-02T04:07:56.7373904Z (node:2145) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-02T04:07:56.7409917Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-02T04:07:56.7412939Z Successfully set up CPython (3.12.15)
+2026-11-02T04:07:56.7440872Z ##[endgroup]
+2026-11-02T04:07:56.7735583Z ##[group]Run python -m pip install numpy scipy
+2026-11-02T04:07:56.7738194Z [36;1mpython -m pip install numpy scipy[0m
+2026-11-02T04:07:56.7839477Z shell: /usr/bin/bash -e {0}
+2026-11-02T04:07:56.7840701Z env:
+2026-11-02T04:07:56.7841937Z   OPENBLAS_NUM_THREADS: 1
+2026-11-02T04:07:56.7843680Z   DEE_EXPERIMENT: actions-stabilized-flux
+2026-11-02T04:07:56.7845762Z   DEE_SCALAR_ORDER: flux
+2026-11-02T04:07:56.7847755Z   DEE_PRECONDITIONER: fourier
+2026-11-02T04:07:56.7849876Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:07:56.7852889Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-02T04:07:56.7855850Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:07:56.7858632Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:07:56.7861257Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:07:56.7864123Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-02T04:07:56.7866354Z ##[endgroup]
+2026-11-02T04:07:58.1633907Z Collecting numpy
+2026-11-02T04:07:58.2473674Z   Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+2026-11-02T04:07:58.4040626Z Collecting scipy
+2026-11-02T04:07:58.4314080Z   Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-11-02T04:07:58.5087561Z Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+2026-11-02T04:07:58.8167646Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 59.1 MB/s  0:00:00
+2026-11-02T04:07:58.8391441Z Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+2026-11-02T04:07:59.1551148Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 113.3 MB/s  0:00:00
+2026-11-02T04:07:59.2847354Z Installing collected packages: numpy, scipy
+2026-11-02T04:08:06.5709845Z 
+2026-11-02T04:08:06.5729341Z Successfully installed numpy-2.5.4 scipy-1.18.1
+2026-11-02T04:08:06.6880919Z ##[group]Run test "$(git hash-object reproduce/diagnose_toroidal_boundary_convergence.py)" = 5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22
+2026-11-02T04:08:06.6882069Z [36;1mtest "$(git hash-object reproduce/diagnose_toroidal_boundary_convergence.py)" = 5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22[0m
+2026-11-02T04:08:06.6883088Z [36;1mpython -m unittest discover -s tests -v[0m
+2026-11-02T04:08:06.6917959Z shell: /usr/bin/bash -e {0}
+2026-11-02T04:08:06.6918318Z env:
+2026-11-02T04:08:06.6918585Z   OPENBLAS_NUM_THREADS: 1
+2026-11-02T04:08:06.6918910Z   DEE_EXPERIMENT: actions-stabilized-flux
+2026-11-02T04:08:06.6919264Z   DEE_SCALAR_ORDER: flux
+2026-11-02T04:08:06.6919563Z   DEE_PRECONDITIONER: fourier
+2026-11-02T04:08:06.6919944Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:08:06.6920476Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-02T04:08:06.6921000Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:08:06.6921543Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:08:06.6922013Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:08:06.6922487Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-02T04:08:06.6922894Z ##[endgroup]
+2026-11-02T04:08:07.2501820Z test_analytic_finite_equilibrium_and_mass (test_dee_companion.DeeFieldModelTests.test_analytic_finite_equilibrium_and_mass) ... ok
+2026-11-02T04:08:07.2503743Z test_kinetic_matrix_positive_definiteness (test_dee_companion.DeeFieldModelTests.test_kinetic_matrix_positive_definiteness) ... ok
+2026-11-02T04:08:07.2525407Z test_rejects_invalid_lambda_v_inputs (test_dee_companion.DeeFieldModelTests.test_rejects_invalid_lambda_v_inputs) ... ok
+2026-11-02T04:08:07.2529781Z test_rejects_invalid_rho_squared_inputs (test_dee_companion.DeeFieldModelTests.test_rejects_invalid_rho_squared_inputs) ... ok
+2026-11-02T04:08:07.2548397Z test_radial_solver_grid_convergence (test_dee_companion.LinearizedEinsteinTests.test_radial_solver_grid_convergence) ... ok
+2026-11-02T04:08:07.2553459Z test_regular_axis_and_outer_boundary (test_dee_companion.LinearizedEinsteinTests.test_regular_axis_and_outer_boundary) ... ok
+2026-11-02T04:08:07.2576190Z test_rejects_incompatible_component_boundary_shape (test_dee_companion.LinearizedEinsteinTests.test_rejects_incompatible_component_boundary_shape) ... ok
+2026-11-02T04:08:07.2588308Z test_rejects_nonfinite_radius_stress_and_boundary (test_dee_companion.LinearizedEinsteinTests.test_rejects_nonfinite_radius_stress_and_boundary) ... ok
+2026-11-02T04:08:07.2598348Z test_indefinite_matrix_has_negative_scan_direction (test_dee_companion.NecTests.test_indefinite_matrix_has_negative_scan_direction) ... ok
+2026-11-02T04:08:07.2618009Z test_nec_quadratic_form_and_scan (test_dee_companion.NecTests.test_nec_quadratic_form_and_scan) ... ok
+2026-11-02T04:08:07.2637279Z test_archived_illustrative_point (test_nonlinear_dee_matter_gate.NonlinearDEEMatterGate.test_archived_illustrative_point) ... ok
+2026-11-02T04:08:07.2654722Z test_finite_branch_exact_stationarity_residual (test_nonlinear_dee_matter_gate.NonlinearDEEMatterGate.test_finite_branch_exact_stationarity_residual) ... ok
+2026-11-02T04:08:07.2668286Z test_indefinite_kinetic_matrix_is_rejected (test_nonlinear_dee_matter_gate.NonlinearDEEMatterGate.test_indefinite_kinetic_matrix_is_rejected) ... ok
+2026-11-02T04:08:07.2687621Z test_kinetic_matrix_is_positive_definite_at_archived_point (test_nonlinear_dee_matter_gate.NonlinearDEEMatterGate.test_kinetic_matrix_is_positive_definite_at_archived_point) ... ok
+2026-11-02T04:08:07.2689192Z {"timing": "base_derivatives_enter", "elapsed_s": 0.0015840840000009848}
+2026-11-02T04:08:07.2698896Z test_nec_quadratic_form_all_random_projected_directions (test_nonlinear_dee_matter_gate.NonlinearDEEMatterGate.test_nec_quadratic_form_all_random_projected_directions) ... ok
+2026-11-02T04:08:07.2710021Z test_positive_radial_curvature_on_positive_branch (test_nonlinear_dee_matter_gate.NonlinearDEEMatterGate.test_positive_radial_curvature_on_positive_branch) ... ok
+2026-11-02T04:08:07.2719608Z {"timing": "base_derivatives_exit", "elapsed_s": 0.006233380000004729}
+2026-11-02T04:08:07.2721173Z {"timing": "base_second_derivatives_enter", "elapsed_s": 0.006279593000002137}
+2026-11-02T04:08:07.2744329Z {"timing": "base_second_derivatives_exit", "elapsed_s": 0.008682550999999705}
+2026-11-02T04:08:07.2745921Z {"timing": "base_laplacian_enter", "elapsed_s": 0.008715741000003163}
+2026-11-02T04:08:07.2761688Z {"timing": "base_laplacian_exit", "elapsed_s": 0.010415812000005076}
+2026-11-02T04:08:07.2762885Z {"timing": "base_gradients_enter", "elapsed_s": 0.010446818000005464}
+2026-11-02T04:08:07.2786356Z {"timing": "base_gradients_exit", "elapsed_s": 0.012884198000001845}
+2026-11-02T04:08:07.2787858Z {"timing": "base_interior_laplacian_enter", "elapsed_s": 0.012916445000001886}
+2026-11-02T04:08:07.2791672Z {"timing": "base_interior_laplacian_exit", "elapsed_s": 0.013491333000004602}
+2026-11-02T04:08:07.2793109Z {"timing": "base_splu_skipped_candidate", "elapsed_s": 0.013518702000006044}
+2026-11-02T04:08:07.3079951Z test_fourier_inverse_and_scalar_flux_consistency (test_run43_consistent_momentum.ConsistentMomentum.test_fourier_inverse_and_scalar_flux_consistency) ... ok
+2026-11-02T04:08:07.3084719Z {"timing": "base_derivatives_enter", "elapsed_s": 0.0006331929999987551}
+2026-11-02T04:08:07.3108438Z {"timing": "base_derivatives_exit", "elapsed_s": 0.002940670999997508}
+2026-11-02T04:08:07.3109864Z {"timing": "base_second_derivatives_enter", "elapsed_s": 0.003001228999998773}
+2026-11-02T04:08:07.3131223Z {"timing": "base_second_derivatives_exit", "elapsed_s": 0.005243911000000878}
+2026-11-02T04:08:07.3132416Z {"timing": "base_laplacian_enter", "elapsed_s": 0.005276078000001405}
+2026-11-02T04:08:07.3145436Z {"timing": "base_laplacian_exit", "elapsed_s": 0.0066933640000002015}
+2026-11-02T04:08:07.3146739Z {"timing": "base_gradients_enter", "elapsed_s": 0.006722555999999713}
+2026-11-02T04:08:07.3169797Z {"timing": "base_gradients_exit", "elapsed_s": 0.00910902500000077}
+2026-11-02T04:08:07.3171097Z {"timing": "base_interior_laplacian_enter", "elapsed_s": 0.009140010000002974}
+2026-11-02T04:08:07.3173370Z {"timing": "base_interior_laplacian_exit", "elapsed_s": 0.00951744500000018}
+2026-11-02T04:08:07.3174693Z {"timing": "base_splu_skipped_candidate", "elapsed_s": 0.009567365000002326}
+2026-11-02T04:08:07.7516065Z test_small_grid_has_no_exact_null_mode (test_run43_consistent_momentum.ConsistentMomentum.test_small_grid_has_no_exact_null_mode) ... ok
+2026-11-02T04:08:07.7523970Z {"timing": "base_derivatives_enter", "elapsed_s": 0.0008741640000025086}
+2026-11-02T04:08:07.7554008Z {"timing": "base_derivatives_exit", "elapsed_s": 0.0038209180000023935}
+2026-11-02T04:08:07.7555380Z {"timing": "base_second_derivatives_enter", "elapsed_s": 0.0038604780000000005}
+2026-11-02T04:08:07.7577138Z {"timing": "base_second_derivatives_exit", "elapsed_s": 0.006133323999996776}
+2026-11-02T04:08:07.7578301Z {"timing": "base_laplacian_enter", "elapsed_s": 0.0061620050000001925}
+2026-11-02T04:08:07.7592153Z {"timing": "base_laplacian_exit", "elapsed_s": 0.007655085999999756}
+2026-11-02T04:08:07.7593433Z {"timing": "base_gradients_enter", "elapsed_s": 0.007683757000002345}
+2026-11-02T04:08:07.7620225Z {"timing": "base_gradients_exit", "elapsed_s": 0.010460283999996989}
+2026-11-02T04:08:07.7621414Z {"timing": "base_interior_laplacian_enter", "elapsed_s": 0.010489186000000927}
+2026-11-02T04:08:07.7623689Z {"timing": "base_interior_laplacian_exit", "elapsed_s": 0.010874004000001491}
+2026-11-02T04:08:07.7624938Z {"timing": "base_splu_skipped_candidate", "elapsed_s": 0.010898087000001055}
+2026-11-02T04:08:07.7751158Z {"timing": "base_derivatives_enter", "elapsed_s": 0.00047459900000035304}
+2026-11-02T04:08:07.7773745Z {"timing": "base_derivatives_exit", "elapsed_s": 0.0028282489999966742}
+2026-11-02T04:08:07.7774924Z {"timing": "base_second_derivatives_enter", "elapsed_s": 0.002858582999998305}
+2026-11-02T04:08:07.7797483Z {"timing": "base_second_derivatives_exit", "elapsed_s": 0.005116422000000398}
+2026-11-02T04:08:07.7798695Z {"timing": "base_laplacian_enter", "elapsed_s": 0.005144932999996854}
+2026-11-02T04:08:07.7812212Z {"timing": "base_laplacian_exit", "elapsed_s": 0.006686981999997954}
+2026-11-02T04:08:07.7813303Z {"timing": "base_gradients_enter", "elapsed_s": 0.006714480999995942}
+2026-11-02T04:08:07.7837342Z {"timing": "base_gradients_exit", "elapsed_s": 0.009181563999995035}
+2026-11-02T04:08:07.7838502Z {"timing": "base_interior_laplacian_enter", "elapsed_s": 0.009208992999994337}
+2026-11-02T04:08:07.7841077Z {"timing": "base_interior_laplacian_exit", "elapsed_s": 0.009637810000000968}
+2026-11-02T04:08:07.7842287Z {"timing": "base_splu_skipped_candidate", "elapsed_s": 0.009663345999996409}
+2026-11-02T04:08:07.7987738Z test_stabilization_damps_angular_checkerboard (test_run43_consistent_momentum.ConsistentMomentum.test_stabilization_damps_angular_checkerboard) ... ok
+2026-11-02T04:08:07.7994331Z {"timing": "base_derivatives_enter", "elapsed_s": 0.0006787639999998873}
+2026-11-02T04:08:07.8019301Z {"timing": "base_derivatives_exit", "elapsed_s": 0.0032140290000057803}
+2026-11-02T04:08:07.8020484Z {"timing": "base_second_derivatives_enter", "elapsed_s": 0.0032431810000019823}
+2026-11-02T04:08:07.8041966Z {"timing": "base_second_derivatives_exit", "elapsed_s": 0.005495220000000245}
+2026-11-02T04:08:07.8043100Z {"timing": "base_laplacian_enter", "elapsed_s": 0.005523180000004402}
+2026-11-02T04:08:07.8057137Z {"timing": "base_laplacian_exit", "elapsed_s": 0.006985075000002894}
+2026-11-02T04:08:07.8058388Z {"timing": "base_gradients_enter", "elapsed_s": 0.007013406000005773}
+2026-11-02T04:08:07.8098082Z {"timing": "base_gradients_exit", "elapsed_s": 0.010874302000004832}
+2026-11-02T04:08:07.8101788Z {"timing": "base_interior_laplacian_enter", "elapsed_s": 0.010908944000000531}
+2026-11-02T04:08:07.8103202Z {"timing": "base_interior_laplacian_exit", "elapsed_s": 0.011390205000004983}
+2026-11-02T04:08:07.8104357Z {"timing": "base_splu_skipped_candidate", "elapsed_s": 0.0114132859999998}
+2026-11-02T04:08:07.8267171Z test_tensor_operator_matches_independent_audit (test_run43_consistent_momentum.ConsistentMomentum.test_tensor_operator_matches_independent_audit) ... ok
+2026-11-02T04:08:07.8270879Z test_analytic_operator_identities (test_tensor_twist.TensorTwistTests.test_analytic_operator_identities) ... ok
+2026-11-02T04:08:07.8314393Z test_manufactured_solution_second_order_convergence (test_tensor_twist.TensorTwistTests.test_manufactured_solution_second_order_convergence) ... ok
+2026-11-02T04:08:07.8316427Z test_rejects_nonuniform_grid (test_tensor_twist.TensorTwistTests.test_rejects_nonuniform_grid) ... ok
+2026-11-02T04:08:07.8961976Z test_candidate_preserves_source_and_matches_independent_operator (test_toroidal_coupled_constraints.ToroidalOperators.test_candidate_preserves_source_and_matches_independent_operator) ... ok
+2026-11-02T04:08:08.0996621Z test_cartesian_polynomial_vector_laplacian_converges (test_toroidal_coupled_constraints.ToroidalOperators.test_cartesian_polynomial_vector_laplacian_converges) ... ok
+2026-11-02T04:08:08.0999239Z {"timing": "candidate_init_enter", "shape": [9, 8, 8]}
+2026-11-02T04:08:08.1003699Z {"timing": "base_derivatives_enter", "elapsed_s": 0.0007467960000013818}
+2026-11-02T04:08:08.1027030Z {"timing": "base_derivatives_exit", "elapsed_s": 0.0030470109999996}
+2026-11-02T04:08:08.1028178Z {"timing": "base_second_derivatives_enter", "elapsed_s": 0.0030769649999982107}
+2026-11-02T04:08:08.1048783Z {"timing": "base_second_derivatives_exit", "elapsed_s": 0.005241265999998745}
+2026-11-02T04:08:08.1049799Z {"timing": "base_laplacian_enter", "elapsed_s": 0.0052696569999994836}
+2026-11-02T04:08:08.1062365Z {"timing": "base_laplacian_exit", "elapsed_s": 0.006605927000002509}
+2026-11-02T04:08:08.1063401Z {"timing": "base_gradients_enter", "elapsed_s": 0.006633526999998196}
+2026-11-02T04:08:08.1085071Z {"timing": "base_gradients_exit", "elapsed_s": 0.00886620100000357}
+2026-11-02T04:08:08.1087082Z {"timing": "base_interior_laplacian_enter", "elapsed_s": 0.008895682999998655}
+2026-11-02T04:08:08.1089127Z {"timing": "base_interior_laplacian_exit", "elapsed_s": 0.00931325999999899}
+2026-11-02T04:08:08.1090264Z {"timing": "base_splu_skipped_candidate", "elapsed_s": 0.00933931699999846}
+2026-11-02T04:08:08.1091244Z {"timing": "base_grid_complete", "elapsed_s": 0.009579915999999855}
+2026-11-02T04:08:08.1144719Z {"timing": "candidate_hessian_complete", "elapsed_s": 0.005150542999999175, "total_s": 0.014750396000003718}
+2026-11-02T04:08:08.1158163Z {"timing": "candidate_init_complete", "total_s": 0.015351551000001962}
+2026-11-02T04:08:08.1159237Z {"timing": "matvec_enter", "call": 1}
+2026-11-02T04:08:08.1160128Z {"timing": "matvec_exit", "call": 1, "elapsed_s": 0.0003692510000021798}
+2026-11-02T04:08:08.1177878Z {"timing": "candidate_init_enter", "shape": [17, 16, 16]}
+2026-11-02T04:08:08.1197769Z {"timing": "base_derivatives_enter", "elapsed_s": 0.0012070589999950698}
+2026-11-02T04:08:08.1209928Z {"timing": "base_derivatives_exit", "elapsed_s": 0.004049293000001342}
+2026-11-02T04:08:08.1211190Z {"timing": "base_second_derivatives_enter", "elapsed_s": 0.004082362999994871}
+2026-11-02T04:08:08.1237461Z {"timing": "base_second_derivatives_exit", "elapsed_s": 0.006774006999997084}
+2026-11-02T04:08:08.1253174Z {"timing": "base_laplacian_enter", "elapsed_s": 0.006804912999996304}
+2026-11-02T04:08:08.1266703Z {"timing": "base_laplacian_exit", "elapsed_s": 0.00945276899999925}
+2026-11-02T04:08:08.1268241Z {"timing": "base_gradients_enter", "elapsed_s": 0.00948807199999635}
+2026-11-02T04:08:08.1302378Z {"timing": "base_gradients_exit", "elapsed_s": 0.01319159699999517}
+2026-11-02T04:08:08.1306640Z {"timing": "base_interior_laplacian_enter", "elapsed_s": 0.013235144999995896}
+2026-11-02T04:08:08.1309647Z {"timing": "base_interior_laplacian_exit", "elapsed_s": 0.014058737999995685}
+2026-11-02T04:08:08.1311245Z {"timing": "base_splu_skipped_candidate", "elapsed_s": 0.01409004499999611}
+2026-11-02T04:08:08.1315485Z {"timing": "base_grid_complete", "elapsed_s": 0.014669742000002373}
+2026-11-02T04:08:08.1395326Z {"timing": "candidate_hessian_complete", "elapsed_s": 0.007709161000001075, "total_s": 0.022415027000000975}
+2026-11-02T04:08:08.1408380Z {"timing": "candidate_init_complete", "total_s": 0.02392319500000184}
+2026-11-02T04:08:08.1439078Z {"timing": "matvec_enter", "call": 1}
+2026-11-02T04:08:08.1441715Z {"timing": "matvec_exit", "call": 1, "elapsed_s": 0.0025311680000044134}
+2026-11-02T04:08:08.1464508Z test_direct_hessian_manufactured_inner_boundary_converges (test_toroidal_coupled_constraints.ToroidalOperators.test_direct_hessian_manufactured_inner_boundary_converges) ... ok
+2026-11-02T04:08:08.1466572Z {"timing": "candidate_init_enter", "shape": [9, 8, 8]}
+2026-11-02T04:08:08.1471193Z {"timing": "base_derivatives_enter", "elapsed_s": 0.0006449430000046164}
+2026-11-02T04:08:08.1493788Z {"timing": "base_derivatives_exit", "elapsed_s": 0.0028906710000029534}
+2026-11-02T04:08:08.1495157Z {"timing": "base_second_derivatives_enter", "elapsed_s": 0.002917709000001878}
+2026-11-02T04:08:08.1515475Z {"timing": "base_second_derivatives_exit", "elapsed_s": 0.005052758000005042}
+2026-11-02T04:08:08.1519068Z {"timing": "base_laplacian_enter", "elapsed_s": 0.005082180999998798}
+2026-11-02T04:08:08.1529885Z {"timing": "base_laplacian_exit", "elapsed_s": 0.006506208000004676}
+2026-11-02T04:08:08.1531278Z {"timing": "base_gradients_enter", "elapsed_s": 0.0065328760000014086}
+2026-11-02T04:08:08.1552710Z {"timing": "base_gradients_exit", "elapsed_s": 0.008781789000003926}
+2026-11-02T04:08:08.1554276Z {"timing": "base_interior_laplacian_enter", "elapsed_s": 0.0088115920000007}
+2026-11-02T04:08:08.1568981Z {"timing": "base_interior_laplacian_exit", "elapsed_s": 0.00922251700000487}
+2026-11-02T04:08:08.1587647Z {"timing": "base_splu_skipped_candidate", "elapsed_s": 0.009247121000001357}
+2026-11-02T04:08:08.1620664Z {"timing": "base_grid_complete", "elapsed_s": 0.009490647000006902}
+2026-11-02T04:08:08.1640151Z {"timing": "candidate_hessian_complete", "elapsed_s": 0.007999568999998985, "total_s": 0.01751230600000042}
+2026-11-02T04:08:08.1645768Z {"timing": "candidate_init_complete", "total_s": 0.01807593400000229}
+2026-11-02T04:08:08.1653339Z {"timing": "matvec_enter", "call": 1}
+2026-11-02T04:08:08.1661742Z {"timing": "matvec_exit", "call": 1, "elapsed_s": 0.0006587080000031165}
+2026-11-02T04:08:08.1687371Z {"timing": "candidate_init_enter", "shape": [17, 16, 16]}
+2026-11-02T04:08:08.1690442Z {"timing": "base_derivatives_enter", "elapsed_s": 0.0015797360000036065}
+2026-11-02T04:08:08.1718820Z {"timing": "base_derivatives_exit", "elapsed_s": 0.004360560000002067}
+2026-11-02T04:08:08.1720225Z {"timing": "base_second_derivatives_enter", "elapsed_s": 0.00441189200000025}
+2026-11-02T04:08:08.1748299Z {"timing": "base_second_derivatives_exit", "elapsed_s": 0.007340169999999091}
+2026-11-02T04:08:08.1749634Z {"timing": "base_laplacian_enter", "elapsed_s": 0.007392444000004161}
+2026-11-02T04:08:08.1774291Z {"timing": "base_laplacian_exit", "elapsed_s": 0.009936575000004666}
+2026-11-02T04:08:08.1775706Z {"timing": "base_gradients_enter", "elapsed_s": 0.009966298000001927}
+2026-11-02T04:08:08.1809530Z {"timing": "base_gradients_exit", "elapsed_s": 0.013438349000004735}
+2026-11-02T04:08:08.1810762Z {"timing": "base_interior_laplacian_enter", "elapsed_s": 0.013472430000000202}
+2026-11-02T04:08:08.1819304Z {"timing": "base_interior_laplacian_exit", "elapsed_s": 0.01446242100000461}
+2026-11-02T04:08:08.1820678Z {"timing": "base_splu_skipped_candidate", "elapsed_s": 0.014491523000003781}
+2026-11-02T04:08:08.1826683Z {"timing": "base_grid_complete", "elapsed_s": 0.015239210000004277}
+2026-11-02T04:08:08.1913718Z {"timing": "candidate_hessian_complete", "elapsed_s": 0.008423948999997322, "total_s": 0.023692191000002083}
+2026-11-02T04:08:08.1933871Z {"timing": "candidate_init_complete", "total_s": 0.02588645700000569}
+2026-11-02T04:08:08.1940610Z {"timing": "matvec_enter", "call": 1}
+2026-11-02T04:08:08.1960269Z {"timing": "matvec_exit", "call": 1, "elapsed_s": 0.001948235000000409}
+2026-11-02T04:08:08.1986737Z {"timing": "candidate_init_enter", "shape": [9, 8, 8]}
+2026-11-02T04:08:08.1993353Z {"timing": "base_derivatives_enter", "elapsed_s": 0.0006431969999951548}
+2026-11-02T04:08:08.2017718Z {"timing": "base_derivatives_exit", "elapsed_s": 0.0029794489999943607}
+2026-11-02T04:08:08.2019164Z {"timing": "base_second_derivatives_enter", "elapsed_s": 0.0030116390000003435}
+2026-11-02T04:08:08.2038961Z {"timing": "base_second_derivatives_exit", "elapsed_s": 0.005209711999995648}
+2026-11-02T04:08:08.2040327Z {"timing": "base_laplacian_enter", "elapsed_s": 0.005238174999995238}
+2026-11-02T04:08:08.2052680Z {"timing": "base_laplacian_exit", "elapsed_s": 0.006582416999997065}
+2026-11-02T04:08:08.2055834Z {"timing": "base_gradients_enter", "elapsed_s": 0.006610859999995}
+2026-11-02T04:08:08.2076556Z {"timing": "base_gradients_exit", "elapsed_s": 0.008965996999997117}
+2026-11-02T04:08:08.2080232Z {"timing": "base_interior_laplacian_enter", "elapsed_s": 0.008995351999999457}
+2026-11-02T04:08:08.2088628Z {"timing": "base_interior_laplacian_exit", "elapsed_s": 0.009454843999996854}
+2026-11-02T04:08:08.2092074Z {"timing": "base_splu_skipped_candidate", "elapsed_s": 0.009480822999996974}
+2026-11-02T04:08:08.2092985Z {"timing": "base_grid_complete", "elapsed_s": 0.009714891000001558}
+2026-11-02T04:08:08.2140861Z {"timing": "candidate_hessian_complete", "elapsed_s": 0.005555591000003801, "total_s": 0.015290608999997346}
+2026-11-02T04:08:08.2145488Z {"timing": "candidate_init_complete", "total_s": 0.01589728700000137}
+2026-11-02T04:08:08.2159070Z test_direct_hessian_operator_converges_and_preserves_matter (test_toroidal_coupled_constraints.ToroidalOperators.test_direct_hessian_operator_converges_and_preserves_matter) ... ok
+2026-11-02T04:08:08.2359574Z test_expanded_audit_matches_production_vector_operator (test_toroidal_coupled_constraints.ToroidalOperators.test_expanded_audit_matches_production_vector_operator) ... ok
+2026-11-02T04:08:08.2369170Z test_fourth_order_radial_polynomial_including_endpoints (test_toroidal_coupled_constraints.ToroidalOperators.test_fourth_order_radial_polynomial_including_endpoints) ... ok
+2026-11-02T04:08:08.2448667Z test_independent_tensor_divergence_manufactured_vector (test_toroidal_coupled_constraints.ToroidalOperators.test_independent_tensor_divergence_manufactured_vector) ... ok
+2026-11-02T04:08:08.2461270Z test_matched_endpoint_composition_has_no_cubic_edge_defect (test_toroidal_coupled_constraints.ToroidalOperators.test_matched_endpoint_composition_has_no_cubic_edge_defect) ... ok
+2026-11-02T04:08:08.2628216Z test_source_uses_physical_inverse_metric (test_toroidal_coupled_constraints.ToroidalOperators.test_source_uses_physical_inverse_metric) ... ok
+2026-11-02T04:08:08.2629625Z 
+2026-11-02T04:08:08.2809249Z ----------------------------------------------------------------------
+2026-11-02T04:08:08.2809902Z Ran 32 tests in 1.014s
+2026-11-02T04:08:08.2810127Z 
+2026-11-02T04:08:08.2810247Z OK
+2026-11-02T04:08:08.3242172Z ##[group]Run set -o pipefail
+2026-11-02T04:08:08.3242563Z [36;1mset -o pipefail[0m
+2026-11-02T04:08:08.3243356Z [36;1mpython research/run43_consistent_momentum.py 2>&1 | tee research/execution.log[0m
+2026-11-02T04:08:08.3277270Z shell: /usr/bin/bash -e {0}
+2026-11-02T04:08:08.3277582Z env:
+2026-11-02T04:08:08.3277819Z   OPENBLAS_NUM_THREADS: 1
+2026-11-02T04:08:08.3278135Z   DEE_EXPERIMENT: actions-stabilized-flux
+2026-11-02T04:08:08.3278508Z   DEE_SCALAR_ORDER: flux
+2026-11-02T04:08:08.3278784Z   DEE_PRECONDITIONER: fourier
+2026-11-02T04:08:08.3279145Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:08:08.3279665Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-02T04:08:08.3280178Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:08:08.3280638Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:08:08.3281097Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:08:08.3281616Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-02T04:08:08.3282011Z ##[endgroup]
+2026-11-02T04:08:08.6297888Z {"timing": "base_derivatives_enter", "elapsed_s": 0.0009280109999991737}
+2026-11-02T04:08:08.6315445Z {"timing": "base_derivatives_exit", "elapsed_s": 0.005042338000002644}
+2026-11-02T04:08:08.6328376Z {"timing": "base_second_derivatives_enter", "elapsed_s": 0.005140892999996538}
+2026-11-02T04:08:08.6343410Z {"timing": "base_second_derivatives_exit", "elapsed_s": 0.007829475000001196}
+2026-11-02T04:08:08.6344837Z {"timing": "base_laplacian_enter", "elapsed_s": 0.007868979999997805}
+2026-11-02T04:08:08.6363133Z {"timing": "base_laplacian_exit", "elapsed_s": 0.009797898000002192}
+2026-11-02T04:08:08.6364611Z {"timing": "base_gradients_enter", "elapsed_s": 0.00983217200000297}
+2026-11-02T04:08:08.6390279Z {"timing": "base_gradients_exit", "elapsed_s": 0.012516306000001975}
+2026-11-02T04:08:08.6391860Z {"timing": "base_interior_laplacian_enter", "elapsed_s": 0.012550701000002107}
+2026-11-02T04:08:08.6397562Z {"timing": "base_interior_laplacian_exit", "elapsed_s": 0.013259560000001613}
+2026-11-02T04:08:08.6398827Z {"timing": "base_splu_skipped_candidate", "elapsed_s": 0.013342184999999063}
+2026-11-02T04:08:08.6987583Z {"gmres_info": 0, "iterations": 39, "true_residual": 8.062065490010124e-12}
+2026-11-02T04:08:08.7472348Z {"gmres_info": 0, "iterations": 39, "true_residual": 8.052300967773663e-12}
+2026-11-02T04:08:08.7927621Z {"gmres_info": 0, "iterations": 39, "true_residual": 8.052300967773663e-12}
+2026-11-02T04:08:08.8448734Z {"gmres_info": 0, "iterations": 39, "true_residual": 8.052300967773663e-12}
+2026-11-02T04:08:08.8608230Z {"completed": 8, "seconds": 0.2204124927520752}
+2026-11-02T04:08:08.8638196Z {"timing": "base_derivatives_enter", "elapsed_s": 0.0017133930000028386}
+2026-11-02T04:08:08.8678260Z {"timing": "base_derivatives_exit", "elapsed_s": 0.00684238299999862}
+2026-11-02T04:08:08.8708222Z {"timing": "base_second_derivatives_enter", "elapsed_s": 0.006942070000000911}
+2026-11-02T04:08:08.8727685Z {"timing": "base_second_derivatives_exit", "elapsed_s": 0.011779924000002495}
+2026-11-02T04:08:08.8747912Z {"timing": "base_laplacian_enter", "elapsed_s": 0.011880402999999262}
+2026-11-02T04:08:08.8767847Z {"timing": "base_laplacian_exit", "elapsed_s": 0.015861059000002342}
+2026-11-02T04:08:08.8792513Z {"timing": "base_gradients_enter", "elapsed_s": 0.015942350999999633}
+2026-11-02T04:08:08.8838837Z {"timing": "base_gradients_exit", "elapsed_s": 0.021787093999996898}
+2026-11-02T04:08:08.8857837Z {"timing": "base_interior_laplacian_enter", "elapsed_s": 0.021894895999999164}
+2026-11-02T04:08:08.8859075Z {"timing": "base_interior_laplacian_exit", "elapsed_s": 0.02306692500000196}
+2026-11-02T04:08:08.8860420Z {"timing": "base_splu_skipped_candidate", "elapsed_s": 0.023122108000002584}
+2026-11-02T04:08:09.2285378Z {"gmres_info": 0, "iterations": 75, "true_residual": 4.2371023088800276e-11}
+2026-11-02T04:08:09.4407660Z {"gmres_info": 0, "iterations": 75, "true_residual": 4.2361722407377975e-11}
+2026-11-02T04:08:09.6481865Z {"gmres_info": 0, "iterations": 75, "true_residual": 4.2361722407377975e-11}
+2026-11-02T04:08:09.8538417Z {"gmres_info": 0, "iterations": 75, "true_residual": 4.2359384853463665e-11}
+2026-11-02T04:08:09.8740247Z {"completed": 16, "seconds": 0.9995613098144531}
+2026-11-02T04:08:09.8804252Z {"timing": "base_derivatives_enter", "elapsed_s": 0.00634541099999808}
+2026-11-02T04:08:09.8854637Z {"timing": "base_derivatives_exit", "elapsed_s": 0.011465545000000077}
+2026-11-02T04:08:09.8856244Z {"timing": "base_second_derivatives_enter", "elapsed_s": 0.011512643000003209}
+2026-11-02T04:08:09.8921659Z {"timing": "base_second_derivatives_exit", "elapsed_s": 0.018065843999998776}
+2026-11-02T04:08:09.8923267Z {"timing": "base_laplacian_enter", "elapsed_s": 0.01812633800000185}
+2026-11-02T04:08:09.9042618Z {"timing": "base_laplacian_exit", "elapsed_s": 0.030172681999999895}
+2026-11-02T04:08:09.9044330Z {"timing": "base_gradients_enter", "elapsed_s": 0.03022756500000412}
+2026-11-02T04:08:09.9177144Z {"timing": "base_gradients_exit", "elapsed_s": 0.04353989399999847}
+2026-11-02T04:08:09.9179046Z {"timing": "base_interior_laplacian_enter", "elapsed_s": 0.043596499999999594}
+2026-11-02T04:08:09.9232058Z {"timing": "base_interior_laplacian_exit", "elapsed_s": 0.04918787799999791}
+2026-11-02T04:08:09.9233642Z {"timing": "base_splu_skipped_candidate", "elapsed_s": 0.04923667900000339}
+2026-11-02T04:08:14.1691580Z {"gmres_info": 0, "iterations": 166, "true_residual": 1.240395962699404e-10}
+2026-11-02T04:08:17.7173609Z {"gmres_info": 0, "iterations": 166, "true_residual": 1.240984396033909e-10}
+2026-11-02T04:08:21.3021645Z {"gmres_info": 0, "iterations": 166, "true_residual": 1.240984396033909e-10}
+2026-11-02T04:08:24.8436464Z {"gmres_info": 0, "iterations": 166, "true_residual": 1.2392672644239945e-10}
+2026-11-02T04:08:24.9469683Z {"completed": 32, "seconds": 15.010326385498047}
+2026-11-02T04:08:24.9938155Z {"timing": "base_derivatives_enter", "elapsed_s": 0.046715433000002804}
+2026-11-02T04:08:25.0230705Z {"timing": "base_derivatives_exit", "elapsed_s": 0.07598757099999887}
+2026-11-02T04:08:25.0232430Z {"timing": "base_second_derivatives_enter", "elapsed_s": 0.07605318299999908}
+2026-11-02T04:08:25.0581292Z {"timing": "base_second_derivatives_exit", "elapsed_s": 0.1110465830000038}
+2026-11-02T04:08:25.0583041Z {"timing": "base_laplacian_enter", "elapsed_s": 0.1111116650000028}
+2026-11-02T04:08:25.1402395Z {"timing": "base_laplacian_exit", "elapsed_s": 0.19314249800000027}
+2026-11-02T04:08:25.1404398Z {"timing": "base_gradients_enter", "elapsed_s": 0.19320460400000172}
+2026-11-02T04:08:25.2375795Z {"timing": "base_gradients_exit", "elapsed_s": 0.290528946000002}
+2026-11-02T04:08:25.2378289Z {"timing": "base_interior_laplacian_enter", "elapsed_s": 0.2905920930000008}
+2026-11-02T04:08:25.2665218Z {"timing": "base_interior_laplacian_exit", "elapsed_s": 0.319451162}
+2026-11-02T04:08:25.2667259Z {"timing": "base_splu_skipped_candidate", "elapsed_s": 0.31951967000000536}
+2026-11-02T04:09:48.2565410Z {"gmres_info": 0, "iterations": 387, "true_residual": 8.814642881052834e-11}
+2026-11-02T04:11:08.4288312Z {"gmres_info": 0, "iterations": 387, "true_residual": 8.811644058129597e-11}
+2026-11-02T04:12:28.0475884Z {"gmres_info": 0, "iterations": 387, "true_residual": 8.811644058129597e-11}
+2026-11-02T04:13:48.8385283Z {"gmres_info": 0, "iterations": 387, "true_residual": 8.805134996597005e-11}
+2026-11-02T04:13:49.6698536Z {"completed": 64, "seconds": 324.18576407432556}
+2026-11-02T04:13:49.6747408Z {
+2026-11-02T04:13:49.6750155Z   "status": "PASS",
+2026-11-02T04:13:49.6750811Z   "checks": [
+2026-11-02T04:13:49.6758425Z     {
+2026-11-02T04:13:49.6759073Z       "band": "inner_boundary_band",
+2026-11-02T04:13:49.6759743Z       "metric": "independent_flux_H",
+2026-11-02T04:13:49.6760360Z       "pair": [
+2026-11-02T04:13:49.6760842Z         8,
+2026-11-02T04:13:49.6761295Z         16
+2026-11-02T04:13:49.6761744Z       ],
+2026-11-02T04:13:49.6762217Z       "order": 1.7408475852068643,
+2026-11-02T04:13:49.6763155Z       "passed": true
+2026-11-02T04:13:49.6763663Z     },
+2026-11-02T04:13:49.6764106Z     {
+2026-11-02T04:13:49.6764601Z       "band": "inner_boundary_band",
+2026-11-02T04:13:49.6765261Z       "metric": "independent_flux_H",
+2026-11-02T04:13:49.6765903Z       "pair": [
+2026-11-02T04:13:49.6766361Z         16,
+2026-11-02T04:13:49.6767053Z         32
+2026-11-02T04:13:49.6767541Z       ],
+2026-11-02T04:13:49.6767984Z       "order": 1.9298254627467846,
+2026-11-02T04:13:49.6768568Z       "passed": true
+2026-11-02T04:13:49.6769052Z     },
+2026-11-02T04:13:49.6769483Z     {
+2026-11-02T04:13:49.6769942Z       "band": "inner_boundary_band",
+2026-11-02T04:13:49.6770536Z       "metric": "independent_flux_H",
+2026-11-02T04:13:49.6771122Z       "pair": [
+2026-11-02T04:13:49.6771565Z         32,
+2026-11-02T04:13:49.6771996Z         64
+2026-11-02T04:13:49.6772428Z       ],
+2026-11-02T04:13:49.6772889Z       "order": 1.996175084036,
+2026-11-02T04:13:49.6773419Z       "passed": true
+2026-11-02T04:13:49.6773895Z     },
+2026-11-02T04:13:49.6774325Z     {
+2026-11-02T04:13:49.6774787Z       "band": "inner_boundary_band",
+2026-11-02T04:13:49.6775377Z       "metric": "independent_tensor_M_order2",
+2026-11-02T04:13:49.6775987Z       "pair": [
+2026-11-02T04:13:49.6776434Z         8,
+2026-11-02T04:13:49.6777076Z         16
+2026-11-02T04:13:49.6777612Z       ],
+2026-11-02T04:13:49.6778060Z       "order": 1.875425681647632,
+2026-11-02T04:13:49.6778582Z       "passed": true
+2026-11-02T04:13:49.6779047Z     },
+2026-11-02T04:13:49.6779469Z     {
+2026-11-02T04:13:49.6779929Z       "band": "inner_boundary_band",
+2026-11-02T04:13:49.6780524Z       "metric": "independent_tensor_M_order2",
+2026-11-02T04:13:49.6781119Z       "pair": [
+2026-11-02T04:13:49.6781572Z         16,
+2026-11-02T04:13:49.6782011Z         32
+2026-11-02T04:13:49.6782434Z       ],
+2026-11-02T04:13:49.6782867Z       "order": 1.9702785937777196,
+2026-11-02T04:13:49.6783395Z       "passed": true
+2026-11-02T04:13:49.6783836Z     },
+2026-11-02T04:13:49.6784261Z     {
+2026-11-02T04:13:49.6784723Z       "band": "inner_boundary_band",
+2026-11-02T04:13:49.6785307Z       "metric": "independent_tensor_M_order2",
+2026-11-02T04:13:49.6785914Z       "pair": [
+2026-11-02T04:13:49.6786358Z         32,
+2026-11-02T04:13:49.6786974Z         64
+2026-11-02T04:13:49.6787428Z       ],
+2026-11-02T04:13:49.6787912Z       "order": 1.9947318805278793,
+2026-11-02T04:13:49.6788472Z       "passed": true
+2026-11-02T04:13:49.6788932Z     },
+2026-11-02T04:13:49.6789369Z     {
+2026-11-02T04:13:49.6789818Z       "band": "outer_boundary_band",
+2026-11-02T04:13:49.6790386Z       "metric": "independent_flux_H",
+2026-11-02T04:13:49.6790935Z       "pair": [
+2026-11-02T04:13:49.6791580Z         8,
+2026-11-02T04:13:49.6792063Z         16
+2026-11-02T04:13:49.6792492Z       ],
+2026-11-02T04:13:49.6792930Z       "order": 1.745663903035301,
+2026-11-02T04:13:49.6793478Z       "passed": true
+2026-11-02T04:13:49.6793951Z     },
+2026-11-02T04:13:49.6794387Z     {
+2026-11-02T04:13:49.6794872Z       "band": "outer_boundary_band",
+2026-11-02T04:13:49.6795468Z       "metric": "independent_flux_H",
+2026-11-02T04:13:49.6796023Z       "pair": [
+2026-11-02T04:13:49.6796462Z         16,
+2026-11-02T04:13:49.6797109Z         32
+2026-11-02T04:13:49.6797647Z       ],
+2026-11-02T04:13:49.6798098Z       "order": 1.963989315282403,
+2026-11-02T04:13:49.6798637Z       "passed": true
+2026-11-02T04:13:49.6799091Z     },
+2026-11-02T04:13:49.6799504Z     {
+2026-11-02T04:13:49.6799946Z       "band": "outer_boundary_band",
+2026-11-02T04:13:49.6801118Z       "metric": "independent_flux_H",
+2026-11-02T04:13:49.6804665Z       "pair": [
+2026-11-02T04:13:49.6805174Z         32,
+2026-11-02T04:13:49.6805599Z         64
+2026-11-02T04:13:49.6806014Z       ],
+2026-11-02T04:13:49.6806457Z       "order": 2.01837669322443,
+2026-11-02T04:13:49.6807290Z       "passed": true
+2026-11-02T04:13:49.6807759Z     },
+2026-11-02T04:13:49.6808170Z     {
+2026-11-02T04:13:49.6808623Z       "band": "outer_boundary_band",
+2026-11-02T04:13:49.6809679Z       "metric": "independent_tensor_M_order2",
+2026-11-02T04:13:49.6810426Z       "pair": [
+2026-11-02T04:13:49.6810888Z         8,
+2026-11-02T04:13:49.6811323Z         16
+2026-11-02T04:13:49.6811741Z       ],
+2026-11-02T04:13:49.6812165Z       "order": 2.2291429861068672,
+2026-11-02T04:13:49.6812707Z       "passed": true
+2026-11-02T04:13:49.6813171Z     },
+2026-11-02T04:13:49.6813592Z     {
+2026-11-02T04:13:49.6814037Z       "band": "outer_boundary_band",
+2026-11-02T04:13:49.6814630Z       "metric": "independent_tensor_M_order2",
+2026-11-02T04:13:49.6815217Z       "pair": [
+2026-11-02T04:13:49.6815663Z         16,
+2026-11-02T04:13:49.6816078Z         32
+2026-11-02T04:13:49.6816497Z       ],
+2026-11-02T04:13:49.6817206Z       "order": 2.13246228086123,
+2026-11-02T04:13:49.6817747Z       "passed": true
+2026-11-02T04:13:49.6818205Z     },
+2026-11-02T04:13:49.6818625Z     {
+2026-11-02T04:13:49.6819084Z       "band": "outer_boundary_band",
+2026-11-02T04:13:49.6819690Z       "metric": "independent_tensor_M_order2",
+2026-11-02T04:13:49.6820289Z       "pair": [
+2026-11-02T04:13:49.6820738Z         32,
+2026-11-02T04:13:49.6821167Z         64
+2026-11-02T04:13:49.6821597Z       ],
+2026-11-02T04:13:49.6822034Z       "order": 2.0712567613137893,
+2026-11-02T04:13:49.6822568Z       "passed": true
+2026-11-02T04:13:49.6823036Z     }
+2026-11-02T04:13:49.6823471Z   ],
+2026-11-02T04:13:49.6823891Z   "passed": 12
+2026-11-02T04:13:49.6824330Z }
+2026-11-02T04:13:49.7599929Z ##[group]Run python research/audit_run43_arrays.py research/results/actions-stabilized-flux
+2026-11-02T04:13:49.7600834Z [36;1mpython research/audit_run43_arrays.py research/results/actions-stabilized-flux[0m
+2026-11-02T04:13:49.7633164Z shell: /usr/bin/bash -e {0}
+2026-11-02T04:13:49.7633487Z env:
+2026-11-02T04:13:49.7633740Z   OPENBLAS_NUM_THREADS: 1
+2026-11-02T04:13:49.7634072Z   DEE_EXPERIMENT: actions-stabilized-flux
+2026-11-02T04:13:49.7634441Z   DEE_SCALAR_ORDER: flux
+2026-11-02T04:13:49.7634738Z   DEE_PRECONDITIONER: fourier
+2026-11-02T04:13:49.7635144Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:13:49.7635715Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-02T04:13:49.7636274Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:13:49.7637015Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:13:49.7637624Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:13:49.7638134Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-02T04:13:49.7638575Z ##[endgroup]
+2026-11-02T04:13:50.6018583Z {
+2026-11-02T04:13:50.6019369Z   "audit_git_blob": "5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22",
+2026-11-02T04:13:50.6020241Z   "passed": 12,
+2026-11-02T04:13:50.6026627Z   "total": 12,
+2026-11-02T04:13:50.6027630Z   "status": "PASS",
+2026-11-02T04:13:50.6028189Z   "checks": [
+2026-11-02T04:13:50.6028724Z     {
+2026-11-02T04:13:50.6029252Z       "band": "inner_boundary_band",
+2026-11-02T04:13:50.6029920Z       "metric": "independent_flux_H",
+2026-11-02T04:13:50.6030561Z       "pair": [
+2026-11-02T04:13:50.6031048Z         8,
+2026-11-02T04:13:50.6031527Z         16
+2026-11-02T04:13:50.6032005Z       ],
+2026-11-02T04:13:50.6032486Z       "order": 1.7408475852068643,
+2026-11-02T04:13:50.6033111Z       "passed": true
+2026-11-02T04:13:50.6033636Z     },
+2026-11-02T04:13:50.6034105Z     {
+2026-11-02T04:13:50.6034619Z       "band": "inner_boundary_band",
+2026-11-02T04:13:50.6035295Z       "metric": "independent_flux_H",
+2026-11-02T04:13:50.6036439Z       "pair": [
+2026-11-02T04:13:50.6037201Z         16,
+2026-11-02T04:13:50.6037724Z         32
+2026-11-02T04:13:50.6038242Z       ],
+2026-11-02T04:13:50.6038735Z       "order": 1.9298254627467846,
+2026-11-02T04:13:50.6039349Z       "passed": true
+2026-11-02T04:13:50.6039872Z     },
+2026-11-02T04:13:50.6040346Z     {
+2026-11-02T04:13:50.6040857Z       "band": "inner_boundary_band",
+2026-11-02T04:13:50.6041449Z       "metric": "independent_flux_H",
+2026-11-02T04:13:50.6042057Z       "pair": [
+2026-11-02T04:13:50.6042520Z         32,
+2026-11-02T04:13:50.6042937Z         64
+2026-11-02T04:13:50.6043352Z       ],
+2026-11-02T04:13:50.6043790Z       "order": 1.996175084036,
+2026-11-02T04:13:50.6044330Z       "passed": true
+2026-11-02T04:13:50.6044830Z     },
+2026-11-02T04:13:50.6045252Z     {
+2026-11-02T04:13:50.6045725Z       "band": "inner_boundary_band",
+2026-11-02T04:13:50.6046380Z       "metric": "independent_tensor_M_order2",
+2026-11-02T04:13:50.6047295Z       "pair": [
+2026-11-02T04:13:50.6047756Z         8,
+2026-11-02T04:13:50.6048168Z         16
+2026-11-02T04:13:50.6048586Z       ],
+2026-11-02T04:13:50.6049035Z       "order": 1.875425681647632,
+2026-11-02T04:13:50.6049566Z       "passed": true
+2026-11-02T04:13:50.6050036Z     },
+2026-11-02T04:13:50.6050471Z     {
+2026-11-02T04:13:50.6050922Z       "band": "inner_boundary_band",
+2026-11-02T04:13:50.6051506Z       "metric": "independent_tensor_M_order2",
+2026-11-02T04:13:50.6052144Z       "pair": [
+2026-11-02T04:13:50.6052629Z         16,
+2026-11-02T04:13:50.6053079Z         32
+2026-11-02T04:13:50.6053514Z       ],
+2026-11-02T04:13:50.6053936Z       "order": 1.9702785937777196,
+2026-11-02T04:13:50.6054464Z       "passed": true
+2026-11-02T04:13:50.6054918Z     },
+2026-11-02T04:13:50.6055322Z     {
+2026-11-02T04:13:50.6055765Z       "band": "inner_boundary_band",
+2026-11-02T04:13:50.6056368Z       "metric": "independent_tensor_M_order2",
+2026-11-02T04:13:50.6057719Z       "pair": [
+2026-11-02T04:13:50.6058195Z         32,
+2026-11-02T04:13:50.6058629Z         64
+2026-11-02T04:13:50.6059035Z       ],
+2026-11-02T04:13:50.6059460Z       "order": 1.9947318805278793,
+2026-11-02T04:13:50.6059976Z       "passed": true
+2026-11-02T04:13:50.6060419Z     },
+2026-11-02T04:13:50.6060830Z     {
+2026-11-02T04:13:50.6061303Z       "band": "outer_boundary_band",
+2026-11-02T04:13:50.6061898Z       "metric": "independent_flux_H",
+2026-11-02T04:13:50.6062466Z       "pair": [
+2026-11-02T04:13:50.6062910Z         8,
+2026-11-02T04:13:50.6063359Z         16
+2026-11-02T04:13:50.6063798Z       ],
+2026-11-02T04:13:50.6064237Z       "order": 1.745663903035301,
+2026-11-02T04:13:50.6064748Z       "passed": true
+2026-11-02T04:13:50.6065203Z     },
+2026-11-02T04:13:50.6065606Z     {
+2026-11-02T04:13:50.6066059Z       "band": "outer_boundary_band",
+2026-11-02T04:13:50.6066656Z       "metric": "independent_flux_H",
+2026-11-02T04:13:50.6067427Z       "pair": [
+2026-11-02T04:13:50.6067863Z         16,
+2026-11-02T04:13:50.6068294Z         32
+2026-11-02T04:13:50.6068721Z       ],
+2026-11-02T04:13:50.6069177Z       "order": 1.963989315282403,
+2026-11-02T04:13:50.6069709Z       "passed": true
+2026-11-02T04:13:50.6070186Z     },
+2026-11-02T04:13:50.6070615Z     {
+2026-11-02T04:13:50.6071068Z       "band": "outer_boundary_band",
+2026-11-02T04:13:50.6071622Z       "metric": "independent_flux_H",
+2026-11-02T04:13:50.6072153Z       "pair": [
+2026-11-02T04:13:50.6072581Z         32,
+2026-11-02T04:13:50.6073003Z         64
+2026-11-02T04:13:50.6073420Z       ],
+2026-11-02T04:13:50.6073861Z       "order": 2.01837669322443,
+2026-11-02T04:13:50.6074372Z       "passed": true
+2026-11-02T04:13:50.6074822Z     },
+2026-11-02T04:13:50.6075242Z     {
+2026-11-02T04:13:50.6075702Z       "band": "outer_boundary_band",
+2026-11-02T04:13:50.6076307Z       "metric": "independent_tensor_M_order2",
+2026-11-02T04:13:50.6077117Z       "pair": [
+2026-11-02T04:13:50.6077576Z         8,
+2026-11-02T04:13:50.6078024Z         16
+2026-11-02T04:13:50.6078510Z       ],
+2026-11-02T04:13:50.6078967Z       "order": 2.2291429861068672,
+2026-11-02T04:13:50.6079911Z       "passed": true
+2026-11-02T04:13:50.6080426Z     },
+2026-11-02T04:13:50.6080883Z     {
+2026-11-02T04:13:50.6081350Z       "band": "outer_boundary_band",
+2026-11-02T04:13:50.6082016Z       "metric": "independent_tensor_M_order2",
+2026-11-02T04:13:50.6082606Z       "pair": [
+2026-11-02T04:13:50.6083053Z         16,
+2026-11-02T04:13:50.6083447Z         32
+2026-11-02T04:13:50.6083855Z       ],
+2026-11-02T04:13:50.6084311Z       "order": 2.13246228086123,
+2026-11-02T04:13:50.6084824Z       "passed": true
+2026-11-02T04:13:50.6085313Z     },
+2026-11-02T04:13:50.6085821Z     {
+2026-11-02T04:13:50.6086324Z       "band": "outer_boundary_band",
+2026-11-02T04:13:50.6087175Z       "metric": "independent_tensor_M_order2",
+2026-11-02T04:13:50.6087824Z       "pair": [
+2026-11-02T04:13:50.6088338Z         32,
+2026-11-02T04:13:50.6088787Z         64
+2026-11-02T04:13:50.6089241Z       ],
+2026-11-02T04:13:50.6089708Z       "order": 2.0712567613137893,
+2026-11-02T04:13:50.6090273Z       "passed": true
+2026-11-02T04:13:50.6090756Z     }
+2026-11-02T04:13:50.6091174Z   ],
+2026-11-02T04:13:50.6092135Z   "scope": "Independent array re-evaluation of frozen numerical gate; not independent scientific replication or continuum proof."
+2026-11-02T04:13:50.6093214Z }
+2026-11-02T04:13:50.6322436Z ##[group]Run actions/upload-artifact@v4
+2026-11-02T04:13:50.6322796Z with:
+2026-11-02T04:13:50.6323055Z   name: run43-consistent-momentum-evidence
+2026-11-02T04:13:50.6323540Z   path: research/results/actions-stabilized-flux/
+research/execution.log
+
+2026-11-02T04:13:50.6324024Z   if-no-files-found: warn
+2026-11-02T04:13:50.6324306Z   compression-level: 6
+2026-11-02T04:13:50.6324565Z   overwrite: false
+2026-11-02T04:13:50.6324824Z   include-hidden-files: false
+2026-11-02T04:13:50.6325106Z env:
+2026-11-02T04:13:50.6325339Z   OPENBLAS_NUM_THREADS: 1
+2026-11-02T04:13:50.6325636Z   DEE_EXPERIMENT: actions-stabilized-flux
+2026-11-02T04:13:50.6325967Z   DEE_SCALAR_ORDER: flux
+2026-11-02T04:13:50.6326241Z   DEE_PRECONDITIONER: fourier
+2026-11-02T04:13:50.6326622Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:13:50.6327477Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-11-02T04:13:50.6328020Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:13:50.6328485Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:13:50.6328952Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-11-02T04:13:50.6329421Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-11-02T04:13:50.6329812Z ##[endgroup]
+2026-11-02T04:13:50.8470804Z (node:2369) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-02T04:13:50.8492634Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-02T04:13:50.9484579Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-02T04:13:50.9568672Z The least common ancestor is /home/runner/work/dee-toroidal-helical-omniverse/dee-toroidal-helical-omniverse/research. This will be the root directory of the artifact
+2026-11-02T04:13:50.9608007Z With the provided path, there will be 21 files uploaded
+2026-11-02T04:13:50.9643897Z Artifact name is valid!
+2026-11-02T04:13:50.9668392Z Root directory input is valid!
+2026-11-02T04:13:51.3508618Z Beginning upload of artifact content to blob storage
+2026-11-02T04:13:51.7311911Z (node:2369) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-02T04:13:52.6706287Z Uploaded bytes 8388608
+2026-11-02T04:13:52.7582217Z Uploaded bytes 8640433
+2026-11-02T04:13:52.8389121Z Finished uploading artifact content to blob storage!
+2026-11-02T04:13:52.8392014Z SHA256 digest of uploaded artifact zip is 7390980db3b499bd5d15438753781cb807299c008181cfb270fa01d6a907e35b
+2026-11-02T04:13:52.8394274Z Finalizing artifact upload
+2026-11-02T04:13:53.3012718Z Artifact run43-consistent-momentum-evidence.zip successfully finalized. Artifact ID 13115731417
+2026-11-02T04:13:53.3016333Z Artifact run43-consistent-momentum-evidence has been successfully uploaded! Final size is 8640433 bytes. Artifact ID is 13115731417
+2026-11-02T04:13:53.3023953Z Artifact download URL: https://github.com/GeraldDahlbergJr/dee-toroidal-helical-omniverse/actions/runs/41386724276/artifacts/13115731417
+2026-11-02T04:13:53.3302790Z Post job cleanup.
+2026-11-02T04:13:53.4742222Z (node:2383) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-02T04:13:53.4744331Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-02T04:13:53.5042968Z Post job cleanup.
+2026-11-02T04:13:53.6809728Z [command]/usr/bin/git version
+2026-11-02T04:13:53.6945916Z git version 2.56.0
+2026-11-02T04:13:53.7127541Z Temporarily overriding HOME='/home/runner/work/_temp/9000b4c5-877b-49b2-8b6d-904c2ee77c3f' before making global git config changes
+2026-11-02T04:13:53.7151707Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-02T04:13:53.7191553Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/dee-toroidal-helical-omniverse/dee-toroidal-helical-omniverse
+2026-11-02T04:13:53.7315270Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-02T04:13:53.7464686Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-02T04:13:53.8083224Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-02T04:13:53.8178222Z http.https://github.com/.extraheader
+2026-11-02T04:13:53.8191885Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-02T04:13:53.8314404Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-02T04:13:53.8826776Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-02T04:13:53.8876754Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-02T04:13:53.9440497Z Cleaning up orphan processes
+2026-11-02T04:13:53.9851898Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+
