@@ -32,6 +32,8 @@ jobs:
         run: |
           set -o pipefail
           python research/run43_consistent_momentum.py 2>&1 | tee research/execution.log
+      - name: Independently recompute frozen twelve-check gate
+        run: python research/audit_run43_arrays.py research/results/actions-stabilized-flux
       - uses: actions/upload-artifact@v4
         if: always()
         with:
