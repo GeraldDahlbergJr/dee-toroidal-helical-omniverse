@@ -1,0 +1,32 @@
+name: Run43 research branch regression checks
+on:
+  push:
+    branches:
+      - research/run43-inner-boundary-repair-20261101
+    paths:
+      - '.github/workflows/run43-research-regression.yml'
+      - 'tests/test_toroidal_coupled_constraints.py'
+      - 'research/run43_inner_boundary_triage.py'
+      - 'research/run43_physical_inner_profile.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical dependencies
+        run: python -m pip install numpy scipy
+      - name: Verify inner gate deficits without changing audit
+        run: python research/run43_inner_boundary_triage.py
+      - name: Profile original physical inner-band residuals across coarse resolutions
+        run: python research/run43_physical_inner_profile.py
+      - name: Verify matrix-free Hessian regression and unchanged source
+        run: python -m unittest tests.test_toroidal_coupled_constraints.ToroidalOperators.test_direct_hessian_operator_converges_and_preserves_matter -v
