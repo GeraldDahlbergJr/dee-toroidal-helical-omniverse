@@ -134,7 +134,10 @@ class TensorGrid(Grid):
         return w
 
 def main():
-    root=Path(__file__).resolve().parents[1];out=output_dir();out.mkdir(parents=True,exist_ok=True)
+    root=Path(__file__).resolve().parents[1];out=output_dir()
+    if out.exists() and any(out.iterdir()):
+        raise FileExistsError(f'Preserving existing evidence: choose a fresh DEE_EXPERIMENT instead of {out}')
+    out.mkdir(parents=True,exist_ok=True)
     source=Path(__file__).read_bytes();(out/'executed_solver.py').write_bytes(source)
     (out/'settings.json').write_text(json.dumps(dict(solver_sha256=hashlib.sha256(source).hexdigest(),levels=os.environ.get('DEE_LEVELS','8,16,32,64'),scalar_order=os.environ.get('DEE_SCALAR_ORDER','2'),preconditioner=os.environ.get('DEE_PRECONDITIONER','ilu'),stabilization=.25,gmres_rtol=1e-10,gmres_atol=1e-13,numpy=np.__version__,scipy=__import__('scipy').__version__),indent=2)+'\n')
     audit=root/'reproduce/diagnose_toroidal_boundary_convergence.py'

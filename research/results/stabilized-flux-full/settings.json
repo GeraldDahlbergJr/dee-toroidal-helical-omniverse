@@ -1,0 +1,11 @@
+{
+  "solver_sha256": "d162f4f11f420e5118174b350552dde59ca624ad16b52fc47bea89c15c639b33",
+  "levels": "8,16,32,64",
+  "scalar_order": "flux",
+  "preconditioner": "fourier",
+  "stabilization": 0.25,
+  "gmres_rtol": 1e-10,
+  "gmres_atol": 1e-13,
+  "numpy": "2.3.5",
+  "scipy": "1.17.0"
+}

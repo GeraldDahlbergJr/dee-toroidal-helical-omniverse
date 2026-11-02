@@ -1,0 +1,12 @@
+{
+  "scalar_order": "2",
+  "preconditioner": "ilu",
+  "stabilization": 0.25,
+  "gmres_rtol": 1e-10,
+  "gmres_atol": 1e-13,
+  "gmres_restart": 60,
+  "gmres_max_cycles": 100,
+  "ilu_drop_tol": 0.0001,
+  "ilu_fill_factor": 8,
+  "source_provenance": "Exploratory run before snapshot instrumentation; current implementation reproduces these operator selections; not an exact executed source snapshot."
+}
