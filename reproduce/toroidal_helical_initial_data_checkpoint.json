@@ -1,0 +1,49 @@
+{
+  "scope": "3-D periodic CMC conformally flat helical-scalar ring; initial constraints only",
+  "parameters": {
+    "L": 8.0,
+    "G": 0.005,
+    "R": 1.7,
+    "sigma": 0.65,
+    "m": 2,
+    "axial_periods": 1
+  },
+  "runs": [
+    {
+      "n": 16,
+      "iterations": 3,
+      "hamiltonian_rms": 9.72796210527516e-15,
+      "hamiltonian_max": 3.3479217884163035e-14,
+      "psi_min": 0.9999866331083261,
+      "psi_max": 1.0000448959470483,
+      "rho_min": 0.9756546530324832,
+      "kinetic_det_min": 1.521256872061019,
+      "k": -0.006757697650776162,
+      "momentum_max": 0.0
+    },
+    {
+      "n": 32,
+      "iterations": 3,
+      "hamiltonian_rms": 3.850673682409523e-14,
+      "hamiltonian_max": 1.4499149493876762e-13,
+      "psi_min": 0.9999834938700795,
+      "psi_max": 1.000054387225849,
+      "rho_min": 0.9750307249974571,
+      "kinetic_det_min": 1.5205325476954012,
+      "k": -0.007551849334006353,
+      "momentum_max": 0.0
+    },
+    {
+      "n": 64,
+      "iterations": 4,
+      "hamiltonian_rms": 1.5335837965604928e-13,
+      "hamiltonian_max": 5.997182773241736e-13,
+      "psi_min": 0.9999823183064983,
+      "psi_max": 1.000057923099783,
+      "rho_min": 0.9750000019994727,
+      "kinetic_det_min": 1.520496896851382,
+      "k": -0.007828691214738259,
+      "momentum_max": 0.0
+    }
+  ]
+}
