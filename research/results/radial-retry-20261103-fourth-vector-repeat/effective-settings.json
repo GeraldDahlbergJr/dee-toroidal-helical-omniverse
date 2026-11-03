@@ -1,0 +1,10 @@
+{
+  "vector_order": 4,
+  "vector_stabilization": 0,
+  "scalar_order": 2,
+  "scalar_stabilization": 0.25,
+  "radial_D1_points": 5,
+  "radial_D2_points": 6,
+  "periodic_D1_D2_points": 5,
+  "note": "Inherited settings.json stabilization=.25 describes the scalar operator; the direct vector operator has no stabilization."
+}

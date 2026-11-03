@@ -1,0 +1,7 @@
+{
+  "vector": "fourth-order direct Cartesian Hessian with analytic chart connections",
+  "scalar": "unchanged baseline stabilized second-order conservative face flux",
+  "physical_source": "unchanged",
+  "frozen_audit": "unchanged",
+  "vector_stabilization": 0
+}

@@ -1,0 +1,12 @@
+{
+  "principal_solve": 0,
+  "fourth_vector_solve": 0,
+  "fourth_vector_repeat_solve": 0,
+  "principal_frozen": 1,
+  "fourth_vector_frozen": 1,
+  "fourth_vector_repeat_frozen": 1,
+  "all_supplementary_audits": 0,
+  "regression_production_environment": 0,
+  "regression_default_environment": 0,
+  "bitwise_reproducibility": 0
+}

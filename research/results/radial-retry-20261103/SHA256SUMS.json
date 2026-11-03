@@ -1,0 +1,477 @@
+{
+  "research/results/radial-retry-20261103/environment.json": {
+    "bytes": 440,
+    "sha256": "70fd244e78bbb756adb642c0db18f823aec7a074c65da9f8e6cf3a2cc862a809",
+    "git_blob": "82a49c0c7e983d749c4480445849c001158f5f42"
+  },
+  "research/results/radial-retry-20261103/exit-status.json": {
+    "bytes": 326,
+    "sha256": "63f2f54476e60a2e63dec8a705a162fa3556dc9feef43eecb47483e21958997f",
+    "git_blob": "286f75dbb646eba360d465423c36aac64452519d"
+  },
+  "research/results/radial-retry-20261103/fourth-operator-accuracy.json": {
+    "bytes": 2426,
+    "sha256": "09dc7f5fceaf8c279f1aa1813ef20fb4507a9b96a72954c6e16e9006d90ed8c8",
+    "git_blob": "20fac52b2644b9b7c464cd942ad06722c20c0ce0"
+  },
+  "research/results/radial-retry-20261103/fourth-operator-accuracy.log": {
+    "bytes": 5663,
+    "sha256": "f76d9ec860023b6b60cdb01b4b28fd1033e2be0cd4e8815122ec5be4e11fa924",
+    "git_blob": "d08b29b3d15092878f1e22ac05ca091f4c0e2aad"
+  },
+  "research/results/radial-retry-20261103/fourth-vector-audit_run43_arrays.py.log": {
+    "bytes": 2623,
+    "sha256": "bfe64457ccb8fbb0d9c1cf278e5771f222b8dff545d21f527e0d192db11adc38",
+    "git_blob": "53565cec3e94a5cd9524e986dadd584c8c268605"
+  },
+  "research/results/radial-retry-20261103/fourth-vector-repeat-audit_run43_arrays.py.log": {
+    "bytes": 2623,
+    "sha256": "bfe64457ccb8fbb0d9c1cf278e5771f222b8dff545d21f527e0d192db11adc38",
+    "git_blob": "53565cec3e94a5cd9524e986dadd584c8c268605"
+  },
+  "research/results/radial-retry-20261103/fourth-vector-repeat-solve.log": {
+    "bytes": 7056,
+    "sha256": "5e2b66845ae9328864c4a458ca915cd75501a96fab3358209adbfe34332dcc1b",
+    "git_blob": "7687379f8889f5d4cbe8f36e0b31b22827974809"
+  },
+  "research/results/radial-retry-20261103/fourth-vector-repeat-validate_original_physics.py.log": {
+    "bytes": 9624,
+    "sha256": "0e9c7029ddb9cea15031df113a2e707946395efc25e46f84e7f978a0a42a5e1a",
+    "git_blob": "0d152efa720f96a028ab127819d87d31d0661e30"
+  },
+  "research/results/radial-retry-20261103/fourth-vector-solve.log": {
+    "bytes": 7062,
+    "sha256": "152ae3d6f32800608e7cf98feb3fcdb10d6b02fe009c3ca63b76540bf49cbffe",
+    "git_blob": "28bd0e4be8fa724a2fe122620efcf9ef119761fe"
+  },
+  "research/results/radial-retry-20261103/fourth-vector-tests.log": {
+    "bytes": 5564,
+    "sha256": "2c59460a5562f6efee2f7f71ac2f5c3aee17be496e4e347dac53069520295b30",
+    "git_blob": "44dc9e99636cae92be2e46dcc7508dfb2a2f2e49"
+  },
+  "research/results/radial-retry-20261103/fourth-vector-validate_original_physics.py.log": {
+    "bytes": 9624,
+    "sha256": "0e9c7029ddb9cea15031df113a2e707946395efc25e46f84e7f978a0a42a5e1a",
+    "git_blob": "0d152efa720f96a028ab127819d87d31d0661e30"
+  },
+  "research/results/radial-retry-20261103/full-regression-default.log": {
+    "bytes": 27812,
+    "sha256": "b1e0fbd7e8291d8bddd05419b50bc36fcd56a8139c6a1e43f005e9a4d5d71bef",
+    "git_blob": "6a58b18718044a445193fecb7dfa92ceaa532aee"
+  },
+  "research/results/radial-retry-20261103/full-regression.log": {
+    "bytes": 27861,
+    "sha256": "82295f9237cbe082eddd372a34186b8693ae78375949f80c55ff5fc94269fa53",
+    "git_blob": "e57a15bce16c9929e8742bf193fe1572be2ab6a6"
+  },
+  "research/results/radial-retry-20261103/operator-accuracy.json": {
+    "bytes": 3685,
+    "sha256": "0a0b7b8983ffbf8c2db27ba210a5ce53a811b2aa138afa87bb664d624989e20e",
+    "git_blob": "2694aba15f4f6eed6e5ba5a3c53a42075b5b26b5"
+  },
+  "research/results/radial-retry-20261103/operator-accuracy.log": {
+    "bytes": 6916,
+    "sha256": "761388c4cc38755fce46dcc6a249d85693a242edaf3a58d7fdabe7dcc04d09ac",
+    "git_blob": "fd5120e5fb394cc41b0a41ab39d34a080b2ee96a"
+  },
+  "research/results/radial-retry-20261103/original-source-integrity.json": {
+    "bytes": 3515,
+    "sha256": "e4779d5fee6dcd3aed7d9c2d8053fed99809a0ddfd255fa86039ded1a5867ec2",
+    "git_blob": "e2b0c6e7871d9412d4fb35e84b3b1987fcdc5a07"
+  },
+  "research/results/radial-retry-20261103/principal-audit_run43_arrays.py.log": {
+    "bytes": 2622,
+    "sha256": "b4129a18d3459c1748b4f8871a8ac11d9a278e53a6bb9d0cda9ef359cf25eb7e",
+    "git_blob": "64ad21caac90944612218ac1f35fd76224eaa01f"
+  },
+  "research/results/radial-retry-20261103/principal-solve.log": {
+    "bytes": 7047,
+    "sha256": "ca5571791229d28e20d447f8e5a3aa129054bafa0bbd1ce8b4308bc6d3ba9c21",
+    "git_blob": "ccbc36dd4009be35a0cc4026345f761cbcf1fdc2"
+  },
+  "research/results/radial-retry-20261103/principal-validate_original_physics.py.log": {
+    "bytes": 9600,
+    "sha256": "3bfe0c13da2410dc54bd0cee58040178f89fa9ffb76faa048b95579124529171",
+    "git_blob": "bd7905dbe931eaf0c91dac4ee322791e3a447dc8"
+  },
+  "research/results/radial-retry-20261103/radial-tests.log": {
+    "bytes": 5509,
+    "sha256": "90e44d1fe90ed49d07dc2cac9ee281bea01ed55353cb633ea7db83c5533d715d",
+    "git_blob": "4a3e6bfc066131ae3bc36c95073dcc3567fc2546"
+  },
+  "research/results/radial-retry-20261103/repeat-reproducibility.json": {
+    "bytes": 554,
+    "sha256": "f337be14ac1d27bcf3175eae3d4340042ba8ce11f37b4d5e45d9de062d2cd1c9",
+    "git_blob": "f5237e39ede466f0e21d08930569ec05f6249f5c"
+  },
+  "research/results/radial-retry-20261103/residual-decomposition.json": {
+    "bytes": 12371,
+    "sha256": "18aae3f5257d7957b8e6b6f577d6eda7046d2303af90943bdf17737e6254e40e",
+    "git_blob": "d0ca5a069ea8e4df70b50d341759a7f54a3efa59"
+  },
+  "research/results/radial-retry-20261103/residual-decomposition.log": {
+    "bytes": 12371,
+    "sha256": "18aae3f5257d7957b8e6b6f577d6eda7046d2303af90943bdf17737e6254e40e",
+    "git_blob": "d0ca5a069ea8e4df70b50d341759a7f54a3efa59"
+  },
+  "research/results/radial-retry-20261103/source-bundle.tar.gz": {
+    "bytes": 73629,
+    "sha256": "d84126d59b5e14a82e65cc243f37d1b853959a06b49af62dac89945c21a26fcd",
+    "git_blob": "ad075b11d321b94b194c7a1307c370f254e811ec"
+  },
+  "research/results/radial-retry-20261103/source-hashes.json": {
+    "bytes": 6123,
+    "sha256": "2664bfbe2397267827edb17efdc64f176fbad0c75c215b47d3d3192e724fc518",
+    "git_blob": "c5b6884efd0a7caff0dbdebf9002cc1ac08c5d7d"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/checkpoint_16_0.npz": {
+    "bytes": 39814,
+    "sha256": "4e139acab23e56d89fac3f79bfd803ad8426c97672166b4f912ce6f287c2d837",
+    "git_blob": "c567a3c7d4949ed7a4f20ce2e43455ceb0567b2a"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/checkpoint_16_1.npz": {
+    "bytes": 40049,
+    "sha256": "12696d156fcd7ec3ebd203e9bec9765045328e55f019a5f5d369e3af48b6eb83",
+    "git_blob": "ad5bf243bd018a41ae566b75406388916fa6d1d2"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/checkpoint_32_0.npz": {
+    "bytes": 322616,
+    "sha256": "9b493ed3f90968fa9ff673b8652930ca3a7c85a6948e618fce8ec4536a5c8eae",
+    "git_blob": "01ce827bac9cec984089d02d48f3bf02860d7ddf"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/checkpoint_32_1.npz": {
+    "bytes": 323117,
+    "sha256": "6aa9de4ac01c194e600011b49683bc00f3b3b323e9eb8112ae9d78434921b003",
+    "git_blob": "dd95a3be905b9f9c2a94bfcfcf55c35c133c696c"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/checkpoint_64_0.npz": {
+    "bytes": 2763893,
+    "sha256": "b9e14c73aa2d81c14a1204888257c77a1a52aca45512628caf2974659423436d",
+    "git_blob": "189f93832b64ab44c493d7f3095a17dfccc48b95"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/checkpoint_64_1.npz": {
+    "bytes": 2764164,
+    "sha256": "a6fcec25f337dc2b33b90d8530b354ea33190e3861655b1f6fe47deb9891b7c7",
+    "git_blob": "256b677a1f7b6e1e095fd96c23b3060a93e49976"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/checkpoint_8_0.npz": {
+    "bytes": 5088,
+    "sha256": "c7f817b5f9aba10befdd450244ef1d261c9da26e4dee112af8554a7435152929",
+    "git_blob": "2a4e96f209924b8b5a06819e0bdddf32c5f89582"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/checkpoint_8_1.npz": {
+    "bytes": 5082,
+    "sha256": "5a9c3e1e7d5572517110dd9740fa9c2505f459be890d3bcb0af0fbc74dbbe283",
+    "git_blob": "92b8a810f915d0c5a2fffe5a1283b64abdaaeebb"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/correction.json": {
+    "bytes": 263,
+    "sha256": "37a2c0d6559c392729dc69fe851709efa8f8d13ebd62569692cd154271cba041",
+    "git_blob": "482c6f22d4b067f86dd3cdee7fde3d82ea2f7006"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/executed_fourth_vector.py": {
+    "bytes": 4204,
+    "sha256": "1590c0da41d28895fdb1508749486fb6df5afa548b56250295a9c4a795d0a25f",
+    "git_blob": "771333aed689a8251319e5bbddc42f6193b08dab"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/executed_solver.py": {
+    "bytes": 10432,
+    "sha256": "bd9f25822fa108e6cc910c7e9ca5b28bce7d41bb4fe9fe68806c5488f127a9b9",
+    "git_blob": "57c09d698fdda1496a5c6c55dc7f38825e806d98"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/fields_16.npz": {
+    "bytes": 39685,
+    "sha256": "495e0e50ea75f199ff1b04c092487b3bcce1133bd5fb7ec87296f3b6ea8b4f39",
+    "git_blob": "d8e0963cfca8a34d00006ce75c8f993a2a72ec08"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/fields_32.npz": {
+    "bytes": 322753,
+    "sha256": "35838803e15b062c6e29371703d4b7cc2081a427b0cb5ce6ed26ae72dd23a0b7",
+    "git_blob": "e5fc4308fcfcd4e51d518c8dcd26970437bed4e2"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/fields_64.npz": {
+    "bytes": 2763795,
+    "sha256": "b23d67d08c04985f3d667565fe5dfbb79192ad22a6ffe5a83ee6d7189db445a8",
+    "git_blob": "5d4fc0418e52cc372c152a8f6e3384f3163c1e02"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/fields_8.npz": {
+    "bytes": 4718,
+    "sha256": "865909b29cd96b28e47c5b8a0dbedf00fa6755eba1bda8500841aca2cdd87400",
+    "git_blob": "f52a1902e8af199ee20092d2e6d17c2b45b36a27"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/independent-audit.json": {
+    "bytes": 17600,
+    "sha256": "f22adc63e284a5f2b21b8f29b26c6ec14f5dfb1642a58869ace51b13211aef91",
+    "git_blob": "2d65445a1d19809b1b2c03a76716046d4f8f320d"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/original-physics-audit.json": {
+    "bytes": 14003,
+    "sha256": "21517066b41e5758c2f865e46620dcf7f6711676e68639f9c2caec454c80d0dc",
+    "git_blob": "3b65aeda239be3a4007c6bdfbf4cf86856d85a16"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/report.json": {
+    "bytes": 31742,
+    "sha256": "b6766bf9193b09947e35ff34b34be86d87a3553db9c7f000262048fd646de0c7",
+    "git_blob": "e2136d2a1e7f8bcd83f8f855f95b5f32ea5b666f"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/result_16.json": {
+    "bytes": 6485,
+    "sha256": "78cd79979e57fa2d13265d22a912166c812f73a8a39df500252f80e8fe7007f4",
+    "git_blob": "39fe9dabb9a9405bdce2fbd66be50e353383ab7a"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/result_32.json": {
+    "bytes": 6350,
+    "sha256": "da9f4a3ae000640e4a34f7fa0047fc5166748b8ac33d2f13f6d27ddbc86116d3",
+    "git_blob": "dcfec57df32023559dd11b2465c5ac86e9af5004"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/result_64.json": {
+    "bytes": 6369,
+    "sha256": "791e95ff33a8d80156678a0e6de2885ea60228d4938efc3ea1df68f0458b55e8",
+    "git_blob": "310bece0e1be35c8e632b3b550a2b6a26dd8963a"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/result_8.json": {
+    "bytes": 6585,
+    "sha256": "c9cb7aa77937ebbcc8ea50014a3b64ecd82e6541f29148a3dd4fc8ca21c597a2",
+    "git_blob": "818126ac82109f696d6de4d9ac4176a4c80b26d2"
+  },
+  "research/results/radial-retry-20261103-fourth-vector/settings.json": {
+    "bytes": 285,
+    "sha256": "92a213e9163949bc83d23aef307a4e010eecb194adb7258f0c4047b389b949b4",
+    "git_blob": "4c90e63f3a41bfffa3b6ac571905dfc64bd91ce7"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/checkpoint_16_0.npz": {
+    "bytes": 39814,
+    "sha256": "4e139acab23e56d89fac3f79bfd803ad8426c97672166b4f912ce6f287c2d837",
+    "git_blob": "c567a3c7d4949ed7a4f20ce2e43455ceb0567b2a"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/checkpoint_16_1.npz": {
+    "bytes": 40049,
+    "sha256": "12696d156fcd7ec3ebd203e9bec9765045328e55f019a5f5d369e3af48b6eb83",
+    "git_blob": "ad5bf243bd018a41ae566b75406388916fa6d1d2"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/checkpoint_32_0.npz": {
+    "bytes": 322616,
+    "sha256": "9b493ed3f90968fa9ff673b8652930ca3a7c85a6948e618fce8ec4536a5c8eae",
+    "git_blob": "01ce827bac9cec984089d02d48f3bf02860d7ddf"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/checkpoint_32_1.npz": {
+    "bytes": 323117,
+    "sha256": "6aa9de4ac01c194e600011b49683bc00f3b3b323e9eb8112ae9d78434921b003",
+    "git_blob": "dd95a3be905b9f9c2a94bfcfcf55c35c133c696c"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/checkpoint_64_0.npz": {
+    "bytes": 2763893,
+    "sha256": "b9e14c73aa2d81c14a1204888257c77a1a52aca45512628caf2974659423436d",
+    "git_blob": "189f93832b64ab44c493d7f3095a17dfccc48b95"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/checkpoint_64_1.npz": {
+    "bytes": 2764164,
+    "sha256": "a6fcec25f337dc2b33b90d8530b354ea33190e3861655b1f6fe47deb9891b7c7",
+    "git_blob": "256b677a1f7b6e1e095fd96c23b3060a93e49976"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/checkpoint_8_0.npz": {
+    "bytes": 5088,
+    "sha256": "c7f817b5f9aba10befdd450244ef1d261c9da26e4dee112af8554a7435152929",
+    "git_blob": "2a4e96f209924b8b5a06819e0bdddf32c5f89582"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/checkpoint_8_1.npz": {
+    "bytes": 5082,
+    "sha256": "5a9c3e1e7d5572517110dd9740fa9c2505f459be890d3bcb0af0fbc74dbbe283",
+    "git_blob": "92b8a810f915d0c5a2fffe5a1283b64abdaaeebb"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/correction.json": {
+    "bytes": 263,
+    "sha256": "37a2c0d6559c392729dc69fe851709efa8f8d13ebd62569692cd154271cba041",
+    "git_blob": "482c6f22d4b067f86dd3cdee7fde3d82ea2f7006"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/effective-settings.json": {
+    "bytes": 321,
+    "sha256": "667f0c38daac210c174c8c542810d628dc42d906af758b452b3292474be44505",
+    "git_blob": "4a025ea3a65293158aa4796456195e4a22f821ec"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/executed_fourth_vector.py": {
+    "bytes": 4622,
+    "sha256": "8f829e3781308edc6559167831557e689622f3cb341bc43ff0926b2f0d0f3a1a",
+    "git_blob": "f9b646e3dbcd0e71ba9411d8c68fdbf401386ed8"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/executed_solver.py": {
+    "bytes": 10432,
+    "sha256": "bd9f25822fa108e6cc910c7e9ca5b28bce7d41bb4fe9fe68806c5488f127a9b9",
+    "git_blob": "57c09d698fdda1496a5c6c55dc7f38825e806d98"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/fields_16.npz": {
+    "bytes": 39685,
+    "sha256": "495e0e50ea75f199ff1b04c092487b3bcce1133bd5fb7ec87296f3b6ea8b4f39",
+    "git_blob": "d8e0963cfca8a34d00006ce75c8f993a2a72ec08"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/fields_32.npz": {
+    "bytes": 322753,
+    "sha256": "35838803e15b062c6e29371703d4b7cc2081a427b0cb5ce6ed26ae72dd23a0b7",
+    "git_blob": "e5fc4308fcfcd4e51d518c8dcd26970437bed4e2"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/fields_64.npz": {
+    "bytes": 2763795,
+    "sha256": "b23d67d08c04985f3d667565fe5dfbb79192ad22a6ffe5a83ee6d7189db445a8",
+    "git_blob": "5d4fc0418e52cc372c152a8f6e3384f3163c1e02"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/fields_8.npz": {
+    "bytes": 4718,
+    "sha256": "865909b29cd96b28e47c5b8a0dbedf00fa6755eba1bda8500841aca2cdd87400",
+    "git_blob": "f52a1902e8af199ee20092d2e6d17c2b45b36a27"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/independent-audit.json": {
+    "bytes": 17600,
+    "sha256": "f22adc63e284a5f2b21b8f29b26c6ec14f5dfb1642a58869ace51b13211aef91",
+    "git_blob": "2d65445a1d19809b1b2c03a76716046d4f8f320d"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/original-physics-audit.json": {
+    "bytes": 14003,
+    "sha256": "21517066b41e5758c2f865e46620dcf7f6711676e68639f9c2caec454c80d0dc",
+    "git_blob": "3b65aeda239be3a4007c6bdfbf4cf86856d85a16"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/report.json": {
+    "bytes": 31741,
+    "sha256": "1b226b8c4a3ab336bb1d99470579d5bc08e8a4516848dac3019924629ba2b66d",
+    "git_blob": "5d11373bcf3abd3fb379192fca4e8a9bd7dddf1b"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/result_16.json": {
+    "bytes": 6485,
+    "sha256": "b04b028a0015abd64569f8deb64074323e949b918b26b9ef8d259dcc1630d872",
+    "git_blob": "b4f9f7d88c1e64c42666001d95fb6d52af40eb97"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/result_32.json": {
+    "bytes": 6349,
+    "sha256": "3a6fee1872514e4a4df8cb6cab99bd4aa58ede4288f16a6062a47b8e2defa56e",
+    "git_blob": "c40de70dec3e3a3a4c117d5be5232e72d1ebc793"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/result_64.json": {
+    "bytes": 6369,
+    "sha256": "0b78f51a77e6ea8faf321890bac8fd43f135a241136f8b1ad4577855d1ed6f73",
+    "git_blob": "c48d40d44b72042cf10d1e4242f5fd6b6c6090c9"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/result_8.json": {
+    "bytes": 6585,
+    "sha256": "d221963863f2ab1a7181c7acfbbd79b4870dde1e579b0ff6c08e5e7d42e96b9c",
+    "git_blob": "370033d3c960e32fd8656ccf979b33d28dc9e431"
+  },
+  "research/results/radial-retry-20261103-fourth-vector-repeat/settings.json": {
+    "bytes": 285,
+    "sha256": "92a213e9163949bc83d23aef307a4e010eecb194adb7258f0c4047b389b949b4",
+    "git_blob": "4c90e63f3a41bfffa3b6ac571905dfc64bd91ce7"
+  },
+  "research/results/radial-retry-20261103-principal/checkpoint_16_0.npz": {
+    "bytes": 40641,
+    "sha256": "13927957297ea11e18c7fbeefbdb7703a3f25a6437be947905e6e15b84f70e4a",
+    "git_blob": "eabee8795ec428e474689f4683c2cd2c71bcc5a1"
+  },
+  "research/results/radial-retry-20261103-principal/checkpoint_16_1.npz": {
+    "bytes": 40672,
+    "sha256": "14d335cf5e36edf19e4f8363c8414170b1c0ee42175edf9176f6b11fd9773310",
+    "git_blob": "52cc0814df074f20711a1375840dde44d2547164"
+  },
+  "research/results/radial-retry-20261103-principal/checkpoint_32_0.npz": {
+    "bytes": 328573,
+    "sha256": "e778ec5b36d6568b7300ca285df3b0aa2737af4ac2ac589093667109312085f1",
+    "git_blob": "77f4c1a096078c87a4c07bc8bb981b49020ce069"
+  },
+  "research/results/radial-retry-20261103-principal/checkpoint_32_1.npz": {
+    "bytes": 328661,
+    "sha256": "69ac92142c170a821eff795aa2d9dfb2472afcc23be496dd73efec0ac396b7e2",
+    "git_blob": "14b488117e081a399e324cd656a5541abc1ea83b"
+  },
+  "research/results/radial-retry-20261103-principal/checkpoint_64_0.npz": {
+    "bytes": 2724193,
+    "sha256": "ea5ebd9395e3c0ff517fd6ecf05a06b6440699495f4a015c4d4843b961be649f",
+    "git_blob": "404e002272260f3c3bbef04635ba19124698cfe8"
+  },
+  "research/results/radial-retry-20261103-principal/checkpoint_64_1.npz": {
+    "bytes": 2728749,
+    "sha256": "fd0a75b6370a070746d1dca0f1862580514fedf3f9b038f1b8df64b39db63cb8",
+    "git_blob": "2194046f17d402f26bd85466d059242799848922"
+  },
+  "research/results/radial-retry-20261103-principal/checkpoint_8_0.npz": {
+    "bytes": 5172,
+    "sha256": "d6ba39a86b870df64abfa650797be734269768e7738497b861cf1540225220c3",
+    "git_blob": "cba57faaa34c8ac60d63ce660d3bda54c488ec99"
+  },
+  "research/results/radial-retry-20261103-principal/checkpoint_8_1.npz": {
+    "bytes": 5166,
+    "sha256": "514099d42933f85b0bbf9d7489ca61c97d43dc8fcb46012c2ad480163db85c22",
+    "git_blob": "b9358695f6b086f882da28a86636ad6740e97493"
+  },
+  "research/results/radial-retry-20261103-principal/correction.json": {
+    "bytes": 188,
+    "sha256": "29eb0f87513718e546a483d10dc38c263affab93460003c0bd70c121c631ef5d",
+    "git_blob": "cbbe38a337bad27393ebd8beeda9c22419aed54d"
+  },
+  "research/results/radial-retry-20261103-principal/executed_radial_correction.py": {
+    "bytes": 2474,
+    "sha256": "6d175581e3e37a6673cd84ff82c26d57833bc0796f22747ed4cc06bd9a98b421",
+    "git_blob": "6bdff9a31af4520e3894845fd50a3726124400c6"
+  },
+  "research/results/radial-retry-20261103-principal/executed_solver.py": {
+    "bytes": 10432,
+    "sha256": "bd9f25822fa108e6cc910c7e9ca5b28bce7d41bb4fe9fe68806c5488f127a9b9",
+    "git_blob": "57c09d698fdda1496a5c6c55dc7f38825e806d98"
+  },
+  "research/results/radial-retry-20261103-principal/fields_16.npz": {
+    "bytes": 40308,
+    "sha256": "a6545b82555f6555519c002e4cd51964d88d4082865497206286002bcc35618b",
+    "git_blob": "c3c81f95c4ea10c8689f9a70376efa15c3c7a4ef"
+  },
+  "research/results/radial-retry-20261103-principal/fields_32.npz": {
+    "bytes": 328295,
+    "sha256": "6cfb3579f579a90e0f6a1868487989a8e28a36c8472ad748adca01ed47d7397d",
+    "git_blob": "332d12fbcbbbb40daee80f301fedaa945638890b"
+  },
+  "research/results/radial-retry-20261103-principal/fields_64.npz": {
+    "bytes": 2728381,
+    "sha256": "9572a674028241f2678447437e128793858022c23c351d7d1a94e0043ac81094",
+    "git_blob": "ebc2a5e09d780da9717c1223e0eb90281cfb8781"
+  },
+  "research/results/radial-retry-20261103-principal/fields_8.npz": {
+    "bytes": 4801,
+    "sha256": "68f7c77b5f1884e8cd1a3e05a19386daba09b1dc3491d0f5f8028494e961a57e",
+    "git_blob": "c8ad6e6712031ab7015b81859fef4c0c9c17c30a"
+  },
+  "research/results/radial-retry-20261103-principal/independent-audit.json": {
+    "bytes": 17597,
+    "sha256": "c96cee9bf7e82d52829508c11b4337d4522ad03e5de85653e81b22f11c13d2d8",
+    "git_blob": "ebb75fb9564ee2f32207d3b41d26a362b74adb49"
+  },
+  "research/results/radial-retry-20261103-principal/original-physics-audit.json": {
+    "bytes": 13979,
+    "sha256": "2d77ea97d23f53d6a0c65f81576d9c2825edcb8732ed704e2cbc9a48e27d34f4",
+    "git_blob": "0ab0e86a405b98829c78a1359255afcfd19df3c3"
+  },
+  "research/results/radial-retry-20261103-principal/report.json": {
+    "bytes": 31441,
+    "sha256": "0c8ccdb96828577556c2d583d7282ffb39ad4f3fb64bdf7bcd9b6e0b370dc220",
+    "git_blob": "7a15d8ca880f25edc739c4296f8e83c67fac2a81"
+  },
+  "research/results/radial-retry-20261103-principal/result_16.json": {
+    "bytes": 6608,
+    "sha256": "70c7c113f652f9bdc6acae0fb19137607a29e80d95b5fc5e242dbe671e3dd38b",
+    "git_blob": "bf95ebbe967033cd099bc0ff8210312d32c2676d"
+  },
+  "research/results/radial-retry-20261103-principal/result_32.json": {
+    "bytes": 6215,
+    "sha256": "d201a7bea1a802de532970ee936bd4ed4145423d35e3e58029d47a6f3850d85a",
+    "git_blob": "9a41ddda96aab3bd8b5033e5a765b49c0e1e9569"
+  },
+  "research/results/radial-retry-20261103-principal/result_64.json": {
+    "bytes": 6110,
+    "sha256": "c75f6b0d7764a29f058578e24793550b18bd03753da4983ab086d15852804b57",
+    "git_blob": "222e3c61c9d8fb60a709c6e8a589ff0cedb6f724"
+  },
+  "research/results/radial-retry-20261103-principal/result_8.json": {
+    "bytes": 6588,
+    "sha256": "c9bbcb42c44fefeefc5563aae2e7649fdd45bc47cb43b37cce25b1f8b9905c09",
+    "git_blob": "f4539e8cd9efe733adbc3b18280becb38f4a8f05"
+  },
+  "research/results/radial-retry-20261103-principal/settings.json": {
+    "bytes": 285,
+    "sha256": "92a213e9163949bc83d23aef307a4e010eecb194adb7258f0c4047b389b949b4",
+    "git_blob": "4c90e63f3a41bfffa3b6ac571905dfc64bd91ce7"
+  }
+}

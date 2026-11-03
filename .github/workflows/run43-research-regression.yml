@@ -4,6 +4,7 @@ on:
     branches:
       - research/run43-inner-boundary-repair-20261101
       - research/run43-original-continuation-20261103
+      - research/run43-radial-consistency-retry-20261103
     paths:
       - '.github/workflows/run43-research-regression.yml'
       - 'tests/test_toroidal_coupled_constraints.py'
@@ -12,6 +13,12 @@ on:
       - 'research/run43_consistent_momentum.py'
       - 'research/run43_endpoint_continuation.py'
       - 'research/compare_run43_operators.py'
+      - 'research/run43_radial_consistency.py'
+      - 'research/run43_fourth_vector.py'
+      - 'research/check_run43_radial_accuracy.py'
+      - 'research/check_run43_fourth_accuracy.py'
+      - 'tests/test_run43_radial_consistency.py'
+      - 'tests/test_run43_fourth_vector.py'
       - 'research/run43_inner_boundary_triage.py'
       - 'research/run43_physical_inner_profile.py'
   workflow_dispatch:
