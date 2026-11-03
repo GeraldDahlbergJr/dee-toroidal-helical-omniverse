@@ -1,0 +1,11 @@
+{
+  "baseline_solve": 0,
+  "endpoint_solve": 0,
+  "baseline_frozen_audit": 0,
+  "endpoint_frozen_audit": 1,
+  "baseline_supplementary_audit": 0,
+  "endpoint_supplementary_audit": 0,
+  "full_regressions": 0,
+  "production_environment_regressions": 0,
+  "replay_shell_syntax": 0
+}

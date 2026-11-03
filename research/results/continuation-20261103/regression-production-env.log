@@ -1,0 +1,199 @@
+test_analytic_finite_equilibrium_and_mass (test_dee_companion.DeeFieldModelTests.test_analytic_finite_equilibrium_and_mass) ... ok
+test_kinetic_matrix_positive_definiteness (test_dee_companion.DeeFieldModelTests.test_kinetic_matrix_positive_definiteness) ... ok
+test_rejects_invalid_lambda_v_inputs (test_dee_companion.DeeFieldModelTests.test_rejects_invalid_lambda_v_inputs) ... ok
+test_rejects_invalid_rho_squared_inputs (test_dee_companion.DeeFieldModelTests.test_rejects_invalid_rho_squared_inputs) ... ok
+test_radial_solver_grid_convergence (test_dee_companion.LinearizedEinsteinTests.test_radial_solver_grid_convergence) ... ok
+test_regular_axis_and_outer_boundary (test_dee_companion.LinearizedEinsteinTests.test_regular_axis_and_outer_boundary) ... ok
+test_rejects_incompatible_component_boundary_shape (test_dee_companion.LinearizedEinsteinTests.test_rejects_incompatible_component_boundary_shape) ... ok
+test_rejects_nonfinite_radius_stress_and_boundary (test_dee_companion.LinearizedEinsteinTests.test_rejects_nonfinite_radius_stress_and_boundary) ... ok
+test_indefinite_matrix_has_negative_scan_direction (test_dee_companion.NecTests.test_indefinite_matrix_has_negative_scan_direction) ... ok
+test_nec_quadratic_form_and_scan (test_dee_companion.NecTests.test_nec_quadratic_form_and_scan) ... ok
+test_archived_illustrative_point (test_nonlinear_dee_matter_gate.NonlinearDEEMatterGate.test_archived_illustrative_point) ... ok
+test_finite_branch_exact_stationarity_residual (test_nonlinear_dee_matter_gate.NonlinearDEEMatterGate.test_finite_branch_exact_stationarity_residual) ... ok
+test_indefinite_kinetic_matrix_is_rejected (test_nonlinear_dee_matter_gate.NonlinearDEEMatterGate.test_indefinite_kinetic_matrix_is_rejected) ... ok
+test_kinetic_matrix_is_positive_definite_at_archived_point (test_nonlinear_dee_matter_gate.NonlinearDEEMatterGate.test_kinetic_matrix_is_positive_definite_at_archived_point) ... ok
+test_nec_quadratic_form_all_random_projected_directions (test_nonlinear_dee_matter_gate.NonlinearDEEMatterGate.test_nec_quadratic_form_all_random_projected_directions) ... ok
+test_positive_radial_curvature_on_positive_branch (test_nonlinear_dee_matter_gate.NonlinearDEEMatterGate.test_positive_radial_curvature_on_positive_branch) ... ok
+test_fourier_inverse_and_scalar_flux_consistency (test_run43_consistent_momentum.ConsistentMomentum.test_fourier_inverse_and_scalar_flux_consistency) ... {"timing": "base_derivatives_enter", "elapsed_s": 0.0006777370000463634}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0022270610000418856}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0022491750000313004}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.0035008530000482097}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.0035133310000219353}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.004469025000048532}
+{"timing": "base_gradients_enter", "elapsed_s": 0.004483217000029072}
+{"timing": "base_gradients_exit", "elapsed_s": 0.0056233870000141906}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.005638739999994868}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.005881174000023748}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.005890218000047298}
+ok
+test_small_grid_has_no_exact_null_mode (test_run43_consistent_momentum.ConsistentMomentum.test_small_grid_has_no_exact_null_mode) ... {"timing": "base_derivatives_enter", "elapsed_s": 0.0003385480000019925}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0017479630000138968}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0017676620000202092}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.0032293849999973645}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.003246640999975625}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.004175704999966001}
+{"timing": "base_gradients_enter", "elapsed_s": 0.004190498000014031}
+{"timing": "base_gradients_exit", "elapsed_s": 0.00521815899998046}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.005232540999998037}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.005374002999985805}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.00539368300002252}
+ok
+test_stabilization_damps_angular_checkerboard (test_run43_consistent_momentum.ConsistentMomentum.test_stabilization_damps_angular_checkerboard) ... {"timing": "base_derivatives_enter", "elapsed_s": 0.0005369659999701071}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0019200410000053125}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.001940060999970683}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.0032341630000018995}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.0032520500000146058}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.004149385999994593}
+{"timing": "base_gradients_enter", "elapsed_s": 0.004170977999990555}
+{"timing": "base_gradients_exit", "elapsed_s": 0.005429327000001649}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.0054476839999892945}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.005635175000008985}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.005643017000011241}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.0006495040000231711}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0019493249999982254}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0019711969999889334}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.003679110000007313}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.0037077630000226236}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.004496045999985654}
+{"timing": "base_gradients_enter", "elapsed_s": 0.004510287000016433}
+{"timing": "base_gradients_exit", "elapsed_s": 0.005505069999969692}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.0055160960000080195}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.0056762070000218046}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.005683266999994885}
+ok
+test_tensor_operator_matches_independent_audit (test_run43_consistent_momentum.ConsistentMomentum.test_tensor_operator_matches_independent_audit) ... {"timing": "base_derivatives_enter", "elapsed_s": 0.0005099759999893649}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.002070776999971713}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.002096295999990616}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.0033115289999727793}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.0033286350000025777}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.004035895999948025}
+{"timing": "base_gradients_enter", "elapsed_s": 0.004048814999976003}
+{"timing": "base_gradients_exit", "elapsed_s": 0.006334073999994416}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.006363047999968785}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.006540283999981966}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.006547734999969634}
+ok
+test_matched_composition_first_interior_rows_converge (test_run43_endpoint_continuation.EndpointContinuation.test_matched_composition_first_interior_rows_converge) ... ok
+test_matter_is_unchanged_under_endpoint_correction (test_run43_endpoint_continuation.EndpointContinuation.test_matter_is_unchanged_under_endpoint_correction) ... {"timing": "base_derivatives_enter", "elapsed_s": 0.0005258490000414895}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0019036260000007132}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.001919981000014559}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.03955250199999227}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.03960701300002256}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.04059393400001454}
+{"timing": "base_gradients_enter", "elapsed_s": 0.040618922000021485}
+{"timing": "base_gradients_exit", "elapsed_s": 0.04166828600000372}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.04168548200004807}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.041860605000010764}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.04186915799999724}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.00041214800000943796}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0018110269999738193}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0019825840000180506}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.0040766459999872495}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.004099691000021721}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.005133441999987554}
+{"timing": "base_gradients_enter", "elapsed_s": 0.005154593999975532}
+{"timing": "base_gradients_exit", "elapsed_s": 0.006243296999969061}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.006274404000009781}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.006449446999965858}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.006457608999994591}
+ok
+test_analytic_operator_identities (test_tensor_twist.TensorTwistTests.test_analytic_operator_identities) ... ok
+test_manufactured_solution_second_order_convergence (test_tensor_twist.TensorTwistTests.test_manufactured_solution_second_order_convergence) ... ok
+test_rejects_nonuniform_grid (test_tensor_twist.TensorTwistTests.test_rejects_nonuniform_grid) ... ok
+test_candidate_preserves_source_and_matches_independent_operator (test_toroidal_coupled_constraints.ToroidalOperators.test_candidate_preserves_source_and_matches_independent_operator) ... ok
+test_cartesian_polynomial_vector_laplacian_converges (test_toroidal_coupled_constraints.ToroidalOperators.test_cartesian_polynomial_vector_laplacian_converges) ... ok
+test_direct_hessian_manufactured_inner_boundary_converges (test_toroidal_coupled_constraints.ToroidalOperators.test_direct_hessian_manufactured_inner_boundary_converges) ... {"timing": "candidate_init_enter", "shape": [9, 8, 8]}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.00046658000002253175}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.002072900000030131}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0020889740000029633}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.004372921000026508}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.004394524000019828}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.005427263000001403}
+{"timing": "base_gradients_enter", "elapsed_s": 0.005441394000001765}
+{"timing": "base_gradients_exit", "elapsed_s": 0.006904720000022735}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.006921375000047192}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.007311370000024908}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.007324660000051608}
+{"timing": "base_grid_complete", "elapsed_s": 0.00746828500001584}
+{"timing": "candidate_hessian_complete", "elapsed_s": 0.003502496000010069, "total_s": 0.010977981999985786}
+{"timing": "candidate_init_complete", "total_s": 0.011285192999991978}
+{"timing": "matvec_enter", "call": 1}
+{"timing": "matvec_exit", "call": 1, "elapsed_s": 0.00025958999998465515}
+{"timing": "candidate_init_enter", "shape": [17, 16, 16]}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.000770876999979464}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0025685439999847404}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.002587061999975049}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.0042458009999677415}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.004261774999974932}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.0059189909999872725}
+{"timing": "base_gradients_enter", "elapsed_s": 0.005934854999964045}
+{"timing": "base_gradients_exit", "elapsed_s": 0.008258420999993632}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.008275025999978425}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.008675396999990426}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.008685092000007444}
+{"timing": "base_grid_complete", "elapsed_s": 0.009002387000009549}
+{"timing": "candidate_hessian_complete", "elapsed_s": 0.0054151749999959975, "total_s": 0.01442753700001731}
+{"timing": "candidate_init_complete", "total_s": 0.015352515000017775}
+{"timing": "matvec_enter", "call": 1}
+{"timing": "matvec_exit", "call": 1, "elapsed_s": 0.0010978169999589227}
+ok
+test_direct_hessian_operator_converges_and_preserves_matter (test_toroidal_coupled_constraints.ToroidalOperators.test_direct_hessian_operator_converges_and_preserves_matter) ... {"timing": "candidate_init_enter", "shape": [9, 8, 8]}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.00043967999999949825}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0018573870000295756}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0018729000000234919}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.003384949000007964}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.0034010130000297067}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.004312010000035116}
+{"timing": "base_gradients_enter", "elapsed_s": 0.004325069000003623}
+{"timing": "base_gradients_exit", "elapsed_s": 0.005378038999992896}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.005389315999991595}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.005546162000030108}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.005553872999996656}
+{"timing": "base_grid_complete", "elapsed_s": 0.005667123000023366}
+{"timing": "candidate_hessian_complete", "elapsed_s": 0.0032066719999761517, "total_s": 0.008880645000033383}
+{"timing": "candidate_init_complete", "total_s": 0.009150400000009995}
+{"timing": "matvec_enter", "call": 1}
+{"timing": "matvec_exit", "call": 1, "elapsed_s": 0.00023441199999751916}
+{"timing": "candidate_init_enter", "shape": [17, 16, 16]}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.0008922490000031758}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.002492069000027186}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0025055400000155714}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.004051940000010745}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.004064118000030703}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.006581826000001456}
+{"timing": "base_gradients_enter", "elapsed_s": 0.006603969000025245}
+{"timing": "base_gradients_exit", "elapsed_s": 0.045491067000000385}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.04553471299999501}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.0462651889999961}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.046280040999988614}
+{"timing": "base_grid_complete", "elapsed_s": 0.046782243999984985}
+{"timing": "candidate_hessian_complete", "elapsed_s": 0.0072875649999559755, "total_s": 0.054081485999972756}
+{"timing": "candidate_init_complete", "total_s": 0.055192572999999356}
+{"timing": "matvec_enter", "call": 1}
+{"timing": "matvec_exit", "call": 1, "elapsed_s": 0.0011066809999533689}
+{"timing": "candidate_init_enter", "shape": [9, 8, 8]}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.0003493540000363282}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.001561633000051188}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.001573831000030168}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.003582896000011715}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.003603266000027361}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.004342365000013615}
+{"timing": "base_gradients_enter", "elapsed_s": 0.004354583999997885}
+{"timing": "base_gradients_exit", "elapsed_s": 0.005666332000032526}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.005679071000031399}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.0058383100000014565}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.005845431000011558}
+{"timing": "base_grid_complete", "elapsed_s": 0.0060624159999633775}
+{"timing": "candidate_hessian_complete", "elapsed_s": 0.0033635070000173073, "total_s": 0.00943950299995322}
+{"timing": "candidate_init_complete", "total_s": 0.009696980000001076}
+ok
+test_expanded_audit_matches_production_vector_operator (test_toroidal_coupled_constraints.ToroidalOperators.test_expanded_audit_matches_production_vector_operator) ... ok
+test_fourth_order_radial_polynomial_including_endpoints (test_toroidal_coupled_constraints.ToroidalOperators.test_fourth_order_radial_polynomial_including_endpoints) ... ok
+test_independent_tensor_divergence_manufactured_vector (test_toroidal_coupled_constraints.ToroidalOperators.test_independent_tensor_divergence_manufactured_vector) ... ok
+test_matched_endpoint_composition_has_no_cubic_edge_defect (test_toroidal_coupled_constraints.ToroidalOperators.test_matched_endpoint_composition_has_no_cubic_edge_defect) ... ok
+test_source_uses_physical_inverse_metric (test_toroidal_coupled_constraints.ToroidalOperators.test_source_uses_physical_inverse_metric) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.953s
+
+OK

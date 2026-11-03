@@ -1,0 +1,6 @@
+{
+  "radial": "matched leading centered first-derivative truncation at endpoints",
+  "source": "unchanged original Einstein-DEE projections",
+  "frozen_audit": "unchanged",
+  "stabilization": 0.25
+}

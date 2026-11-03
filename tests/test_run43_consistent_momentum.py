@@ -1,4 +1,5 @@
-import sys, unittest
+import sys, unittest, os
+from unittest.mock import patch
 from pathlib import Path
 import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'research'))
@@ -6,6 +7,15 @@ from run43_consistent_momentum import TensorGrid, scalar_flux_laplacian, Fourier
 from diagnose_toroidal_boundary_convergence import Audit
 
 class ConsistentMomentum(unittest.TestCase):
+    def setUp(self):
+        # Production experiment settings must not select a different scalar
+        # operator/preconditioner while testing the baseline algebra.
+        self.environment = patch.dict(os.environ)
+        self.environment.start()
+        for key in ('DEE_SCALAR_ORDER', 'DEE_PRECONDITIONER'):
+            os.environ.pop(key, None)
+        self.addCleanup(self.environment.stop)
+
     def test_fourier_inverse_and_scalar_flux_consistency(self):
         g=TensorGrid(8);L=scalar_flux_laplacian(g);interior=(L[g.idx]@g.inject).tocsc()
         pre=FourierPreconditioner(interior,8)

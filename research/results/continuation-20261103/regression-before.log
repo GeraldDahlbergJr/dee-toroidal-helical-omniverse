@@ -1,0 +1,64 @@
+test_fourier_inverse_and_scalar_flux_consistency (test_run43_consistent_momentum.ConsistentMomentum.test_fourier_inverse_and_scalar_flux_consistency) ... {"timing": "base_derivatives_enter", "elapsed_s": 0.002417698000002133}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.005253494000001524}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.00527554699999655}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.006787334999998507}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.006808156999994708}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.009340546999993649}
+{"timing": "base_gradients_enter", "elapsed_s": 0.009359535000001529}
+{"timing": "base_gradients_exit", "elapsed_s": 0.01126695799999311}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.01128545499999234}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.011785665999994421}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.011798815999995327}
+ok
+test_small_grid_has_no_exact_null_mode (test_run43_consistent_momentum.ConsistentMomentum.test_small_grid_has_no_exact_null_mode) ... {"timing": "base_derivatives_enter", "elapsed_s": 0.00029265900001007594}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.002086220999999}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0021030959999990273}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.0032931620000056228}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.003308584999999198}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.003966341999998235}
+{"timing": "base_gradients_enter", "elapsed_s": 0.003978400000008264}
+{"timing": "base_gradients_exit", "elapsed_s": 0.005301215000002912}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.005315627000001655}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.005689908000007904}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.005704831000002741}
+ok
+test_stabilization_damps_angular_checkerboard (test_run43_consistent_momentum.ConsistentMomentum.test_stabilization_damps_angular_checkerboard) ... {"timing": "base_derivatives_enter", "elapsed_s": 0.0005253979999935154}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0017626749999948288}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0017768859999875986}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.002902664999993476}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.0029185490000003256}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.0036347539999894707}
+{"timing": "base_gradients_enter", "elapsed_s": 0.0036459809999911386}
+{"timing": "base_gradients_exit", "elapsed_s": 0.004665289999991273}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.00467646699999591}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.004826912999988053}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.004833843000000115}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.0003388189999924407}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0014762749999874814}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0014882029999938595}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.0025490849999982856}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.002560391999992362}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.0031537029999952892}
+{"timing": "base_gradients_enter", "elapsed_s": 0.0031635869999888655}
+{"timing": "base_gradients_exit", "elapsed_s": 0.00428007299998967}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.004293432999986635}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.004472481999997058}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.004484218999991185}
+ok
+test_tensor_operator_matches_independent_audit (test_run43_consistent_momentum.ConsistentMomentum.test_tensor_operator_matches_independent_audit) ... {"timing": "base_derivatives_enter", "elapsed_s": 0.00033297000000231947}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0014860999999939395}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0014998509999912812}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.002516596999996068}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.0025368069999984755}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.0032258709999979374}
+{"timing": "base_gradients_enter", "elapsed_s": 0.003239570999994612}
+{"timing": "base_gradients_exit", "elapsed_s": 0.0042912499999943066}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.00430173499999853}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.004451970999994614}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.004458550999999034}
+ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.275s
+
+OK

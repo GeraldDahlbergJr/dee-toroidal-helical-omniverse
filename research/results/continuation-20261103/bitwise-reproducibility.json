@@ -1,0 +1,26 @@
+[
+  {
+    "path": "research/results/continuation-20261103-fresh/fields_16.npz",
+    "historical_git_blob": "950d3f37b670e23d8e79da9c83e27d29dc443fc3",
+    "fresh_git_blob": "950d3f37b670e23d8e79da9c83e27d29dc443fc3",
+    "bitwise_identical": true
+  },
+  {
+    "path": "research/results/continuation-20261103-fresh/fields_32.npz",
+    "historical_git_blob": "5c38de6e7c991bb823e74e815ec3a4f1d04be87b",
+    "fresh_git_blob": "5c38de6e7c991bb823e74e815ec3a4f1d04be87b",
+    "bitwise_identical": true
+  },
+  {
+    "path": "research/results/continuation-20261103-fresh/fields_64.npz",
+    "historical_git_blob": "fd3863f1730c9e7fa48917ed91803d796ad4b13a",
+    "fresh_git_blob": "fd3863f1730c9e7fa48917ed91803d796ad4b13a",
+    "bitwise_identical": true
+  },
+  {
+    "path": "research/results/continuation-20261103-fresh/fields_8.npz",
+    "historical_git_blob": "dfe62bd6f4f4794b6637307e6e5f76d8632d8a23",
+    "fresh_git_blob": "dfe62bd6f4f4794b6637307e6e5f76d8632d8a23",
+    "bitwise_identical": true
+  }
+]

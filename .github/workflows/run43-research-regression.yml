@@ -3,9 +3,15 @@ on:
   push:
     branches:
       - research/run43-inner-boundary-repair-20261101
+      - research/run43-original-continuation-20261103
     paths:
       - '.github/workflows/run43-research-regression.yml'
       - 'tests/test_toroidal_coupled_constraints.py'
+      - 'tests/test_run43_consistent_momentum.py'
+      - 'tests/test_run43_endpoint_continuation.py'
+      - 'research/run43_consistent_momentum.py'
+      - 'research/run43_endpoint_continuation.py'
+      - 'research/compare_run43_operators.py'
       - 'research/run43_inner_boundary_triage.py'
       - 'research/run43_physical_inner_profile.py'
   workflow_dispatch:
@@ -24,9 +30,14 @@ jobs:
           python-version: '3.12'
       - name: Install numerical dependencies
         run: python -m pip install numpy scipy
-      - name: Verify inner gate deficits without changing audit
-        run: python research/run43_inner_boundary_triage.py
-      - name: Profile original physical inner-band residuals across coarse resolutions
-        run: python research/run43_physical_inner_profile.py
-      - name: Verify matrix-free Hessian regression and unchanged source
-        run: python -m unittest tests.test_toroidal_coupled_constraints.ToroidalOperators.test_direct_hessian_operator_converges_and_preserves_matter -v
+      - name: Verify frozen audit and execute matrix-free regressions
+        run: |
+          set -o pipefail
+          mkdir -p research/results/continuation-20261103
+          test "$(git hash-object reproduce/diagnose_toroidal_boundary_convergence.py)" = 5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22
+          python -m unittest discover -s tests -v 2>&1 | tee research/results/continuation-20261103/regression.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: run43-regression-evidence
+          path: research/results/continuation-20261103/
