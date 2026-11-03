@@ -1,0 +1,1299 @@
+{
+  "scope": "Factorial radial/angular gradient perturbations relative to seven-point/Fourier reference. Supplementary only; no solver or acceptance changes. Taylor completion is interpolation identity, not continuum validation.",
+  "rows": [
+    {
+      "n": 8,
+      "field_sha256": "865909b29cd96b28e47c5b8a0dbedf00fa6755eba1bda8500841aca2cdd87400",
+      "matched_minus_reference_rms": 0.0018291399950117152,
+      "components": {
+        "radial_linear": 0.0018561988056071124,
+        "radial_quadratic": 0.0007927633340700894,
+        "angular_linear": 0.0009402732220444638,
+        "angular_quadratic": 0.00017172009963277356,
+        "radial_angular_mixed": 0.0001411596849656149
+      },
+      "gram": {
+        "radial_linear": {
+          "radial_linear": 3.4454740059372702e-06,
+          "radial_quadratic": -1.2803132514276476e-06,
+          "angular_linear": 5.279176349784859e-07,
+          "angular_quadratic": 3.0821755667669374e-07,
+          "radial_angular_mixed": 2.5461417449196767e-07
+        },
+        "radial_quadratic": {
+          "radial_linear": -1.2803132514276476e-06,
+          "radial_quadratic": 6.284737038459243e-07,
+          "angular_linear": -5.343972156543578e-07,
+          "angular_quadratic": -1.0214052433098835e-07,
+          "radial_angular_mixed": -1.0415298728967313e-07
+        },
+        "angular_linear": {
+          "radial_linear": 5.279176349784859e-07,
+          "radial_quadratic": -5.343972156543578e-07,
+          "angular_linear": 8.841137320938775e-07,
+          "angular_quadratic": 1.7057809050553452e-08,
+          "radial_angular_mixed": 6.018537466659906e-08
+        },
+        "angular_quadratic": {
+          "radial_linear": 3.0821755667669374e-07,
+          "radial_quadratic": -1.0214052433098835e-07,
+          "angular_linear": 1.7057809050553452e-08,
+          "angular_quadratic": 2.9487792617889676e-08,
+          "radial_angular_mixed": 2.2150343936825987e-08
+        },
+        "radial_angular_mixed": {
+          "radial_linear": 2.5461417449196767e-07,
+          "radial_quadratic": -1.0415298728967313e-07,
+          "angular_linear": 6.018537466659906e-08,
+          "angular_quadratic": 2.2150343936825987e-08,
+          "radial_angular_mixed": 1.9926056659591644e-08
+        }
+      },
+      "leading_predictions": {
+        "radial": {
+          "predicted_rms": 0.002105643335463323,
+          "actual_rms": 0.0018561988056071124,
+          "relative_difference": 0.20790013061623971,
+          "cosine": 0.9889088567296794
+        },
+        "angular": {
+          "predicted_rms": 0.0010834331509611583,
+          "actual_rms": 0.0009402732220444638,
+          "relative_difference": 0.1635574391588488,
+          "cosine": 0.9984509074663137
+        }
+      },
+      "endpoint_taylor": {
+        "7": [
+          {
+            "through_derivative": 3,
+            "delta3_coefficient": 1.0,
+            "relative_error": 0.41206663327240245,
+            "rms": 0.0014402314060491949
+          },
+          {
+            "through_derivative": 4,
+            "delta3_coefficient": 0.5,
+            "relative_error": 0.16446344656811568,
+            "rms": 0.0008525606855984792
+          },
+          {
+            "through_derivative": 5,
+            "delta3_coefficient": 0.25,
+            "relative_error": 0.02066712944339049,
+            "rms": 0.0010410934484652442
+          },
+          {
+            "through_derivative": 6,
+            "delta3_coefficient": 0.08333333333333333,
+            "relative_error": 1.1686219546715448e-14,
+            "rms": 0.0010200506733244036
+          }
+        ],
+        "8": [
+          {
+            "through_derivative": 3,
+            "delta3_coefficient": 1.0,
+            "relative_error": 0.4220918088105763,
+            "rms": 0.0014504452759414707
+          },
+          {
+            "through_derivative": 4,
+            "delta3_coefficient": 0.5,
+            "relative_error": 0.2117612356408791,
+            "rms": 0.0008044912668372349
+          },
+          {
+            "through_derivative": 5,
+            "delta3_coefficient": 0.25,
+            "relative_error": 0.04503691876909192,
+            "rms": 0.0010658862291677254
+          },
+          {
+            "through_derivative": 6,
+            "delta3_coefficient": 0.08333333333333333,
+            "relative_error": 0.004300760234839342,
+            "rms": 0.0010156762180660633
+          },
+          {
+            "through_derivative": 7,
+            "delta3_coefficient": 0.025,
+            "relative_error": 2.3566237664635507e-13,
+            "rms": 0.001020050673324645
+          }
+        ]
+      },
+      "identity_absolute_error": 1.103601176795653e-17,
+      "radial_profiles": {
+        "radial_linear": [
+          {
+            "row": 1,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.7044999735473834
+          },
+          {
+            "row": 2,
+            "r": 0.1,
+            "squared_norm_fraction": 0.2955000264526166
+          }
+        ],
+        "radial_quadratic": [
+          {
+            "row": 1,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.9949781993899958
+          },
+          {
+            "row": 2,
+            "r": 0.1,
+            "squared_norm_fraction": 0.005021800610004183
+          }
+        ],
+        "angular_linear": [
+          {
+            "row": 1,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.5832714823196719
+          },
+          {
+            "row": 2,
+            "r": 0.1,
+            "squared_norm_fraction": 0.4167285176803282
+          }
+        ],
+        "angular_quadratic": [
+          {
+            "row": 1,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.530616896130574
+          },
+          {
+            "row": 2,
+            "r": 0.1,
+            "squared_norm_fraction": 0.469383103869426
+          }
+        ],
+        "radial_angular_mixed": [
+          {
+            "row": 1,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.857205683410511
+          },
+          {
+            "row": 2,
+            "r": 0.1,
+            "squared_norm_fraction": 0.14279431658948927
+          }
+        ]
+      }
+    },
+    {
+      "n": 16,
+      "field_sha256": "495e0e50ea75f199ff1b04c092487b3bcce1133bd5fb7ec87296f3b6ea8b4f39",
+      "matched_minus_reference_rms": 0.0011566171131997811,
+      "components": {
+        "radial_linear": 0.0010021098570966987,
+        "radial_quadratic": 0.000401962359899731,
+        "angular_linear": 0.0005196430954573996,
+        "angular_quadratic": 1.2237659951350422e-05,
+        "radial_angular_mixed": 1.7817497700049175e-05
+      },
+      "gram": {
+        "radial_linear": {
+          "radial_linear": 1.0042241656903659e-06,
+          "radial_quadratic": -3.127621003597064e-07,
+          "angular_linear": 4.309192680040802e-07,
+          "angular_quadratic": 1.0049231831636483e-08,
+          "radial_angular_mixed": 1.7444551680156747e-08
+        },
+        "radial_quadratic": {
+          "radial_linear": -3.127621003597064e-07,
+          "radial_quadratic": 1.6157373877616087e-07,
+          "angular_linear": -1.9750936884483136e-07,
+          "angular_quadratic": -1.951746236811887e-09,
+          "radial_angular_mixed": -5.990822752694003e-09
+        },
+        "angular_linear": {
+          "radial_linear": 4.309192680040802e-07,
+          "radial_quadratic": -1.9750936884483136e-07,
+          "angular_linear": 2.700289466565481e-07,
+          "angular_quadratic": 2.4857672861501016e-09,
+          "radial_angular_mixed": 7.876635770780574e-09
+        },
+        "angular_quadratic": {
+          "radial_linear": 1.0049231831636483e-08,
+          "radial_quadratic": -1.951746236811887e-09,
+          "angular_linear": 2.4857672861501016e-09,
+          "angular_quadratic": 1.4976032108488603e-10,
+          "radial_angular_mixed": 1.731195603120411e-10
+        },
+        "radial_angular_mixed": {
+          "radial_linear": 1.7444551680156747e-08,
+          "radial_quadratic": -5.990822752694003e-09,
+          "angular_linear": 7.876635770780574e-09,
+          "angular_quadratic": 1.731195603120411e-10,
+          "radial_angular_mixed": 3.174632242912576e-10
+        }
+      },
+      "leading_predictions": {
+        "radial": {
+          "predicted_rms": 0.0011271251932584527,
+          "actual_rms": 0.0010021098570966987,
+          "relative_difference": 0.19825957500020314,
+          "cosine": 0.9894448895370291
+        },
+        "angular": {
+          "predicted_rms": 0.0005388378619763825,
+          "actual_rms": 0.0005196430954573996,
+          "relative_difference": 0.03757241827934594,
+          "cosine": 0.999977219581627
+        }
+      },
+      "endpoint_taylor": {
+        "7": [
+          {
+            "through_derivative": 3,
+            "delta3_coefficient": 1.0,
+            "relative_error": 0.29873819170445404,
+            "rms": 0.0009840476696871751
+          },
+          {
+            "through_derivative": 4,
+            "delta3_coefficient": 0.5,
+            "relative_error": 0.09431609543190861,
+            "rms": 0.0006864950771712924
+          },
+          {
+            "through_derivative": 5,
+            "delta3_coefficient": 0.25,
+            "relative_error": 0.010493653507494911,
+            "rms": 0.0007657305117734463
+          },
+          {
+            "through_derivative": 6,
+            "delta3_coefficient": 0.08333333333333333,
+            "relative_error": 3.072412393495988e-14,
+            "rms": 0.0007578014734309948
+          }
+        ],
+        "8": [
+          {
+            "through_derivative": 3,
+            "delta3_coefficient": 1.0,
+            "relative_error": 0.3028766713512922,
+            "rms": 0.0009871772935359099
+          },
+          {
+            "through_derivative": 4,
+            "delta3_coefficient": 0.5,
+            "relative_error": 0.11384691416999476,
+            "rms": 0.0006717643057383534
+          },
+          {
+            "through_derivative": 5,
+            "delta3_coefficient": 0.25,
+            "relative_error": 0.020557535718788794,
+            "rms": 0.000773325717297595
+          },
+          {
+            "through_derivative": 6,
+            "delta3_coefficient": 0.08333333333333333,
+            "relative_error": 0.0017760971587763802,
+            "rms": 0.0007564613072017554
+          },
+          {
+            "through_derivative": 7,
+            "delta3_coefficient": 0.025,
+            "relative_error": 1.6366252468240104e-13,
+            "rms": 0.0007578014734311107
+          }
+        ]
+      },
+      "identity_absolute_error": 2.3045613991793532e-17,
+      "radial_profiles": {
+        "radial_linear": [
+          {
+            "row": 1,
+            "r": 0.0625,
+            "squared_norm_fraction": 0.5823124477456737
+          },
+          {
+            "row": 2,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.3393531580742189
+          },
+          {
+            "row": 3,
+            "r": 0.08750000000000001,
+            "squared_norm_fraction": 0.05879670353484724
+          },
+          {
+            "row": 4,
+            "r": 0.1,
+            "squared_norm_fraction": 0.019537690645260085
+          }
+        ],
+        "radial_quadratic": [
+          {
+            "row": 1,
+            "r": 0.0625,
+            "squared_norm_fraction": 0.9854911903997453
+          },
+          {
+            "row": 2,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.006190615143316295
+          },
+          {
+            "row": 3,
+            "r": 0.08750000000000001,
+            "squared_norm_fraction": 0.008053104001144548
+          },
+          {
+            "row": 4,
+            "r": 0.1,
+            "squared_norm_fraction": 0.0002650904557938457
+          }
+        ],
+        "angular_linear": [
+          {
+            "row": 1,
+            "r": 0.0625,
+            "squared_norm_fraction": 0.8618911245321369
+          },
+          {
+            "row": 2,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.0783390316896337
+          },
+          {
+            "row": 3,
+            "r": 0.08750000000000001,
+            "squared_norm_fraction": 0.004832289660516516
+          },
+          {
+            "row": 4,
+            "r": 0.1,
+            "squared_norm_fraction": 0.054937554117712846
+          }
+        ],
+        "angular_quadratic": [
+          {
+            "row": 1,
+            "r": 0.0625,
+            "squared_norm_fraction": 0.1783001239794529
+          },
+          {
+            "row": 2,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.2839620693177211
+          },
+          {
+            "row": 3,
+            "r": 0.08750000000000001,
+            "squared_norm_fraction": 0.28740354679038077
+          },
+          {
+            "row": 4,
+            "r": 0.1,
+            "squared_norm_fraction": 0.25033425991244523
+          }
+        ],
+        "radial_angular_mixed": [
+          {
+            "row": 1,
+            "r": 0.0625,
+            "squared_norm_fraction": 0.7162077381271553
+          },
+          {
+            "row": 2,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.1949055134237646
+          },
+          {
+            "row": 3,
+            "r": 0.08750000000000001,
+            "squared_norm_fraction": 0.06435896205976328
+          },
+          {
+            "row": 4,
+            "r": 0.1,
+            "squared_norm_fraction": 0.024527786389316648
+          }
+        ]
+      }
+    },
+    {
+      "n": 32,
+      "field_sha256": "35838803e15b062c6e29371703d4b7cc2081a427b0cb5ce6ed26ae72dd23a0b7",
+      "matched_minus_reference_rms": 0.0004700984454592175,
+      "components": {
+        "radial_linear": 0.000381941405192168,
+        "radial_quadratic": 0.0001324218354511821,
+        "angular_linear": 0.00018142180705518502,
+        "angular_quadratic": 7.815628910500944e-07,
+        "radial_angular_mixed": 1.5271058021983176e-06
+      },
+      "gram": {
+        "radial_linear": {
+          "radial_linear": 1.4587923700016786e-07,
+          "radial_quadratic": -3.354841779206067e-08,
+          "angular_linear": 6.420931125996272e-08,
+          "angular_quadratic": 2.066098872297858e-10,
+          "radial_angular_mixed": 5.728454889206727e-10
+        },
+        "radial_quadratic": {
+          "radial_linear": -3.354841779206067e-08,
+          "radial_quadratic": 1.7535542504259954e-08,
+          "angular_linear": -1.9257201714558728e-08,
+          "angular_quadratic": -1.9273194387774963e-11,
+          "radial_angular_mixed": -1.4676988994640126e-10
+        },
+        "angular_linear": {
+          "radial_linear": 6.420931125996272e-08,
+          "radial_quadratic": -1.9257201714558728e-08,
+          "angular_linear": 3.291387207516878e-08,
+          "angular_quadratic": 5.6707889074867775e-11,
+          "radial_angular_mixed": 2.558386421725162e-10
+        },
+        "angular_quadratic": {
+          "radial_linear": 2.066098872297858e-10,
+          "radial_quadratic": -1.9273194387774963e-11,
+          "angular_linear": 5.6707889074867775e-11,
+          "angular_quadratic": 6.108405526665818e-13,
+          "radial_angular_mixed": 8.263990394760509e-13
+        },
+        "radial_angular_mixed": {
+          "radial_linear": 5.728454889206727e-10,
+          "radial_quadratic": -1.4676988994640126e-10,
+          "angular_linear": 2.558386421725162e-10,
+          "angular_quadratic": 8.263990394760509e-13,
+          "radial_angular_mixed": 2.3320521311077667e-12
+        }
+      },
+      "leading_predictions": {
+        "radial": {
+          "predicted_rms": 0.00041922521992084446,
+          "actual_rms": 0.000381941405192168,
+          "relative_difference": 0.17426039504262034,
+          "cosine": 0.9905077563458735
+        },
+        "angular": {
+          "predicted_rms": 0.00018304736774501175,
+          "actual_rms": 0.00018142180705518502,
+          "relative_difference": 0.009048927624520737,
+          "cosine": 0.9999992074080358
+        }
+      },
+      "endpoint_taylor": {
+        "7": [
+          {
+            "through_derivative": 3,
+            "delta3_coefficient": 1.0,
+            "relative_error": 0.18764903293198396,
+            "rms": 0.0005120233987229276
+          },
+          {
+            "through_derivative": 4,
+            "delta3_coefficient": 0.5,
+            "relative_error": 0.04074875820397977,
+            "rms": 0.00041365399732815327
+          },
+          {
+            "through_derivative": 5,
+            "delta3_coefficient": 0.25,
+            "relative_error": 0.0036680001014231306,
+            "rms": 0.00043275302976073687
+          },
+          {
+            "through_derivative": 6,
+            "delta3_coefficient": 0.08333333333333333,
+            "relative_error": 9.263272321753719e-14,
+            "rms": 0.000431177206343552
+          }
+        ],
+        "8": [
+          {
+            "through_derivative": 3,
+            "delta3_coefficient": 1.0,
+            "relative_error": 0.1886787199402525,
+            "rms": 0.0005124661242193274
+          },
+          {
+            "through_derivative": 4,
+            "delta3_coefficient": 0.5,
+            "relative_error": 0.045609460692219196,
+            "rms": 0.0004115690051857551
+          },
+          {
+            "through_derivative": 5,
+            "delta3_coefficient": 0.25,
+            "relative_error": 0.006172886184272922,
+            "rms": 0.0004338275359317169
+          },
+          {
+            "through_derivative": 6,
+            "delta3_coefficient": 0.08333333333333333,
+            "relative_error": 0.0004420800526442312,
+            "rms": 0.0004309875966050812
+          },
+          {
+            "through_derivative": 7,
+            "delta3_coefficient": 0.025,
+            "relative_error": 2.2236138023684346e-13,
+            "rms": 0.0004311772063435209
+          }
+        ]
+      },
+      "identity_absolute_error": 4.376103468523558e-17,
+      "radial_profiles": {
+        "radial_linear": [
+          {
+            "row": 1,
+            "r": 0.05625,
+            "squared_norm_fraction": 0.41857665100461783
+          },
+          {
+            "row": 2,
+            "r": 0.0625,
+            "squared_norm_fraction": 0.34829037679231073
+          },
+          {
+            "row": 3,
+            "r": 0.06875,
+            "squared_norm_fraction": 0.11775648962052115
+          },
+          {
+            "row": 4,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.058961166116152784
+          },
+          {
+            "row": 5,
+            "r": 0.08125,
+            "squared_norm_fraction": 0.028931514648246552
+          },
+          {
+            "row": 6,
+            "r": 0.08750000000000001,
+            "squared_norm_fraction": 0.01490796193235563
+          },
+          {
+            "row": 7,
+            "r": 0.09375,
+            "squared_norm_fraction": 0.008048857056670857
+          },
+          {
+            "row": 8,
+            "r": 0.1,
+            "squared_norm_fraction": 0.004526982829124366
+          }
+        ],
+        "radial_quadratic": [
+          {
+            "row": 1,
+            "r": 0.05625,
+            "squared_norm_fraction": 0.9867440392869159
+          },
+          {
+            "row": 2,
+            "r": 0.0625,
+            "squared_norm_fraction": 0.0077555668907044045
+          },
+          {
+            "row": 3,
+            "r": 0.06875,
+            "squared_norm_fraction": 0.005303596216424228
+          },
+          {
+            "row": 4,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.0001350429780365947
+          },
+          {
+            "row": 5,
+            "r": 0.08125,
+            "squared_norm_fraction": 3.8167488696233514e-05
+          },
+          {
+            "row": 6,
+            "r": 0.08750000000000001,
+            "squared_norm_fraction": 1.4727852372431461e-05
+          },
+          {
+            "row": 7,
+            "r": 0.09375,
+            "squared_norm_fraction": 6.1474101704252275e-06
+          },
+          {
+            "row": 8,
+            "r": 0.1,
+            "squared_norm_fraction": 2.7118766797387614e-06
+          }
+        ],
+        "angular_linear": [
+          {
+            "row": 1,
+            "r": 0.05625,
+            "squared_norm_fraction": 0.6258051004732218
+          },
+          {
+            "row": 2,
+            "r": 0.0625,
+            "squared_norm_fraction": 0.24209780141064008
+          },
+          {
+            "row": 3,
+            "r": 0.06875,
+            "squared_norm_fraction": 0.0837502680855827
+          },
+          {
+            "row": 4,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.022113907965811374
+          },
+          {
+            "row": 5,
+            "r": 0.08125,
+            "squared_norm_fraction": 0.0026530647406641135
+          },
+          {
+            "row": 6,
+            "r": 0.08750000000000001,
+            "squared_norm_fraction": 0.0012871220290507303
+          },
+          {
+            "row": 7,
+            "r": 0.09375,
+            "squared_norm_fraction": 0.0071147911589404655
+          },
+          {
+            "row": 8,
+            "r": 0.1,
+            "squared_norm_fraction": 0.01517794413608877
+          }
+        ],
+        "angular_quadratic": [
+          {
+            "row": 1,
+            "r": 0.05625,
+            "squared_norm_fraction": 0.04002919616061936
+          },
+          {
+            "row": 2,
+            "r": 0.0625,
+            "squared_norm_fraction": 0.09454083137640273
+          },
+          {
+            "row": 3,
+            "r": 0.06875,
+            "squared_norm_fraction": 0.13155821928385167
+          },
+          {
+            "row": 4,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.15017943621876165
+          },
+          {
+            "row": 5,
+            "r": 0.08125,
+            "squared_norm_fraction": 0.15539359100300193
+          },
+          {
+            "row": 6,
+            "r": 0.08750000000000001,
+            "squared_norm_fraction": 0.15202951529470296
+          },
+          {
+            "row": 7,
+            "r": 0.09375,
+            "squared_norm_fraction": 0.14364497316242023
+          },
+          {
+            "row": 8,
+            "r": 0.1,
+            "squared_norm_fraction": 0.13262423750023938
+          }
+        ],
+        "radial_angular_mixed": [
+          {
+            "row": 1,
+            "r": 0.05625,
+            "squared_norm_fraction": 0.5275945093822708
+          },
+          {
+            "row": 2,
+            "r": 0.0625,
+            "squared_norm_fraction": 0.23430868488396028
+          },
+          {
+            "row": 3,
+            "r": 0.06875,
+            "squared_norm_fraction": 0.1121793385781724
+          },
+          {
+            "row": 4,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.057589956303705905
+          },
+          {
+            "row": 5,
+            "r": 0.08125,
+            "squared_norm_fraction": 0.03163812206033338
+          },
+          {
+            "row": 6,
+            "r": 0.08750000000000001,
+            "squared_norm_fraction": 0.018381408608769613
+          },
+          {
+            "row": 7,
+            "r": 0.09375,
+            "squared_norm_fraction": 0.011199575966084934
+          },
+          {
+            "row": 8,
+            "r": 0.1,
+            "squared_norm_fraction": 0.007108404216702749
+          }
+        ]
+      }
+    },
+    {
+      "n": 64,
+      "field_sha256": "b23d67d08c04985f3d667565fe5dfbb79192ad22a6ffe5a83ee6d7189db445a8",
+      "matched_minus_reference_rms": 0.00015284681920494053,
+      "components": {
+        "radial_linear": 0.00011760664875732534,
+        "radial_quadratic": 3.227424006139563e-05,
+        "angular_linear": 5.254584250558657e-05,
+        "angular_quadratic": 4.89084242734235e-08,
+        "radial_angular_mixed": 1.0967908502557038e-07
+      },
+      "gram": {
+        "radial_linear": {
+          "radial_linear": 1.3831323831928894e-08,
+          "radial_quadratic": -1.9984208664789384e-09,
+          "angular_linear": 5.907750036824051e-09,
+          "angular_quadratic": 3.521425248368482e-12,
+          "radial_angular_mixed": 1.2707223118099945e-11
+        },
+        "radial_quadratic": {
+          "radial_linear": -1.9984208664789384e-09,
+          "radial_quadratic": 1.0416265715405948e-09,
+          "angular_linear": -1.0657374230128747e-09,
+          "angular_quadratic": -1.2185888438300747e-13,
+          "radial_angular_mixed": -2.0720283467877837e-12
+        },
+        "angular_linear": {
+          "radial_linear": 5.907750036824051e-09,
+          "radial_quadratic": -1.0657374230128747e-09,
+          "angular_linear": 2.7610655646219084e-09,
+          "angular_quadratic": 9.907549929560242e-13,
+          "radial_angular_mixed": 5.439205180654813e-12
+        },
+        "angular_quadratic": {
+          "radial_linear": 3.521425248368482e-12,
+          "radial_quadratic": -1.2185888438300747e-13,
+          "angular_linear": 9.907549929560242e-13,
+          "angular_quadratic": 2.392033964909201e-15,
+          "radial_angular_mixed": 3.407079267513923e-15
+        },
+        "radial_angular_mixed": {
+          "radial_linear": 1.2707223118099945e-11,
+          "radial_quadratic": -2.0720283467877837e-12,
+          "angular_linear": 5.439205180654813e-12,
+          "angular_quadratic": 3.407079267513923e-15,
+          "radial_angular_mixed": 1.2029501692046296e-14
+        }
+      },
+      "leading_predictions": {
+        "radial": {
+          "predicted_rms": 0.00012512324668508747,
+          "actual_rms": 0.00011760664875732534,
+          "relative_difference": 0.13918106318936285,
+          "cosine": 0.9928159108307298
+        },
+        "angular": {
+          "predicted_rms": 5.266224658083312e-05,
+          "actual_rms": 5.254584250558657e-05,
+          "relative_difference": 0.0022327044983746227,
+          "cosine": 0.9999999613472216
+        }
+      },
+      "endpoint_taylor": {
+        "7": [
+          {
+            "through_derivative": 3,
+            "delta3_coefficient": 1.0,
+            "relative_error": 0.10583905716124803,
+            "rms": 0.0002221562733206656
+          },
+          {
+            "through_derivative": 4,
+            "delta3_coefficient": 0.5,
+            "relative_error": 0.013820350365502287,
+            "rms": 0.0001981420160026402
+          },
+          {
+            "through_derivative": 5,
+            "delta3_coefficient": 0.25,
+            "relative_error": 0.000897778607617715,
+            "rms": 0.00020109053671202393
+          },
+          {
+            "through_derivative": 6,
+            "delta3_coefficient": 0.08333333333333333,
+            "relative_error": 3.337754198049725e-13,
+            "rms": 0.00020091090381577556
+          }
+        ],
+        "8": [
+          {
+            "through_derivative": 3,
+            "delta3_coefficient": 1.0,
+            "relative_error": 0.10599139057205398,
+            "rms": 0.00022218677410477952
+          },
+          {
+            "through_derivative": 4,
+            "delta3_coefficient": 0.5,
+            "relative_error": 0.014539624646463214,
+            "rms": 0.0001979983096198926
+          },
+          {
+            "through_derivative": 5,
+            "delta3_coefficient": 0.25,
+            "relative_error": 0.0012684972242639782,
+            "rms": 0.00020116457698675255
+          },
+          {
+            "through_derivative": 6,
+            "delta3_coefficient": 0.08333333333333333,
+            "relative_error": 6.543049597938621e-05,
+            "rms": 0.00020089783803674388
+          },
+          {
+            "through_derivative": 7,
+            "delta3_coefficient": 0.025,
+            "relative_error": 1.2417891662984705e-12,
+            "rms": 0.00020091090381557831
+          }
+        ]
+      },
+      "identity_absolute_error": 1.309088119993274e-16,
+      "radial_profiles": {
+        "radial_linear": [
+          {
+            "row": 1,
+            "r": 0.053125000000000006,
+            "squared_norm_fraction": 0.2582574397831957
+          },
+          {
+            "row": 2,
+            "r": 0.05625,
+            "squared_norm_fraction": 0.2893251179086272
+          },
+          {
+            "row": 3,
+            "r": 0.059375000000000004,
+            "squared_norm_fraction": 0.14938491753884997
+          },
+          {
+            "row": 4,
+            "r": 0.0625,
+            "squared_norm_fraction": 0.10113553304487768
+          },
+          {
+            "row": 5,
+            "r": 0.065625,
+            "squared_norm_fraction": 0.06528422190240885
+          },
+          {
+            "row": 6,
+            "r": 0.06875,
+            "squared_norm_fraction": 0.04301427531379166
+          },
+          {
+            "row": 7,
+            "r": 0.07187500000000001,
+            "squared_norm_fraction": 0.028876388937544132
+          },
+          {
+            "row": 8,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.019722322677785495
+          },
+          {
+            "row": 9,
+            "r": 0.078125,
+            "squared_norm_fraction": 0.013685006093259192
+          },
+          {
+            "row": 10,
+            "r": 0.08125,
+            "squared_norm_fraction": 0.009635351156085378
+          },
+          {
+            "row": 11,
+            "r": 0.084375,
+            "squared_norm_fraction": 0.006876240144056378
+          },
+          {
+            "row": 12,
+            "r": 0.08750000000000001,
+            "squared_norm_fraction": 0.004969045366133535
+          },
+          {
+            "row": 13,
+            "r": 0.09062500000000001,
+            "squared_norm_fraction": 0.003632918546584343
+          },
+          {
+            "row": 14,
+            "r": 0.09375,
+            "squared_norm_fraction": 0.002685098534772495
+          },
+          {
+            "row": 15,
+            "r": 0.096875,
+            "squared_norm_fraction": 0.0020048479721595774
+          },
+          {
+            "row": 16,
+            "r": 0.1,
+            "squared_norm_fraction": 0.0015112750798683384
+          }
+        ],
+        "radial_quadratic": [
+          {
+            "row": 1,
+            "r": 0.053125000000000006,
+            "squared_norm_fraction": 0.9872153316567771
+          },
+          {
+            "row": 2,
+            "r": 0.05625,
+            "squared_norm_fraction": 0.009018010840499394
+          },
+          {
+            "row": 3,
+            "r": 0.059375000000000004,
+            "squared_norm_fraction": 0.0036822297484349117
+          },
+          {
+            "row": 4,
+            "r": 0.0625,
+            "squared_norm_fraction": 3.93565021704063e-05
+          },
+          {
+            "row": 5,
+            "r": 0.065625,
+            "squared_norm_fraction": 1.9622423396739665e-05
+          },
+          {
+            "row": 6,
+            "r": 0.06875,
+            "squared_norm_fraction": 1.0634607441858624e-05
+          },
+          {
+            "row": 7,
+            "r": 0.07187500000000001,
+            "squared_norm_fraction": 6.0161248699167524e-06
+          },
+          {
+            "row": 8,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 3.4856330353811223e-06
+          },
+          {
+            "row": 9,
+            "r": 0.078125,
+            "squared_norm_fraction": 2.066402323911344e-06
+          },
+          {
+            "row": 10,
+            "r": 0.08125,
+            "squared_norm_fraction": 1.2513613813859095e-06
+          },
+          {
+            "row": 11,
+            "r": 0.084375,
+            "squared_norm_fraction": 7.728547527771346e-07
+          },
+          {
+            "row": 12,
+            "r": 0.08750000000000001,
+            "squared_norm_fraction": 4.861206989074962e-07
+          },
+          {
+            "row": 13,
+            "r": 0.09062500000000001,
+            "squared_norm_fraction": 3.110065481262838e-07
+          },
+          {
+            "row": 14,
+            "r": 0.09375,
+            "squared_norm_fraction": 2.0215202366661212e-07
+          },
+          {
+            "row": 15,
+            "r": 0.096875,
+            "squared_norm_fraction": 1.333590000546138e-07
+          },
+          {
+            "row": 16,
+            "r": 0.1,
+            "squared_norm_fraction": 8.920664541509033e-08
+          }
+        ],
+        "angular_linear": [
+          {
+            "row": 1,
+            "r": 0.053125000000000006,
+            "squared_norm_fraction": 0.3807509009743974
+          },
+          {
+            "row": 2,
+            "r": 0.05625,
+            "squared_norm_fraction": 0.24101736056134682
+          },
+          {
+            "row": 3,
+            "r": 0.059375000000000004,
+            "squared_norm_fraction": 0.15119058188996706
+          },
+          {
+            "row": 4,
+            "r": 0.0625,
+            "squared_norm_fraction": 0.09327444017611503
+          },
+          {
+            "row": 5,
+            "r": 0.065625,
+            "squared_norm_fraction": 0.05602605418939833
+          },
+          {
+            "row": 6,
+            "r": 0.06875,
+            "squared_norm_fraction": 0.03229804346353471
+          },
+          {
+            "row": 7,
+            "r": 0.07187500000000001,
+            "squared_norm_fraction": 0.017476431954904344
+          },
+          {
+            "row": 8,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.008543740437176373
+          },
+          {
+            "row": 9,
+            "r": 0.078125,
+            "squared_norm_fraction": 0.0035050451965725907
+          },
+          {
+            "row": 10,
+            "r": 0.08125,
+            "squared_norm_fraction": 0.0010298386337463023
+          },
+          {
+            "row": 11,
+            "r": 0.084375,
+            "squared_norm_fraction": 0.0002248012102635101
+          },
+          {
+            "row": 12,
+            "r": 0.08750000000000001,
+            "squared_norm_fraction": 0.00048745964009113297
+          },
+          {
+            "row": 13,
+            "r": 0.09062500000000001,
+            "squared_norm_fraction": 0.0014106632640697038
+          },
+          {
+            "row": 14,
+            "r": 0.09375,
+            "squared_norm_fraction": 0.0027194760578127504
+          },
+          {
+            "row": 15,
+            "r": 0.096875,
+            "squared_norm_fraction": 0.004229033353845556
+          },
+          {
+            "row": 16,
+            "r": 0.1,
+            "squared_norm_fraction": 0.005816128996758264
+          }
+        ],
+        "angular_quadratic": [
+          {
+            "row": 1,
+            "r": 0.053125000000000006,
+            "squared_norm_fraction": 0.006874763121581588
+          },
+          {
+            "row": 2,
+            "r": 0.05625,
+            "squared_norm_fraction": 0.020683729873678877
+          },
+          {
+            "row": 3,
+            "r": 0.059375000000000004,
+            "squared_norm_fraction": 0.035521419691892375
+          },
+          {
+            "row": 4,
+            "r": 0.0625,
+            "squared_norm_fraction": 0.04883116262086561
+          },
+          {
+            "row": 5,
+            "r": 0.065625,
+            "squared_norm_fraction": 0.05968812966568555
+          },
+          {
+            "row": 6,
+            "r": 0.06875,
+            "squared_norm_fraction": 0.06794273542246845
+          },
+          {
+            "row": 7,
+            "r": 0.07187500000000001,
+            "squared_norm_fraction": 0.07379097250524332
+          },
+          {
+            "row": 8,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.07756029251220016
+          },
+          {
+            "row": 9,
+            "r": 0.078125,
+            "squared_norm_fraction": 0.0796054939194392
+          },
+          {
+            "row": 10,
+            "r": 0.08125,
+            "squared_norm_fraction": 0.08026091985444082
+          },
+          {
+            "row": 11,
+            "r": 0.084375,
+            "squared_norm_fraction": 0.07982126723105154
+          },
+          {
+            "row": 12,
+            "r": 0.08750000000000001,
+            "squared_norm_fraction": 0.07853660300030628
+          },
+          {
+            "row": 13,
+            "r": 0.09062500000000001,
+            "squared_norm_fraction": 0.07661408653201411
+          },
+          {
+            "row": 14,
+            "r": 0.09375,
+            "squared_norm_fraction": 0.07422252168285433
+          },
+          {
+            "row": 15,
+            "r": 0.096875,
+            "squared_norm_fraction": 0.0714977770827692
+          },
+          {
+            "row": 16,
+            "r": 0.1,
+            "squared_norm_fraction": 0.06854812528350854
+          }
+        ],
+        "radial_angular_mixed": [
+          {
+            "row": 1,
+            "r": 0.053125000000000006,
+            "squared_norm_fraction": 0.3356779797552362
+          },
+          {
+            "row": 2,
+            "r": 0.05625,
+            "squared_norm_fraction": 0.21257178338743982
+          },
+          {
+            "row": 3,
+            "r": 0.059375000000000004,
+            "squared_norm_fraction": 0.13806502034874396
+          },
+          {
+            "row": 4,
+            "r": 0.0625,
+            "squared_norm_fraction": 0.09193733031396593
+          },
+          {
+            "row": 5,
+            "r": 0.065625,
+            "squared_norm_fraction": 0.06271864196257029
+          },
+          {
+            "row": 6,
+            "r": 0.06875,
+            "squared_norm_fraction": 0.04372394866827989
+          },
+          {
+            "row": 7,
+            "r": 0.07187500000000001,
+            "squared_norm_fraction": 0.031088048301837173
+          },
+          {
+            "row": 8,
+            "r": 0.07500000000000001,
+            "squared_norm_fraction": 0.022504299252256454
+          },
+          {
+            "row": 9,
+            "r": 0.078125,
+            "squared_norm_fraction": 0.0165604430985249
+          },
+          {
+            "row": 10,
+            "r": 0.08125,
+            "squared_norm_fraction": 0.012371577163356367
+          },
+          {
+            "row": 11,
+            "r": 0.084375,
+            "squared_norm_fraction": 0.009371341791487025
+          },
+          {
+            "row": 12,
+            "r": 0.08750000000000001,
+            "squared_norm_fraction": 0.0071900958226459415
+          },
+          {
+            "row": 13,
+            "r": 0.09062500000000001,
+            "squared_norm_fraction": 0.005582189127875976
+          },
+          {
+            "row": 14,
+            "r": 0.09375,
+            "squared_norm_fraction": 0.004381613836232225
+          },
+          {
+            "row": 15,
+            "r": 0.096875,
+            "squared_norm_fraction": 0.0034744234657220624
+          },
+          {
+            "row": 16,
+            "r": 0.1,
+            "squared_norm_fraction": 0.0027812637038256154
+          }
+        ]
+      }
+    }
+  ]
+}
