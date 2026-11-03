@@ -1,0 +1,52 @@
+{"timing": "base_derivatives_enter", "elapsed_s": 0.0012647180000158187}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0033849010000039925}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0034074050000185707}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.004651351999996223}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.00466565400000718}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.0060589050000317}
+{"timing": "base_gradients_enter", "elapsed_s": 0.00607713300001933}
+{"timing": "base_gradients_exit", "elapsed_s": 0.00717099500002405}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.0071818609999922955}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.007590845000038371}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.007603574000029312}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.0009023050000109833}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0025083150000000387}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.002523478000000523}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.004684923000013441}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.0047020380000049045}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.006179455999983929}
+{"timing": "base_gradients_enter", "elapsed_s": 0.006192124999984117}
+{"timing": "base_gradients_exit", "elapsed_s": 0.00863889800001516}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.008654121000006398}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.009111167000014575}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.0091209820000131}
+[
+  {
+    "n": 8,
+    "shape": [
+      192,
+      1728
+    ],
+    "max_coefficient": 2077.6294885211237,
+    "identity_max_abs": 1.0729195309977513e-12,
+    "identity_relative": 5.164152400250468e-16,
+    "radial_formula_max_abs": 4.547473508864641e-13,
+    "radial_max": 1599.9999999999998,
+    "angular_max": 579.2469817281427,
+    "leibniz_max": 374.1602067183462
+  },
+  {
+    "n": 16,
+    "shape": [
+      768,
+      13056
+    ],
+    "max_coefficient": 8964.598941289212,
+    "identity_max_abs": 5.32196509084315e-12,
+    "identity_relative": 5.936646051538577e-16,
+    "radial_formula_max_abs": 2.7284841053187847e-12,
+    "radial_max": 6399.999999999999,
+    "angular_max": 3331.159520744098,
+    "leibniz_max": 890.9803921568626
+  }
+]

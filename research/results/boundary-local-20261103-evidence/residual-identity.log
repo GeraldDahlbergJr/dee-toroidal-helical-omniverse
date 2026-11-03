@@ -1,0 +1,114 @@
+{"timing": "base_derivatives_enter", "elapsed_s": 0.000748234000013781}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.03406021600000031}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.03410035600001038}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.03555044400002316}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.035581191000005674}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.03698147400001517}
+{"timing": "base_gradients_enter", "elapsed_s": 0.03700664199999437}
+{"timing": "base_gradients_exit", "elapsed_s": 0.03858671599999752}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.0386077870000463}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.03898080800001935}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.03899298600003931}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.0012126409999950738}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.003407638999988194}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.003441079000026548}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.005133552000017971}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.005149375000030432}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.0068207460000166975}
+{"timing": "base_gradients_enter", "elapsed_s": 0.0068423390000020845}
+{"timing": "base_gradients_exit", "elapsed_s": 0.008889805000023898}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.008919499000000997}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.009478338999997504}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.009498219000022345}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.03680374800001118}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.040598778999992646}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.040642955000009806}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.046365060999960406}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.046411610999996356}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.055731171999980234}
+{"timing": "base_gradients_enter", "elapsed_s": 0.055785572999980104}
+{"timing": "base_gradients_exit", "elapsed_s": 0.06734474799998225}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.06739190899997993}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.07026738899998008}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.0703085000000101}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.04321960600003649}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.05926222600004394}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.05931041900004175}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.08553919000001997}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.08558956600001011}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.14731821700002}
+{"timing": "base_gradients_enter", "elapsed_s": 0.1473687830000472}
+{"timing": "base_gradients_exit", "elapsed_s": 0.2208384730000148}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.22088881900003798}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.24235163100001955}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.24240959800005157}
+{
+  "identity": "M_frozen=psi^-10(A W-b)+psi^-10(T W-A W)",
+  "source": "research/results/boundary-local-20261103",
+  "rows": [
+    {
+      "n": 8,
+      "identity_max_abs": 1.734723475976807e-18,
+      "planes": {
+        "first": {
+          "algebraic": 5.729701128412218e-14,
+          "mismatch": 0.0013509078691097266,
+          "frozen": 0.001350907869099528
+        },
+        "last": {
+          "algebraic": 3.250863538991038e-14,
+          "mismatch": 5.0350606745637366e-05,
+          "frozen": 5.035060672145641e-05
+        }
+      }
+    },
+    {
+      "n": 16,
+      "identity_max_abs": 2.8189256484623115e-18,
+      "planes": {
+        "first": {
+          "algebraic": 2.6167583190335665e-14,
+          "mismatch": 0.0017604868081342612,
+          "frozen": 0.0017604868081346663
+        },
+        "last": {
+          "algebraic": 1.334762375058239e-14,
+          "mismatch": 1.8978125966651196e-05,
+          "frozen": 1.8978125970510468e-05
+        }
+      }
+    },
+    {
+      "n": 32,
+      "identity_max_abs": 3.791319471910248e-18,
+      "planes": {
+        "first": {
+          "algebraic": 1.172008254683049e-14,
+          "mismatch": 0.001561418100464837,
+          "frozen": 0.0015614181004641845
+        },
+        "last": {
+          "algebraic": 4.364154093823349e-15,
+          "mismatch": 1.1231948837551163e-05,
+          "frozen": 1.1231948838097933e-05
+        }
+      }
+    },
+    {
+      "n": 64,
+      "identity_max_abs": 5.010623399482814e-18,
+      "planes": {
+        "first": {
+          "algebraic": 2.7463414816362684e-15,
+          "mismatch": 0.0010381033308661817,
+          "frozen": 0.0010381033308661375
+        },
+        "last": {
+          "algebraic": 7.043992892186981e-16,
+          "mismatch": 6.4855399538386435e-06,
+          "frozen": 6.485539953931302e-06
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+test_cubic_defect_coefficient_and_locality (test_run43_local_boundary.LocalBoundaryTests.test_cubic_defect_coefficient_and_locality) ... {"timing": "base_derivatives_enter", "elapsed_s": 0.001233604000020705}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0032642950000081328}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.003280079000006708}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.004380773000008276}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.004393692000007832}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.0057789939999963735}
+{"timing": "base_gradients_enter", "elapsed_s": 0.005793706000019938}
+{"timing": "base_gradients_exit", "elapsed_s": 0.007199248000006264}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.0072125180000170985}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.007611566999997876}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.007624567000021898}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.0002868210000031013}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0016272949999915909}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0016414459999793962}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.0031475589999843123}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.0031613799999945513}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.0038256279999870912}
+{"timing": "base_gradients_enter", "elapsed_s": 0.0038373360000036882}
+{"timing": "base_gradients_exit", "elapsed_s": 0.005029356999983747}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.005043557999982795}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.005276397999978144}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.005288135999990118}
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.043s
+
+OK
