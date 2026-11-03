@@ -1,0 +1,109 @@
+{
+  "scope": "Exact endpoint closure difference on newly executed candidate fields; supplementary original-physics norms. No source subtraction or acceptance replacement. Norms must not be added; cancellation remains possible.",
+  "rows": {
+    "compatible-closure-20261103": [
+      {
+        "n": 8,
+        "frozen_inner_M": 0.009059102977125366,
+        "exact_frozen_minus_matched_endpoint_inner_rms": 0.0003459190109730259,
+        "supplementary_inner_M": 0.009667657465796113
+      },
+      {
+        "n": 16,
+        "frozen_inner_M": 0.00760679300363452,
+        "exact_frozen_minus_matched_endpoint_inner_rms": 0.00033148744548238155,
+        "supplementary_inner_M": 0.008045281435322101
+      },
+      {
+        "n": 32,
+        "frozen_inner_M": 0.0034701076111249103,
+        "exact_frozen_minus_matched_endpoint_inner_rms": 0.0004355930536039934,
+        "supplementary_inner_M": 0.0037082053751022553
+      },
+      {
+        "n": 64,
+        "frozen_inner_M": 0.0010888930749307474,
+        "exact_frozen_minus_matched_endpoint_inner_rms": 0.00021847136041549284,
+        "supplementary_inner_M": 0.001165465822698209
+      }
+    ],
+    "coordinate-ko-20261103": [
+      {
+        "n": 8,
+        "frozen_inner_M": 0.0016892115970853524,
+        "exact_frozen_minus_matched_endpoint_inner_rms": 0.0011248304411463881,
+        "supplementary_inner_M": 0.0008471004209783107
+      },
+      {
+        "n": 16,
+        "frozen_inner_M": 0.0012865097298706623,
+        "exact_frozen_minus_matched_endpoint_inner_rms": 0.0008221169070812187,
+        "supplementary_inner_M": 0.0006057300618558175
+      },
+      {
+        "n": 32,
+        "frozen_inner_M": 0.0005803330508557969,
+        "exact_frozen_minus_matched_endpoint_inner_rms": 0.00044876905249888237,
+        "supplementary_inner_M": 0.0002484422757162602
+      },
+      {
+        "n": 64,
+        "frozen_inner_M": 0.0002269555599135397,
+        "exact_frozen_minus_matched_endpoint_inner_rms": 0.00020394396519530093,
+        "supplementary_inner_M": 7.681340777108815e-05
+      }
+    ],
+    "second-hessian-20261103": [
+      {
+        "n": 8,
+        "frozen_inner_M": 0.0010894173387990828,
+        "exact_frozen_minus_matched_endpoint_inner_rms": 0.0010555617250861214,
+        "supplementary_inner_M": 0.00018026432292148932
+      },
+      {
+        "n": 16,
+        "frozen_inner_M": 0.000765946433184971,
+        "exact_frozen_minus_matched_endpoint_inner_rms": 0.0007605423991762653,
+        "supplementary_inner_M": 3.7582910525411925e-05
+      },
+      {
+        "n": 32,
+        "frozen_inner_M": 0.0004242169350639895,
+        "exact_frozen_minus_matched_endpoint_inner_rms": 0.00043026176109149075,
+        "supplementary_inner_M": 2.533521172493685e-05
+      },
+      {
+        "n": 64,
+        "frozen_inner_M": 0.00019897416167299263,
+        "exact_frozen_minus_matched_endpoint_inner_rms": 0.00020061842638329416,
+        "supplementary_inner_M": 8.564414374946151e-06
+      }
+    ],
+    "radial-filter-20261103": [
+      {
+        "n": 8,
+        "frozen_inner_M": 0.001815059437899471,
+        "exact_frozen_minus_matched_endpoint_inner_rms": 0.0008571854093537245,
+        "supplementary_inner_M": 0.003795561884852697
+      },
+      {
+        "n": 16,
+        "frozen_inner_M": 0.001832755210239717,
+        "exact_frozen_minus_matched_endpoint_inner_rms": 0.0009148169632804101,
+        "supplementary_inner_M": 0.003554766350815674
+      },
+      {
+        "n": 32,
+        "frozen_inner_M": 0.001057073069465806,
+        "exact_frozen_minus_matched_endpoint_inner_rms": 0.0006124147225342451,
+        "supplementary_inner_M": 0.0019175580267551235
+      },
+      {
+        "n": 64,
+        "frozen_inner_M": 0.00045243790343511413,
+        "exact_frozen_minus_matched_endpoint_inner_rms": 0.0003007108560662318,
+        "supplementary_inner_M": 0.0007629005107073572
+      }
+    ]
+  }
+}

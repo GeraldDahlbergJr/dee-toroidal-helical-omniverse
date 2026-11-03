@@ -1,0 +1,18 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "threads": 1,
+  "command_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "DEE_SCALAR_ORDER": "flux",
+    "DEE_PRECONDITIONER": "fourier"
+  },
+  "research_heads": [
+    "68199626a2a561d8c1bc69451093988bca53ef97 Resolve remaining Run 43 finite-grid gradient composition terms",
+    "f110d62c43cbb9a639b17c3cea2f615e039c2728 Quantify Run 43 composed endpoint error and cancellation across saved grids"
+  ],
+  "audit_blob": "5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22"
+}

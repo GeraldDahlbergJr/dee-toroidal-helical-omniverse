@@ -1,0 +1,241 @@
+{
+  "resolution": [
+    17,
+    16,
+    16
+  ],
+  "iterations": 2,
+  "seconds": 0.5839357376098633,
+  "sha256": "f5c94a99081e750c9018a3b8d3b70c218fb626597d5edce2a3a7c6b1bbd45a3a",
+  "audit": {
+    "whole_interior": {
+      "r_interval": [
+        0.05,
+        0.25
+      ],
+      "interior_radial_samples": 15,
+      "independent_flux_H": {
+        "volume_weighted_rms": 9.4935672576626e-05,
+        "max_abs": 0.00032117536938119917
+      },
+      "independent_tensor_M_order2": {
+        "volume_weighted_rms": 0.000548682342292438,
+        "max_vector_norm": 0.0022658618974466696
+      },
+      "independent_tensor_M_order4": {
+        "volume_weighted_rms": 0.0002830831492319046,
+        "max_vector_norm": 0.0014587415052111537
+      }
+    },
+    "inner_boundary_band": {
+      "r_interval": [
+        0.05,
+        0.1
+      ],
+      "interior_radial_samples": 4,
+      "independent_flux_H": {
+        "volume_weighted_rms": 0.00010733147885155653,
+        "max_abs": 0.0002985023868845582
+      },
+      "independent_tensor_M_order2": {
+        "volume_weighted_rms": 0.0012865097298706623,
+        "max_vector_norm": 0.0022658618974466696
+      },
+      "independent_tensor_M_order4": {
+        "volume_weighted_rms": 0.0007356353284364934,
+        "max_vector_norm": 0.0014587415052111537
+      }
+    },
+    "bulk": {
+      "r_interval": [
+        0.1,
+        0.2
+      ],
+      "interior_radial_samples": 9,
+      "independent_flux_H": {
+        "volume_weighted_rms": 0.00011256930941377333,
+        "max_abs": 0.00032117536938119917
+      },
+      "independent_tensor_M_order2": {
+        "volume_weighted_rms": 0.000280172321177361,
+        "max_vector_norm": 0.00034592328727671505
+      },
+      "independent_tensor_M_order4": {
+        "volume_weighted_rms": 5.623828733053389e-05,
+        "max_vector_norm": 9.659291044633024e-05
+      }
+    },
+    "outer_boundary_band": {
+      "r_interval": [
+        0.2,
+        0.25
+      ],
+      "interior_radial_samples": 4,
+      "independent_flux_H": {
+        "volume_weighted_rms": 5.0324196898639586e-05,
+        "max_abs": 0.0001948178209258966
+      },
+      "independent_tensor_M_order2": {
+        "volume_weighted_rms": 0.00025141129544673825,
+        "max_vector_norm": 0.0003076611020249554
+      },
+      "independent_tensor_M_order4": {
+        "volume_weighted_rms": 3.814818963433491e-05,
+        "max_vector_norm": 6.20941601050184e-05
+      }
+    },
+    "inner_endpoint": {
+      "r": 0.05,
+      "independent_tensor_M_order2": {
+        "volume_weighted_rms": 0.009116020733956908,
+        "max_vector_norm": 0.009483601080427805
+      },
+      "independent_tensor_M_order4": {
+        "volume_weighted_rms": 0.0025208619379360584,
+        "max_vector_norm": 0.00263698418374604
+      },
+      "note": "one-sided PDE compatibility audit; Dirichlet boundary values themselves do not enforce the constraints at endpoints"
+    },
+    "outer_endpoint": {
+      "r": 0.25,
+      "independent_tensor_M_order2": {
+        "volume_weighted_rms": 0.00014661499423542103,
+        "max_vector_norm": 0.00018629623285944556
+      },
+      "independent_tensor_M_order4": {
+        "volume_weighted_rms": 2.6023467020904328e-05,
+        "max_vector_norm": 3.5741051813788186e-05
+      },
+      "note": "one-sided PDE compatibility audit; Dirichlet boundary values themselves do not enforce the constraints at endpoints"
+    }
+  },
+  "gmres": [
+    {
+      "info": 0,
+      "true_residual": 2.973890970223473e-11,
+      "rhs_norm": 0.4273256465642671,
+      "history": [
+        2.5441732878167857e-05,
+        3.188337302566359e-06,
+        2.9455788378143867e-07,
+        5.102076922461522e-08,
+        1.045775762141205e-08,
+        3.0996956954867022e-09,
+        6.468556358664631e-10,
+        1.7206914631606134e-10,
+        6.321168682595788e-11,
+        1.6963926142058118e-11,
+        4.277456891463007e-12,
+        1.0416655575399779e-12,
+        3.4633907163004386e-13,
+        1.1486507973634668e-13,
+        6.011582686200075e-14,
+        2.2179706282511237e-14,
+        5.53207286577378e-15
+      ],
+      "acceptance_tolerance": 4.273256465642671e-11
+    },
+    {
+      "info": 0,
+      "true_residual": 2.975163689186884e-11,
+      "rhs_norm": 0.42762192238473734,
+      "history": [
+        2.542316062528016e-05,
+        3.1865608531030863e-06,
+        2.944445488699777e-07,
+        5.097949645617961e-08,
+        1.0450405948262696e-08,
+        3.097483486499974e-09,
+        6.464181264684795e-10,
+        1.7196363526087018e-10,
+        6.317222677462225e-11,
+        1.695218854903264e-11,
+        4.2746989817549445e-12,
+        1.0412302247552082e-12,
+        3.4626088461798596e-13,
+        1.1482178434448906e-13,
+        6.008489944053022e-14,
+        2.2169579774604947e-14,
+        5.530660574993756e-15
+      ],
+      "acceptance_tolerance": 4.2762192238473736e-11
+    },
+    {
+      "info": 0,
+      "true_residual": 2.975163689186884e-11,
+      "rhs_norm": 0.42762192238473734,
+      "history": [
+        2.542316062528016e-05,
+        3.1865608531030863e-06,
+        2.944445488699777e-07,
+        5.097949645617961e-08,
+        1.0450405948262696e-08,
+        3.097483486499974e-09,
+        6.464181264684795e-10,
+        1.7196363526087018e-10,
+        6.317222677462225e-11,
+        1.695218854903264e-11,
+        4.2746989817549445e-12,
+        1.0412302247552082e-12,
+        3.4626088461798596e-13,
+        1.1482178434448906e-13,
+        6.008489944053022e-14,
+        2.2169579774604947e-14,
+        5.530660574993756e-15
+      ],
+      "acceptance_tolerance": 4.2762192238473736e-11
+    },
+    {
+      "info": 0,
+      "true_residual": 2.975154437740775e-11,
+      "rhs_norm": 0.427621922385115,
+      "history": [
+        2.5423160625261227e-05,
+        3.1865608531011847e-06,
+        2.9444454886972773e-07,
+        5.0979496456171495e-08,
+        1.0450405948259272e-08,
+        3.097483486492546e-09,
+        6.464181264899706e-10,
+        1.7196363526191806e-10,
+        6.317222677414129e-11,
+        1.6952188548843513e-11,
+        4.2746989816615256e-12,
+        1.041230224734253e-12,
+        3.4626088461810213e-13,
+        1.1482178434425523e-13,
+        6.008478563214788e-14,
+        2.2169572831260942e-14,
+        5.530687774499531e-15
+      ],
+      "acceptance_tolerance": 4.27621922385115e-11
+    }
+  ],
+  "diagnostics": {
+    "resolution": [
+      17,
+      16,
+      16
+    ],
+    "all_finite": true,
+    "psi_min": 1.0,
+    "psi_max": 1.000165513148186,
+    "H_physical_max_abs_interior": 4.719946655740159e-11,
+    "H_physical_bulk_rms": 1.786729260362062e-11,
+    "expanded_momentum_solver_max_abs": 1.0411352769496007e-12,
+    "independent_M_cartesian_bulk_rms": [
+      2.979390787184475e-05,
+      2.9793907871844672e-05,
+      3.724769884596563e-05
+    ],
+    "independent_M_cartesian_max_abs_interior": [
+      0.0013813837400670128,
+      0.001381383740067077,
+      0.0014364319446150322
+    ],
+    "independent_M_vector_bulk_rms": 5.6238287330533904e-05,
+    "A_trace_max_abs": 1.0842021724855044e-19,
+    "boundary_psi_error": 0.0,
+    "boundary_W_error": 0.0
+  }
+}

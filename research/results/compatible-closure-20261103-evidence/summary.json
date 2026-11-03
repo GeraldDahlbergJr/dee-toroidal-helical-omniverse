@@ -1,0 +1,1422 @@
+{
+  "compatible-closure-20261103": {
+    "passed": 10,
+    "checks": [
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          8,
+          16
+        ],
+        "order": 1.740848296937144,
+        "passed": true
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          16,
+          32
+        ],
+        "order": 1.929827015816492,
+        "passed": true
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          32,
+          64
+        ],
+        "order": 1.9961760437467768,
+        "passed": true
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          8,
+          16
+        ],
+        "order": 0.25207985628767315,
+        "passed": false
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          16,
+          32
+        ],
+        "order": 1.1323079441520503,
+        "passed": false
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          32,
+          64
+        ],
+        "order": 1.67211810879199,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          8,
+          16
+        ],
+        "order": 1.745664711250617,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          16,
+          32
+        ],
+        "order": 1.9639894470735653,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          32,
+          64
+        ],
+        "order": 2.018377651980806,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          8,
+          16
+        ],
+        "order": 1.5283031034064063,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          16,
+          32
+        ],
+        "order": 1.7552512170674233,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          32,
+          64
+        ],
+        "order": 1.91994643618387,
+        "passed": true
+      }
+    ],
+    "fields": [
+      {
+        "n": 8,
+        "sha256": "ca03accc7773497e1f663cf744d703f10b2775565f0f7de3b0a2e7042f7ad93f",
+        "source_consistency": {
+          "energy_max_abs": 0.0,
+          "momentum_max_abs": 0.0,
+          "direct_4D_sample_max_abs": 4.440892098500626e-16
+        }
+      },
+      {
+        "n": 16,
+        "sha256": "515f9c4470a74bbc257d65438b4a91f0ea3a6064e96967f0c5415335facec4d1",
+        "source_consistency": {
+          "energy_max_abs": 0.0,
+          "momentum_max_abs": 0.0,
+          "direct_4D_sample_max_abs": 4.440892098500626e-16
+        }
+      },
+      {
+        "n": 32,
+        "sha256": "aa04e733f3bd1b2a2bc39d11f8b1c79e420d810ae83b708b5ab45ee54e24d90a",
+        "source_consistency": {
+          "energy_max_abs": 0.0,
+          "momentum_max_abs": 0.0,
+          "direct_4D_sample_max_abs": 4.440892098500626e-16
+        }
+      },
+      {
+        "n": 64,
+        "sha256": "8e7ae317d1c667929cbcbc62a8b0dec82c166dc0d71d1bbb61ab970d353c7ff7",
+        "source_consistency": {
+          "energy_max_abs": 0.0,
+          "momentum_max_abs": 0.0,
+          "direct_4D_sample_max_abs": 4.440892098500626e-16
+        }
+      }
+    ],
+    "supplementary_orders": [
+      {
+        "region": "interior",
+        "field": "H",
+        "values": [
+          0.0050847837347959305,
+          0.0028630304579235584,
+          0.0010563573776045916,
+          0.0003069016132970524
+        ],
+        "orders": [
+          0.8286433965987119,
+          1.438445021049383,
+          1.783249862479564
+        ]
+      },
+      {
+        "region": "interior",
+        "field": "M",
+        "values": [
+          0.004525546575189707,
+          0.0033183027534020543,
+          0.0014517103200927448,
+          0.0004463545580811738
+        ],
+        "orders": [
+          0.447646524865303,
+          1.192691918992123,
+          1.701491537464964
+        ]
+      },
+      {
+        "region": "inner",
+        "field": "H",
+        "values": [
+          0.011974143419054511,
+          0.0074421687457227196,
+          0.0028616066743303525,
+          0.0008476361044811103
+        ],
+        "orders": [
+          0.6861274471862486,
+          1.378897714536654,
+          1.755308443609064
+        ]
+      },
+      {
+        "region": "inner",
+        "field": "M",
+        "values": [
+          0.009667657465796113,
+          0.008045281435322101,
+          0.0037082053751022553,
+          0.001165465822698209
+        ],
+        "orders": [
+          0.2650234686215366,
+          1.1174217410020162,
+          1.6698144503076566
+        ]
+      },
+      {
+        "region": "bulk",
+        "field": "H",
+        "values": [
+          0.004719483600813856,
+          0.0008606820239659488,
+          0.00020386719605286347,
+          4.929045732170749e-05
+        ],
+        "orders": [
+          2.45507676816986,
+          2.0778506850411973,
+          2.048249380608445
+        ]
+      },
+      {
+        "region": "bulk",
+        "field": "M",
+        "values": [
+          0.0039034981316838167,
+          0.00220003586483922,
+          0.000808264786657031,
+          0.00022852148701759853
+        ],
+        "orders": [
+          0.8272405365018621,
+          1.444627141826404,
+          1.8224981728615468
+        ]
+      },
+      {
+        "region": "outer",
+        "field": "H",
+        "values": [
+          0.0006642131572531739,
+          9.036041919600715e-05,
+          2.162635849003141e-05,
+          5.272781530767637e-06
+        ],
+        "orders": [
+          2.877883432408894,
+          2.0629002031250208,
+          2.036154633190402
+        ]
+      },
+      {
+        "region": "outer",
+        "field": "M",
+        "values": [
+          0.0006160850521678302,
+          0.0001911835386352832,
+          5.3451030089139276e-05,
+          1.3817708213516511e-05
+        ],
+        "orders": [
+          1.688171223391654,
+          1.8386686527072476,
+          1.9516993992064295
+        ]
+      },
+      {
+        "region": "inner_endpoint",
+        "field": "H",
+        "values": [
+          0.4661748514064606,
+          0.12409716957964402,
+          0.022150996945828845,
+          0.0038011614660076504
+        ],
+        "orders": [
+          1.9094009672193037,
+          2.4860266742507875,
+          2.5428594168338807
+        ]
+      },
+      {
+        "region": "inner_endpoint",
+        "field": "M",
+        "values": [
+          0.016710773828767136,
+          0.010274549946888943,
+          0.0007257207264330146,
+          0.00025481827246163536
+        ],
+        "orders": [
+          0.7017033407397205,
+          3.8235169174183774,
+          1.5099457398845038
+        ]
+      },
+      {
+        "region": "outer_endpoint",
+        "field": "H",
+        "values": [
+          0.005936190064250009,
+          9.882449678566352e-06,
+          1.0281786413605455e-05,
+          2.745020624898007e-06
+        ],
+        "orders": [
+          9.230452865543556,
+          -0.05715033903572205,
+          1.9052020538382817
+        ]
+      },
+      {
+        "region": "outer_endpoint",
+        "field": "M",
+        "values": [
+          5.817074279534461e-05,
+          3.141653849387245e-06,
+          8.429588617591414e-07,
+          2.3488910018060987e-07
+        ],
+        "orders": [
+          4.210697589486182,
+          1.8979901004668083,
+          1.8434824582782796
+        ]
+      }
+    ],
+    "solution_orders": {
+      "psi": [
+        1.952006684157264,
+        1.9971713819617392
+      ],
+      "W": [
+        0.2173947140668367,
+        1.138386652239319
+      ]
+    }
+  },
+  "coordinate-ko-20261103": {
+    "passed": 9,
+    "checks": [
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          8,
+          16
+        ],
+        "order": 1.7408490258769889,
+        "passed": true
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          16,
+          32
+        ],
+        "order": 1.9298258567489015,
+        "passed": true
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          32,
+          64
+        ],
+        "order": 1.9961751445897418,
+        "passed": true
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          8,
+          16
+        ],
+        "order": 0.39288768872766955,
+        "passed": false
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          16,
+          32
+        ],
+        "order": 1.1485093681776868,
+        "passed": false
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          32,
+          64
+        ],
+        "order": 1.3544712633489089,
+        "passed": false
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          8,
+          16
+        ],
+        "order": 1.7456678461729451,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          16,
+          32
+        ],
+        "order": 1.963990187348337,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          32,
+          64
+        ],
+        "order": 2.018376423908306,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          8,
+          16
+        ],
+        "order": 1.9028614803529296,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          16,
+          32
+        ],
+        "order": 1.9817275861452737,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          32,
+          64
+        ],
+        "order": 1.996286746889896,
+        "passed": true
+      }
+    ],
+    "fields": [
+      {
+        "n": 8,
+        "sha256": "4a573d4dee77e61c921e792698c02316e6f9174a4bf722e2435483ada70c8a8a",
+        "source_consistency": {
+          "energy_max_abs": 0.0,
+          "momentum_max_abs": 0.0,
+          "direct_4D_sample_max_abs": 4.440892098500626e-16
+        }
+      },
+      {
+        "n": 16,
+        "sha256": "f5c94a99081e750c9018a3b8d3b70c218fb626597d5edce2a3a7c6b1bbd45a3a",
+        "source_consistency": {
+          "energy_max_abs": 0.0,
+          "momentum_max_abs": 0.0,
+          "direct_4D_sample_max_abs": 8.881784197001252e-16
+        }
+      },
+      {
+        "n": 32,
+        "sha256": "99988c717dd5477621725161027b2fd2d0f51ccbce839e99282e0bfb4dd6289a",
+        "source_consistency": {
+          "energy_max_abs": 0.0,
+          "momentum_max_abs": 0.0,
+          "direct_4D_sample_max_abs": 4.440892098500626e-16
+        }
+      },
+      {
+        "n": 64,
+        "sha256": "7f855f26b50a377f5ec26bbacd067c13f645e1832ec3383271595a296b74ffce",
+        "source_consistency": {
+          "energy_max_abs": 0.0,
+          "momentum_max_abs": 0.0,
+          "direct_4D_sample_max_abs": 8.881784197001252e-16
+        }
+      }
+    ],
+    "supplementary_orders": [
+      {
+        "region": "interior",
+        "field": "H",
+        "values": [
+          0.005084789688557041,
+          0.002863036481128031,
+          0.0010563589393437311,
+          0.00030690175661217894
+        ],
+        "orders": [
+          0.8286420507269153,
+          1.4384459232617404,
+          1.7832513216850225
+        ]
+      },
+      {
+        "region": "interior",
+        "field": "M",
+        "values": [
+          0.00035383861714851305,
+          0.00023099695566074655,
+          9.121619410724688e-05,
+          2.7685281164603508e-05
+        ],
+        "orders": [
+          0.6152176708044685,
+          1.340511956557286,
+          1.7201708030461147
+        ]
+      },
+      {
+        "region": "inner",
+        "field": "H",
+        "values": [
+          0.011974158517850397,
+          0.007442184864373209,
+          0.0028616109683910654,
+          0.0008476365055938167
+        ],
+        "orders": [
+          0.6861261416880294,
+          1.3788986743268594,
+          1.7553099257798437
+        ]
+      },
+      {
+        "region": "inner",
+        "field": "M",
+        "values": [
+          0.0008471004209783107,
+          0.0006057300618558175,
+          0.0002484422757162602,
+          7.681340777108815e-05
+        ],
+        "orders": [
+          0.48385799359723547,
+          1.2857643249093165,
+          1.693480627672063
+        ]
+      },
+      {
+        "region": "bulk",
+        "field": "H",
+        "values": [
+          0.004719487821910827,
+          0.0008606820543031855,
+          0.00020386718567130664,
+          4.929045676857103e-05
+        ],
+        "orders": [
+          2.4550780076609526,
+          2.0778508093597283,
+          2.048249323331781
+        ]
+      },
+      {
+        "region": "bulk",
+        "field": "M",
+        "values": [
+          0.0002136331450662005,
+          4.3937083431825186e-05,
+          7.974656608894015e-06,
+          1.8551964816959177e-06
+        ],
+        "orders": [
+          2.2816244865931536,
+          2.46194480358943,
+          2.1038504082465725
+        ]
+      },
+      {
+        "region": "outer",
+        "field": "H",
+        "values": [
+          0.0006642131964199381,
+          9.03601929881658e-05,
+          2.162635319101639e-05,
+          5.272781513107618e-06
+        ],
+        "orders": [
+          2.8778871291209107,
+          2.0628969449821315,
+          2.0361542845248928
+        ]
+      },
+      {
+        "region": "outer",
+        "field": "M",
+        "values": [
+          4.813990677554136e-05,
+          7.061134354059886e-06,
+          1.6723225363985081e-06,
+          4.038098376188132e-07
+        ],
+        "orders": [
+          2.7692614753135807,
+          2.0780468445549722,
+          2.0501051598497284
+        ]
+      },
+      {
+        "region": "inner_endpoint",
+        "field": "H",
+        "values": [
+          0.46617603287800247,
+          0.1240975939561852,
+          0.022151025933664695,
+          0.003801162705303764
+        ],
+        "orders": [
+          1.9093996899821308,
+          2.486029719866133,
+          2.5428608344480987
+        ]
+      },
+      {
+        "region": "inner_endpoint",
+        "field": "M",
+        "values": [
+          0.007528827286210614,
+          0.0010715176666696927,
+          0.0003309752852352222,
+          0.00021447810770524535
+        ],
+        "orders": [
+          2.8127695270102575,
+          1.6948602402089206,
+          0.625893095455745
+        ]
+      },
+      {
+        "region": "outer_endpoint",
+        "field": "H",
+        "values": [
+          0.005936190493303719,
+          9.88249177447942e-06,
+          1.0282008315853668e-05,
+          2.7450014624095912e-06
+        ],
+        "orders": [
+          9.230446824435383,
+          -0.057175329664334924,
+          1.9052432610757852
+        ]
+      },
+      {
+        "region": "outer_endpoint",
+        "field": "M",
+        "values": [
+          6.396497253426136e-05,
+          1.6474998868749866e-06,
+          8.611039335529367e-07,
+          2.375505251458195e-07
+        ],
+        "orders": [
+          5.27893182469001,
+          0.9360190824700485,
+          1.8579529825135568
+        ]
+      }
+    ],
+    "solution_orders": {
+      "psi": [
+        1.9520581566126705,
+        1.997262377421901
+      ],
+      "W": [
+        1.0936779586507483,
+        1.893752745121619
+      ]
+    }
+  },
+  "second-hessian-20261103": {
+    "passed": 9,
+    "checks": [
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          8,
+          16
+        ],
+        "order": 1.7408477343332749,
+        "passed": true
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          16,
+          32
+        ],
+        "order": 1.9298255085704121,
+        "passed": true
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          32,
+          64
+        ],
+        "order": 1.9961753160049631,
+        "passed": true
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          8,
+          16
+        ],
+        "order": 0.5082413286700432,
+        "passed": false
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          16,
+          32
+        ],
+        "order": 0.8524412846331314,
+        "passed": false
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          32,
+          64
+        ],
+        "order": 1.0922211176337366,
+        "passed": false
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          8,
+          16
+        ],
+        "order": 1.7456640358194337,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          16,
+          32
+        ],
+        "order": 1.9639891871964374,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          32,
+          64
+        ],
+        "order": 2.0183770941324037,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          8,
+          16
+        ],
+        "order": 1.844384408998609,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          16,
+          32
+        ],
+        "order": 1.9675359364580047,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          32,
+          64
+        ],
+        "order": 1.9916073235168708,
+        "passed": true
+      }
+    ],
+    "fields": [
+      {
+        "n": 8,
+        "sha256": "a70831cb64eac18ba9ace548e3901b17930c95cffd4bf926b9a1f00d664c3b91",
+        "source_consistency": {
+          "energy_max_abs": 0.0,
+          "momentum_max_abs": 0.0,
+          "direct_4D_sample_max_abs": 8.881784197001252e-16
+        }
+      },
+      {
+        "n": 16,
+        "sha256": "fefb60478105340f53bdfd9c9b6b3afb4d3e2262f2da8ef113a4476af7be9045",
+        "source_consistency": {
+          "energy_max_abs": 0.0,
+          "momentum_max_abs": 0.0,
+          "direct_4D_sample_max_abs": 4.440892098500626e-16
+        }
+      },
+      {
+        "n": 32,
+        "sha256": "fe82166f69a8665b07d51d558504c8bff7faff62c2f65d631a915d1995957b2a",
+        "source_consistency": {
+          "energy_max_abs": 0.0,
+          "momentum_max_abs": 0.0,
+          "direct_4D_sample_max_abs": 4.440892098500626e-16
+        }
+      },
+      {
+        "n": 64,
+        "sha256": "7d960b6eab190a769906075d7395520be9311c64db8a41a2fc7712ee5fe85629",
+        "source_consistency": {
+          "energy_max_abs": 0.0,
+          "momentum_max_abs": 0.0,
+          "direct_4D_sample_max_abs": 4.440892098500626e-16
+        }
+      }
+    ],
+    "supplementary_orders": [
+      {
+        "region": "interior",
+        "field": "H",
+        "values": [
+          0.005084785235017722,
+          0.0028630298572001217,
+          0.0010563562883502435,
+          0.0003069009692636836
+        ],
+        "orders": [
+          0.8286441249609439,
+          1.4384462059659409,
+          1.7832514023557853
+        ]
+      },
+      {
+        "region": "interior",
+        "field": "M",
+        "values": [
+          7.939194737598987e-05,
+          1.5867413505749914e-05,
+          9.454163839653285e-06,
+          3.1158455508412517e-06
+        ],
+        "orders": [
+          2.3229257056475716,
+          0.7470452066450632,
+          1.6013261443556115
+        ]
+      },
+      {
+        "region": "inner",
+        "field": "H",
+        "values": [
+          0.0119741404154378,
+          0.00744216628000892,
+          0.002861603514555924,
+          0.0008476342684606376
+        ],
+        "orders": [
+          0.6861275632867064,
+          1.3788988295666715,
+          1.7553099755402641
+        ]
+      },
+      {
+        "region": "inner",
+        "field": "M",
+        "values": [
+          0.00018026432292148932,
+          3.7582910525411925e-05,
+          2.533521172493685e-05,
+          8.564414374946151e-06
+        ],
+        "orders": [
+          2.2619651909877665,
+          0.5689329119801148,
+          1.564717380507025
+        ]
+      },
+      {
+        "region": "bulk",
+        "field": "H",
+        "values": [
+          0.004719493669313554,
+          0.0008606843515897892,
+          0.00020386781820022978,
+          4.929062333261676e-05
+        ],
+        "orders": [
+          2.455075944386487,
+          2.0778501839455417,
+          2.048248924307829
+        ]
+      },
+      {
+        "region": "bulk",
+        "field": "M",
+        "values": [
+          3.0478355532902454e-05,
+          7.492572623571553e-06,
+          1.4532280494764386e-06,
+          3.5540582180407394e-07
+        ],
+        "orders": [
+          2.024251996379014,
+          2.3662000451687057,
+          2.0317218982487533
+        ]
+      },
+      {
+        "region": "outer",
+        "field": "H",
+        "values": [
+          0.0006642190406147065,
+          9.036181241170204e-05,
+          2.162673347790886e-05,
+          5.2728713515240465e-06
+        ],
+        "orders": [
+          2.8778739673073246,
+          2.0628974318084095,
+          2.036155072620352
+        ]
+      },
+      {
+        "region": "outer",
+        "field": "M",
+        "values": [
+          3.873129937908051e-05,
+          9.313283272373488e-06,
+          2.4087242902590237e-06,
+          6.110762254510782e-07
+        ],
+        "orders": [
+          2.05613813726858,
+          1.9510205922645882,
+          1.978845010169169
+        ]
+      },
+      {
+        "region": "inner_endpoint",
+        "field": "H",
+        "values": [
+          0.4661757548753321,
+          0.1240974597458644,
+          0.02215098814089611,
+          0.003801151965843187
+        ],
+        "orders": [
+          1.9094003898963057,
+          2.4860306210478047,
+          2.542862449070725
+        ]
+      },
+      {
+        "region": "inner_endpoint",
+        "field": "M",
+        "values": [
+          0.007249374752834577,
+          0.0019441314241141379,
+          0.00033495586083563005,
+          5.363628842005936e-05
+        ],
+        "orders": [
+          1.8987308212751857,
+          2.537082848504284,
+          2.642689682734074
+        ]
+      },
+      {
+        "region": "outer_endpoint",
+        "field": "H",
+        "values": [
+          0.005936191369848432,
+          9.882322111880523e-06,
+          1.0281390154342912e-05,
+          2.7453481456285042e-06
+        ],
+        "orders": [
+          9.230471805863546,
+          -0.057113359623079674,
+          1.9049743272582655
+        ]
+      },
+      {
+        "region": "outer_endpoint",
+        "field": "M",
+        "values": [
+          2.7857772499154862e-05,
+          1.1151129788045514e-05,
+          2.885501522338073e-06,
+          7.240905288473221e-07
+        ],
+        "orders": [
+          1.3208900193348008,
+          1.9502958884030925,
+          1.9945801066417745
+        ]
+      }
+    ],
+    "solution_orders": {
+      "psi": [
+        1.9520568115447436,
+        1.9972624516319721
+      ],
+      "W": [
+        1.7891106733200726,
+        1.9488677137732666
+      ]
+    }
+  },
+  "radial-filter-20261103": {
+    "passed": 9,
+    "checks": [
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          8,
+          16
+        ],
+        "order": 1.7408476066170904,
+        "passed": true
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          16,
+          32
+        ],
+        "order": 1.9298255921158949,
+        "passed": true
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          32,
+          64
+        ],
+        "order": 1.9961753397523325,
+        "passed": true
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          8,
+          16
+        ],
+        "order": -0.013997313858475923,
+        "passed": false
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          16,
+          32
+        ],
+        "order": 0.7939390014122526,
+        "passed": false
+      },
+      {
+        "band": "inner_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          32,
+          64
+        ],
+        "order": 1.2242834027784488,
+        "passed": false
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          8,
+          16
+        ],
+        "order": 1.7456638840274235,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          16,
+          32
+        ],
+        "order": 1.9639890798109712,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_flux_H",
+        "pair": [
+          32,
+          64
+        ],
+        "order": 2.018376564260432,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          8,
+          16
+        ],
+        "order": 1.5399395619209288,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          16,
+          32
+        ],
+        "order": 1.5002865679903,
+        "passed": true
+      },
+      {
+        "band": "outer_boundary_band",
+        "metric": "independent_tensor_M_order2",
+        "pair": [
+          32,
+          64
+        ],
+        "order": 1.5145814094405448,
+        "passed": true
+      }
+    ],
+    "fields": [
+      {
+        "n": 8,
+        "sha256": "bb6910b775b2621324c077c8f8a71f7e1988cd11104351de24b182dbe79ec6b2",
+        "source_consistency": {
+          "energy_max_abs": 0.0,
+          "momentum_max_abs": 0.0,
+          "direct_4D_sample_max_abs": 4.440892098500626e-16
+        }
+      },
+      {
+        "n": 16,
+        "sha256": "1723f99e4c59c42d1f8e1f2b12c9315ee965b8ed0a1a4afc92c806df7b898e48",
+        "source_consistency": {
+          "energy_max_abs": 0.0,
+          "momentum_max_abs": 0.0,
+          "direct_4D_sample_max_abs": 1.3322676295501878e-15
+        }
+      },
+      {
+        "n": 32,
+        "sha256": "1fa05ee305b178a94db17e14c2c4b26ab653ee895b452dca95d23f73df2c9592",
+        "source_consistency": {
+          "energy_max_abs": 0.0,
+          "momentum_max_abs": 0.0,
+          "direct_4D_sample_max_abs": 8.881784197001252e-16
+        }
+      },
+      {
+        "n": 64,
+        "sha256": "f9fc7770359d5eb8ea683e967b947578f69b0aa3a913436844f2541681468f97",
+        "source_consistency": {
+          "energy_max_abs": 0.0,
+          "momentum_max_abs": 0.0,
+          "direct_4D_sample_max_abs": 4.440892098500626e-16
+        }
+      }
+    ],
+    "supplementary_orders": [
+      {
+        "region": "interior",
+        "field": "H",
+        "values": [
+          0.005084779282290622,
+          0.002863024468202918,
+          0.0010563542730830378,
+          0.00030690058800153535
+        ],
+        "orders": [
+          0.8286451515508144,
+          1.4384462427296505,
+          1.7832504423037305
+        ]
+      },
+      {
+        "region": "interior",
+        "field": "M",
+        "values": [
+          0.0018058809065772572,
+          0.0013709120829775736,
+          0.0007056298153946603,
+          0.00027511786453980266
+        ],
+        "orders": [
+          0.39756670015376433,
+          0.9581526272533295,
+          1.358861698385299
+        ]
+      },
+      {
+        "region": "inner",
+        "field": "H",
+        "values": [
+          0.01197412536303098,
+          0.007442151970068205,
+          0.002861597983016139,
+          0.0008476332036040979
+        ],
+        "orders": [
+          0.686128523752469,
+          1.3788988442847379,
+          1.7553089991917081
+        ]
+      },
+      {
+        "region": "inner",
+        "field": "M",
+        "values": [
+          0.003795561884852697,
+          0.003554766350815674,
+          0.0019175580267551235,
+          0.0007629005107073572
+        ],
+        "orders": [
+          0.0945587372827243,
+          0.8904845014608076,
+          1.3297034017877156
+        ]
+      },
+      {
+        "region": "bulk",
+        "field": "H",
+        "values": [
+          0.004719489686547222,
+          0.0008606842075197833,
+          0.00020386780483064141,
+          4.92906217347317e-05
+        ],
+        "orders": [
+          2.4550749683928537,
+          2.077850037064208,
+          2.048248876465083
+        ]
+      },
+      {
+        "region": "bulk",
+        "field": "M",
+        "values": [
+          0.001493770864639275,
+          0.000262560920301996,
+          6.000773413227824e-05,
+          1.525510624435803e-05
+        ],
+        "orders": [
+          2.5082347585837503,
+          2.1294318403414803,
+          1.9758562276905223
+        ]
+      },
+      {
+        "region": "outer",
+        "field": "H",
+        "values": [
+          0.000664225002336717,
+          9.036197107523133e-05,
+          2.1626747583827843e-05,
+          5.272871451052348e-06
+        ],
+        "orders": [
+          2.8778843830290466,
+          2.0628990240004024,
+          2.036155986378369
+        ]
+      },
+      {
+        "region": "outer",
+        "field": "M",
+        "values": [
+          0.001171455697115971,
+          0.0002774722283460298,
+          6.980160226285958e-05,
+          1.769097696944822e-05
+        ],
+        "orders": [
+          2.0778871071711142,
+          1.9910113238446818,
+          1.9802464313405426
+        ]
+      },
+      {
+        "region": "inner_endpoint",
+        "field": "H",
+        "values": [
+          0.46617571548762393,
+          0.12409774001122084,
+          0.022151156111605615,
+          0.0038012027494776627
+        ],
+        "orders": [
+          1.9093970097801183,
+          2.4860229393692737,
+          2.5428541146008476
+        ]
+      },
+      {
+        "region": "inner_endpoint",
+        "field": "M",
+        "values": [
+          0.006670809045492617,
+          0.023629374217920787,
+          0.02631209584973193,
+          0.018089924728969305
+        ],
+        "orders": [
+          -1.824647773295889,
+          -0.1551447461490768,
+          0.5405397637376387
+        ]
+      },
+      {
+        "region": "outer_endpoint",
+        "field": "H",
+        "values": [
+          0.0059362187523747745,
+          9.882859032682688e-06,
+          1.028118732786733e-05,
+          2.7457828367622064e-06
+        ],
+        "orders": [
+          9.230400079155716,
+          -0.057006516955202646,
+          1.904717451743645
+        ]
+      },
+      {
+        "region": "outer_endpoint",
+        "field": "M",
+        "values": [
+          0.00139955453468509,
+          0.0003117795588453278,
+          0.00018751893974671107,
+          0.00010358733935466797
+        ],
+        "orders": [
+          2.166369454634587,
+          0.7334900262109619,
+          0.8561886329190789
+        ]
+      }
+    ],
+    "solution_orders": {
+      "psi": [
+        1.9520533075419575,
+        1.9972632723107484
+      ],
+      "W": [
+        1.6044408527785006,
+        1.9397551082140243
+      ]
+    }
+  }
+}

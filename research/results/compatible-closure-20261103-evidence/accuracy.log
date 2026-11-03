@@ -1,0 +1,32 @@
+{"timing": "base_derivatives_enter", "elapsed_s": 0.0008535230000177307}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.002684177000020327}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.003026852000004965}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.0044095519999984845}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.004660790000002635}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.00582294800000227}
+{"timing": "base_gradients_enter", "elapsed_s": 0.005839833999999655}
+{"timing": "base_gradients_exit", "elapsed_s": 0.007863847999999507}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.007894093000004432}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.008185392000001457}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.008203178000002254}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.0005571879999877183}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0021030529999848113}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0021233439999832626}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.0033415759999968486}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.0033561779999899954}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.004183351999984097}
+{"timing": "base_gradients_enter", "elapsed_s": 0.004196371999995563}
+{"timing": "base_gradients_exit", "elapsed_s": 0.005194093000000066}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.005204778999996051}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.005360832999997456}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.005368043999993688}
+Traceback (most recent call last):
+  File "/workspace/dee-toroidal-helical-omniverse/research/check_run43_compatible_accuracy.py", line 38, in <module>
+    result=check();Path(sys.argv[1]).write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
+           ^^^^^^^
+  File "/workspace/dee-toroidal-helical-omniverse/research/check_run43_compatible_accuracy.py", line 31, in check
+    exact=np.zeros_like(x) if power<4 else np.math.factorial(power)/np.math.factorial(power-4)*x**(power-4)
+                                           ^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/__init__.py", line 795, in __getattr__
+    raise AttributeError(f"module {__name__!r} has no attribute {attr!r}")
+AttributeError: module 'numpy' has no attribute 'math'. Did you mean: 'emath'?

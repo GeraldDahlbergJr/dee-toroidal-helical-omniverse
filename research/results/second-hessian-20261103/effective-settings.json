@@ -1,0 +1,11 @@
+{
+  "vector_order": 2,
+  "vector_stabilization": 0,
+  "scalar_order": 2,
+  "scalar_stabilization": 0.25,
+  "radial_D1_points": 3,
+  "radial_D2_points": 4,
+  "periodic_D1_D2_points": 3,
+  "source": "unchanged original",
+  "frozen_audit": "unchanged"
+}

@@ -1,0 +1,187 @@
+{
+  "rows": [
+    {
+      "n": 8,
+      "sha256": "bb6910b775b2621324c077c8f8a71f7e1988cd11104351de24b182dbe79ec6b2",
+      "norms": {
+        "inner_boundary_band": {
+          "independent_flux_H": 0.0003587365302843327,
+          "independent_tensor_M_order2": 0.0018150594378994714
+        },
+        "outer_boundary_band": {
+          "independent_flux_H": 0.00016876140998449863,
+          "independent_tensor_M_order2": 7.854665289061889e-05
+        }
+      }
+    },
+    {
+      "n": 16,
+      "sha256": "1723f99e4c59c42d1f8e1f2b12c9315ee965b8ed0a1a4afc92c806df7b898e48",
+      "norms": {
+        "inner_boundary_band": {
+          "independent_flux_H": 0.00010733176122661475,
+          "independent_tensor_M_order2": 0.0018327552102397173
+        },
+        "outer_boundary_band": {
+          "independent_flux_H": 5.032409271108503e-05,
+          "independent_tensor_M_order2": 2.7012183015233378e-05
+        }
+      }
+    },
+    {
+      "n": 32,
+      "sha256": "1fa05ee305b178a94db17e14c2c4b26ab653ee895b452dca95d23f73df2c9592",
+      "norms": {
+        "inner_boundary_band": {
+          "independent_flux_H": 2.8170390432600766e-05,
+          "independent_tensor_M_order2": 0.001057073069465807
+        },
+        "outer_boundary_band": {
+          "independent_flux_H": 1.2899008519358838e-05,
+          "independent_tensor_M_order2": 9.548352078577644e-06
+        }
+      }
+    },
+    {
+      "n": 64,
+      "sha256": "f9fc7770359d5eb8ea683e967b947578f69b0aa3a913436844f2541681468f97",
+      "norms": {
+        "inner_boundary_band": {
+          "independent_flux_H": 7.061292673765985e-06,
+          "independent_tensor_M_order2": 0.00045243790343511397
+        },
+        "outer_boundary_band": {
+          "independent_flux_H": 3.183936819374572e-06,
+          "independent_tensor_M_order2": 3.341904147903544e-06
+        }
+      }
+    }
+  ],
+  "checks": [
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.7408476066170904,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9298255921158949,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9961753397523325,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        8,
+        16
+      ],
+      "order": -0.013997313858475923,
+      "passed": false
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 0.7939390014122526,
+      "passed": false
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.2242834027784488,
+      "passed": false
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.7456638840274235,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9639890798109712,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 2.018376564260432,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.5399395619209288,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.5002865679903,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.5145814094405448,
+      "passed": true
+    }
+  ],
+  "passed": 9,
+  "total": 12,
+  "status": "FAIL",
+  "criterion": "All twelve finite orders >=1.5; unchanged frozen bands and volume weights",
+  "method": "Independent explicit-array implementation, compared to frozen-code audit"
+}

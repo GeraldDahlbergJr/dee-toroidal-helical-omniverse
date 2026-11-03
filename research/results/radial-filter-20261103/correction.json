@@ -1,0 +1,7 @@
+{
+  "operator": "original tensor divergence plus h^4/16 (I+er er^T/3) D6 W",
+  "source": "unchanged",
+  "frozen_audit": "unchanged",
+  "boundary": "eight-point polynomial D6, no added physical boundary condition",
+  "limitation": "retains original first-interior-row O(h) composition defect"
+}

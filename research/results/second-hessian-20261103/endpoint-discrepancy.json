@@ -1,0 +1,29 @@
+{
+  "scope": "Exact frozen-minus-matched endpoint difference on new fields only; not additive scalar budget or replacement gate.",
+  "rows": [
+    {
+      "n": 8,
+      "frozen_inner_M": 0.0010894173387990828,
+      "exact_endpoint_difference_rms": 0.0010555617250861214,
+      "supplementary_inner_M": 0.00018026432292148932
+    },
+    {
+      "n": 16,
+      "frozen_inner_M": 0.000765946433184971,
+      "exact_endpoint_difference_rms": 0.0007605423991762653,
+      "supplementary_inner_M": 3.7582910525411925e-05
+    },
+    {
+      "n": 32,
+      "frozen_inner_M": 0.0004242169350639895,
+      "exact_endpoint_difference_rms": 0.00043026176109149075,
+      "supplementary_inner_M": 2.533521172493685e-05
+    },
+    {
+      "n": 64,
+      "frozen_inner_M": 0.00019897416167299263,
+      "exact_endpoint_difference_rms": 0.00020061842638329416,
+      "supplementary_inner_M": 8.564414374946151e-06
+    }
+  ]
+}

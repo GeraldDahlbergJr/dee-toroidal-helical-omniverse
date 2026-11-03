@@ -1,0 +1,65 @@
+{"timing": "base_derivatives_enter", "elapsed_s": 0.0008175510000114627}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0026832089999970776}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0027027579999980844}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.0041949140000099305}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.004209846000009065}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.005393948999994791}
+{"timing": "base_gradients_enter", "elapsed_s": 0.005410143000005974}
+{"timing": "base_gradients_exit", "elapsed_s": 0.006747055000005275}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.006760175000010804}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.006991533000018535}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.007001126999995222}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.00031676699998683944}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0016406189999997878}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0016557019999936529}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.002937191000000894}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.0029513220000012552}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.0071873469999843564}
+{"timing": "base_gradients_enter", "elapsed_s": 0.007214317999995501}
+{"timing": "base_gradients_exit", "elapsed_s": 0.008889949999996816}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.008904731999990645}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.009221297999999933}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.009233556999987513}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.0010106809999967936}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.0027231989999734196}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.002748135999979695}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.004590899999982412}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.004625741999973343}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.006838061999985712}
+{"timing": "base_gradients_enter", "elapsed_s": 0.0068856030000006285}
+{"timing": "base_gradients_exit", "elapsed_s": 0.009560888999999406}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.009597263999978622}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.010076965999985532}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.0100899559999732}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.007814652000007527}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.013213607000011507}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.013299525999997286}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.01974667999999724}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.01980201300000317}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.03306889000000979}
+{"timing": "base_gradients_enter", "elapsed_s": 0.03312948199999255}
+{"timing": "base_gradients_exit", "elapsed_s": 0.05114754900000662}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.0512055460000056}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.05607509500001129}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.05613264199999435}
+Traceback (most recent call last):
+  File "/workspace/dee-toroidal-helical-omniverse/research/check_run43_compatible_accuracy.py", line 38, in <module>
+    result=check();Path(sys.argv[1]).write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
+           ^^^^^^^
+  File "/workspace/dee-toroidal-helical-omniverse/research/check_run43_compatible_accuracy.py", line 32, in check
+    np.testing.assert_allclose(d4@x**power,exact,atol=3e-6,rtol=1e-7)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 1711, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 919, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=1e-07, atol=3e-06
+
+Mismatched elements: 1 / 33 (3.03%)
+Max absolute difference among violations: 3.09944153e-06
+Max relative difference among violations: inf
+ ACTUAL: array([ 7.152557e-07,  1.192093e-07,  1.434625e-07,  1.434625e-07,
+        1.434625e-07,  1.434625e-07,  1.434625e-07,  1.434625e-07,
+        1.434625e-07,  1.434625e-07,  1.434625e-07,  1.434625e-07,...
+ DESIRED: array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+       0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])

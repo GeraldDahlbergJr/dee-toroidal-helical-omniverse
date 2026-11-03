@@ -1,0 +1,555 @@
+{
+  "audit_git_blob": "5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22",
+  "passed": 10,
+  "total": 12,
+  "status": "FAIL",
+  "checks": [
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.7408482969369676,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9298270158167128,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9961760437466591,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 0.25207985628767315,
+      "passed": false
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.1323079441520505,
+      "passed": false
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.6721181087919905,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.7456647112506003,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9639894470734294,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 2.0183776519806083,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.5283031034064072,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.7552512170674281,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9199464361838863,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "n": 8,
+      "sha256": "ca03accc7773497e1f663cf744d703f10b2775565f0f7de3b0a2e7042f7ad93f",
+      "audit": {
+        "whole_interior": {
+          "r_interval": [
+            0.05,
+            0.25
+          ],
+          "interior_radial_samples": 7,
+          "independent_flux_H": {
+            "volume_weighted_rms": 0.00029801697199170974,
+            "max_abs": 0.0009273473238763374
+          },
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.004387835491367064,
+            "max_vector_norm": 0.010804075789513364
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.004467578851422658,
+            "max_vector_norm": 0.011368589518962031
+          }
+        },
+        "inner_boundary_band": {
+          "r_interval": [
+            0.05,
+            0.1
+          ],
+          "interior_radial_samples": 2,
+          "independent_flux_H": {
+            "volume_weighted_rms": 0.00035873612575719797,
+            "max_abs": 0.000868128295216819
+          },
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.009059102977125366,
+            "max_vector_norm": 0.010804075789513364
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.009440887772139637,
+            "max_vector_norm": 0.011368589518962031
+          }
+        },
+        "bulk": {
+          "r_interval": [
+            0.1,
+            0.2
+          ],
+          "interior_radial_samples": 5,
+          "independent_flux_H": {
+            "volume_weighted_rms": 0.00033541645757907305,
+            "max_abs": 0.0009273473238763374
+          },
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.0039025918434495675,
+            "max_vector_norm": 0.007607707974489079
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.003885932300974588,
+            "max_vector_norm": 0.007818835716514858
+          }
+        },
+        "outer_boundary_band": {
+          "r_interval": [
+            0.2,
+            0.25
+          ],
+          "interior_radial_samples": 2,
+          "independent_flux_H": {
+            "volume_weighted_rms": 0.00016876187123570415,
+            "max_abs": 0.0005287453704139744
+          },
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.0010143504657542895,
+            "max_vector_norm": 0.0012951060812670084
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.0007768072379010626,
+            "max_vector_norm": 0.0010644783363535726
+          }
+        },
+        "inner_endpoint": {
+          "r": 0.05,
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.01685738098924402,
+            "max_vector_norm": 0.016913934951100454
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.017116778372102667,
+            "max_vector_norm": 0.017202532984550184
+          },
+          "note": "one-sided PDE compatibility audit; Dirichlet boundary values themselves do not enforce the constraints at endpoints"
+        },
+        "outer_endpoint": {
+          "r": 0.25,
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.00039888339994234166,
+            "max_vector_norm": 0.0004776191473303841
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.00024625376782854374,
+            "max_vector_norm": 0.0002601381179986592
+          },
+          "note": "one-sided PDE compatibility audit; Dirichlet boundary values themselves do not enforce the constraints at endpoints"
+        }
+      }
+    },
+    {
+      "n": 16,
+      "sha256": "515f9c4470a74bbc257d65438b4a91f0ea3a6064e96967f0c5415335facec4d1",
+      "audit": {
+        "whole_interior": {
+          "r_interval": [
+            0.05,
+            0.25
+          ],
+          "interior_radial_samples": 15,
+          "independent_flux_H": {
+            "volume_weighted_rms": 9.49356193270054e-05,
+            "max_abs": 0.0003211799010249261
+          },
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.0032010472973240302,
+            "max_vector_norm": 0.010393120492922797
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.0032991684143843535,
+            "max_vector_norm": 0.010580507537282582
+          }
+        },
+        "inner_boundary_band": {
+          "r_interval": [
+            0.05,
+            0.1
+          ],
+          "interior_radial_samples": 4,
+          "independent_flux_H": {
+            "volume_weighted_rms": 0.00010733158883713067,
+            "max_abs": 0.0002985051009437023
+          },
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.00760679300363452,
+            "max_vector_norm": 0.010393120492922797
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.007980813902535711,
+            "max_vector_norm": 0.010580507537282582
+          }
+        },
+        "bulk": {
+          "r_interval": [
+            0.1,
+            0.2
+          ],
+          "interior_radial_samples": 9,
+          "independent_flux_H": {
+            "volume_weighted_rms": 0.00011256918485852642,
+            "max_abs": 0.0003211799010249261
+          },
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.002274260854274369,
+            "max_vector_norm": 0.005300592411192239
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.002213199009958819,
+            "max_vector_norm": 0.005341410563007611
+          }
+        },
+        "outer_boundary_band": {
+          "r_interval": [
+            0.2,
+            0.25
+          ],
+          "interior_radial_samples": 4,
+          "independent_flux_H": {
+            "volume_weighted_rms": 5.032420139939274e-05,
+            "max_abs": 0.00019481979918434256
+          },
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.0003516599875262481,
+            "max_vector_norm": 0.0005679623377036365
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.00021066861593873652,
+            "max_vector_norm": 0.0004133293959532557
+          }
+        },
+        "inner_endpoint": {
+          "r": 0.05,
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.015556448308023002,
+            "max_vector_norm": 0.015829401395436562
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.012255357343628774,
+            "max_vector_norm": 0.01252558184315173
+          },
+          "note": "one-sided PDE compatibility audit; Dirichlet boundary values themselves do not enforce the constraints at endpoints"
+        },
+        "outer_endpoint": {
+          "r": 0.25,
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 9.60520735802785e-05,
+            "max_vector_norm": 0.00013744509932733266
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 2.106672979684187e-05,
+            "max_vector_norm": 2.599210382916123e-05
+          },
+          "note": "one-sided PDE compatibility audit; Dirichlet boundary values themselves do not enforce the constraints at endpoints"
+        }
+      }
+    },
+    {
+      "n": 32,
+      "sha256": "aa04e733f3bd1b2a2bc39d11f8b1c79e420d810ae83b708b5ab45ee54e24d90a",
+      "audit": {
+        "whole_interior": {
+          "r_interval": [
+            0.05,
+            0.25
+          ],
+          "interior_radial_samples": 31,
+          "independent_flux_H": {
+            "volume_weighted_rms": 2.5643922977168454e-05,
+            "max_abs": 9.040014231104232e-05
+          },
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.001381350849947789,
+            "max_vector_norm": 0.004614450407967551
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.001449544317742793,
+            "max_vector_norm": 0.005086897520996672
+          }
+        },
+        "inner_boundary_band": {
+          "r_interval": [
+            0.05,
+            0.1
+          ],
+          "interior_radial_samples": 8,
+          "independent_flux_H": {
+            "volume_weighted_rms": 2.8170317387655416e-05,
+            "max_abs": 8.406855672415947e-05
+          },
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.0034701076111249103,
+            "max_vector_norm": 0.004614450407967551
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.0037008636949557782,
+            "max_vector_norm": 0.005086897520996672
+          }
+        },
+        "bulk": {
+          "r_interval": [
+            0.1,
+            0.2
+          ],
+          "interior_radial_samples": 17,
+          "independent_flux_H": {
+            "volume_weighted_rms": 3.116363798219383e-05,
+            "max_abs": 9.040014231104232e-05
+          },
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.0008394094582728006,
+            "max_vector_norm": 0.002230210772069233
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.0008095639712667273,
+            "max_vector_norm": 0.002233786220273745
+          }
+        },
+        "outer_boundary_band": {
+          "r_interval": [
+            0.2,
+            0.25
+          ],
+          "interior_radial_samples": 8,
+          "independent_flux_H": {
+            "volume_weighted_rms": 1.2899033094542199e-05,
+            "max_abs": 5.5565508320337686e-05
+          },
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.00010416928664256133,
+            "max_vector_norm": 0.00020237797167890086
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 5.501593682658482e-05,
+            "max_vector_norm": 0.00014244761529425717
+          }
+        },
+        "inner_endpoint": {
+          "r": 0.05,
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.008514051919295114,
+            "max_vector_norm": 0.008869562757722892
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.0020598098005355525,
+            "max_vector_norm": 0.002250931914515761
+          },
+          "note": "one-sided PDE compatibility audit; Dirichlet boundary values themselves do not enforce the constraints at endpoints"
+        },
+        "outer_endpoint": {
+          "r": 0.25,
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 1.6825458305754027e-05,
+            "max_vector_norm": 3.161196210606213e-05
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 1.018903677129156e-06,
+            "max_vector_norm": 1.656390343408191e-06
+          },
+          "note": "one-sided PDE compatibility audit; Dirichlet boundary values themselves do not enforce the constraints at endpoints"
+        }
+      }
+    },
+    {
+      "n": 64,
+      "sha256": "8e7ae317d1c667929cbcbc62a8b0dec82c166dc0d71d1bbb61ab970d353c7ff7",
+      "audit": {
+        "whole_interior": {
+          "r_interval": [
+            0.05,
+            0.25
+          ],
+          "interior_radial_samples": 63,
+          "independent_flux_H": {
+            "volume_weighted_rms": 6.52971432721523e-06,
+            "max_abs": 2.3415406850191278e-05
+          },
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.00042342597679338766,
+            "max_vector_norm": 0.001499235514304039
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.0004464103660638059,
+            "max_vector_norm": 0.0016817179817994394
+          }
+        },
+        "inner_boundary_band": {
+          "r_interval": [
+            0.05,
+            0.1
+          ],
+          "interior_radial_samples": 16,
+          "independent_flux_H": {
+            "volume_weighted_rms": 7.061270918352833e-06,
+            "max_abs": 2.1784376298905617e-05
+          },
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.0010888930749307474,
+            "max_vector_norm": 0.001499235514304039
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.0011655494356723557,
+            "max_vector_norm": 0.0016817179817994394
+          }
+        },
+        "bulk": {
+          "r_interval": [
+            0.1,
+            0.2
+          ],
+          "interior_radial_samples": 33,
+          "independent_flux_H": {
+            "volume_weighted_rms": 8.032721076115396e-06,
+            "max_abs": 2.3415406850191278e-05
+          },
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.00023767058455472452,
+            "max_vector_norm": 0.0006938374772899806
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 0.0002286284732161545,
+            "max_vector_norm": 0.000695299520564044
+          }
+        },
+        "outer_boundary_band": {
+          "r_interval": [
+            0.2,
+            0.25
+          ],
+          "interior_radial_samples": 16,
+          "independent_flux_H": {
+            "volume_weighted_rms": 3.183940484875721e-06,
+            "max_abs": 1.4433467302787939e-05
+          },
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 2.752822585160784e-05,
+            "max_vector_norm": 5.996826089369423e-05
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 1.3923228115108648e-05,
+            "max_vector_norm": 4.2324586076681906e-05
+          }
+        },
+        "inner_endpoint": {
+          "r": 0.05,
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 0.003966720165163703,
+            "max_vector_norm": 0.004145462730701948
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 2.4799664670531156e-05,
+            "max_vector_norm": 3.013013138942774e-05
+          },
+          "note": "one-sided PDE compatibility audit; Dirichlet boundary values themselves do not enforce the constraints at endpoints"
+        },
+        "outer_endpoint": {
+          "r": 0.25,
+          "independent_tensor_M_order2": {
+            "volume_weighted_rms": 8.926274524655204e-06,
+            "max_vector_norm": 1.1643374342229415e-05
+          },
+          "independent_tensor_M_order4": {
+            "volume_weighted_rms": 1.6721013249302972e-07,
+            "max_vector_norm": 1.8555089588184077e-07
+          },
+          "note": "one-sided PDE compatibility audit; Dirichlet boundary values themselves do not enforce the constraints at endpoints"
+        }
+      }
+    }
+  ],
+  "scope": "Independent array re-evaluation of frozen numerical gate; not independent scientific replication or continuum proof."
+}

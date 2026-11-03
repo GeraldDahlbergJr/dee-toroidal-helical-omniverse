@@ -1,0 +1,9 @@
+{
+  "closure": "direct fourth-order Cartesian Hessian; six-point radial polynomial D4 closure",
+  "dissipation": "-sum_a h_a^2/4 scale_a^-4 (I+e_a e_a^T/3) D_aaaa W",
+  "coefficient_origin": "centered D2-D0 squared identity; no fit",
+  "mixed": "all direct Hessian mixed terms retained",
+  "source": "original unchanged",
+  "frozen_audit": "unchanged",
+  "extra_boundary_data": false
+}

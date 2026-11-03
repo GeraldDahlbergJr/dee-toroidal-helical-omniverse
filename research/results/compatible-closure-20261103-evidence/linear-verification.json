@@ -1,0 +1,522 @@
+{
+  "compatible-closure-20261103": [
+    {
+      "n": 8,
+      "vector_solves": 4,
+      "worst_true_residual_over_tolerance": 0.9090995758919492,
+      "diagnostics": {
+        "resolution": [
+          9,
+          8,
+          8
+        ],
+        "all_finite": true,
+        "psi_min": 1.0,
+        "psi_max": 1.0001623967467013,
+        "H_physical_max_abs_interior": 2.454078051883357e-10,
+        "H_physical_bulk_rms": 1.4383211777849688e-10,
+        "expanded_momentum_solver_max_abs": 1.9889263846994965e-12,
+        "independent_M_cartesian_bulk_rms": [
+          0.0019450513896314156,
+          0.001945051389631426,
+          0.002744816939459427
+        ],
+        "independent_M_cartesian_max_abs_interior": [
+          0.011282868983116898,
+          0.011282868983114896,
+          0.0113452662533898
+        ],
+        "independent_M_vector_bulk_rms": 0.0038859323009745885,
+        "A_trace_max_abs": 3.9279348174937944e-20,
+        "boundary_psi_error": 0.0,
+        "boundary_W_error": 0.0
+      }
+    },
+    {
+      "n": 16,
+      "vector_solves": 4,
+      "worst_true_residual_over_tolerance": 0.715649526616182,
+      "diagnostics": {
+        "resolution": [
+          17,
+          16,
+          16
+        ],
+        "all_finite": true,
+        "psi_min": 1.0,
+        "psi_max": 1.0001655130991765,
+        "H_physical_max_abs_interior": 4.1538328332535457e-10,
+        "H_physical_bulk_rms": 1.9179835845735273e-10,
+        "expanded_momentum_solver_max_abs": 2.131361927226738e-12,
+        "independent_M_cartesian_bulk_rms": [
+          0.001106622435751554,
+          0.0011066224357515531,
+          0.0015649355983762695
+        ],
+        "independent_M_cartesian_max_abs_interior": [
+          0.010404413303968704,
+          0.0104044133039704,
+          0.010568085396014207
+        ],
+        "independent_M_vector_bulk_rms": 0.002213199009958819,
+        "A_trace_max_abs": 5.421010862427522e-20,
+        "boundary_psi_error": 0.0,
+        "boundary_W_error": 0.0
+      }
+    },
+    {
+      "n": 32,
+      "vector_solves": 4,
+      "worst_true_residual_over_tolerance": 0.8108777127707515,
+      "diagnostics": {
+        "resolution": [
+          33,
+          32,
+          32
+        ],
+        "all_finite": true,
+        "psi_min": 1.0,
+        "psi_max": 1.0001668198812559,
+        "H_physical_max_abs_interior": 3.423258343460134e-10,
+        "H_physical_bulk_rms": 7.607661006865721e-11,
+        "expanded_momentum_solver_max_abs": 7.556018311039026e-12,
+        "independent_M_cartesian_bulk_rms": [
+          0.0004044610671704193,
+          0.00040446106717041973,
+          0.0005729016615963722
+        ],
+        "independent_M_cartesian_max_abs_interior": [
+          0.004969759183639744,
+          0.0049697591836403154,
+          0.005083185979353841
+        ],
+        "independent_M_vector_bulk_rms": 0.0008095639712667266,
+        "A_trace_max_abs": 1.0842021724855044e-19,
+        "boundary_psi_error": 0.0,
+        "boundary_W_error": 0.0
+      }
+    },
+    {
+      "n": 64,
+      "vector_solves": 4,
+      "worst_true_residual_over_tolerance": 0.9074866742432204,
+      "diagnostics": {
+        "resolution": [
+          65,
+          64,
+          64
+        ],
+        "all_finite": true,
+        "psi_min": 1.0,
+        "psi_max": 1.000167022148932,
+        "H_physical_max_abs_interior": 1.4492338440419417e-09,
+        "H_physical_bulk_rms": 2.830892554098283e-10,
+        "expanded_momentum_solver_max_abs": 7.150514555465115e-12,
+        "independent_M_cartesian_bulk_rms": [
+          0.00011401464127216369,
+          0.00011401464127216584,
+          0.00016208732805592617
+        ],
+        "independent_M_cartesian_max_abs_interior": [
+          0.001629125722960813,
+          0.0016291257229617464,
+          0.001680823521208465
+        ],
+        "independent_M_vector_bulk_rms": 0.00022862847321615534,
+        "A_trace_max_abs": 1.0842021724855044e-19,
+        "boundary_psi_error": 0.0,
+        "boundary_W_error": 0.0
+      }
+    }
+  ],
+  "coordinate-ko-20261103": [
+    {
+      "n": 8,
+      "vector_solves": 4,
+      "worst_true_residual_over_tolerance": 0.5258142816243053,
+      "diagnostics": {
+        "resolution": [
+          9,
+          8,
+          8
+        ],
+        "all_finite": true,
+        "psi_min": 1.0,
+        "psi_max": 1.0001623968138214,
+        "H_physical_max_abs_interior": 4.0988666627495007e-10,
+        "H_physical_bulk_rms": 3.244216601234756e-10,
+        "expanded_momentum_solver_max_abs": 5.240590947308554e-13,
+        "independent_M_cartesian_bulk_rms": [
+          0.00026223882833334016,
+          0.00026223882833334005,
+          0.00035032214684054404
+        ],
+        "independent_M_cartesian_max_abs_interior": [
+          0.0021092072120320656,
+          0.002109207212032083,
+          0.0021406900980286536
+        ],
+        "independent_M_vector_bulk_rms": 0.0005101607714615597,
+        "A_trace_max_abs": 1.0842021724855044e-19,
+        "boundary_psi_error": 0.0,
+        "boundary_W_error": 0.0
+      }
+    },
+    {
+      "n": 16,
+      "vector_solves": 4,
+      "worst_true_residual_over_tolerance": 0.6959308420015972,
+      "diagnostics": {
+        "resolution": [
+          17,
+          16,
+          16
+        ],
+        "all_finite": true,
+        "psi_min": 1.0,
+        "psi_max": 1.000165513148186,
+        "H_physical_max_abs_interior": 4.719946655740159e-11,
+        "H_physical_bulk_rms": 1.786729260362062e-11,
+        "expanded_momentum_solver_max_abs": 1.0411352769496007e-12,
+        "independent_M_cartesian_bulk_rms": [
+          2.979390787184475e-05,
+          2.9793907871844672e-05,
+          3.724769884596563e-05
+        ],
+        "independent_M_cartesian_max_abs_interior": [
+          0.0013813837400670128,
+          0.001381383740067077,
+          0.0014364319446150322
+        ],
+        "independent_M_vector_bulk_rms": 5.6238287330533904e-05,
+        "A_trace_max_abs": 1.0842021724855044e-19,
+        "boundary_psi_error": 0.0,
+        "boundary_W_error": 0.0
+      }
+    },
+    {
+      "n": 32,
+      "vector_solves": 4,
+      "worst_true_residual_over_tolerance": 0.333966789822612,
+      "diagnostics": {
+        "resolution": [
+          33,
+          32,
+          32
+        ],
+        "all_finite": true,
+        "psi_min": 1.0,
+        "psi_max": 1.0001668199072147,
+        "H_physical_max_abs_interior": 2.4153035127483236e-10,
+        "H_physical_bulk_rms": 7.213966565785519e-11,
+        "expanded_momentum_solver_max_abs": 7.422855732852618e-13,
+        "independent_M_cartesian_bulk_rms": [
+          4.9427807138141e-06,
+          4.942780713813662e-06,
+          5.470383631193695e-06
+        ],
+        "independent_M_cartesian_max_abs_interior": [
+          0.000640587421571465,
+          0.0006405874215713991,
+          0.0006614136158344767
+        ],
+        "independent_M_vector_bulk_rms": 8.876218758127406e-06,
+        "A_trace_max_abs": 1.0842021724855044e-19,
+        "boundary_psi_error": 0.0,
+        "boundary_W_error": 0.0
+      }
+    },
+    {
+      "n": 64,
+      "vector_solves": 4,
+      "worst_true_residual_over_tolerance": 0.045951174849403593,
+      "diagnostics": {
+        "resolution": [
+          65,
+          64,
+          64
+        ],
+        "all_finite": true,
+        "psi_min": 1.0,
+        "psi_max": 1.0001670221575958,
+        "H_physical_max_abs_interior": 1.6739740704707629e-09,
+        "H_physical_bulk_rms": 2.8754822713890704e-10,
+        "expanded_momentum_solver_max_abs": 1.2293638329552437e-13,
+        "independent_M_cartesian_bulk_rms": [
+          1.0898648478624792e-06,
+          1.0898648478620563e-06,
+          1.1318659481164813e-06
+        ],
+        "independent_M_cartesian_max_abs_interior": [
+          0.00022742618270226063,
+          0.000227426182702729,
+          0.0002350950970471874
+        ],
+        "independent_M_vector_bulk_rms": 1.912258167120044e-06,
+        "A_trace_max_abs": 1.0842021724855044e-19,
+        "boundary_psi_error": 0.0,
+        "boundary_W_error": 0.0
+      }
+    }
+  ],
+  "second-hessian-20261103": [
+    {
+      "n": 8,
+      "vector_solves": 4,
+      "worst_true_residual_over_tolerance": 0.1097042337401089,
+      "diagnostics": {
+        "resolution": [
+          9,
+          8,
+          8
+        ],
+        "all_finite": true,
+        "psi_min": 1.0,
+        "psi_max": 1.0001623968041966,
+        "H_physical_max_abs_interior": 4.724043378701026e-10,
+        "H_physical_bulk_rms": 3.027952643825089e-10,
+        "expanded_momentum_solver_max_abs": 1.541765846935217e-13,
+        "independent_M_cartesian_bulk_rms": [
+          0.0004600607434494622,
+          0.00046006074344946224,
+          0.000633002378463742
+        ],
+        "independent_M_cartesian_max_abs_interior": [
+          0.0014023598721041725,
+          0.0014023598721041742,
+          0.001476780081247157
+        ],
+        "independent_M_vector_bulk_rms": 0.0009077465430764792,
+        "A_trace_max_abs": 1.0842021724855044e-19,
+        "boundary_psi_error": 0.0,
+        "boundary_W_error": 0.0
+      }
+    },
+    {
+      "n": 16,
+      "vector_solves": 4,
+      "worst_true_residual_over_tolerance": 0.3924525453724493,
+      "diagnostics": {
+        "resolution": [
+          17,
+          16,
+          16
+        ],
+        "all_finite": true,
+        "psi_min": 1.0,
+        "psi_max": 1.0001655131453873,
+        "H_physical_max_abs_interior": 8.873568546619026e-11,
+        "H_physical_bulk_rms": 1.632052711296828e-11,
+        "expanded_momentum_solver_max_abs": 8.577479004845401e-13,
+        "independent_M_cartesian_bulk_rms": [
+          0.00013105459860352671,
+          0.00013105459860352666,
+          0.00018190545508735165
+        ],
+        "independent_M_cartesian_max_abs_interior": [
+          0.001425847140853415,
+          0.0014258471408534097,
+          0.0014562398507464366
+        ],
+        "independent_M_vector_bulk_rms": 0.00025969253015980165,
+        "A_trace_max_abs": 1.0842021724855044e-19,
+        "boundary_psi_error": 0.0,
+        "boundary_W_error": 0.0
+      }
+    },
+    {
+      "n": 32,
+      "vector_solves": 4,
+      "worst_true_residual_over_tolerance": 0.3446872117611978,
+      "diagnostics": {
+        "resolution": [
+          33,
+          32,
+          32
+        ],
+        "all_finite": true,
+        "psi_min": 1.0,
+        "psi_max": 1.0001668199064648,
+        "H_physical_max_abs_interior": 2.921887176654536e-10,
+        "H_physical_bulk_rms": 6.651103807342115e-11,
+        "expanded_momentum_solver_max_abs": 1.5331303934718044e-12,
+        "independent_M_cartesian_bulk_rms": [
+          3.4295500257971355e-05,
+          3.429550025797132e-05,
+          4.7709366110833144e-05
+        ],
+        "independent_M_cartesian_max_abs_interior": [
+          0.0009179287003130924,
+          0.0009179287003130802,
+          0.0009378341895801626
+        ],
+        "independent_M_vector_bulk_rms": 6.80334203945865e-05,
+        "A_trace_max_abs": 1.0842021724855044e-19,
+        "boundary_psi_error": 0.0,
+        "boundary_W_error": 0.0
+      }
+    },
+    {
+      "n": 64,
+      "vector_solves": 4,
+      "worst_true_residual_over_tolerance": 0.20903529608904148,
+      "diagnostics": {
+        "resolution": [
+          65,
+          64,
+          64
+        ],
+        "all_finite": true,
+        "psi_min": 1.0,
+        "psi_max": 1.0001670221574135,
+        "H_physical_max_abs_interior": 1.4384584634541397e-09,
+        "H_physical_bulk_rms": 2.813401640935325e-10,
+        "expanded_momentum_solver_max_abs": 1.1726834781011775e-12,
+        "independent_M_cartesian_bulk_rms": [
+          8.693212202743375e-06,
+          8.693212202743297e-06,
+          1.2102311064166135e-05
+        ],
+        "independent_M_cartesian_max_abs_interior": [
+          0.0007050781466189319,
+          0.0007050781466188417,
+          0.0007157965249857626
+        ],
+        "independent_M_vector_bulk_rms": 1.725137124688033e-05,
+        "A_trace_max_abs": 1.0842021724855044e-19,
+        "boundary_psi_error": 0.0,
+        "boundary_W_error": 0.0
+      }
+    }
+  ],
+  "radial-filter-20261103": [
+    {
+      "n": 8,
+      "vector_solves": 4,
+      "worst_true_residual_over_tolerance": 0.740730489019773,
+      "diagnostics": {
+        "resolution": [
+          9,
+          8,
+          8
+        ],
+        "all_finite": true,
+        "psi_min": 1.0,
+        "psi_max": 1.0001623967988187,
+        "H_physical_max_abs_interior": 5.23474291691528e-10,
+        "H_physical_bulk_rms": 3.242451859143871e-10,
+        "expanded_momentum_solver_max_abs": 1.3907989343531213e-12,
+        "independent_M_cartesian_bulk_rms": [
+          0.0003406262976656068,
+          0.00034062629766560464,
+          0.0004039798498921092
+        ],
+        "independent_M_cartesian_max_abs_interior": [
+          0.0020636350715035664,
+          0.0020636350715035586,
+          0.0020623101015490013
+        ],
+        "independent_M_vector_bulk_rms": 0.0006286909164618229,
+        "A_trace_max_abs": 1.0842021724855044e-19,
+        "boundary_psi_error": 0.0,
+        "boundary_W_error": 0.0
+      }
+    },
+    {
+      "n": 16,
+      "vector_solves": 4,
+      "worst_true_residual_over_tolerance": 0.37776949694563705,
+      "diagnostics": {
+        "resolution": [
+          17,
+          16,
+          16
+        ],
+        "all_finite": true,
+        "psi_min": 1.0,
+        "psi_max": 1.0001655131425091,
+        "H_physical_max_abs_interior": 6.54709619851701e-11,
+        "H_physical_bulk_rms": 1.6751572615092327e-11,
+        "expanded_momentum_solver_max_abs": 1.0135173950098775e-12,
+        "independent_M_cartesian_bulk_rms": [
+          2.2133151667551514e-05,
+          2.2133151667551873e-05,
+          2.7697294566516916e-05
+        ],
+        "independent_M_cartesian_max_abs_interior": [
+          0.003209953050392067,
+          0.003209953050392223,
+          0.0032312643281864426
+        ],
+        "independent_M_vector_bulk_rms": 4.179584826010952e-05,
+        "A_trace_max_abs": 1.0842021724855044e-19,
+        "boundary_psi_error": 0.0,
+        "boundary_W_error": 0.0
+      }
+    },
+    {
+      "n": 32,
+      "vector_solves": 4,
+      "worst_true_residual_over_tolerance": 0.2909845033399153,
+      "diagnostics": {
+        "resolution": [
+          33,
+          32,
+          32
+        ],
+        "all_finite": true,
+        "psi_min": 1.0,
+        "psi_max": 1.0001668199058378,
+        "H_physical_max_abs_interior": 3.2708102892797797e-10,
+        "H_physical_bulk_rms": 7.567843595830819e-11,
+        "expanded_momentum_solver_max_abs": 1.24048124203191e-12,
+        "independent_M_cartesian_bulk_rms": [
+          5.544552605667564e-06,
+          5.544552605667242e-06,
+          7.718845181146274e-06
+        ],
+        "independent_M_cartesian_max_abs_interior": [
+          0.002781062985100195,
+          0.0027810629850998584,
+          0.002836054747299265
+        ],
+        "independent_M_vector_bulk_rms": 1.1002940430836268e-05,
+        "A_trace_max_abs": 1.0842021724855044e-19,
+        "boundary_psi_error": 0.0,
+        "boundary_W_error": 0.0
+      }
+    },
+    {
+      "n": 64,
+      "vector_solves": 4,
+      "worst_true_residual_over_tolerance": 0.6472455950199584,
+      "diagnostics": {
+        "resolution": [
+          65,
+          64,
+          64
+        ],
+        "all_finite": true,
+        "psi_min": 1.0,
+        "psi_max": 1.0001670221573138,
+        "H_physical_max_abs_interior": 1.5263905694951063e-09,
+        "H_physical_bulk_rms": 2.8589702100191463e-10,
+        "expanded_momentum_solver_max_abs": 3.946103860341665e-12,
+        "independent_M_cartesian_bulk_rms": [
+          1.376610246368115e-06,
+          1.3766102463677294e-06,
+          1.9146012280385185e-06
+        ],
+        "independent_M_cartesian_max_abs_interior": [
+          0.001740587764548704,
+          0.0017405877645486553,
+          0.0017812176346834949
+        ],
+        "independent_M_vector_bulk_rms": 2.7305328057390018e-06,
+        "A_trace_max_abs": 1.0842021724855044e-19,
+        "boundary_psi_error": 0.0,
+        "boundary_W_error": 0.0
+      }
+    }
+  ]
+}
