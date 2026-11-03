@@ -1,0 +1,39 @@
+{
+  "source": "research/results/radial-retry-20261103-fourth-vector",
+  "identity": "M_frozen = psi^-10 (H W-b) + psi^-10 (T W-H W)",
+  "scope": "Original-source saved fields, row-local identity only; previous all-twelve audit remains frozen.",
+  "rows": [
+    {
+      "n": 8,
+      "first_row_radius": 0.07500000000000001,
+      "algebraic_first_row_rms": 3.3548114623905457e-13,
+      "mismatch_first_row_rms": 0.0012525584276790681,
+      "frozen_first_row_rms": 0.0012525584274859466,
+      "identity_max_abs": 2.168404344971009e-18
+    },
+    {
+      "n": 16,
+      "first_row_radius": 0.0625,
+      "algebraic_first_row_rms": 5.685430976171488e-13,
+      "mismatch_first_row_rms": 0.00042139220704394875,
+      "frozen_first_row_rms": 0.00042139220721573576,
+      "identity_max_abs": 3.144186300207963e-18
+    },
+    {
+      "n": 32,
+      "first_row_radius": 0.05625,
+      "algebraic_first_row_rms": 2.0087375858808383e-14,
+      "mismatch_first_row_rms": 0.0006119317346699246,
+      "frozen_first_row_rms": 0.0006119317346847905,
+      "identity_max_abs": 5.149960319306146e-18
+    },
+    {
+      "n": 64,
+      "first_row_radius": 0.053125000000000006,
+      "algebraic_first_row_rms": 1.0325133536160514e-13,
+      "mismatch_first_row_rms": 0.0006833769963428843,
+      "frozen_first_row_rms": 0.000683376996331397,
+      "identity_max_abs": 4.30970363562988e-18
+    }
+  ]
+}

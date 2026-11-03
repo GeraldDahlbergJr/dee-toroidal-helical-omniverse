@@ -1,0 +1,54 @@
+{
+  "scope": "Radial principal-part stability only; not a full toroidal stability theorem.",
+  "uniform_lower_bound": 32.0,
+  "rows": [
+    {
+      "n": 8,
+      "radial_energy_lower_bound": 76.393202250021,
+      "observed_energy_lower_bound": 212.50010875252303,
+      "original_singular_min": 222.03827274772928,
+      "fourth_energy_lower_bound": 178.22075643051954,
+      "fourth_largest_eigenvalue_real": -246.76242314355068
+    },
+    {
+      "n": 16,
+      "radial_energy_lower_bound": 96.49180674254656,
+      "observed_energy_lower_bound": 230.4200903090826,
+      "original_singular_min": 236.9591260572123,
+      "fourth_energy_lower_bound": 208.75471146176102,
+      "fourth_largest_eigenvalue_real": -246.7368119974903
+    },
+    {
+      "n": 32,
+      "radial_energy_lower_bound": 108.97216202302857,
+      "observed_energy_lower_bound": 238.95917217071724,
+      "original_singular_min": 242.65153474989378,
+      "fourth_energy_lower_bound": 226.33376650295858,
+      "fourth_largest_eigenvalue_real": -246.73986170478182
+    },
+    {
+      "n": 64,
+      "radial_energy_lower_bound": 115.91878212903408,
+      "observed_energy_lower_bound": 242.97387344320924,
+      "original_singular_min": 244.91423077544107,
+      "fourth_energy_lower_bound": 236.17313166347847,
+      "fourth_largest_eigenvalue_real": -246.7400941614113
+    },
+    {
+      "n": 128,
+      "radial_energy_lower_bound": 119.57997236975733,
+      "observed_energy_lower_bound": 244.89217701317676,
+      "original_singular_min": 245.88378801255925,
+      "fourth_energy_lower_bound": 241.36530926740798,
+      "fourth_largest_eigenvalue_real": -246.74010903275612
+    },
+    {
+      "n": 256,
+      "radial_energy_lower_bound": 121.45875143090552,
+      "observed_energy_lower_bound": 245.82548199239045,
+      "original_singular_min": 246.3263389120837,
+      "fourth_energy_lower_bound": 244.02991446040494,
+      "fourth_largest_eigenvalue_real": -246.74010996618665
+    }
+  ]
+}

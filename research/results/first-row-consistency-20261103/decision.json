@@ -1,0 +1,8 @@
+{
+  "new_production_candidate": false,
+  "original_sources_modified": false,
+  "frozen_audit_modified": false,
+  "promoted": false,
+  "reason": "Exact continuum manufactured solutions fail the finite-grid inner-M2 ratio test. First-row original-source solver residual is negligible and the operator-mismatch identity closes to roundoff. No evidence supports an additional accuracy correction that will satisfy the frozen finite-grid ratios.",
+  "limitation": "This is an evidentiary/scientific blocker, not a theorem that no consistent discretization can ever satisfy all twelve checks."
+}
