@@ -1,0 +1,8 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "source_commit": "6aefba3e96ae911cd0895e32abe7b172c4af3914",
+  "frozen_audit": "5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22"
+}

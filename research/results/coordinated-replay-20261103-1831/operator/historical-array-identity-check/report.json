@@ -1,0 +1,47 @@
+{
+  "scope": "Fresh original-source fourth-vector fields, independently reconstructed array fourth-Hessian operator; not new solutions or replacement acceptance.",
+  "source": "/workspace/run43-investigation/solver/source-current/research/results/radial-retry-20261103-fourth-vector",
+  "rows": [
+    {
+      "n": 8,
+      "field_sha256": "865909b29cd96b28e47c5b8a0dbedf00fa6755eba1bda8500841aca2cdd87400",
+      "identity_max_abs": 2.168404344971009e-18,
+      "first_row_algebraic_physical_rms": 3.354814658802665e-13,
+      "first_row_operator_mismatch_rms": 0.0012525584276790683,
+      "first_row_frozen_M2_rms": 0.0012525584274859466,
+      "independent_fourth_unweighted_algebraic_l2": 3.928249116971082e-12,
+      "first_row_radius": 0.07500000000000001
+    },
+    {
+      "n": 16,
+      "field_sha256": "495e0e50ea75f199ff1b04c092487b3bcce1133bd5fb7ec87296f3b6ea8b4f39",
+      "identity_max_abs": 3.144186300207963e-18,
+      "first_row_algebraic_physical_rms": 5.685446160795108e-13,
+      "first_row_operator_mismatch_rms": 0.0004213922070439474,
+      "first_row_frozen_M2_rms": 0.00042139220721573576,
+      "independent_fourth_unweighted_algebraic_l2": 1.850082837092766e-11,
+      "first_row_radius": 0.0625
+    },
+    {
+      "n": 32,
+      "field_sha256": "35838803e15b062c6e29371703d4b7cc2081a427b0cb5ce6ed26ae72dd23a0b7",
+      "identity_max_abs": 5.149960319306146e-18,
+      "first_row_algebraic_physical_rms": 2.0073635497466606e-14,
+      "first_row_operator_mismatch_rms": 0.000611931734669942,
+      "first_row_frozen_M2_rms": 0.0006119317346847905,
+      "independent_fourth_unweighted_algebraic_l2": 2.976813212260977e-11,
+      "first_row_radius": 0.05625
+    },
+    {
+      "n": 64,
+      "field_sha256": "b23d67d08c04985f3d667565fe5dfbb79192ad22a6ffe5a83ee6d7189db445a8",
+      "identity_max_abs": 4.30970363562988e-18,
+      "first_row_algebraic_physical_rms": 1.0324872044207591e-13,
+      "first_row_operator_mismatch_rms": 0.0006833769963428674,
+      "first_row_frozen_M2_rms": 0.000683376996331397,
+      "independent_fourth_unweighted_algebraic_l2": 1.2500912434610018e-11,
+      "first_row_radius": 0.053125000000000006
+    }
+  ],
+  "identity": "M_frozen=psi^-10(HW-b)+psi^-10(TW-HW)"
+}

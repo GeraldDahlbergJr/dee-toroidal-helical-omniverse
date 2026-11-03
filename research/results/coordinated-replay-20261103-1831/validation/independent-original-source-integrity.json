@@ -1,0 +1,32 @@
+[
+  {
+    "path": "docs/RECOVERED_NONLINEAR_DEE_FORMULATION.md",
+    "sha256": "a1be21c475e9ecd128760ebc6373cf8b39599c0edc6c266b351c3ae1acc96cb1",
+    "git_blob": "84b8f6eb897fd5cb750e0ce74c5f161da7b5e2b9",
+    "identical_to_nov02_branch": true
+  },
+  {
+    "path": "reproduce/dee_stress_energy_3p1.py",
+    "sha256": "7a858cbe022e7a3004209c400bd19df0b917e6cc08c6bdd0c65d4f0884203865",
+    "git_blob": "176be59b96119dc92f6fb0c5cd47273c68bbba8d",
+    "identical_to_nov02_branch": true
+  },
+  {
+    "path": "reproduce/validate_toroidal_helical_dee_source.py",
+    "sha256": "e7bc16a4638b58ad1e77bfdfae5e8ad5044a9aa8c95cd77f07a0514e4e7c39d4",
+    "git_blob": "6e490f9fe63586eef7661dd3253649ad825057bd",
+    "identical_to_nov02_branch": true
+  },
+  {
+    "path": "reproduce/toroidal_helical_dee_source_run38_frozen_checkpoint.json",
+    "sha256": "fbe488c14facba10996f0051fcfc5e06e62c9bd314b0fc1279430b4a515db37c",
+    "git_blob": "15bf1e797c6ab8863debcd1ad620cf7578886ae4",
+    "identical_to_nov02_branch": true
+  },
+  {
+    "path": "reproduce/diagnose_toroidal_boundary_convergence.py",
+    "sha256": "36516a8d6c20699b76d814b4b5cba15378ac78948e99cf53970e33388f3b6e68",
+    "git_blob": "5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22",
+    "identical_to_nov02_branch": true
+  }
+]

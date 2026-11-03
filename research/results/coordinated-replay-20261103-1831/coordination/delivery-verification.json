@@ -1,0 +1,22 @@
+{
+  "preexisting_files_verified": 629,
+  "changed": [],
+  "missing": [],
+  "fresh_solves": 12,
+  "checkpoints": 24,
+  "gate": {
+    "baseline": 12,
+    "fourth": 9,
+    "local": 8
+  },
+  "audit_exit_codes": {
+    "baseline": 0,
+    "fourth": 1,
+    "local": 1
+  },
+  "regression_tests_passed": 45,
+  "decision": "Baseline preserved; both candidates rejected; no new justified 12/12 correction established.",
+  "original_execution_root": "/workspace/run43-investigation/solver/source-current",
+  "delivery_evidence_root": "/workspace/run43-delivery/research/results/coordinated-replay-20261103-1831",
+  "no_merge_or_promotion_or_journal_submission": true
+}

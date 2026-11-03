@@ -1,0 +1,6 @@
+{"variant": "baseline", "command": ["/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python", "/workspace/run43-investigation/validation/verify_fresh.py", "/workspace/run43-investigation/solver/source-current", "/workspace/run43-investigation/solver/source-current/research/results/live-20261103-baseline", "/workspace/run43-investigation/validation/baseline-independent-validation.json"]}
+{"variant": "baseline", "status": "completed"}
+{"variant": "fourth", "command": ["/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python", "/workspace/run43-investigation/validation/verify_fresh.py", "/workspace/run43-investigation/solver/source-current", "/workspace/run43-investigation/solver/source-current/research/results/live-20261103-fourth", "/workspace/run43-investigation/validation/fourth-independent-validation.json"]}
+{"variant": "fourth", "status": "completed"}
+{"variant": "local", "command": ["/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python", "/workspace/run43-investigation/validation/verify_fresh.py", "/workspace/run43-investigation/solver/source-current", "/workspace/run43-investigation/solver/source-current/research/results/live-20261103-local", "/workspace/run43-investigation/validation/local-independent-validation.json"]}
+{"variant": "local", "status": "completed"}

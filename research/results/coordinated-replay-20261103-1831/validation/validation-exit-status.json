@@ -1,0 +1,14 @@
+[
+  {
+    "variant": "baseline",
+    "exit_code": 0
+  },
+  {
+    "variant": "fourth",
+    "exit_code": 0
+  },
+  {
+    "variant": "local",
+    "exit_code": 0
+  }
+]

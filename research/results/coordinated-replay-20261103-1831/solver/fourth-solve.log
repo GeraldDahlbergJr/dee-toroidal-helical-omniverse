@@ -1,0 +1,190 @@
+{"timing": "base_derivatives_enter", "elapsed_s": 0.0007701490000044942}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.002272852000032799}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0022880850000319697}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.0034014309999861325}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.003415162000010241}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.004257580000000871}
+{"timing": "base_gradients_enter", "elapsed_s": 0.0042712410000262935}
+{"timing": "base_gradients_exit", "elapsed_s": 0.005401001999985056}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.0054141720000302485}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.0056318800000099145}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.005642596000029698}
+{"gmres_info": 0, "iterations": 13, "true_residual": 3.927033016243301e-12}
+{"gmres_info": 0, "iterations": 13, "true_residual": 3.928243165596211e-12}
+{"gmres_info": 0, "iterations": 13, "true_residual": 3.928243165596211e-12}
+{"gmres_info": 0, "iterations": 13, "true_residual": 3.928243165596211e-12}
+{"completed": 8, "seconds": 0.06517481803894043}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.0008645720000117763}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.002424099999984719}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0024374899999770605}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.004096056999969733}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.004111050000005889}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.0056887650000021495}
+{"timing": "base_gradients_enter", "elapsed_s": 0.005704828999967049}
+{"timing": "base_gradients_exit", "elapsed_s": 0.007681264999973791}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.0076954470000032416}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.008169640999994954}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.00818037699997376}
+{"gmres_info": 0, "iterations": 12, "true_residual": 1.8490626605416594e-11}
+{"gmres_info": 0, "iterations": 12, "true_residual": 1.8500998908028976e-11}
+{"gmres_info": 0, "iterations": 12, "true_residual": 1.8500998908028976e-11}
+{"gmres_info": 0, "iterations": 12, "true_residual": 1.8500857541962683e-11}
+{"completed": 16, "seconds": 0.26383256912231445}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.007109355000011419}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.010351617000026181}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.01037051500003372}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.014570729000013216}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.014591779999989285}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.024802995000015926}
+{"timing": "base_gradients_enter", "elapsed_s": 0.024825719000034496}
+{"timing": "base_gradients_exit", "elapsed_s": 0.03632204900003444}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.03634427299999743}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.04202408399999058}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.042043453000019326}
+{"gmres_info": 0, "iterations": 11, "true_residual": 2.9764710836913337e-11}
+{"gmres_info": 0, "iterations": 11, "true_residual": 2.976834905104832e-11}
+{"gmres_info": 0, "iterations": 11, "true_residual": 2.976834905104832e-11}
+{"gmres_info": 0, "iterations": 11, "true_residual": 2.97681559255736e-11}
+{"completed": 32, "seconds": 2.198702812194824}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.04602202299997771}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.07498057499998367}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.07503034000001207}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.10823452400001088}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.10840473000001793}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.17211689900000238}
+{"timing": "base_gradients_enter", "elapsed_s": 0.17217397500002107}
+{"timing": "base_gradients_exit", "elapsed_s": 0.24549139599997716}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.2455435950000151}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.26759280400000307}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.26764954899999793}
+{"gmres_info": 0, "iterations": 11, "true_residual": 1.250896531601511e-11}
+{"gmres_info": 0, "iterations": 11, "true_residual": 1.2504205964312105e-11}
+{"gmres_info": 0, "iterations": 11, "true_residual": 1.2504205964312105e-11}
+{"gmres_info": 0, "iterations": 11, "true_residual": 1.2501055897449003e-11}
+{"completed": 64, "seconds": 20.395385026931763}
+{
+  "status": "FAIL",
+  "checks": [
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.7408491019719712,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9298260710948216,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9961748629463336,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 0.33058031543325067,
+      "passed": false
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 0.8555669948778551,
+      "passed": false
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.1126520705783982,
+      "passed": false
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.7456674343126124,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9639899711384596,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 2.0183772251059415,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.8529470169068585,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9704572025024305,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.992557652397895,
+      "passed": true
+    }
+  ],
+  "passed": 9
+}

@@ -1,0 +1,7 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "source_commit": "12b2b2a27e09a38a304afb9dff521c814a219901",
+  "frozen_audit_git_blob": "5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22"
+}

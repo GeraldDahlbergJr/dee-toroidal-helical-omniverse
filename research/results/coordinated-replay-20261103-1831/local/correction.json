@@ -1,0 +1,11 @@
+{
+  "correction": "P_edge (I+er er^T/3)(Drr-Dr Dr)W",
+  "planes": "first and last interior radial planes",
+  "coefficient": "continuum principal symbol; fixed before execution",
+  "source": "original unchanged",
+  "audit": "frozen unchanged",
+  "extra_boundary_data": false,
+  "vector_boundary_consistency_order": 2,
+  "angular_stabilization": 0.25,
+  "scalar": "unchanged stabilized flux"
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "n": 8,
+    "old_sha256": "d86045bbbb956aa0ea7d89ae00824bb8d7eed9c5dfe53a0ded10d9cfb0a95114",
+    "new_sha256": "d86045bbbb956aa0ea7d89ae00824bb8d7eed9c5dfe53a0ded10d9cfb0a95114",
+    "arrays_exact": {
+      "psi": true,
+      "W_cartesian": true
+    },
+    "max_abs": {
+      "psi": 0.0,
+      "W_cartesian": 0.0
+    }
+  },
+  {
+    "n": 16,
+    "old_sha256": "bf97ccd47caae014951e85571a7238276477c95c5cd5f9b64606c89e5dae2162",
+    "new_sha256": "bf97ccd47caae014951e85571a7238276477c95c5cd5f9b64606c89e5dae2162",
+    "arrays_exact": {
+      "psi": true,
+      "W_cartesian": true
+    },
+    "max_abs": {
+      "psi": 0.0,
+      "W_cartesian": 0.0
+    }
+  },
+  {
+    "n": 32,
+    "old_sha256": "d9f0af5dcdbcd38d482efeee6ba2ab419f7bdf8068e6adc37fd67ea38bd5d313",
+    "new_sha256": "d9f0af5dcdbcd38d482efeee6ba2ab419f7bdf8068e6adc37fd67ea38bd5d313",
+    "arrays_exact": {
+      "psi": true,
+      "W_cartesian": true
+    },
+    "max_abs": {
+      "psi": 0.0,
+      "W_cartesian": 0.0
+    }
+  },
+  {
+    "n": 64,
+    "old_sha256": "18b9b4c0d530af09585e56de8dabf905311878545f698f6c8544877bdacf54be",
+    "new_sha256": "18b9b4c0d530af09585e56de8dabf905311878545f698f6c8544877bdacf54be",
+    "arrays_exact": {
+      "psi": true,
+      "W_cartesian": true
+    },
+    "max_abs": {
+      "psi": 0.0,
+      "W_cartesian": 0.0
+    }
+  }
+]

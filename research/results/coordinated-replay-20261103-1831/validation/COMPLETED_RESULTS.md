@@ -1,0 +1,1 @@
+Fresh independent validation completed all four original-source grids for each variant: baseline 12/12 PASS; fourth 9/12 FAIL; local 8/12 FAIL. All 12 field files match preserved originals byte for byte. All source projections agree to roundoff. Process exit 0 means diagnostic execution, while JSON status records scientific rejection. No full Einstein–DEE evolution claim follows.

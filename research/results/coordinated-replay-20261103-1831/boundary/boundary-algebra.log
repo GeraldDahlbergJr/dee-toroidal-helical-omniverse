@@ -1,0 +1,40 @@
+{
+  "scope": "Exact rational stencil identity only; no physical acceptance result",
+  "first_interior_DrDr_h2": [
+    "3/4",
+    "-5/4",
+    "1/4",
+    "1/4"
+  ],
+  "first_interior_defect_h2": [
+    "-1/4",
+    "3/4",
+    "-3/4",
+    "1/4"
+  ],
+  "defect_moments_about_rows": {
+    "1": [
+      "0",
+      "0",
+      "0",
+      "3/2",
+      "3"
+    ],
+    "7": [
+      "0",
+      "0",
+      "0",
+      "-3/2",
+      "3"
+    ]
+  },
+  "inner_odd_leading_coefficient": "+h f'''/4",
+  "outer_odd_leading_coefficient": "-h f'''/4",
+  "Dirichlet_counterexample_third_derivative_at_inner": "12000",
+  "radial_vector_principal_eigenvalues": [
+    "1",
+    "1",
+    "4/3"
+  ],
+  "script_sha256": "eee22091c87fddb4c3397424052aeb61c494ecb1a304cdd2206856b0147fdbe8"
+}

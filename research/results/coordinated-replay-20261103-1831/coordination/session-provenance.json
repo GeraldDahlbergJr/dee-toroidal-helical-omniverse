@@ -1,0 +1,42 @@
+{
+  "started_utc": "2026-11-03T18:34:00.152131+00:00",
+  "repository": "GeraldDahlbergJr/dee-toroidal-helical-omniverse",
+  "checkout_head": "21dcf6469d2de6b1b98792685bd85423b413adf6",
+  "agents": {
+    "operator_consistency": "operator",
+    "boundary_mathematics": "boundary",
+    "solver_implementation": "solver",
+    "physical_validation": "validation"
+  },
+  "immutable_audit_git_blob": "5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22",
+  "gate": {
+    "resolutions": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "bands": {
+      "inner": [
+        0.05,
+        0.1
+      ],
+      "outer": [
+        0.2,
+        0.25
+      ]
+    },
+    "metrics": [
+      "H",
+      "M2"
+    ],
+    "minimum_order": 1.5,
+    "required_checks": 12
+  },
+  "preservation": {
+    "preserved-repository.bundle": "f55eba58d9b4e343b21db5f2d8a761d63d8afd9e4073417ada8e15a13cc96d1a",
+    "frozen_audit.py": "36516a8d6c20699b76d814b4b5cba15378ac78948e99cf53970e33388f3b6e68",
+    "original-refs.txt": "5c7d2558519fec644e2e0d07a944f0f356dabb48abe6cc0c76e94f98d8c7c785"
+  },
+  "policy": "No promotion, threshold/band/row/source modification, manufactured production result, or journal submission."
+}

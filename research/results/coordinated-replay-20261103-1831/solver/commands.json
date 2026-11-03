@@ -1,0 +1,38 @@
+{
+  "cwd": "/workspace/run43-investigation/solver/source-current",
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "DEE_SCALAR_ORDER": "flux",
+    "DEE_PRECONDITIONER": "fourier"
+  },
+  "solves": [
+    {
+      "experiment": "live-20261103-baseline",
+      "argv": [
+        "python",
+        "-u",
+        "research/run43_consistent_momentum.py"
+      ],
+      "log": "live-evidence/baseline-solve.log"
+    },
+    {
+      "experiment": "live-20261103-fourth",
+      "argv": [
+        "python",
+        "-u",
+        "research/run43_fourth_vector.py"
+      ],
+      "log": "live-evidence/fourth-solve.log"
+    },
+    {
+      "experiment": "live-20261103-local",
+      "argv": [
+        "python",
+        "-u",
+        "research/run43_local_boundary.py"
+      ],
+      "log": "live-evidence/local-solve.log"
+    }
+  ]
+}

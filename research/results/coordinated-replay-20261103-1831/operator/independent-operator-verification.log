@@ -1,0 +1,37 @@
+{
+  "scope": "Manufactured analytic consistency only; not original-source physical solves or acceptance.",
+  "frozen_audit_git_blob": "5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22",
+  "rows": [
+    {
+      "n": 8,
+      "first_row_coefficient_identity_error": 2.2737367544323206e-13,
+      "tensor_commutator_identity_error": 2.7051115583620805e-14,
+      "exact_continuum_field_inner_frozen_M2_truncation_rms": 5.271231524234162
+    },
+    {
+      "n": 16,
+      "first_row_coefficient_identity_error": 9.094947017729282e-13,
+      "tensor_commutator_identity_error": 8.175118943018512e-14,
+      "exact_continuum_field_inner_frozen_M2_truncation_rms": 4.252149017190918
+    },
+    {
+      "n": 32,
+      "first_row_coefficient_identity_error": 3.637978807091713e-12,
+      "tensor_commutator_identity_error": 2.1938006966593093e-13,
+      "exact_continuum_field_inner_frozen_M2_truncation_rms": 2.449881290181444
+    },
+    {
+      "n": 64,
+      "first_row_coefficient_identity_error": 1.4551915228366852e-11,
+      "tensor_commutator_identity_error": 6.501466032204917e-13,
+      "exact_continuum_field_inner_frozen_M2_truncation_rms": 1.1391126212299463
+    }
+  ],
+  "inner_orders": [
+    0.30994790262400523,
+    0.7954803125659679,
+    1.104801454884232
+  ],
+  "threshold_unchanged": 1.5,
+  "passed": 0
+}

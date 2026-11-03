@@ -1,0 +1,98 @@
+[
+  {
+    "variant": "baseline",
+    "n": 8,
+    "fresh_sha256": "d86045bbbb956aa0ea7d89ae00824bb8d7eed9c5dfe53a0ded10d9cfb0a95114",
+    "preserved_sha256": "d86045bbbb956aa0ea7d89ae00824bb8d7eed9c5dfe53a0ded10d9cfb0a95114",
+    "bitwise_identical": true,
+    "preserved_path": "/workspace/run43-investigation/solver/source-current/research/results/stabilized-flux-full/fields_8.npz"
+  },
+  {
+    "variant": "baseline",
+    "n": 16,
+    "fresh_sha256": "bf97ccd47caae014951e85571a7238276477c95c5cd5f9b64606c89e5dae2162",
+    "preserved_sha256": "bf97ccd47caae014951e85571a7238276477c95c5cd5f9b64606c89e5dae2162",
+    "bitwise_identical": true,
+    "preserved_path": "/workspace/run43-investigation/solver/source-current/research/results/stabilized-flux-full/fields_16.npz"
+  },
+  {
+    "variant": "baseline",
+    "n": 32,
+    "fresh_sha256": "d9f0af5dcdbcd38d482efeee6ba2ab419f7bdf8068e6adc37fd67ea38bd5d313",
+    "preserved_sha256": "d9f0af5dcdbcd38d482efeee6ba2ab419f7bdf8068e6adc37fd67ea38bd5d313",
+    "bitwise_identical": true,
+    "preserved_path": "/workspace/run43-investigation/solver/source-current/research/results/stabilized-flux-full/fields_32.npz"
+  },
+  {
+    "variant": "baseline",
+    "n": 64,
+    "fresh_sha256": "18b9b4c0d530af09585e56de8dabf905311878545f698f6c8544877bdacf54be",
+    "preserved_sha256": "18b9b4c0d530af09585e56de8dabf905311878545f698f6c8544877bdacf54be",
+    "bitwise_identical": true,
+    "preserved_path": "/workspace/run43-investigation/solver/source-current/research/results/stabilized-flux-full/fields_64.npz"
+  },
+  {
+    "variant": "fourth",
+    "n": 8,
+    "fresh_sha256": "865909b29cd96b28e47c5b8a0dbedf00fa6755eba1bda8500841aca2cdd87400",
+    "preserved_sha256": "865909b29cd96b28e47c5b8a0dbedf00fa6755eba1bda8500841aca2cdd87400",
+    "bitwise_identical": true,
+    "preserved_path": "/workspace/run43-investigation/solver/source-current/research/results/radial-retry-20261103-fourth-vector-repeat/fields_8.npz"
+  },
+  {
+    "variant": "fourth",
+    "n": 16,
+    "fresh_sha256": "495e0e50ea75f199ff1b04c092487b3bcce1133bd5fb7ec87296f3b6ea8b4f39",
+    "preserved_sha256": "495e0e50ea75f199ff1b04c092487b3bcce1133bd5fb7ec87296f3b6ea8b4f39",
+    "bitwise_identical": true,
+    "preserved_path": "/workspace/run43-investigation/solver/source-current/research/results/radial-retry-20261103-fourth-vector-repeat/fields_16.npz"
+  },
+  {
+    "variant": "fourth",
+    "n": 32,
+    "fresh_sha256": "35838803e15b062c6e29371703d4b7cc2081a427b0cb5ce6ed26ae72dd23a0b7",
+    "preserved_sha256": "35838803e15b062c6e29371703d4b7cc2081a427b0cb5ce6ed26ae72dd23a0b7",
+    "bitwise_identical": true,
+    "preserved_path": "/workspace/run43-investigation/solver/source-current/research/results/radial-retry-20261103-fourth-vector-repeat/fields_32.npz"
+  },
+  {
+    "variant": "fourth",
+    "n": 64,
+    "fresh_sha256": "b23d67d08c04985f3d667565fe5dfbb79192ad22a6ffe5a83ee6d7189db445a8",
+    "preserved_sha256": "b23d67d08c04985f3d667565fe5dfbb79192ad22a6ffe5a83ee6d7189db445a8",
+    "bitwise_identical": true,
+    "preserved_path": "/workspace/run43-investigation/solver/source-current/research/results/radial-retry-20261103-fourth-vector-repeat/fields_64.npz"
+  },
+  {
+    "variant": "local",
+    "n": 8,
+    "fresh_sha256": "684f5f8413e3692bb7dd28f631bab09eb38c1f1ed8c0ea5d69467e96fec991a3",
+    "preserved_sha256": "684f5f8413e3692bb7dd28f631bab09eb38c1f1ed8c0ea5d69467e96fec991a3",
+    "bitwise_identical": true,
+    "preserved_path": "/workspace/run43-investigation/solver/source-current/research/results/boundary-local-20261103/fields_8.npz"
+  },
+  {
+    "variant": "local",
+    "n": 16,
+    "fresh_sha256": "ecb62bf55a9d8c713037c8f1bcb1bf7f26bda82d27cd28c0c81b5c12f8ab4578",
+    "preserved_sha256": "ecb62bf55a9d8c713037c8f1bcb1bf7f26bda82d27cd28c0c81b5c12f8ab4578",
+    "bitwise_identical": true,
+    "preserved_path": "/workspace/run43-investigation/solver/source-current/research/results/boundary-local-20261103/fields_16.npz"
+  },
+  {
+    "variant": "local",
+    "n": 32,
+    "fresh_sha256": "9839879c79065197b6f2062f448b7fdb7c0b9b50fe159156f538cad6172f69fa",
+    "preserved_sha256": "9839879c79065197b6f2062f448b7fdb7c0b9b50fe159156f538cad6172f69fa",
+    "bitwise_identical": true,
+    "preserved_path": "/workspace/run43-investigation/solver/source-current/research/results/boundary-local-20261103/fields_32.npz"
+  },
+  {
+    "variant": "local",
+    "n": 64,
+    "fresh_sha256": "fa4971e4b7de670bd2c28b24bac23e258741c4d89ad82b9c90b8f31afc79c357",
+    "preserved_sha256": "fa4971e4b7de670bd2c28b24bac23e258741c4d89ad82b9c90b8f31afc79c357",
+    "bitwise_identical": true,
+    "preserved_path": "/workspace/run43-investigation/solver/source-current/research/results/boundary-local-20261103/fields_64.npz"
+  }
+]

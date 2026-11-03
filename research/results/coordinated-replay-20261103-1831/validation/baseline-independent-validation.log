@@ -1,0 +1,133 @@
+{"completed": 8, "sha256": "d86045bbbb956aa0ea7d89ae00824bb8d7eed9c5dfe53a0ded10d9cfb0a95114", "source_energy_difference": 3.552713678800501e-15, "source_momentum_difference": 5.551115123125783e-17}
+{"completed": 16, "sha256": "bf97ccd47caae014951e85571a7238276477c95c5cd5f9b64606c89e5dae2162", "source_energy_difference": 3.552713678800501e-15, "source_momentum_difference": 1.3877787807814457e-17}
+{"completed": 32, "sha256": "d9f0af5dcdbcd38d482efeee6ba2ab419f7bdf8068e6adc37fd67ea38bd5d313", "source_energy_difference": 3.552713678800501e-15, "source_momentum_difference": 2.7755575615628914e-17}
+{"completed": 64, "sha256": "18b9b4c0d530af09585e56de8dabf905311878545f698f6c8544877bdacf54be", "source_energy_difference": 3.552713678800501e-15, "source_momentum_difference": 1.1102230246251565e-16}
+{
+  "audit_git_blob": "5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22",
+  "passed": 12,
+  "total": 12,
+  "status": "PASS",
+  "checks": [
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.7408475852068372,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9298254627468134,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9961750840360475,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.875425681646199,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9702785937799752,
+      "passed": true
+    },
+    {
+      "band": "inner_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9947318805784477,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.7456639030353636,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9639893152822205,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_flux_H",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 2.018376693224301,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 2.229142986207778,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 2.132462281138297,
+      "passed": true
+    },
+    {
+      "band": "outer_boundary_band",
+      "metric": "independent_tensor_M_order2",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 2.0712567607217762,
+      "passed": true
+    }
+  ],
+  "scope": "Fresh array validation of frozen initial-constraint gate; no full matter evolution, absolute continuum error bound, or physical survival claim."
+}
