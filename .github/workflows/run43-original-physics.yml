@@ -1,0 +1,70 @@
+name: Run43 original physical problem validation
+on:
+  push:
+    branches: [validation/run43-original-physics-20261102]
+    paths:
+      - research/validate_original_physics.py
+      - .github/workflows/run43-original-physics.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      DEE_SCALAR_ORDER: flux
+      DEE_PRECONDITIONER: fourier
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy==2.3.5 scipy==1.17.0
+      - name: Execute fresh physical-problem solves twice
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p validation-logs
+          git rev-parse HEAD > validation-logs/commit.txt
+          git ls-tree -r HEAD > validation-logs/source-tree.txt
+          for trial in runner-a runner-b; do
+            DEE_EXPERIMENT=$trial python research/run43_consistent_momentum.py 2>&1 | tee validation-logs/$trial-solve.log
+          done
+      - name: Preserve frozen gate results including scientific failures
+        if: always()
+        shell: bash
+        run: |
+          set +e
+          set -o pipefail
+          for trial in runner-a runner-b; do
+            python research/audit_run43_arrays.py research/results/$trial 2>&1 | tee validation-logs/$trial-frozen.log
+            echo "Frozen audit exit status: ${PIPESTATUS[0]}" >> validation-logs/$trial-frozen.log
+            python research/validate_original_physics.py research/results/$trial 2>&1 | tee validation-logs/$trial-physics.log
+          done
+      - name: Compare independent repeated physical solutions
+        run: |
+          python - <<'PY'
+          import numpy as np,json
+          from pathlib import Path
+          rows=[]
+          for n in (8,16,32,64):
+            with np.load(f'research/results/runner-a/fields_{n}.npz') as a,np.load(f'research/results/runner-b/fields_{n}.npz') as b:
+              rows.append(dict(n=n,fields={k:dict(exact_equal=bool(np.array_equal(a[k],b[k])),max_abs_difference=float(np.max(abs(a[k]-b[k])))) for k in a.files}))
+          Path('validation-logs/reproducibility.json').write_text(json.dumps(rows,indent=2)+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: run43-original-physical-validation-${{ github.sha }}
+          retention-days: 90
+          path: |
+            validation-logs/
+            research/results/runner-a/
+            research/results/runner-b/
+            research/validate_original_physics.py
+            research/run43_consistent_momentum.py
+            reproduce/diagnose_toroidal_boundary_convergence.py
+            reproduce/validate_toroidal_helical_dee_source.py
+            reproduce/dee_stress_energy_3p1.py
