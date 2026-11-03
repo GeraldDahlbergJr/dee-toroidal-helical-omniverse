@@ -1,0 +1,531 @@
+{
+  "scope": "Fixed-source conformal initial-data constraints only; supplementary diagnostics with no new pass threshold. Full Einstein-DEE evolution and matter equations not solved by this candidate.",
+  "rows": [
+    {
+      "n": 8,
+      "source_consistency": {
+        "energy_max_abs": 0.0,
+        "momentum_max_abs": 0.0,
+        "direct_4D_sample_max_abs": 4.440892098500626e-16
+      },
+      "regions": {
+        "interior": {
+          "H": {
+            "volume_weighted_rms": 0.005084782533908263,
+            "max_abs": 0.013105551164589335
+          },
+          "M": {
+            "volume_weighted_rms": 0.0013249303732573256,
+            "max_vector_norm": 0.0037660672315947157
+          }
+        },
+        "inner": {
+          "H": {
+            "volume_weighted_rms": 0.011974133853779928,
+            "max_abs": 0.013105551164589335
+          },
+          "M": {
+            "volume_weighted_rms": 0.002554433797822953,
+            "max_vector_norm": 0.0037660672315947157
+          }
+        },
+        "bulk": {
+          "H": {
+            "volume_weighted_rms": 0.004719491723714949,
+            "max_abs": 0.013098148458486059
+          },
+          "M": {
+            "volume_weighted_rms": 0.000963366173794559,
+            "max_vector_norm": 0.0011108342244265134
+          }
+        },
+        "outer": {
+          "H": {
+            "volume_weighted_rms": 0.0006642154936493393,
+            "max_abs": 0.0010860569274554893
+          },
+          "M": {
+            "volume_weighted_rms": 0.000888271013416532,
+            "max_vector_norm": 0.0010985524288155489
+          }
+        },
+        "inner_endpoint": {
+          "H": {
+            "volume_weighted_rms": 0.46617556081216366,
+            "max_abs": 0.4734808415813728
+          },
+          "M": {
+            "volume_weighted_rms": 0.009895162301551876,
+            "max_vector_norm": 0.010203385832500201
+          }
+        },
+        "outer_endpoint": {
+          "H": {
+            "volume_weighted_rms": 0.005936134867145525,
+            "max_abs": 0.00612666854550295
+          },
+          "M": {
+            "volume_weighted_rms": 0.006727084333740907,
+            "max_vector_norm": 0.006974035247624318
+          }
+        }
+      },
+      "sha256": "684f5f8413e3692bb7dd28f631bab09eb38c1f1ed8c0ea5d69467e96fec991a3"
+    },
+    {
+      "n": 16,
+      "source_consistency": {
+        "energy_max_abs": 0.0,
+        "momentum_max_abs": 0.0,
+        "direct_4D_sample_max_abs": 1.3322676295501878e-15
+      },
+      "regions": {
+        "interior": {
+          "H": {
+            "volume_weighted_rms": 0.002863027141288279,
+            "max_abs": 0.012749664922035997
+          },
+          "M": {
+            "volume_weighted_rms": 0.0007705784756129588,
+            "max_vector_norm": 0.003951580529872805
+          }
+        },
+        "inner": {
+          "H": {
+            "volume_weighted_rms": 0.007442159067195879,
+            "max_abs": 0.012749664922035997
+          },
+          "M": {
+            "volume_weighted_rms": 0.001934944132733494,
+            "max_vector_norm": 0.003951580529872805
+          }
+        },
+        "bulk": {
+          "H": {
+            "volume_weighted_rms": 0.0008606842553779328,
+            "max_abs": 0.0026829114953792477
+          },
+          "M": {
+            "volume_weighted_rms": 0.00023625456399162806,
+            "max_vector_norm": 0.0002802755941072813
+          }
+        },
+        "outer": {
+          "H": {
+            "volume_weighted_rms": 9.036166675110925e-05,
+            "max_abs": 0.0002741974953685
+          },
+          "M": {
+            "volume_weighted_rms": 0.00026377735539301166,
+            "max_vector_norm": 0.0003267595777540604
+          }
+        },
+        "inner_endpoint": {
+          "H": {
+            "volume_weighted_rms": 0.12409760768183488,
+            "max_abs": 0.1262930500604782
+          },
+          "M": {
+            "volume_weighted_rms": 0.01381680389286262,
+            "max_vector_norm": 0.014269296057486256
+          }
+        },
+        "outer_endpoint": {
+          "H": {
+            "volume_weighted_rms": 9.879106489181325e-06,
+            "max_abs": 2.145606667371125e-05
+          },
+          "M": {
+            "volume_weighted_rms": 0.0033247471118581077,
+            "max_vector_norm": 0.00351820243937245
+          }
+        }
+      },
+      "sha256": "ecb62bf55a9d8c713037c8f1bcb1bf7f26bda82d27cd28c0c81b5c12f8ab4578"
+    },
+    {
+      "n": 32,
+      "source_consistency": {
+        "energy_max_abs": 0.0,
+        "momentum_max_abs": 0.0,
+        "direct_4D_sample_max_abs": 4.440892098500626e-16
+      },
+      "regions": {
+        "interior": {
+          "H": {
+            "volume_weighted_rms": 0.001056355458244905,
+            "max_abs": 0.0065304330446895875
+          },
+          "M": {
+            "volume_weighted_rms": 0.00030767362861982363,
+            "max_vector_norm": 0.002385902720340951
+          }
+        },
+        "inner": {
+          "H": {
+            "volume_weighted_rms": 0.0028616012366243734,
+            "max_abs": 0.0065304330446895875
+          },
+          "M": {
+            "volume_weighted_rms": 0.0008239936379698254,
+            "max_vector_norm": 0.002385902720340951
+          }
+        },
+        "bulk": {
+          "H": {
+            "volume_weighted_rms": 0.00020386781088691064,
+            "max_abs": 0.0006886536734357351
+          },
+          "M": {
+            "volume_weighted_rms": 6.041352251739873e-05,
+            "max_vector_norm": 7.204531223607489e-05
+          }
+        },
+        "outer": {
+          "H": {
+            "volume_weighted_rms": 2.1626723864313348e-05,
+            "max_abs": 7.455348300194897e-05
+          },
+          "M": {
+            "volume_weighted_rms": 6.480524758402944e-05,
+            "max_vector_norm": 8.033926396519267e-05
+          }
+        },
+        "inner_endpoint": {
+          "H": {
+            "volume_weighted_rms": 0.022151065457192223,
+            "max_abs": 0.022488022012690845
+          },
+          "M": {
+            "volume_weighted_rms": 0.012392683328025645,
+            "max_vector_norm": 0.012867876845978635
+          }
+        },
+        "outer_endpoint": {
+          "H": {
+            "volume_weighted_rms": 1.0283936322468789e-05,
+            "max_abs": 1.5459338057965955e-05
+          },
+          "M": {
+            "volume_weighted_rms": 0.0008647712168701849,
+            "max_vector_norm": 0.000919702752507563
+          }
+        }
+      },
+      "sha256": "9839879c79065197b6f2062f448b7fdb7c0b9b50fe159156f538cad6172f69fa"
+    },
+    {
+      "n": 64,
+      "source_consistency": {
+        "energy_max_abs": 0.0,
+        "momentum_max_abs": 0.0,
+        "direct_4D_sample_max_abs": 8.881784197001252e-16
+      },
+      "regions": {
+        "interior": {
+          "H": {
+            "volume_weighted_rms": 0.00030690085971615306,
+            "max_abs": 0.002285021493210637
+          },
+          "M": {
+            "volume_weighted_rms": 8.848204263750693e-05,
+            "max_vector_norm": 0.0009462576340986577
+          }
+        },
+        "inner": {
+          "H": {
+            "volume_weighted_rms": 0.0008476339626370428,
+            "max_abs": 0.002285021493210637
+          },
+          "M": {
+            "volume_weighted_rms": 0.0002424623514258771,
+            "max_vector_norm": 0.0009462576340986577
+          }
+        },
+        "bulk": {
+          "H": {
+            "volume_weighted_rms": 4.929062274672009e-05,
+            "max_abs": 0.00017321355438298935
+          },
+          "M": {
+            "volume_weighted_rms": 1.5270917056151365e-05,
+            "max_vector_norm": 1.8137327825176608e-05
+          }
+        },
+        "outer": {
+          "H": {
+            "volume_weighted_rms": 5.272868452328321e-06,
+            "max_abs": 1.9105766157545556e-05
+          },
+          "M": {
+            "volume_weighted_rms": 1.5587342354228678e-05,
+            "max_vector_norm": 1.8535018627880222e-05
+          }
+        },
+        "inner_endpoint": {
+          "H": {
+            "volume_weighted_rms": 0.003801169220522216,
+            "max_abs": 0.003834685930818482
+          },
+          "M": {
+            "volume_weighted_rms": 0.005475957695735582,
+            "max_vector_norm": 0.00571059653597295
+          }
+        },
+        "outer_endpoint": {
+          "H": {
+            "volume_weighted_rms": 2.7454811816758146e-06,
+            "max_abs": 4.034045012632492e-06
+          },
+          "M": {
+            "volume_weighted_rms": 0.00015775777409460012,
+            "max_vector_norm": 0.00016770058824221287
+          }
+        }
+      },
+      "sha256": "fa4971e4b7de670bd2c28b24bac23e258741c4d89ad82b9c90b8f31afc79c357"
+    }
+  ],
+  "residual_orders": [
+    {
+      "region": "interior",
+      "field": "H",
+      "values": [
+        0.005084782533908263,
+        0.002863027141288279,
+        0.001056355458244905,
+        0.00030690085971615306
+      ],
+      "orders": [
+        0.828644727143024,
+        1.4384459711020505,
+        1.783250783623953
+      ]
+    },
+    {
+      "region": "interior",
+      "field": "M",
+      "values": [
+        0.0013249303732573256,
+        0.0007705784756129588,
+        0.00030767362861982363,
+        8.848204263750693e-05
+      ],
+      "orders": [
+        0.7819027530329304,
+        1.3245410956788222,
+        1.797944196254153
+      ]
+    },
+    {
+      "region": "inner",
+      "field": "H",
+      "values": [
+        0.011974133853779928,
+        0.007442159067195879,
+        0.0028616012366243734,
+        0.0008476339626370428
+      ],
+      "orders": [
+        0.6861281709448537,
+        1.3788985797657185,
+        1.755309347626198
+      ]
+    },
+    {
+      "region": "inner",
+      "field": "M",
+      "values": [
+        0.002554433797822953,
+        0.001934944132733494,
+        0.0008239936379698254,
+        0.0002424623514258771
+      ],
+      "orders": [
+        0.40071163418975436,
+        1.231586808758053,
+        1.764872449612157
+      ]
+    },
+    {
+      "region": "bulk",
+      "field": "H",
+      "values": [
+        0.004719491723714949,
+        0.0008606842553779328,
+        0.00020386781088691064,
+        4.929062274672009e-05
+      ],
+      "orders": [
+        2.455075510911308,
+        2.077850074427018,
+        2.0482488897029514
+      ]
+    },
+    {
+      "region": "bulk",
+      "field": "M",
+      "values": [
+        0.000963366173794559,
+        0.00023625456399162806,
+        6.041352251739873e-05,
+        1.5270917056151365e-05
+      ],
+      "orders": [
+        2.027742068424374,
+        1.9673987867158893,
+        1.9840848057917368
+      ]
+    },
+    {
+      "region": "outer",
+      "field": "H",
+      "values": [
+        0.0006642154936493393,
+        9.036166675110925e-05,
+        2.1626723864313348e-05,
+        5.272868452328321e-06
+      ],
+      "orders": [
+        2.877868588801706,
+        2.062895747536695,
+        2.0361552245488306
+      ]
+    },
+    {
+      "region": "outer",
+      "field": "M",
+      "values": [
+        0.000888271013416532,
+        0.00026377735539301166,
+        6.480524758402944e-05,
+        1.5587342354228678e-05
+      ],
+      "orders": [
+        1.7516791948799038,
+        2.0251381735312175,
+        2.055735670468061
+      ]
+    },
+    {
+      "region": "inner_endpoint",
+      "field": "H",
+      "values": [
+        0.46617556081216366,
+        0.12409760768183488,
+        0.022151065457192223,
+        0.003801169220522216
+      ],
+      "orders": [
+        1.9093980694915529,
+        2.486027305270724,
+        2.5428609358239815
+      ]
+    },
+    {
+      "region": "inner_endpoint",
+      "field": "M",
+      "values": [
+        0.009895162301551876,
+        0.01381680389286262,
+        0.012392683328025645,
+        0.005475957695735582
+      ],
+      "orders": [
+        -0.4816286538540806,
+        0.15693532856777404,
+        1.1783053948342326
+      ]
+    },
+    {
+      "region": "outer_endpoint",
+      "field": "H",
+      "values": [
+        0.005936134867145525,
+        9.879106489181325e-06,
+        1.0283936322468789e-05,
+        2.7454811816758146e-06
+      ],
+      "orders": [
+        9.230927590694767,
+        -0.057940113233194576,
+        1.9052616544501668
+      ]
+    },
+    {
+      "region": "outer_endpoint",
+      "field": "M",
+      "values": [
+        0.006727084333740907,
+        0.0033247471118581077,
+        0.0008647712168701849,
+        0.00015775777409460012
+      ],
+      "orders": [
+        1.0167367345692588,
+        1.9428541998029214,
+        2.4546074040043337
+      ]
+    }
+  ],
+  "nested_solution_differences": [
+    {
+      "pair": [
+        8,
+        16
+      ],
+      "psi": {
+        "volume_weighted_rms": 1.7943778608897284e-06,
+        "max_abs": 3.155928712139655e-06
+      },
+      "W": {
+        "volume_weighted_rms": 1.3055599919955946e-06,
+        "max_vector_norm": 1.8708803595321374e-06
+      },
+      "psi_max_all": 3.155928712139655e-06,
+      "W_max_all": 1.7955281109899152e-06
+    },
+    {
+      "pair": [
+        16,
+        32
+      ],
+      "psi": {
+        "volume_weighted_rms": 4.637527424899683e-07,
+        "max_abs": 8.590626996429762e-07
+      },
+      "W": {
+        "volume_weighted_rms": 3.48923960503604e-07,
+        "max_vector_norm": 4.950090459692621e-07
+      },
+      "psi_max_all": 8.590626996429762e-07,
+      "W_max_all": 4.808880608407922e-07
+    },
+    {
+      "pair": [
+        32,
+        64
+      ],
+      "psi": {
+        "volume_weighted_rms": 1.1615845858214716e-07,
+        "max_abs": 2.2103829033781608e-07
+      },
+      "W": {
+        "volume_weighted_rms": 8.73204035401622e-08,
+        "max_vector_norm": 1.2279614507033243e-07
+      },
+      "psi_max_all": 2.2103829033781608e-07,
+      "W_max_all": 1.2164901657597707e-07
+    }
+  ],
+  "nested_solution_orders": {
+    "psi": [
+      1.9520560070913506,
+      1.9972615993390466
+    ],
+    "W": [
+      1.9036841772021436,
+      1.9985219676804975
+    ]
+  }
+}

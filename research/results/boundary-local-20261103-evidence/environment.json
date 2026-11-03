@@ -1,0 +1,9 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "parent": "12b2b2a27e09a38a304afb9dff521c814a219901",
+  "branch": "research/run43-boundary-continuation-20261103",
+  "threads": 1
+}
