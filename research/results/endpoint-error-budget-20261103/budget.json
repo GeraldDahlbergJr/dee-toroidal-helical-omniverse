@@ -1,0 +1,334 @@
+{
+  "scope": "Saved fourth-order vector candidate only; supplementary decomposition, unchanged frozen gate. Sequential split: endpoint, radial, angular, residual. Mixed effects depend on split order; exact endpoint identity does not.",
+  "rows": [
+    {
+      "n": 8,
+      "sha256": "865909b29cd96b28e47c5b8a0dbedf00fa6755eba1bda8500841aca2cdd87400",
+      "inner_samples": 2,
+      "frozen_rms": 0.000983965303729434,
+      "matched_rms": 0.0018801980801886101,
+      "hybrid_rms": 0.0010345301869890636,
+      "high_order_rms": 6.631803292729712e-05,
+      "components": {
+        "endpoint": 0.0010200506733244051,
+        "remaining_radial": 0.0013543151915237717,
+        "angular": 0.0009735076490777439,
+        "high_order_residual": 6.631803292729712e-05
+      },
+      "gram": {
+        "endpoint": {
+          "endpoint": 1.0405033761495725e-06,
+          "remaining_radial": -8.946371856609268e-07,
+          "angular": -8.525216230037846e-07,
+          "high_order_residual": -5.657143031086368e-08
+        },
+        "remaining_radial": {
+          "endpoint": -8.946371856609268e-07,
+          "remaining_radial": 1.8341696379920704e-06,
+          "angular": 2.819331702732555e-07,
+          "high_order_residual": 3.342806720736325e-08
+        },
+        "angular": {
+          "endpoint": -8.525216230037846e-07,
+          "remaining_radial": 2.819331702732555e-07,
+          "angular": 9.477171428128757e-07,
+          "high_order_residual": 5.906874174370269e-08
+        },
+        "high_order_residual": {
+          "endpoint": -5.657143031086368e-08,
+          "remaining_radial": 3.342806720736325e-08,
+          "angular": 5.906874174370269e-08,
+          "high_order_residual": 4.398081491346065e-09
+        }
+      },
+      "endpoint_cross_with_remainder": -3.6074604779511505e-06,
+      "endpoint_remainder_cosine": -0.9404727887923663,
+      "cancellation_fraction": 0.7884042484733712,
+      "frozen_squared_identity": {
+        "endpoint": 1.0405033761495725e-06,
+        "remainder": 3.535144820744935e-06,
+        "cross": -3.6074604779511505e-06,
+        "total": 9.681877189433571e-07
+      },
+      "first_row_squared_fraction": 0.6943895627025767,
+      "leading_predictions": {
+        "5": {
+          "rms": 0.0013147395197716971,
+          "relative_error_vs_exact_endpoint": 0.28896318147319466,
+          "cosine": 0.9999850031406078
+        },
+        "7": {
+          "rms": 0.0014402314060491949,
+          "relative_error_vs_exact_endpoint": 0.4120666332724028,
+          "cosine": 0.9999576303617008
+        },
+        "8": {
+          "rms": 0.0014504452759414707,
+          "relative_error_vs_exact_endpoint": 0.4220918088105766,
+          "cosine": 0.9999533218759931
+        }
+      },
+      "exact_endpoint_formula_relative_error": 2.5007768364933624e-15
+    },
+    {
+      "n": 16,
+      "sha256": "495e0e50ea75f199ff1b04c092487b3bcce1133bd5fb7ec87296f3b6ea8b4f39",
+      "inner_samples": 4,
+      "frozen_rms": 0.0007824654925011455,
+      "matched_rms": 0.0011500572821527496,
+      "hybrid_rms": 0.0005153039184147285,
+      "high_order_rms": 1.064978816333915e-05,
+      "components": {
+        "endpoint": 0.0007578014734309961,
+        "remaining_radial": 0.00075066545466428,
+        "angular": 0.0005245476542221245,
+        "high_order_residual": 1.064978816333915e-05
+      },
+      "gram": {
+        "endpoint": {
+          "endpoint": 5.742630731341888e-07,
+          "remaining_radial": -2.836590618460261e-07,
+          "angular": -3.650093911198169e-07,
+          "high_order_residual": 6.347163759994328e-09
+        },
+        "remaining_radial": {
+          "endpoint": -2.836590618460261e-07,
+          "remaining_radial": 5.634986248263303e-07,
+          "angular": 2.495571400851658e-07,
+          "high_order_residual": -2.7596405488331194e-09
+        },
+        "angular": {
+          "endpoint": -3.650093911198169e-07,
+          "remaining_radial": 2.495571400851658e-07,
+          "angular": 2.751502415499335e-07,
+          "high_order_residual": -4.862765602142087e-09
+        },
+        "high_order_residual": {
+          "endpoint": 6.347163759994328e-09,
+          "remaining_radial": -2.7596405488331194e-09,
+          "angular": -4.862765602142087e-09,
+          "high_order_residual": 1.1341798792399867e-10
+        }
+      },
+      "endpoint_cross_with_remainder": -1.2846425784116974e-06,
+      "endpoint_remainder_cosine": -0.7370168193701279,
+      "cancellation_fraction": 0.6772344788084476,
+      "frozen_squared_identity": {
+        "endpoint": 5.742630731341888e-07,
+        "remainder": 1.322631752232569e-06,
+        "cross": -1.2846425784116974e-06,
+        "total": 6.122522469550603e-07
+      },
+      "first_row_squared_fraction": 0.055757045532149496,
+      "leading_predictions": {
+        "5": {
+          "rms": 0.0009285587807803656,
+          "relative_error_vs_exact_endpoint": 0.2254310159346706,
+          "cosine": 0.9999818811128786
+        },
+        "7": {
+          "rms": 0.0009840476696871751,
+          "relative_error_vs_exact_endpoint": 0.2987381917044544,
+          "cosine": 0.999958104757652
+        },
+        "8": {
+          "rms": 0.0009871772935359099,
+          "relative_error_vs_exact_endpoint": 0.3028766713512926,
+          "cosine": 0.9999556590308538
+        }
+      },
+      "exact_endpoint_formula_relative_error": 5.380168692032871e-15
+    },
+    {
+      "n": 32,
+      "sha256": "35838803e15b062c6e29371703d4b7cc2081a427b0cb5ce6ed26ae72dd23a0b7",
+      "inner_samples": 8,
+      "frozen_rms": 0.00043242805777106777,
+      "matched_rms": 0.00046843053032020543,
+      "hybrid_rms": 0.00017894344490901228,
+      "high_order_rms": 3.980951076672425e-06,
+      "components": {
+        "endpoint": 0.0004311772063435532,
+        "remaining_radial": 0.0003117249222798617,
+        "angular": 0.00018173579365075897,
+        "high_order_residual": 3.980951076672425e-06
+      },
+      "gram": {
+        "endpoint": {
+          "endpoint": 1.8591378327023103e-07,
+          "remaining_radial": -4.963485457056476e-08,
+          "angular": -6.120748592474012e-08,
+          "high_order_residual": 1.6688805659839165e-09
+        },
+        "remaining_radial": {
+          "endpoint": -4.963485457056476e-08,
+          "remaining_radial": 9.717242717038582e-08,
+          "angular": 4.539611127945788e-08,
+          "high_order_residual": -2.7912223456872787e-10
+        },
+        "angular": {
+          "endpoint": -6.120748592474012e-08,
+          "remaining_radial": 4.539611127945788e-08,
+          "angular": 3.302789869387125e-08,
+          "high_order_residual": -5.114950947206908e-10
+        },
+        "high_order_residual": {
+          "endpoint": 1.6688805659839165e-09,
+          "remaining_radial": -2.7912223456872787e-10,
+          "angular": -5.114950947206908e-10,
+          "high_order_residual": 1.5847971474859342e-11
+        }
+      },
+      "endpoint_cross_with_remainder": -2.183469198586419e-07,
+      "endpoint_remainder_cosine": -0.5405253753875708,
+      "cancellation_fraction": 0.5386747195135895,
+      "frozen_squared_identity": {
+        "endpoint": 1.8591378327023103e-07,
+        "remainder": 2.1942716173606888e-07,
+        "cross": -2.183469198586419e-07,
+        "total": 1.8699402514765793e-07
+      },
+      "first_row_squared_fraction": 0.18014222512043987,
+      "leading_predictions": {
+        "5": {
+          "rms": 0.0004976442906616462,
+          "relative_error_vs_exact_endpoint": 0.1542483050609652,
+          "cosine": 0.99998721237358
+        },
+        "7": {
+          "rms": 0.0005120233987229276,
+          "relative_error_vs_exact_endpoint": 0.1876490329319855,
+          "cosine": 0.9999766298704872
+        },
+        "8": {
+          "rms": 0.0005124661242193274,
+          "relative_error_vs_exact_endpoint": 0.18867871994025404,
+          "cosine": 0.9999760612615262
+        }
+      },
+      "exact_endpoint_formula_relative_error": 1.3755530715988894e-14
+    },
+    {
+      "n": 64,
+      "sha256": "b23d67d08c04985f3d667565fe5dfbb79192ad22a6ffe5a83ee6d7189db445a8",
+      "inner_samples": 16,
+      "frozen_rms": 0.00019997339375158374,
+      "matched_rms": 0.00015272423774523167,
+      "hybrid_rms": 5.231259810468453e-05,
+      "high_order_rms": 5.301478677771085e-07,
+      "components": {
+        "endpoint": 0.0002009109038157736,
+        "remaining_radial": 0.00010439056992638683,
+        "angular": 5.256471693676082e-05,
+        "high_order_residual": 5.301478677771085e-07
+      },
+      "gram": {
+        "endpoint": {
+          "endpoint": 4.036519127207103e-08,
+          "remaining_radial": -5.5128342012288806e-09,
+          "angular": -6.441732198367917e-09,
+          "high_order_residual": 1.0430347039323686e-10
+        },
+        "remaining_radial": {
+          "endpoint": -5.5128342012288806e-09,
+          "remaining_radial": 1.089739108955586e-08,
+          "angular": 4.850854792435065e-09,
+          "high_order_residual": -5.5079000130928975e-12
+        },
+        "angular": {
+          "endpoint": -6.441732198367917e-09,
+          "remaining_radial": 4.850854792435065e-09,
+          "angular": 2.7630494666417896e-09,
+          "high_order_residual": -1.3361301470627472e-11
+        },
+        "high_order_residual": {
+          "endpoint": 1.0430347039323686e-10,
+          "remaining_radial": -5.5079000130928975e-12,
+          "angular": -1.3361301470627472e-11,
+          "high_order_residual": 2.810567617086145e-13
+        }
+      },
+      "endpoint_cross_with_remainder": -2.3700525858407123e-08,
+      "endpoint_remainder_cosine": -0.3862037734774064,
+      "cancellation_fraction": 0.3721238655969248,
+      "frozen_squared_identity": {
+        "endpoint": 4.036519127207103e-08,
+        "remainder": 2.3324692794862044e-08,
+        "cross": -2.3700525858407123e-08,
+        "total": 3.998935820852595e-08
+      },
+      "first_row_squared_fraction": 0.5061659350110503,
+      "leading_predictions": {
+        "5": {
+          "rms": 0.0002197458903854082,
+          "relative_error_vs_exact_endpoint": 0.09381917747193645,
+          "cosine": 0.9999938931047202
+        },
+        "7": {
+          "rms": 0.0002221562733206656,
+          "relative_error_vs_exact_endpoint": 0.10583905716124846,
+          "cosine": 0.9999910229801746
+        },
+        "8": {
+          "rms": 0.00022218677410477952,
+          "relative_error_vs_exact_endpoint": 0.1059913905720544,
+          "cosine": 0.9999909614059861
+        }
+      },
+      "exact_endpoint_formula_relative_error": 4.2190912647347256e-14
+    }
+  ],
+  "pairs": [
+    {
+      "pair": [
+        8,
+        16
+      ],
+      "frozen_order": 0.33058031543325067,
+      "endpoint_order": 0.42874897305079757,
+      "remainder_order": 0.7091789380067619,
+      "incoherent_order": 0.6351682218174008,
+      "cancellation_order_shift": -0.3045879063841502,
+      "component_orders": {
+        "endpoint": 0.42874897305079757,
+        "remaining_radial": 0.8513215409043576,
+        "angular": 0.8921184695462583,
+        "high_order_residual": 2.638576481540533
+      }
+    },
+    {
+      "pair": [
+        16,
+        32
+      ],
+      "frozen_order": 0.8555669948778551,
+      "endpoint_order": 0.8135390311581466,
+      "remainder_order": 1.2957987080635132,
+      "incoherent_order": 1.1132159349332724,
+      "cancellation_order_shift": -0.2576489400554173,
+      "component_orders": {
+        "endpoint": 0.8135390311581466,
+        "remaining_radial": 1.2678965898012438,
+        "angular": 1.529231252449898,
+        "high_order_residual": 1.4196396869988936
+      }
+    },
+    {
+      "pair": [
+        32,
+        64
+      ],
+      "frozen_order": 1.1126520705783982,
+      "endpoint_order": 1.101725049802858,
+      "remainder_order": 1.616906067794018,
+      "incoherent_order": 1.3349998818970583,
+      "cancellation_order_shift": -0.22234781131865983,
+      "component_orders": {
+        "endpoint": 1.101725049802858,
+        "remaining_radial": 1.5782821098440358,
+        "angular": 1.789675944615982,
+        "high_order_residual": 2.9086464272285735
+      }
+    }
+  ]
+}

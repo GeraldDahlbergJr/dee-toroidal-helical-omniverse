@@ -1,0 +1,106 @@
+{
+  "polynomial_checks": [
+    {
+      "n": 8,
+      "degree": 0,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "degree": 1,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "degree": 2,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "degree": 3,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "degree": 4,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "degree": 0,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "degree": 1,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "degree": 2,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "degree": 3,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "degree": 4,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "degree": 0,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "degree": 1,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "degree": 2,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "degree": 3,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "degree": 4,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "degree": 0,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "degree": 1,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "degree": 2,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "degree": 3,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "degree": 4,
+      "passed": true
+    }
+  ],
+  "original_archive_hashes_unchanged": 105,
+  "status": "PASS"
+}
