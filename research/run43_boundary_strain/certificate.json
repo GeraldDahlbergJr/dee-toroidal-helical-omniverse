@@ -1,0 +1,48 @@
+{
+  "base_commit": "b075780b0c30296f0e7fbd6fb2230d503e31b40e",
+  "candidate": "minimal diagonal-norm SBP endpoint strain",
+  "arithmetic": "exact symbolic/rational",
+  "sympy": "1.14.0",
+  "radial_nodes": 7,
+  "largest_matrix": [
+    7,
+    7
+  ],
+  "scalar_SBP_identity": true,
+  "Dirichlet_Gram_identity": true,
+  "normal_Gram_leading_minors": [
+    "3/4",
+    "3/8",
+    "5/32",
+    "15/256",
+    "9/256"
+  ],
+  "toroidal_weighted_adjoint": "PROVEN algebraically in derivation.md",
+  "radial_errors": [
+    "(a**2*z + a - 4*h**2*z)/(2*(a + h)*(a*z + h*z + 1))",
+    "-2*h**2*z/((a + 2*h)*(a*z + 2*h*z + 1))",
+    "(b**2*z + b - 4*h**2*z)/(2*(b - h)*(b*z - h*z + 1))",
+    "-2*h**2*z/((b - 2*h)*(b*z - 2*h*z + 1))"
+  ],
+  "radial_error_limits_inner1_inner2_outer1_outer2": [
+    "1/2",
+    "0",
+    "1/2",
+    "0"
+  ],
+  "actual_x_momentum_error_limits": [
+    "2/3",
+    "0",
+    "2/3",
+    "0"
+  ],
+  "second_row_radial_error_over_h_squared": [
+    "-2*z/(a*(a*z + 1))",
+    "-2*z/(b*(b*z + 1))"
+  ],
+  "boundary_closure": "FAILED: nonzero O(1) first-interior-row error",
+  "coercivity": "PARTIAL: normal reduction positive; full toroidal Korn bound unresolved",
+  "physical_solves": 0,
+  "full_grid_sweeps": 0,
+  "stop": "Consistency failure: no further candidates or physical tests"
+}
