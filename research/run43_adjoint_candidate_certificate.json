@@ -1,0 +1,34 @@
+{
+  "base_commit": "d206b2263bd0577c63026e1a3cc6ced5bb27a34d",
+  "status": "STOP: strong boundary consistency disproven for stated candidate",
+  "arithmetic": "exact SymPy rational/symbolic",
+  "sympy": "1.14.0",
+  "spatial_nodes": 7,
+  "largest_assembled_matrix": [
+    7,
+    7
+  ],
+  "normal_Green_identity": true,
+  "normal_Dirichlet_energy_identity": true,
+  "normal_scalar_Gram_leading_minors": [
+    "9/4",
+    "37/32",
+    "69/128",
+    "277/1024",
+    "55/128"
+  ],
+  "full_toroidal_symmetry": "exact weighted algebraic identity in report",
+  "full_toroidal_coercivity": "UNRESOLVED; normal reduction only certified",
+  "boundary_h_times_radial_adjoint": [
+    "a/2 - b/2",
+    "-a/4 + b/4"
+  ],
+  "actual_inner_point_h_times_x_momentum_error": [
+    "-2/15",
+    "1/15"
+  ],
+  "boundary_accuracy": "first two interior rows have nonzero O(h_r^-1) defect",
+  "weak_convergence": "not decided by this strong-consistency obstruction",
+  "physical_solves": 0,
+  "physical_field_comparison": "not reached: mandatory stop"
+}
