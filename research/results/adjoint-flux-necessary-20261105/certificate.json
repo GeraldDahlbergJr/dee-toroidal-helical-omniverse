@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact SymPy rationals and symbolic positive weights",
+  "sympy": "1.14.0",
+  "nodes": 4,
+  "checkpoint": "4f8bcbe8e2ad2e33ce4ac100eb70b6d2c0b4ac73",
+  "frozen_audit_blob": "5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22",
+  "scope": "Constant-coefficient normal reduction plus general symbolic Green derivation; no toroidal-grid stability or physical validation",
+  "D": [
+    [
+      "-3/2",
+      "2",
+      "-1/2",
+      "0"
+    ],
+    [
+      "-1/2",
+      "0",
+      "1/2",
+      "0"
+    ],
+    [
+      "0",
+      "-1/2",
+      "0",
+      "1/2"
+    ],
+    [
+      "0",
+      "1/2",
+      "-2",
+      "3/2"
+    ]
+  ],
+  "original_normal_SBP_obstruction": "-h0/2",
+  "weighted_Green_STF_identity": true,
+  "Dirichlet_energy_identity": true,
+  "constant_test_flux_balance": true,
+  "normal_Dirichlet_Gram_leading_minors": [
+    "19/3",
+    "33",
+    "627/4",
+    "9801/16",
+    "186219/64",
+    "2910897/256"
+  ],
+  "script_sha256": "c5b3055d4c5992f1d4b2da4752c0ae9467a469755855d7dc0d8f318293bcb310"
+}
