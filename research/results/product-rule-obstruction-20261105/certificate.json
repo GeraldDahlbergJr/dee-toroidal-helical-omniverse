@@ -1,0 +1,18 @@
+{
+  "scope": "Finite angular algebra only; no physical convergence result",
+  "checkpoint": "ff07102de88a4b63686a4f71f9fa851602ef7e0b",
+  "frozen_audit_blob": "5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22",
+  "angular_nodes": 16,
+  "spacing": 0.39269908169872414,
+  "basis_pairs": 256,
+  "ordinary_product_rule_max_defect": 1.2732395447351628,
+  "shifted_product_rule_max_defect": 0.0,
+  "mode_pair": [
+    1,
+    2
+  ],
+  "mode_defect_magnitude": 0.4224880799890335,
+  "mode_identity_max_error": 1.4915878357495863e-15,
+  "numpy": "2.3.5",
+  "script_sha256": "490d43bbac18a9b6abe4fdf3a9cc95d13af6c7ba8148fa09c09cee41a597379a"
+}
