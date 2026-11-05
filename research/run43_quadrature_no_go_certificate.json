@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "checkpoint": "3f294581597a1831edf6001d8a191dae134b1499",
+  "arithmetic": "exact rationals; positive symbolic quadrature weights",
+  "largest_matrix_shape": [
+    5,
+    5
+  ],
+  "angular_ring_nodes": 4,
+  "radial_spike": [
+    "0",
+    "0",
+    "1",
+    "0",
+    "0"
+  ],
+  "radial_derivative": [
+    "-1/2",
+    "1/2",
+    "0",
+    "-1/2",
+    "1/2"
+  ],
+  "angular_first_kills_both": true,
+  "angular_second_checkerboard_eigenvalue": -4,
+  "radial_Dirichlet_both": true,
+  "strain_norm_equal_pointwise": true,
+  "h_phi_squared_times_expanded_work_difference": "-1600*w0/529 - 1600*w1/529 - 1600*w10/289 - 1600*w11/289 - 4*w12 - 4*w13 - 4*w14 - 4*w15 - 1600*w2/529 - 1600*w3/529 - 4*w4 - 4*w5 - 4*w6 - 4*w7 - 1600*w8/289 - 1600*w9/289",
+  "strictly_negative_for_all_positive_nodal_weights": true,
+  "conclusion": "No positive nodal quadrature can give the original expanded quadratic strain-energy identity for all radial-Dirichlet vectors.",
+  "coercivity": "UNRESOLVED: no compatible construction survives the necessary energy test."
+}
