@@ -1,0 +1,101 @@
+{
+  "base": "fab11b7ed4defc34687d88ab7fdb277ee91998a7",
+  "arithmetic": "exact rational/symbolic",
+  "sympy": "1.14.0",
+  "nodes": 16,
+  "boundary_weights": [
+    "w0",
+    "w1",
+    "w2",
+    "w3",
+    "w4",
+    "w5"
+  ],
+  "Q_inner_block": [
+    [
+      "-1/2",
+      "q01",
+      "q02",
+      "q03",
+      "q04",
+      "q05"
+    ],
+    [
+      "-q01",
+      "0",
+      "q12",
+      "q13",
+      "q14",
+      "q15"
+    ],
+    [
+      "-q02",
+      "-q12",
+      "0",
+      "q23",
+      "q24",
+      "q25"
+    ],
+    [
+      "-q03",
+      "-q13",
+      "-q23",
+      "0",
+      "q34",
+      "q35"
+    ],
+    [
+      "-q04",
+      "-q14",
+      "-q24",
+      "-q34",
+      "0",
+      "q45"
+    ],
+    [
+      "-q05",
+      "-q15",
+      "-q25",
+      "-q35",
+      "-q45",
+      "0"
+    ]
+  ],
+  "constant_equations": [
+    "q01 + q02 + q03 + q04 + q05 - 1/2",
+    "-q01 + q12 + q13 + q14 + q15",
+    "-q02 - q12 + q23 + q24 + q25",
+    "-q03 - q13 - q23 + q34 + q35",
+    "-q04 - q14 - q24 - q34 + q45",
+    "-q05 - q15 - q25 - q35 - q45 + 1/2"
+  ],
+  "affine_equations": [
+    "q01 + 2*q02 + 3*q03 + 4*q04 + 5*q05 - w0",
+    "2*q12 + 3*q13 + 4*q14 + 5*q15 - w1",
+    "-q12 + 3*q23 + 4*q24 + 5*q25 - w2",
+    "-q13 - 2*q23 + 4*q34 + 5*q35 - w3",
+    "-q14 - 2*q24 - 3*q34 + 5*q45 - w4",
+    "-q15 - 2*q25 - 3*q35 - 4*q45 - w5 + 3"
+  ],
+  "quadratic_error_numerators": [
+    "q01 + 4*q02 + 9*q03 + 16*q04 + 25*q05",
+    "4*q12 + 9*q13 + 16*q14 + 25*q15 - 2*w1",
+    "-q12 + 9*q23 + 16*q24 + 25*q25 - 4*w2",
+    "-q13 - 4*q23 + 16*q34 + 25*q35 - 6*w3",
+    "-q14 - 4*q24 - 9*q34 + 25*q45 - 8*w4",
+    "-q15 - 4*q25 - 9*q35 - 16*q45 - 10*w5 + 18"
+  ],
+  "all_affected_moment_equations": "P_i=sum_j Q_ij*t_j*prod_{k!=j}w_k=0, i=1,...,5; P_6=-t_5*prod_{k=0}^4 w_k/2=0; outer rows reflected",
+  "forced_weight_sum": "11/2",
+  "forced_first_weight_moment": "15",
+  "forced_weighted_error_sum": "1/2",
+  "polynomial_contradiction": "sum_{i=1}^6 i*P_i = -prod_{j=0}^5 w_j/2; positivity makes RHS nonzero",
+  "positive_weighted_norm": "INFEASIBLE",
+  "boundary_moments": "FAIL",
+  "Dirichlet_strain_kernel": "UNRESOLVED",
+  "adjoint_identity": "UNRESOLVED",
+  "stop_reason": "Exact necessary moment subsystem inconsistent; no member selected or checked further",
+  "physical_solves": 0,
+  "grid_sweeps": 0,
+  "historical_certificates_rerun": false
+}
