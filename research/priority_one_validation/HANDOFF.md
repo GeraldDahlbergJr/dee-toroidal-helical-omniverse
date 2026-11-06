@@ -1,3 +1,43 @@
+# Run 43 continuity update — bounded fixture stopped
+
+Date: 2026-11-06. Authorized base: `5a83752a0e8df98e9db5c25041aebcd3e87ed6f9`.
+Branch: `run43-independent-physical-validation`.
+**Decision: FAILED qualification on resource gate; STOP.**
+Independent physical validation remains NOT ESTABLISHED. No PRD manuscript work.
+
+One degree-four open-radial/periodic-angular Cartesian B-spline Galerkin
+manufactured experiment was implemented and executed. Completed n=8 and n=16;
+n=32 stopped before its first solve when analytic forcing evaluation could not
+allocate 54 MiB under the enforced 4 GiB address-space cap. Computation took
+54.7154 seconds, on one pinned CPU with one-thread numerical libraries.
+No retry or memory correction was attempted. No original-source solve ran.
+
+For the completed pair, independent local-power spline differentiation and
+Cartesian chain rules produced H/M component rates 2.963555 through 5.970288
+across all five required regions. These orders account only for the observed
+integration-rule difference, not a certified total uncertainty bound.
+Largest relative linearized residual: 1.87628e-12. Radial and angular trace
+checks: zero, within the unchanged 100-eps scaled tolerances. Field errors,
+20 component/region rows, the exception, saved coefficients and reproduction
+instructions are preserved in [the experiment report](../run43_bspline_qualification/REPORT.md).
+
+Missing: n=32 and the second refinement pair, assembly quadrature assessment,
+full evaluator/solver error propagation and the local coupled nullspace/inverse
+qualification. Thus no manufactured-fixture PASS and no physical-method
+qualification is claimed. Principal scalar/vector coercivity is not a coupled
+nonlinear certificate. The allocation failure does not disprove approximation
+quality of the underlying B-spline method.
+
+Remote commit SHA is verified and provided in the completion response (a commit
+cannot embed its own SHA). All historical sealed evidence is preserved. The
+implementation remains exactly as executed. Any further experiment or repair
+requires separate authorization. **STOP and await that authorization.**
+
+---
+
+The previous checkpoint handoff follows verbatim for continuity; its proposed
+experiment was authorized by the current user instruction and has now stopped.
+
 # Run 43 continuity handoff
 
 Evidence checkpoint: 7325338b2824547bb34b7da875caef541a1e77fd
