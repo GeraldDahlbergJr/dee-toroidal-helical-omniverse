@@ -1,0 +1,154 @@
+{
+  "scope": "Accepted baseline saved fields only. Closure subtraction and fourth derivatives are supplementary diagnostics, never replacement acceptance tests.",
+  "rows": [
+    {
+      "n": 8,
+      "sha256": "d86045bbbb956aa0ea7d89ae00824bb8d7eed9c5dfe53a0ded10d9cfb0a95114",
+      "frozen_rms": 0.0003260038040058034,
+      "fourth_rms": 0.0017543387675242447,
+      "endpoint_rms": 0.001176453191999017,
+      "matched_rms": 0.0010077906535999408,
+      "endpoint_formula_relative_error": 2.251489795344962e-15,
+      "endpoint_remainder_cosine": -0.9671768674693116,
+      "cancellation_fraction": 0.955711470694676,
+      "frozen_components": [
+        0.00016358942342079778,
+        0.0001635894234207977,
+        0.00022968561408141385
+      ],
+      "fourth_components": [
+        0.0009594091367753336,
+        0.0009594091367753345,
+        0.0011121028404704764
+      ],
+      "difference_rms": 0.0014862871963325002,
+      "solver_stabilizer_rms": 0.0003260038040015527,
+      "frozen_minus_stabilizer_rms": 3.696555523841503e-13
+    },
+    {
+      "n": 16,
+      "sha256": "bf97ccd47caae014951e85571a7238276477c95c5cd5f9b64606c89e5dae2162",
+      "frozen_rms": 8.885119698145992e-05,
+      "fourth_rms": 0.0017865036323551212,
+      "endpoint_rms": 0.0013428667154262361,
+      "matched_rms": 0.0013099667727210725,
+      "endpoint_formula_relative_error": 3.037118275878423e-15,
+      "endpoint_remainder_cosine": -0.99806375781942,
+      "cancellation_fraction": 0.9977567907482703,
+      "frozen_components": [
+        4.455438499045839e-05,
+        4.4554384990456934e-05,
+        6.264462276430717e-05
+      ],
+      "fourth_components": [
+        0.0009243895919606373,
+        0.0009243895919606393,
+        0.0012176218595967025
+      ],
+      "difference_rms": 0.001729518938485627,
+      "solver_stabilizer_rms": 8.88511969675996e-05,
+      "frozen_minus_stabilizer_rms": 7.013092635920959e-13
+    },
+    {
+      "n": 32,
+      "sha256": "d9f0af5dcdbcd38d482efeee6ba2ab419f7bdf8068e6adc37fd67ea38bd5d313",
+      "frozen_rms": 2.267515823232337e-05,
+      "fourth_rms": 0.0010011368914284579,
+      "endpoint_rms": 0.0008800928063750518,
+      "matched_rms": 0.000875989960843443,
+      "endpoint_formula_relative_error": 6.86024845676035e-15,
+      "endpoint_remainder_cosine": -0.9996774577660258,
+      "cancellation_fraction": 0.999666544169476,
+      "frozen_components": [
+        1.1368636889902774e-05,
+        1.1368636889901712e-05,
+        1.5989715175449815e-05
+      ],
+      "fourth_components": [
+        0.0005111268946616559,
+        0.0005111268946616553,
+        0.0006926569645113674
+      ],
+      "difference_rms": 0.0009907036722819821,
+      "solver_stabilizer_rms": 2.2675158235019067e-05,
+      "frozen_minus_stabilizer_rms": 4.721333068030421e-13
+    },
+    {
+      "n": 64,
+      "sha256": "18b9b4c0d530af09585e56de8dabf905311878545f698f6c8544877bdacf54be",
+      "frozen_rms": 5.6895274487073055e-06,
+      "fourth_rms": 0.00040516064468961425,
+      "endpoint_rms": 0.0004193212304513106,
+      "matched_rms": 0.0004189009105059401,
+      "endpoint_formula_relative_error": 2.028189628863971e-14,
+      "endpoint_remainder_cosine": -0.9999083594867091,
+      "cancellation_fraction": 0.9999078566443823,
+      "frozen_components": [
+        2.8523751391034982e-06,
+        2.852375139103462e-06,
+        4.012310396921288e-06
+      ],
+      "fourth_components": [
+        0.00020616360732837722,
+        0.00020616360732837695,
+        0.0002813330446854854
+      ],
+      "difference_rms": 0.00040340333001356285,
+      "solver_stabilizer_rms": 5.68952744677936e-06,
+      "frozen_minus_stabilizer_rms": 1.212718172290985e-13
+    }
+  ],
+  "pairs": [
+    {
+      "pair": [
+        8,
+        16
+      ],
+      "orders": {
+        "frozen_rms": 1.875425681646199,
+        "fourth_rms": -0.02621148427430814,
+        "endpoint_rms": -0.19087219832539012,
+        "matched_rms": -0.3783342365837667
+      },
+      "fourth_component_orders": [
+        0.05364516280643414,
+        0.05364516280643198,
+        -0.13077595860795652
+      ]
+    },
+    {
+      "pair": [
+        16,
+        32
+      ],
+      "orders": {
+        "frozen_rms": 1.9702785937799752,
+        "fourth_rms": 0.835499591268446,
+        "endpoint_rms": 0.609588548919087,
+        "matched_rms": 0.5805439770627685
+      },
+      "fourth_component_orders": [
+        0.8548195104775981,
+        0.8548195104776031,
+        0.8138532188483737
+      ]
+    },
+    {
+      "pair": [
+        32,
+        64
+      ],
+      "orders": {
+        "frozen_rms": 1.9947318805784477,
+        "fourth_rms": 1.3050733062107382,
+        "endpoint_rms": 1.069599788497286,
+        "matched_rms": 1.0643053161318627
+      },
+      "fourth_component_orders": [
+        1.3098918196379081,
+        1.3098918196379081,
+        1.2998620224867672
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "seed": 4303,
+  "samples": 512,
+  "projection_max_abs": {
+    "E": 7.37188088351104e-14,
+    "S_i": 3.2862601528904634e-14,
+    "S_ij": 1.2363443602225743e-12,
+    "S_trace": 2.9309887850104133e-13
+  },
+  "source_coefficients": {
+    "A": 0.012763800000000006,
+    "B_prefactor": 0.068614375,
+    "S_prefactor": -0.030316000000000003,
+    "kinetic_eigenvalues": [
+      1.1305957880631348,
+      1.3419042119368652
+    ]
+  },
+  "archived_boundaries": [
+    {
+      "n": 8,
+      "sha256": "d86045bbbb956aa0ea7d89ae00824bb8d7eed9c5dfe53a0ded10d9cfb0a95114",
+      "psi_min": 1.0,
+      "psi_max": 1.0001623968077418,
+      "boundary_psi_max": 0.0,
+      "boundary_W_max": 0.0,
+      "finite": true
+    },
+    {
+      "n": 16,
+      "sha256": "bf97ccd47caae014951e85571a7238276477c95c5cd5f9b64606c89e5dae2162",
+      "psi_min": 1.0,
+      "psi_max": 1.000165513145638,
+      "boundary_psi_max": 0.0,
+      "boundary_W_max": 0.0,
+      "finite": true
+    },
+    {
+      "n": 32,
+      "sha256": "d9f0af5dcdbcd38d482efeee6ba2ab419f7bdf8068e6adc37fd67ea38bd5d313",
+      "psi_min": 1.0,
+      "psi_max": 1.000166819906427,
+      "boundary_psi_max": 0.0,
+      "boundary_W_max": 0.0,
+      "finite": true
+    },
+    {
+      "n": 64,
+      "sha256": "18b9b4c0d530af09585e56de8dabf905311878545f698f6c8544877bdacf54be",
+      "psi_min": 1.0,
+      "psi_max": 1.0001670221573893,
+      "boundary_psi_max": 0.0,
+      "boundary_W_max": 0.0,
+      "finite": true
+    }
+  ],
+  "scope": "Algebra and stored nodal boundary checks only; no continuum residual or PDE solve."
+}
