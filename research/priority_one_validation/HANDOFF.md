@@ -52,3 +52,11 @@ in a disposable directory. The previous [diagnosis](REPORT.md) and its
 [fixture protocol](../run43_bspline_qualification/PROTOCOL.md) and
 [resource failure report](../run43_bspline_qualification/REPORT.md) are
 unchanged.
+
+## Final uncertainty gate
+
+Verdict: NOT YET ESTABLISHED. The [final audit](../run43_final_gate/REPORT.md)
+records all 60 uncertainty budgets, the exact sampled inverse bound below
+1.33, and all 40 conditional rate checks. The missing fixed-field integral
+and propagated root-error enclosures are identified there. No new solve ran.
+Original-source execution remains gated.
