@@ -1,0 +1,101 @@
+{
+  "status": "FAILED",
+  "necessary_consistency_check": [
+    {
+      "n": 8,
+      "constant_second_derivative_defect": 3.0205046641640365e-07,
+      "stored_matrix_dot_product_roundoff_bound": 1.1433647679431832e-09,
+      "passed": false
+    },
+    {
+      "n": 16,
+      "constant_second_derivative_defect": 8.074566721916199e-07,
+      "stored_matrix_dot_product_roundoff_bound": 8.638756024459142e-09,
+      "passed": false
+    },
+    {
+      "n": 32,
+      "constant_second_derivative_defect": 3.4812837839126587e-06,
+      "stored_matrix_dot_product_roundoff_bound": 6.707739971937196e-08,
+      "passed": false
+    },
+    {
+      "n": 64,
+      "constant_second_derivative_defect": 2.4627894163131714e-05,
+      "stored_matrix_dot_product_roundoff_bound": 5.284886038491231e-07,
+      "passed": false
+    }
+  ],
+  "manufactured_fixture": {
+    "psi": "x**2*y/1000 + x*z/1000 + y*z**2/1000 + 1",
+    "W": [
+      "x**2*y/1000 + y*z**2/1000",
+      "x*y**2/1000 + x*z**2/1000",
+      "x*y*z/1000 + z**3/1000"
+    ],
+    "method": "Exact symbolic Cartesian derivatives, compared with toroidal polynomial/Fourier derivatives. No manufactured solve. Errors reported without fitted tolerance.",
+    "rows": [
+      {
+        "n": 8,
+        "max_abs_error": [
+          2.4817504443858107e-06,
+          1.2009784399608092e-10,
+          1.200915851137796e-10,
+          3.0540567470815905e-11
+        ],
+        "exact_residual_max": [
+          1.4450108810062752,
+          0.016427174399515482,
+          0.01523863604758554,
+          0.01526345657212826
+        ]
+      },
+      {
+        "n": 16,
+        "max_abs_error": [
+          6.16187618329711e-06,
+          2.729299182491207e-10,
+          2.7290779185118463e-10,
+          7.08411749400506e-11
+        ],
+        "exact_residual_max": [
+          1.4450108810062752,
+          0.017144745131435792,
+          0.015381165278213722,
+          0.01526345657212826
+        ]
+      },
+      {
+        "n": 32,
+        "max_abs_error": [
+          2.7224851307794395e-05,
+          1.2020014306807214e-09,
+          1.1999759315546588e-09,
+          2.611763669918554e-10
+        ],
+        "exact_residual_max": [
+          1.4450108810062752,
+          0.017144745131435792,
+          0.015607333822684187,
+          0.015265615816652835
+        ]
+      },
+      {
+        "n": 64,
+        "max_abs_error": [
+          0.00019495513880340987,
+          8.154406833799088e-09,
+          8.144360653331711e-09,
+          1.6853711135023097e-09
+        ],
+        "exact_residual_max": [
+          1.4450108810062752,
+          0.017215372657418723,
+          0.015607333822684187,
+          0.015265615816652835
+        ]
+      }
+    ]
+  },
+  "consequence": "Evaluator not qualified. Baseline continuum residuals, uncertainty and orders are provisional and cannot decide physical validation."
+}
