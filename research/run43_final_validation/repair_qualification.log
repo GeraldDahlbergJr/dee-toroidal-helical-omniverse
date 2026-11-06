@@ -1,0 +1,107 @@
+{
+  "status": "FAIL",
+  "components": [
+    "H",
+    "Mx",
+    "My",
+    "Mz"
+  ],
+  "necessary_consistency_check": [
+    {
+      "n": 8,
+      "derivative": 1,
+      "defect": 7.105427357601002e-14,
+      "stored_matrix_dot_product_roundoff_bound": 6.23653509787152e-12,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 2,
+      "defect": 4.160938260611147e-11,
+      "stored_matrix_dot_product_roundoff_bound": 1.143364767943112e-09,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 1,
+      "defect": 1.4210854715202004e-13,
+      "stored_matrix_dot_product_roundoff_bound": 2.356024370307023e-11,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 2,
+      "defect": 6.548361852765083e-11,
+      "stored_matrix_dot_product_roundoff_bound": 8.638756024459086e-09,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 1,
+      "defect": 2.8421709430404007e-13,
+      "stored_matrix_dot_product_roundoff_bound": 9.146918143544945e-11,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 2,
+      "defect": 2.6193447411060333e-10,
+      "stored_matrix_dot_product_roundoff_bound": 6.70773997193296e-08,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 1,
+      "defect": 5.684341886080801e-13,
+      "stored_matrix_dot_product_roundoff_bound": 3.6033313898813675e-10,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 2,
+      "defect": 1.0477378964424133e-09,
+      "stored_matrix_dot_product_roundoff_bound": 5.284886038492673e-07,
+      "passed": true
+    }
+  ],
+  "finest_pair_orders": [
+    {
+      "pair": [
+        16,
+        32
+      ],
+      "order": [
+        -2.202505064406673,
+        -2.6463978583929704,
+        -2.799520038748537,
+        -3.1309798549903363
+      ],
+      "passes_p_1_5": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "pair": [
+        32,
+        64
+      ],
+      "order": [
+        -2.315849820382785,
+        -2.1319812392912874,
+        -1.8455112153289162,
+        -1.374463826420465
+      ],
+      "passes_p_1_5": [
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  ],
+  "criteria": "Constant application roundoff bound unchanged. Polynomial bound includes final coefficient rounding and dot-product rounding; exact dyadic test inputs. Manufactured p>=1.5 on 16->32 and 32->64; no fitted absolute tolerance or roundoff exemption.",
+  "consequence": "Qualification failed: STOP. Do not evaluate baseline or initiate another repair."
+}

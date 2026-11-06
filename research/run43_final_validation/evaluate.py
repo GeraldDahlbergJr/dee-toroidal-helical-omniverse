@@ -9,13 +9,16 @@ BASE=ROOT/'research/results/coordinated-replay-20261103-1831/baseline'
 
 def radial(n,width,degree):
     # Independent local polynomial interpolation, differentiated at each node.
-    x=np.linspace(.05,.25,n+1); mat=np.zeros((n+1,n+1))
+    mat=np.zeros((n+1,n+1))
+    # Exact uniform-grid offsets avoid cancellation in floating polynomial
+    # normalization. Convert only the final physical derivative weights.
+    h=sp.Rational(1,5*n)
     for i in range(n+1):
-        ids=np.arange(min(max(i-width//2,0),n+1-width),min(max(i-width//2,0),n+1-width)+width)
-        z=(x[ids]-x[i])/(.2/n)
-        for j,k in enumerate(ids):
-            p=np.polynomial.Polynomial.fromroots(np.delete(z,j))
-            mat[i,k]=p.deriv(degree)(0)/p(z[j])/(.2/n)**degree
+        start=min(max(i-width//2,0),n+1-width)
+        ids=list(range(start,start+width))
+        weights=sp.finite_diff_weights(degree,[k-i for k in ids],0)[degree][-1]
+        for k,weight in zip(ids,weights):
+            mat[i,k]=float(weight/h**degree)
     return mat
 
 class Evaluator:
