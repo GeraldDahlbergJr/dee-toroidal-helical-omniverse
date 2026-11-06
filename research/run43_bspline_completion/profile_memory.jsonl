@@ -1,0 +1,7 @@
+{"phase": "space", "elapsed_s": 0.012018192999903476, "peak_rss_KiB": 98332}
+{"phase": "forcing", "elapsed_s": 10.18765122800005, "peak_rss_KiB": 532620}
+{"phase": "one_vector_application", "elapsed_s": 14.38251306799998, "peak_rss_KiB": 532620}
+{"phase": "one_vector_load", "elapsed_s": 15.556561374000012, "peak_rss_KiB": 532620}
+{"phase": "strain_squared", "elapsed_s": 25.745606342999963, "peak_rss_KiB": 532620}
+{"phase": "one_scalar_load", "elapsed_s": 28.102035948999855, "peak_rss_KiB": 532620}
+{"phase": "one_scalar_application", "elapsed_s": 29.397518554000044, "peak_rss_KiB": 532620}

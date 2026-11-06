@@ -1,0 +1,76 @@
+{
+  "atol": 5e-14,
+  "rtol": 5e-12,
+  "rows": [
+    {
+      "n": 8,
+      "metrics": {
+        "forcing_scalar": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0
+        },
+        "forcing_vector": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0
+        },
+        "scalar_principal": {
+          "max_abs": 2.6020852139652106e-18,
+          "relative_l2": 2.5407408437844837e-16
+        },
+        "vector_principal": {
+          "max_abs": 4.336808689942018e-19,
+          "relative_l2": 2.518595704096249e-16
+        },
+        "vector_load": {
+          "max_abs": 6.505213034913027e-19,
+          "relative_l2": 2.1462092268965952e-16
+        },
+        "scalar_residual": {
+          "max_abs": 6.938893903907228e-18,
+          "relative_l2": 2.3901811493783483e-16
+        },
+        "scalar_jacobian": {
+          "max_abs": 2.6020852139652106e-18,
+          "relative_l2": 2.618342892980185e-16
+        }
+      },
+      "seconds": 0.5241961460001221,
+      "peak_rss_KiB": 171052
+    },
+    {
+      "n": 16,
+      "metrics": {
+        "forcing_scalar": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0
+        },
+        "forcing_vector": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0
+        },
+        "scalar_principal": {
+          "max_abs": 1.734723475976807e-18,
+          "relative_l2": 2.474025006673094e-16
+        },
+        "vector_principal": {
+          "max_abs": 2.710505431213761e-19,
+          "relative_l2": 2.440027781672964e-16
+        },
+        "vector_load": {
+          "max_abs": 1.6263032587282567e-19,
+          "relative_l2": 2.140319341634074e-16
+        },
+        "scalar_residual": {
+          "max_abs": 1.3010426069826053e-18,
+          "relative_l2": 2.3637558078830906e-16
+        },
+        "scalar_jacobian": {
+          "max_abs": 1.734723475976807e-18,
+          "relative_l2": 2.5294931646966357e-16
+        }
+      },
+      "seconds": 4.85346448700011,
+      "peak_rss_KiB": 719992
+    }
+  ]
+}

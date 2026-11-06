@@ -1,0 +1,38 @@
+[
+  {
+    "n": 8,
+    "psi_lower": 0.9999999999999999,
+    "psi_upper": 1.014519832688358,
+    "strain_frobenius_upper": 3.287617407977706,
+    "scalar_gradient_coercivity_lower": 0.9938878264381359,
+    "vector_gradient_coercivity_lower": 0.9689999999999999,
+    "scalar_cross_gradient_norm_upper": 0.3041046102379378,
+    "vector_cross_gradient_norm_upper": 0.0034163742451453656,
+    "schur_gradient_norm_upper": 0.0010787661116376992,
+    "exact_q6_jacobian_invertible": true
+  },
+  {
+    "n": 16,
+    "psi_lower": 0.9999999999999999,
+    "psi_upper": 1.0141972463834616,
+    "strain_frobenius_upper": 2.495882742054378,
+    "scalar_gradient_coercivity_lower": 0.9938878447988764,
+    "vector_gradient_coercivity_lower": 0.9689999999999999,
+    "scalar_cross_gradient_norm_upper": 0.23086915364002997,
+    "vector_cross_gradient_norm_upper": 0.003410946185099022,
+    "schur_gradient_norm_upper": 0.0008176729336217321,
+    "exact_q6_jacobian_invertible": true
+  },
+  {
+    "n": 32,
+    "psi_lower": 0.9999999999999999,
+    "psi_upper": 1.0141165274124386,
+    "strain_frobenius_upper": 2.3877830422694113,
+    "scalar_gradient_coercivity_lower": 0.9938878493904425,
+    "vector_gradient_coercivity_lower": 0.9689999999999999,
+    "scalar_cross_gradient_norm_upper": 0.2208699314099205,
+    "vector_cross_gradient_norm_upper": 0.0034095890317220033,
+    "schur_gradient_norm_upper": 0.0007819472800318593,
+    "exact_q6_jacobian_invertible": true
+  }
+]
