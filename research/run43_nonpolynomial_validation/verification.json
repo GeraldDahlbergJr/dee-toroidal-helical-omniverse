@@ -1,0 +1,720 @@
+{
+  "status": "PASS",
+  "checks": "Qualification lower orders recomputed; 8/8 constant and 72/72 polynomial tests pass unchanged; 12 symbolic identities; archive identities and radial traces; failed baseline gate retained; JSON finite.",
+  "primitive_checks": [
+    {
+      "n": 8,
+      "derivative": 1,
+      "test": "constant",
+      "error": 7.105427357601002e-14,
+      "bound": 6.23653509787152e-12,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 0,
+      "max_error": 7.105427357601002e-14,
+      "max_bound": 6.929483442079465e-12,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 1,
+      "max_error": 1.5631940186722204e-13,
+      "max_bound": 4.098414729285312e-12,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 2,
+      "max_error": 9.947598300641403e-14,
+      "max_bound": 2.68843148801136e-12,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 3,
+      "max_error": 7.105427357601002e-14,
+      "max_bound": 1.9001731405274974e-12,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 4,
+      "max_error": 1.4210854715202004e-14,
+      "max_bound": 1.4227772399386792e-12,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 5,
+      "max_error": 1.4210854715202004e-14,
+      "max_bound": 1.1153842399955886e-12,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 6,
+      "max_error": 3.552713678800501e-15,
+      "max_bound": 9.075643675735667e-13,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 7,
+      "max_error": 1.1102230246251565e-16,
+      "max_bound": 7.61370546635621e-13,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 8,
+      "max_error": 1.4210854715202004e-14,
+      "max_bound": 6.550970496885917e-13,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 2,
+      "test": "constant",
+      "error": 4.160938260611147e-11,
+      "bound": 1.143364767943112e-09,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 0,
+      "max_error": 4.160938260611147e-11,
+      "max_bound": 1.2704052977145685e-09,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 1,
+      "max_error": 1.659827830735594e-11,
+      "max_bound": 7.217309642342923e-10,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 2,
+      "max_error": 2.0463630789890885e-12,
+      "max_bound": 4.5373052757660976e-10,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 3,
+      "max_error": 1.2732925824820995e-11,
+      "max_bound": 3.0681101398454716e-10,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 4,
+      "max_error": 2.0463630789890885e-12,
+      "max_bound": 2.1959929465682557e-10,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 5,
+      "max_error": 1.8189894035458565e-12,
+      "max_bound": 1.6457710414932962e-10,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 6,
+      "max_error": 1.8189894035458565e-12,
+      "max_bound": 1.281310265119838e-10,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 7,
+      "max_error": 1.8189894035458565e-12,
+      "max_bound": 1.03006014487384e-10,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 8,
+      "max_error": 2.2737367544323206e-13,
+      "max_bound": 8.50988832697154e-11,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 1,
+      "test": "constant",
+      "error": 1.4210854715202004e-13,
+      "bound": 2.356024370307023e-11,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 0,
+      "max_error": 1.4210854715202004e-13,
+      "max_bound": 2.4946140391486118e-11,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 1,
+      "max_error": 1.4210854715202004e-13,
+      "max_bound": 1.9850216708456633e-11,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 2,
+      "max_error": 8.526512829121202e-14,
+      "max_bound": 1.6033269949795332e-11,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 3,
+      "max_error": 3.126388037344441e-13,
+      "max_bound": 1.3135587855523663e-11,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 4,
+      "max_error": 3.126388037344441e-13,
+      "max_bound": 1.0907370245100966e-11,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 5,
+      "max_error": 1.9895196601282805e-13,
+      "max_bound": 9.17289830402817e-12,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 6,
+      "max_error": 2.842170943040401e-14,
+      "max_bound": 7.807018238726581e-12,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 7,
+      "max_error": 1.4210854715202004e-13,
+      "max_bound": 6.719515348252212e-12,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 8,
+      "max_error": 1.4210854715202004e-13,
+      "max_bound": 5.844605157569736e-12,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 2,
+      "test": "constant",
+      "error": 6.548361852765083e-11,
+      "bound": 8.638756024459086e-09,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 0,
+      "max_error": 6.548361852765083e-11,
+      "max_bound": 9.146918143544911e-09,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 1,
+      "max_error": 5.093170329928398e-11,
+      "max_bound": 7.171690543015912e-09,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 2,
+      "max_error": 6.548361852765083e-11,
+      "max_bound": 5.701675956767584e-09,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 3,
+      "max_error": 5.093170329928398e-11,
+      "max_bound": 4.593240708418648e-09,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 4,
+      "max_error": 5.093170329928398e-11,
+      "max_bound": 3.746950051817891e-09,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 5,
+      "max_error": 7.275957614183426e-12,
+      "max_bound": 3.0930860501844932e-09,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 6,
+      "max_error": 7.275957614183426e-12,
+      "max_bound": 2.5821621391185896e-09,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 7,
+      "max_error": 2.1827872842550278e-11,
+      "max_bound": 2.178633730281678e-09,
+      "passed": true
+    },
+    {
+      "n": 16,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 8,
+      "max_error": 7.275957614183426e-12,
+      "max_bound": 1.8566777465638123e-09,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 1,
+      "test": "constant",
+      "error": 2.8421709430404007e-13,
+      "bound": 9.146918143544945e-11,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 0,
+      "max_error": 2.8421709430404007e-13,
+      "max_bound": 9.424097481228122e-11,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 1,
+      "max_error": 2.8421709430404007e-13,
+      "max_bound": 8.461534118878105e-11,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 2,
+      "max_error": 2.8421709430404007e-13,
+      "max_bound": 7.619763021607305e-11,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 3,
+      "max_error": 2.8421709430404007e-13,
+      "max_bound": 6.881797777138958e-11,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 4,
+      "max_error": 1.7053025658242404e-13,
+      "max_bound": 6.233247119516362e-11,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 5,
+      "max_error": 1.7053025658242404e-13,
+      "max_bound": 5.661891927625275e-11,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 6,
+      "max_error": 6.252776074688882e-13,
+      "max_bound": 5.1573349126957364e-11,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 7,
+      "max_error": 6.252776074688882e-13,
+      "max_bound": 4.710709937982135e-11,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 8,
+      "max_error": 6.252776074688882e-13,
+      "max_bound": 4.314440349596047e-11,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 2,
+      "test": "constant",
+      "error": 2.6193447411060333e-10,
+      "bound": 6.70773997193296e-08,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 0,
+      "max_error": 2.6193447411060333e-10,
+      "max_bound": 6.911004819567291e-08,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 1,
+      "max_error": 2.0372681319713593e-10,
+      "max_bound": 6.164807726034111e-08,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 2,
+      "max_error": 2.6193447411060333e-10,
+      "max_bound": 5.5140397574206137e-08,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 3,
+      "max_error": 2.6193447411060333e-10,
+      "max_bound": 4.945135510957455e-08,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 4,
+      "max_error": 2.6193447411060333e-10,
+      "max_bound": 4.4466167555806026e-08,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 5,
+      "max_error": 2.0372681319713593e-10,
+      "max_bound": 4.008750492966588e-08,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 6,
+      "max_error": 2.0372681319713593e-10,
+      "max_bound": 3.623266007196789e-08,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 7,
+      "max_error": 2.9103830456733704e-11,
+      "max_bound": 3.283120274254071e-08,
+      "passed": true
+    },
+    {
+      "n": 32,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 8,
+      "max_error": 2.9103830456733704e-11,
+      "max_bound": 2.982303090415917e-08,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 1,
+      "test": "constant",
+      "error": 5.684341886080801e-13,
+      "bound": 3.6033313898813675e-10,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 0,
+      "max_error": 5.684341886080801e-13,
+      "max_bound": 3.658767257418003e-10,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 1,
+      "max_error": 5.684341886080801e-13,
+      "max_bound": 3.4719167223735865e-10,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 2,
+      "max_error": 5.684341886080801e-13,
+      "max_bound": 3.2967901424692117e-10,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 3,
+      "max_error": 5.684341886080801e-13,
+      "max_bound": 3.132563177109095e-10,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 4,
+      "max_error": 5.684341886080801e-13,
+      "max_bound": 2.9784744561596294e-10,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 5,
+      "max_error": 5.684341886080801e-13,
+      "max_bound": 2.833820447946166e-10,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 6,
+      "max_error": 5.684341886080801e-13,
+      "max_bound": 2.6979507681939686e-10,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 7,
+      "max_error": 3.410605131648481e-13,
+      "max_bound": 2.570263890310916e-10,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 1,
+      "test": "polynomial",
+      "power": 8,
+      "max_error": 3.410605131648481e-13,
+      "max_bound": 2.450203221103483e-10,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 2,
+      "test": "constant",
+      "error": 1.0477378964424133e-09,
+      "bound": 5.284886038492673e-07,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 0,
+      "max_error": 1.0477378964424133e-09,
+      "max_bound": 5.366191977546405e-07,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 1,
+      "max_error": 1.0477378964424133e-09,
+      "max_bound": 5.076491929468816e-07,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 2,
+      "max_error": 1.0477378964424133e-09,
+      "max_bound": 4.805316358581517e-07,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 3,
+      "max_error": 8.149072527885437e-10,
+      "max_bound": 4.551348622851016e-07,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 4,
+      "max_error": 8.149072527885437e-10,
+      "max_bound": 4.3133733694589257e-07,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 5,
+      "max_error": 1.0477378964424133e-09,
+      "max_bound": 4.0902682377535646e-07,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 6,
+      "max_error": 8.149072527885437e-10,
+      "max_bound": 3.8809962778724085e-07,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 7,
+      "max_error": 8.149072527885437e-10,
+      "max_bound": 3.6845990205592595e-07,
+      "passed": true
+    },
+    {
+      "n": 64,
+      "derivative": 2,
+      "test": "polynomial",
+      "power": 8,
+      "max_error": 1.0477378964424133e-09,
+      "max_bound": 3.500190139729329e-07,
+      "passed": true
+    }
+  ],
+  "publication_readiness": "NOT READY",
+  "new_DEE_solves": 0
+}

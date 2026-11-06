@@ -1,0 +1,17 @@
+{
+  "reference_commit": "5799e440b5f27bfe81c3ce5c44814a7d2d652157",
+  "branch": "validation/run43-final-bounded",
+  "all_original_tracked_blobs_unchanged": true,
+  "original_blob_count": 931,
+  "changed_or_missing_originals": [],
+  "original_input_manifest_count": 31,
+  "agent_count": 1,
+  "new_DEE_solves": 0,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "evaluator_source_sha256": "f7e953bc1bad240de80e7549636bb461dba338f2cc0c721f88849eafe9a3a038"
+}

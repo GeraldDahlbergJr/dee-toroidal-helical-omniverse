@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "method": "Exact symbolic chain rule for arbitrary smooth f and W; no discrete derivative or solver equation imports",
+  "checks": [
+    {
+      "identity": "H_cartesian_00",
+      "passed": true
+    },
+    {
+      "identity": "H_cartesian_01",
+      "passed": true
+    },
+    {
+      "identity": "H_cartesian_02",
+      "passed": true
+    },
+    {
+      "identity": "H_cartesian_10",
+      "passed": true
+    },
+    {
+      "identity": "H_cartesian_11",
+      "passed": true
+    },
+    {
+      "identity": "H_cartesian_12",
+      "passed": true
+    },
+    {
+      "identity": "H_cartesian_20",
+      "passed": true
+    },
+    {
+      "identity": "H_cartesian_21",
+      "passed": true
+    },
+    {
+      "identity": "H_cartesian_22",
+      "passed": true
+    },
+    {
+      "identity": "div_LW_0=lap_Wi+grad_div_W_i/3",
+      "passed": true
+    },
+    {
+      "identity": "div_LW_1=lap_Wi+grad_div_W_i/3",
+      "passed": true
+    },
+    {
+      "identity": "div_LW_2=lap_Wi+grad_div_W_i/3",
+      "passed": true
+    }
+  ]
+}

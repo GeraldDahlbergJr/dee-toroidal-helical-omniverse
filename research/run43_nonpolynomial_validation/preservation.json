@@ -1,0 +1,68 @@
+{
+  "reference_commit": "5799e440b5f27bfe81c3ce5c44814a7d2d652157",
+  "branch": "validation/run43-final-bounded",
+  "all_original_tracked_blobs_unchanged": true,
+  "original_blob_count": 931,
+  "changed_or_missing_originals": [],
+  "original_input_manifest_count": 31,
+  "original_input_hash_checks": {
+    "research/RUN43_CONSOLIDATED_MATHEMATICAL_SPECIFICATION_20261106.md": true,
+    "docs/RECOVERED_NONLINEAR_DEE_FORMULATION.md": true,
+    "reproduce/dee_stress_energy_3p1.py": true,
+    "reproduce/validate_toroidal_helical_dee_source.py": true,
+    "reproduce/solve_toroidal_helical_coupled_constraints.py": true,
+    "reproduce/diagnose_toroidal_boundary_convergence.py": true,
+    "research/audit_run43_arrays.py": true,
+    "research/RUN43_COORDINATED_REPLAY_20261103.md": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/fields_64.npz": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/result_64.json": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/original-physics-audit.json": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/checkpoint_16_1.npz": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/checkpoint_8_0.npz": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/checkpoint_64_0.npz": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/result_8.json": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/result_16.json": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/checkpoint_16_0.npz": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/checkpoint_8_1.npz": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/report.json": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/result_32.json": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/checkpoint_32_0.npz": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/executed_solver.py": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/fields_16.npz": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/independent-audit.json": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/fields_32.npz": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/settings.json": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/fields_8.npz": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/checkpoint_64_1.npz": true,
+    "research/results/coordinated-replay-20261103-1831/baseline/checkpoint_32_1.npz": true,
+    "research/results/coordinated-replay-20261103-1831/coordination/frozen_audit.py": true,
+    "research/results/coordinated-replay-20261103-1831/validation/baseline-independent-validation.json": true
+  },
+  "accepted_archives": {
+    "8": {
+      "sha256": "d86045bbbb956aa0ea7d89ae00824bb8d7eed9c5dfe53a0ded10d9cfb0a95114",
+      "matches_saved_result": true
+    },
+    "16": {
+      "sha256": "bf97ccd47caae014951e85571a7238276477c95c5cd5f9b64606c89e5dae2162",
+      "matches_saved_result": true
+    },
+    "32": {
+      "sha256": "d9f0af5dcdbcd38d482efeee6ba2ab419f7bdf8068e6adc37fd67ea38bd5d313",
+      "matches_saved_result": true
+    },
+    "64": {
+      "sha256": "18b9b4c0d530af09585e56de8dabf905311878545f698f6c8544877bdacf54be",
+      "matches_saved_result": true
+    }
+  },
+  "agent_count": 1,
+  "new_DEE_solves": 0,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "evaluator_source_sha256": "f7e953bc1bad240de80e7549636bb461dba338f2cc0c721f88849eafe9a3a038"
+}

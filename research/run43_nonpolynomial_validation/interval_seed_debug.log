@@ -1,0 +1,31 @@
+{"n": 8, "max_abs_error": [77.12180671760052, 5.207672855974138, 5.99220098511082, 4.9791347393167555], "floating_error_bound": [NaN, NaN, NaN, NaN], "direct_matrix_radius": [NaN, NaN, NaN, NaN], "FFT_to_direct_center": [NaN, NaN, NaN, NaN], "continuum_radius": [4.918680353808818e-12, 5.230568572061647e-13, 6.039540953366249e-13, 4.971003285389469e-13], "exact_residual_max": [775.6491841450285, 51.218375733202016, 59.90401776417963, 49.384093821718395], "error_over_bound": [NaN, NaN, NaN, NaN]}
+{"n": 16, "max_abs_error": [4.942634281917435, 0.3171744015412088, 0.3704203043288814, 0.3160322054257989], "floating_error_bound": [NaN, NaN, NaN, NaN], "direct_matrix_radius": [NaN, NaN, NaN, NaN], "FFT_to_direct_center": [NaN, NaN, NaN, NaN], "continuum_radius": [4.918680353808818e-12, 5.408964761780057e-13, 6.31350201690962e-13, 5.363086134975503e-13], "exact_residual_max": [775.6491841450285, 52.17031214801599, 62.218235528439685, 52.1508872217914], "error_over_bound": [NaN, NaN, NaN, NaN]}
+{"n": 32, "max_abs_error": [0.1265102148869346, 0.007990644017375814, 0.009226643451555105, 0.00788379289346608], "floating_error_bound": [NaN, NaN, NaN, NaN], "direct_matrix_radius": [NaN, NaN, NaN, NaN], "FFT_to_direct_center": [NaN, NaN, NaN, NaN], "continuum_radius": [4.922190105397415e-12, 5.451184236133534e-13, 6.371334247563727e-13, 5.363086134975503e-13], "exact_residual_max": [775.6491841450285, 52.799890644722346, 62.218235528439685, 52.1508872217914], "error_over_bound": [NaN, NaN, NaN, NaN]}
+{"n": 64, "max_abs_error": [0.0018538051435825764, 0.00011538100710595245, 0.00013291662932601866, 0.00011366465383844115], "floating_error_bound": [NaN, NaN, NaN, NaN], "direct_matrix_radius": [NaN, NaN, NaN, NaN], "FFT_to_direct_center": [NaN, NaN, NaN, NaN], "continuum_radius": [4.937333231972725e-12, 5.476832355017247e-13, 6.37562814575745e-13, 5.363086134975503e-13], "exact_residual_max": [776.0611630201606, 52.857170172960906, 62.218235528439685, 52.1508872217914], "error_over_bound": [NaN, NaN, NaN, NaN]}
+Traceback (most recent call last):
+  File "/workspace/dee/research/run43_nonpolynomial_validation/qualify.py", line 164, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ^^^^^^
+  File "/workspace/dee/research/run43_nonpolynomial_validation/qualify.py", line 161, in main
+    (OUT/'qualification.json').write_text(json.dumps(report,indent=2,allow_nan=False)+'\n')
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 317, in _iterencode_list
+    yield buf + _floatstr(value)
+                ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 240, in floatstr
+    raise ValueError(
+ValueError: Out of range float values are not JSON compliant: nan
