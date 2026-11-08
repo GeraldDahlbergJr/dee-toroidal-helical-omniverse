@@ -1,0 +1,8 @@
+{
+  "pi_bracket_proven_by": "Machin identity and 50-term alternating rational arctangent series",
+  "denominator_rows_checked": 60,
+  "domain": "exact decimal protocol chart",
+  "denominator_proof": "Nonnegative spline partition gives psi bounds; integrate positive J=r(1+r cos t) against these bounds; angular cos integral vanishes. Surface normalization uses protocol chart weight J rather than geometric area.",
+  "enclosure_arithmetic": "exact rational",
+  "status": "PASS for denominator only"
+}

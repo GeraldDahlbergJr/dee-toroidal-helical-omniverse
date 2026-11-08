@@ -1,0 +1,9 @@
+{
+  "verdict": "NOT YET ESTABLISHED",
+  "certified_total_error_scores": 0,
+  "score_count": 60,
+  "certified_convergence_comparisons": 0,
+  "comparison_count": 40,
+  "conditional_10_percent_comparisons_pass": 40,
+  "proposed_bounds_not_sufficient_for_acceptance": []
+}

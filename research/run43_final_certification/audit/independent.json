@@ -1,0 +1,601 @@
+{
+  "checkpoint": "c5580eea5b216052ba5e91c6725e0304a7852a99",
+  "hash_checks": [
+    {
+      "path": "research/run43_bspline_completion/CONDITIONING.md",
+      "expected": "d701adff48e3476f82eaa61b9ca198af36d395727a181f943ead11208b08a10b",
+      "actual": "d701adff48e3476f82eaa61b9ca198af36d395727a181f943ead11208b08a10b",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/REPRODUCE.md",
+      "expected": "b92088fbe7723f0a1b6dd52394c398e067a6c6919924f8e8f75afb854e9caf6f",
+      "actual": "b92088fbe7723f0a1b6dd52394c398e067a6c6919924f8e8f75afb854e9caf6f",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/REPORT.md",
+      "expected": "2a7e6d7317a4c0019942d2d3e07c3f370384e5dea4d8bec25fc4790f1e1376d8",
+      "actual": "2a7e6d7317a4c0019942d2d3e07c3f370384e5dea4d8bec25fc4790f1e1376d8",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/REVIEWS.md",
+      "expected": "fd93649da6fa66b9f214a7cf674c2974c4655e8ef4026a737dd2dc66a96f5fe3",
+      "actual": "fd93649da6fa66b9f214a7cf674c2974c4655e8ef4026a737dd2dc66a96f5fe3",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/coefficients_16.npz",
+      "expected": "e302fc749becf171574dddee8d63b3ddd310f82898667dfbe7c4cdaa540f1faf",
+      "actual": "e302fc749becf171574dddee8d63b3ddd310f82898667dfbe7c4cdaa540f1faf",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/coefficients_32.npz",
+      "expected": "449669f3215f74fb11483f18fc26222c3b3528efa657c5a66ad28bef532f6c5d",
+      "actual": "449669f3215f74fb11483f18fc26222c3b3528efa657c5a66ad28bef532f6c5d",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/coefficients_8.npz",
+      "expected": "76b250741a141591a5859eff19906a25a1de1bc66e83bd647c1fd1a2add03940",
+      "actual": "76b250741a141591a5859eff19906a25a1de1bc66e83bd647c1fd1a2add03940",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/compare_results.py",
+      "expected": "a477be4a672d221fc8067a3093da4103982bd83d613e7a2dfaedacc0b818e1e7",
+      "actual": "a477be4a672d221fc8067a3093da4103982bd83d613e7a2dfaedacc0b818e1e7",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/conditioning.py",
+      "expected": "b13cde0e393bc7297cc293e4e45e9220ea61c0a345401bf3e05fb49a73a7bbd4",
+      "actual": "b13cde0e393bc7297cc293e4e45e9220ea61c0a345401bf3e05fb49a73a7bbd4",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/conditioning.json",
+      "expected": "f8d090679aa02b101c4c5b9ae13c1b1b54593dd2f20d8ac13ba3e556f433c85e",
+      "actual": "f8d090679aa02b101c4c5b9ae13c1b1b54593dd2f20d8ac13ba3e556f433c85e",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/environment.log",
+      "expected": "fef6e0398a9b7fba79f99231a1dbbf0961e9249c8abc5b6a1f02c3c925a758ce",
+      "actual": "fef6e0398a9b7fba79f99231a1dbbf0961e9249c8abc5b6a1f02c3c925a758ce",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/equivalence.py",
+      "expected": "0543d1719d75f3e3309f4bb7745230cbb534c576ef34b21191711015eae068f5",
+      "actual": "0543d1719d75f3e3309f4bb7745230cbb534c576ef34b21191711015eae068f5",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/equivalence.json",
+      "expected": "5e15cfed528de46be4d4bd6b627eb1513a51d35b220268ccf0830f139208337a",
+      "actual": "5e15cfed528de46be4d4bd6b627eb1513a51d35b220268ccf0830f139208337a",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/evaluator.py",
+      "expected": "25ed7da1f943593346317c2c670c14b17a83d0f2320988ac1fdd5116f4a7492d",
+      "actual": "25ed7da1f943593346317c2c670c14b17a83d0f2320988ac1fdd5116f4a7492d",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/execution.log",
+      "expected": "468d7e34ef1ed5e8519840dc49799090a4588f0bc81c093013c21110cefd1024",
+      "actual": "468d7e34ef1ed5e8519840dc49799090a4588f0bc81c093013c21110cefd1024",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/experiment.py",
+      "expected": "3ffe6f6c122202d0390a554aba8f628e7c42ee04624ab4046f955c893c07906a",
+      "actual": "3ffe6f6c122202d0390a554aba8f628e7c42ee04624ab4046f955c893c07906a",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/profile_memory.py",
+      "expected": "c25af59f37e636c703dc8332f9b79a80d5952257e61af66d94dbc7aa5366b5dc",
+      "actual": "c25af59f37e636c703dc8332f9b79a80d5952257e61af66d94dbc7aa5366b5dc",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/profile_memory.jsonl",
+      "expected": "5e06b2f6bf6eb4691be71a1fcd87c357218e2032ce8fbade74b73b4c71b6e64a",
+      "actual": "5e06b2f6bf6eb4691be71a1fcd87c357218e2032ce8fbade74b73b4c71b6e64a",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/results.json",
+      "expected": "53acf3c216e5809a7ebe2c310afb6ae782c363cd61e125799da12a708a771506",
+      "actual": "53acf3c216e5809a7ebe2c310afb6ae782c363cd61e125799da12a708a771506",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/results_equivalence.json",
+      "expected": "41df297bd36d84d21b941b8485ac4dccabe7a7ed7fe46d2793db1f9effe58886",
+      "actual": "41df297bd36d84d21b941b8485ac4dccabe7a7ed7fe46d2793db1f9effe58886",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_bspline_completion/run.py",
+      "expected": "b771f3baa1562b0f6a844d7b0a731b309a04600ef147845792094b6b6e1c066a",
+      "actual": "b771f3baa1562b0f6a844d7b0a731b309a04600ef147845792094b6b6e1c066a",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_final_gate/REPORT.md",
+      "expected": "f53dfbc2dfe1695df6bf670b99a1ce79692b04019d4286043b40270bb71a2dc8",
+      "actual": "f53dfbc2dfe1695df6bf670b99a1ce79692b04019d4286043b40270bb71a2dc8",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_final_gate/audit.py",
+      "expected": "ac72a29edaf905845c48d7c48c97a96e388ba3a65d3047f3c8416fee8dfc7539",
+      "actual": "ac72a29edaf905845c48d7c48c97a96e388ba3a65d3047f3c8416fee8dfc7539",
+      "status": "MATCH"
+    },
+    {
+      "path": "research/run43_final_gate/audit.json",
+      "expected": "e07f7b78715d2567758a812b5b74ea6472b0ddb41dc82d00818b3bb4bc61754e",
+      "actual": "e07f7b78715d2567758a812b5b74ea6472b0ddb41dc82d00818b3bb4bc61754e",
+      "status": "MATCH"
+    }
+  ],
+  "coefficient_checks": [
+    {
+      "n": 8,
+      "shape": [
+        4,
+        10,
+        8,
+        8
+      ],
+      "finite": true,
+      "exact_coefficient_difference_check": true,
+      "inverse_bound_exact": "300469866742029534424430377172992/227054036335676397430706549382293",
+      "inverse_bound_display": 1.3233407852649457
+    },
+    {
+      "n": 16,
+      "shape": [
+        4,
+        18,
+        16,
+        16
+      ],
+      "finite": true,
+      "exact_coefficient_difference_check": true,
+      "inverse_bound_exact": "24920307348391877262838793437708288/19985978039453825271368911334552673",
+      "inverse_bound_display": 1.2468895592298417
+    },
+    {
+      "n": 32,
+      "shape": [
+        4,
+        34,
+        32,
+        32
+      ],
+      "finite": true,
+      "exact_coefficient_difference_check": true,
+      "inverse_bound_exact": "164750877517994142570667229315072/133244618188151097144810573258017",
+      "inverse_bound_display": 1.236454273037534
+    }
+  ],
+  "score_count": 60,
+  "comparisons": [
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "inner",
+      "component": "H",
+      "conditional_ratio_exact": "236020822784619024/31216752286097345",
+      "conditional_order_display": 2.918521790237655,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "inner",
+      "component": "Mx",
+      "conditional_ratio_exact": "744180521754535920/74896427406017503",
+      "conditional_order_display": 3.312683821510913,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "inner",
+      "component": "My",
+      "conditional_ratio_exact": "215613563863592232/21004574800584287",
+      "conditional_order_display": 3.3596724518140233,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "inner",
+      "component": "Mz",
+      "conditional_ratio_exact": "4254389961130510/373175359683137",
+      "conditional_order_display": 3.511026643015973,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "bulk",
+      "component": "H",
+      "conditional_ratio_exact": "119086630595845884/13398021433090415",
+      "conditional_order_display": 3.1519195863773337,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "bulk",
+      "component": "Mx",
+      "conditional_ratio_exact": "119216524210586816/10800422157443215",
+      "conditional_order_display": 3.464424607473747,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "bulk",
+      "component": "My",
+      "conditional_ratio_exact": "789185189910454704/42045291738613625",
+      "conditional_order_display": 4.230347721630228,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "bulk",
+      "component": "Mz",
+      "conditional_ratio_exact": "8266940274106602/625034925334465",
+      "conditional_order_display": 3.725344752632706,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "outer",
+      "component": "H",
+      "conditional_ratio_exact": "22083468097076424/3460178150623657",
+      "conditional_order_display": 2.6740485344363782,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "outer",
+      "component": "Mx",
+      "conditional_ratio_exact": "505611274095054504/33264055296029371",
+      "conditional_order_display": 3.925992666348835,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "outer",
+      "component": "My",
+      "conditional_ratio_exact": "983935152130225392/30584367438625847",
+      "conditional_order_display": 5.007696892552946,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "outer",
+      "component": "Mz",
+      "conditional_ratio_exact": "892260175300006032/51124279925027683",
+      "conditional_order_display": 4.12538392555864,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "first_inner",
+      "component": "H",
+      "conditional_ratio_exact": "1086491226787230096/90872908388487335",
+      "conditional_order_display": 3.579682461784358,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "first_inner",
+      "component": "Mx",
+      "conditional_ratio_exact": "121641551851368144/10471493399500925",
+      "conditional_order_display": 3.538097013853879,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "first_inner",
+      "component": "My",
+      "conditional_ratio_exact": "21588300723470565/2266062248598709",
+      "conditional_order_display": 3.251990291636321,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "first_inner",
+      "component": "Mz",
+      "conditional_ratio_exact": "969077205832121424/64244653351016017",
+      "conditional_order_display": 3.9149633102740715,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "first_outer",
+      "component": "H",
+      "conditional_ratio_exact": "578769478030173096/83386566812596267",
+      "conditional_order_display": 2.7951019459019073,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "first_outer",
+      "component": "Mx",
+      "conditional_ratio_exact": "273339475035992928/10523277496429973",
+      "conditional_order_display": 4.699037815420237,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "first_outer",
+      "component": "My",
+      "conditional_ratio_exact": "3892008746268517824/75872857475594443",
+      "conditional_order_display": 5.680787269361886,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 8,
+      "n_fine": 16,
+      "region": "first_outer",
+      "component": "Mz",
+      "conditional_ratio_exact": "541942867986880512/14572037570596583",
+      "conditional_order_display": 5.216866244666884,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "inner",
+      "component": "H",
+      "conditional_ratio_exact": "25540979143170555/3821250902774239",
+      "conditional_order_display": 2.7406969404317665,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "inner",
+      "component": "Mx",
+      "conditional_ratio_exact": "37710089323309512/4906745350104829",
+      "conditional_order_display": 2.9421122621886004,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "inner",
+      "component": "My",
+      "conditional_ratio_exact": "68742244801912212/8851177391300189",
+      "conditional_order_display": 2.957255682567723,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "inner",
+      "component": "Mz",
+      "conditional_ratio_exact": "527602108526558784/68553851730502831",
+      "conditional_order_display": 2.944140698339364,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "bulk",
+      "component": "H",
+      "conditional_ratio_exact": "350784561157276320/50346666503993497",
+      "conditional_order_display": 2.8006170883928054,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "bulk",
+      "component": "Mx",
+      "conditional_ratio_exact": "636243050729382120/83765959773705847",
+      "conditional_order_display": 2.9251419978685225,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "bulk",
+      "component": "My",
+      "conditional_ratio_exact": "2201644367403768/282496598158027",
+      "conditional_order_display": 2.9622760488287856,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "bulk",
+      "component": "Mz",
+      "conditional_ratio_exact": "180010058496325920/22908275880979049",
+      "conditional_order_display": 2.9741367349175136,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "outer",
+      "component": "H",
+      "conditional_ratio_exact": "62283206711225826/9770306279729105",
+      "conditional_order_display": 2.6723675312366537,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "outer",
+      "component": "Mx",
+      "conditional_ratio_exact": "217728361937646792/28470910012979005",
+      "conditional_order_display": 2.934968837818498,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "outer",
+      "component": "My",
+      "conditional_ratio_exact": "800754347484022176/89639844514693825",
+      "conditional_order_display": 3.1591476742243585,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "outer",
+      "component": "Mz",
+      "conditional_ratio_exact": "669263300836726032/81104541297339263",
+      "conditional_order_display": 3.0447193032204294,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "first_inner",
+      "component": "H",
+      "conditional_ratio_exact": "16522346979724970/1687721888039121",
+      "conditional_order_display": 3.291269540793206,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "first_inner",
+      "component": "Mx",
+      "conditional_ratio_exact": "205622052208381800/16919167436193143",
+      "conditional_order_display": 3.603264513845186,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "first_inner",
+      "component": "My",
+      "conditional_ratio_exact": "355977778688960832/28771758745462975",
+      "conditional_order_display": 3.6290618689880114,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "first_inner",
+      "component": "Mz",
+      "conditional_ratio_exact": "210255229148779692/17261277445284301",
+      "conditional_order_display": 3.6065305391766262,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "first_outer",
+      "component": "H",
+      "conditional_ratio_exact": "545802982773357384/86095225058586865",
+      "conditional_order_display": 2.6643751474494595,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "first_outer",
+      "component": "Mx",
+      "conditional_ratio_exact": "964314883309219344/72088161349179635",
+      "conditional_order_display": 3.7416700569435872,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "first_outer",
+      "component": "My",
+      "conditional_ratio_exact": "331081559893503024/19817190740766221",
+      "conditional_order_display": 4.062362292255226,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    },
+    {
+      "n_coarse": 16,
+      "n_fine": 32,
+      "region": "first_outer",
+      "component": "Mz",
+      "conditional_ratio_exact": "1144567314635949792/65535935387827817",
+      "conditional_order_display": 4.12637230528487,
+      "conditional_pass": true,
+      "unconditional_pass": null
+    }
+  ],
+  "minimum_conditional_order": 2.6643751474494595,
+  "pilot": {
+    "score": 5.722436413449492e-07,
+    "absolute_allowance_exact": "5404688383845333/94447329657392904273920",
+    "absolute_allowance_display": 5.722436413449492e-08
+  },
+  "verdict": "NOT YET ESTABLISHED",
+  "reason": "No complete rigorous quadrature, floating-point and exact-assembly solution uncertainty enclosure supplied."
+}

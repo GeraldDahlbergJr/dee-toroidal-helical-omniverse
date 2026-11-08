@@ -1,0 +1,47 @@
+{
+  "scope": "Mathematical sampled Gauss-6 Jacobian at exact archived binary64 coefficients; no new PDE solves",
+  "rows": [
+    {
+      "n": 8,
+      "conditioning_reproduced": true,
+      "independent_schur_exact": "2697229879193278374487513992857/2500291629571633650112259557198080",
+      "sampled_inverse_bound_exact": "300469866742029534424430377172992/227054036335676397430706549382293",
+      "sampled_inverse_upper": 1.323340785264946,
+      "exact_assembly_error_upper": null,
+      "absolute_algebraic_dual_defect_upper": null,
+      "jacobian_perturbation_upper": null,
+      "nonlinear_remainder_constant_upper": null,
+      "verified_solution_radius": null,
+      "propagated_strong_residual_error_upper": null,
+      "status": "NOT YET ESTABLISHED"
+    },
+    {
+      "n": 16,
+      "conditioning_reproduced": true,
+      "independent_schur_exact": "5451788878478995210722351001909/6667444468696420752333692795852800",
+      "sampled_inverse_bound_exact": "24920307348391877262838793437708288/19985978039453825271368911334552673",
+      "sampled_inverse_upper": 1.246889559229842,
+      "exact_assembly_error_upper": null,
+      "absolute_algebraic_dual_defect_upper": null,
+      "jacobian_perturbation_upper": null,
+      "nonlinear_remainder_constant_upper": null,
+      "verified_solution_radius": null,
+      "propagated_strong_residual_error_upper": null,
+      "status": "NOT YET ESTABLISHED"
+    },
+    {
+      "n": 32,
+      "conditioning_reproduced": true,
+      "independent_schur_exact": "521359009114639222663737771099/666744449949870124946716604061184",
+      "sampled_inverse_bound_exact": "164750877517994142570667229315072/133244618188151097144810573258017",
+      "sampled_inverse_upper": 1.2364542730375343,
+      "exact_assembly_error_upper": null,
+      "absolute_algebraic_dual_defect_upper": null,
+      "jacobian_perturbation_upper": null,
+      "nonlinear_remainder_constant_upper": null,
+      "verified_solution_radius": null,
+      "propagated_strong_residual_error_upper": null,
+      "status": "NOT YET ESTABLISHED"
+    }
+  ]
+}

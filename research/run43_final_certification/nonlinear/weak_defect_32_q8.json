@@ -1,0 +1,13 @@
+{
+  "n": 32,
+  "quadrature": 8,
+  "seconds": 21.30305334900001,
+  "scalar_dual_upper_formula_binary64": 7.311859795267213e-16,
+  "vector_dual_upper_formula_binary64": 1.471954762490448e-14,
+  "coefficient_defect_euclidean_norms": [
+    2.671046994796158e-16,
+    4.97757384837878e-15
+  ],
+  "rigorous": false,
+  "reason": "Floating-point assembly, symbolic-source evaluation, and eigensolve/preconditioner not enclosed; exact-minus-Gauss assembly absent."
+}

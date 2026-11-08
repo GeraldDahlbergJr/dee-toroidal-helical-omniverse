@@ -1,0 +1,17 @@
+{
+  "scope": "fixed saved field continuum RMS only; no exact-assembly solution claim",
+  "n": 32,
+  "region": "first_outer",
+  "component": "My",
+  "true_RMS_enclosure_rational": [
+    "0",
+    "115417926400"
+  ],
+  "absolute_difference_from_archived_score_bound_rational": "1090091494307351138732266016103467/9444732965739290427392",
+  "absolute_difference_bound": 115417926400.0,
+  "allowed_total_error": 5.722436413449492e-08,
+  "meets_10_percent": false,
+  "method": "analytic pointwise range, positive weighted RMS; Fraction exact arithmetic",
+  "quadrature_truncation": "bypassed by continuum pointwise range; no useful sharp truncation bound",
+  "solution_uncertainty": null
+}

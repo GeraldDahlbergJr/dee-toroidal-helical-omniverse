@@ -1,0 +1,18 @@
+{
+  "status": "NOT YET ESTABLISHED",
+  "n": 32,
+  "region": "first_outer",
+  "component": "My",
+  "archived_q8": 5.722436413449492e-07,
+  "absolute_total_allowance": 5.722436413449492e-08,
+  "empirical_q6_q8_difference": 3.6089171206474615e-14,
+  "empirical_relative_difference": 6.306609387856879e-08,
+  "surface_D_lower_bound_rational": "1053/160",
+  "gauss8_remainder_constant_rational": "1/58914962958794342400000",
+  "illustrative_numerator_truncation_budget": 2.1551144541743275e-13,
+  "sufficient_sum_of_16th_derivative_suprema_ceiling": 6.542024184414019e+19,
+  "ceiling_exact_rational": "5591735983016796130144811459245059112827763720733292187447125/85474095255391633670414725967762673369088",
+  "certified_derivative_suprema": null,
+  "roundoff_bound": null,
+  "propagated_solution_bound": null
+}
