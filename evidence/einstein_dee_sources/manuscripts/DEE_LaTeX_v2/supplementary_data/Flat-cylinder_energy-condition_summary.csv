@@ -1,0 +1,5 @@
+case,sampled_points,Lorentzian_points,TypeI_points,NEC_passes,WEC_passes,DEC_passes,SEC_passes,min_energy_density,max_energy_density
+Flat control,5,5,5,5,5,5,5,1.348861340017304e-10,5.3059901831180664e-08
+Toroidal shift only,5,5,0,0,0,0,0,,
+Helical shear only,5,5,5,0,0,0,0,-0.0006447351309553026,6.720343181370607e-06
+Both couplings,5,5,2,0,0,0,0,-0.0006670286955900146,-0.0002128640937734087

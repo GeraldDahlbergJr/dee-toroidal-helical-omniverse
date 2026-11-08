@@ -1,0 +1,174 @@
+      Helical Perturbations in Finite-Matter Toroidal–Helical Transport: Nonlinear
+                     Distortion, Stability, and Dynamical Recovery
+                                                   Gerald T. Dahlberg Jr.1
+                      1
+                          Theoretical and Computational Physics Researcher, Sacramento, California, USA
+                                                    (Dated: August 24, 2026)
+               We formulate a nonlinear perturbation framework for a finite-matter toroidal–helical transport
+            background in which the imposed disturbance is characterized explicitly by its amplitude, axial
+            propagation, azimuthal winding, characteristic frequency, and mode number. The aim is to iden-
+            tify parameter ranges in which a helical perturbation undergoes nonlinear wave distortion while
+            remaining bounded, and to determine whether, where, and under what conditions the distorted
+            configuration dynamically recovers toward a reference state. The perturbation is treated as a cou-
+            pled axial–azimuthal structure rather than as a purely radial or purely axial disturbance, allowing
+            the winding geometry and propagation scale to be varied independently. Stability is assessed through
+            boundedness, excursion magnitude, nonlinear waveform deformation, growth or decay of the pertur-
+            bation envelope, and recovery after finite displacement. The resulting parameter map is intended
+            to distinguish bounded-recovery, marginal, and unstable regimes and to provide explicit initial-data
+            targets for subsequent nonlinear Einstein–matter evolution. The present analysis does not prescribe
+            the outcome of the full nonlinear evolution; it defines the perturbative variables, diagnostics, and
+            parameter regimes needed to test that evolution systematically.
+
+
+                I.     INTRODUCTION                                  II.   TOROIDAL–HELICAL BACKGROUND
+
+
+   The purpose of this work is to isolate and ana-                  We denote the unperturbed background configuration
+lyze a helical perturbation imposed on a finite-matter            collectively by
+toroidal–helical transport background, with particular
+emphasis on nonlinear wave distortion, boundedness, and                              X0 = X0 (ρ, ϕ, z, t),               (2)
+dynamical recovery.                                               where ρ is a local radial coordinate, ϕ is the azimuthal
+   The central question is not whether a prescribed equi-         coordinate, and z parameterizes the axial direction.
+librium exists by construction. Instead, we ask how a               The finite-matter toroidal–helical transport back-
+finite helical disturbance evolves across a controlled pa-        ground is treated here as a prescribed reference config-
+rameter space and whether the perturbed configuration             uration about which the perturbation analysis is carried
+remains bounded or returns toward a reference dynami-             out.
+cal state after nonlinear deformation.                              A useful generic decomposition is
+   The analysis is organized around four explicit control
+quantities:                                                                             X = X0 + δX,                     (3)
+                                                                  with δX representing the finite helical disturbance.
+                     P = {A, kz , m, ω} .                  (1)
+
+where A is the perturbation amplitude, kz controls axial                           A.    Reference state
+propagation, m is the azimuthal mode number, ω is a
+characteristic temporal frequency.                                  Define a reference-state diagnostic
+  The objectives of the paper are:
+                                                                                        R0 = R[X0 ],                     (4)
+   1. to define the perturbation variables without ambi-
+                                                                  against which the magnitude of departure and subse-
+      guity;
+                                                                  quent recovery can be measured.
+
+   2. to quantify nonlinear waveform distortion;
+                                                                   III.    HELICAL PERTURBATION VARIABLES
+   3. to establish boundedness and recovery criteria;
+                                                                    We write the perturbation phase as
+   4. to map the stable, marginal, and unstable param-
+                                                                              Φ(z, ϕ, t) = kz z + mϕ − ωt + Φ0 ,         (5)
+      eter regimes; and
+                                                                  where kz controls axial phase progression, m ∈ Z con-
+   5. to identify parameter sets suitable as initial-data         trols azimuthal winding, ω is the characteristic temporal
+      targets for nonlinear Einstein–matter evolution.            frequency, and Φ0 is an initial phase.
+                                                                                                                               2
+
+  A minimal perturbation field may be written as                 V.     STABILITY AND DYNAMICAL RECOVERY
+                                                                                   CRITERIA
+                    δX = A F (ρ) W(Φ),                     (6)
+where F (ρ) specifies radial localization and W is a wave-         The perturbation is classified as bounded over the in-
+form that need not remain sinusoidal once nonlinear evo-         terval 0 ≤ t ≤ T when
+lution is included.
+  At the initial surface one may take                                                   sup Aeff (t) < Amax ,                (13)
+                          ⃓                                                           0≤t≤T
+                    W(Φ)⃓t=0 = cos Φ,                  (7)
+while allowing nonlinear terms to generate harmonic con-         for a specified admissible bound Amax .
+tent dynamically.                                                  Let a state-distance functional be
+
+                                                                                     E(t) = ∥X(t) − X0 (t)∥ ,                (14)
+                 A.    Winding geometry
+                                                                 with the norm defined explicitly for the final field vari-
+  The relative importance of axial progression and az-           ables.
+imuthal winding may be characterized by a dimensionless            A recovery event occurs when, after an excursion,
+winding ratio
+                           m                                                               E(trec ) ≤ ϵrec ,                 (15)
+                      η≡        ,                   (8)
+                          kz Lz
+                                                                 for a chosen tolerance ϵrec .
+where Lz is a chosen axial reference scale.
+                                                                   The recovery time is then
+
+               B.      Amplitude measure                                       trec = inf {t > tpeak : E(t) ≤ ϵrec } ,       (16)
+
+  For a scalar perturbation, an instantaneous amplitude          where tpeak is the time of maximum excursion.
+diagnostic may be defined by                                      We therefore distinguish:
+
+                 Aeff (t) = max |δX(x, t)| .               (9)        bounded recovery: Aeff < Amax , trec < T, (17)
+                               x
+                                                                  bounded non-recovery: Aeff < Amax , trec ̸< T, (18)
+     IV.   NONLINEAR WAVE DISTORTION                                          unstable: Aeff ≥ Amax or growth is unbounded.
+                                                                                                                 (19)
+   The nonlinear problem is distinguished from a purely
+linear mode calculation by allowing the waveform to de-
+form as the disturbance evolves.                                         VI.    PARAMETER-SPACE MAPPING
+   A generic harmonic decomposition is
+                 ∞
+                 ∑︂                                                The primary scan is performed over
+    δX(x, t) =         an (t)Fn (ρ) cos [nΦ + θn (t)] .   (10)
+                 n=1                                                                        (A, kz , m, ω).                  (20)
+  An initially single-mode perturbation has
+                                                                   For each parameter point, record at minimum:
+                         an>1 (0) ≈ 0,                    (11)
+whereas nonlinear mode generation produces nonzero                              {Apeak , Dpeak , tpeak , trec , Efinal } .   (21)
+higher harmonics.
+  We define a distortion diagnostic                                The purpose of the scan is to identify surfaces separat-
+                          ∑︂                                     ing:
+                             |an (t)|2
+                              n≥2
+                    D(t) = ∑︂                   ,         (12)        1. bounded-recovery behavior,
+                                    |an (t)|2
+                              n≥1                                     2. bounded but non-recovering behavior,
+so that D = 0 corresponds to an undistorted single-mode
+signal within this decomposition.                                     3. marginal behavior, and
+   Additional measures may include phase drift, steep-
+ening, envelope asymmetry, spectral broadening, and                   4. unstable growth.
+mode-to-mode energy transfer.
+                                                                                                                         3
+
+                                                                  4. trapped-surface or horizon diagnostics where appli-
+TABLE I. Suggested numerical outputs for each parameter
+                                                                     cable,
+point.
+Quantity                                            Symbol        5. persistence or loss of the helical structure, and
+Initial amplitude                                      A
+Axial propagation parameter                            kz
+                                                                  6. recovery or runaway behavior.
+Azimuthal mode number                                  m
+Characteristic frequency                               ω
+Peak effective amplitude                             Apeak                      VIII.    DISCUSSION
+Peak distortion                                      Dpeak
+Recovery time                                         trec        The distinction between nonlinear distortion and insta-
+Final state distance                                 Efinal    bility is important. A waveform may develop substantial
+                                                               harmonic content or geometric deformation while remain-
+                                                               ing bounded and dynamically recoverable. Conversely, a
+                                                               visually modest distortion may precede secular growth or
+         VII. BRIDGE TO NONLINEAR
+        EINSTEIN–MATTER EVOLUTION
+                                                               loss of recovery.
+                                                                  The parameter-space approach therefore avoids identi-
+                                                               fying waveform deformation itself with failure. The rel-
+  The perturbative analysis is intended to identify well-      evant question is whether nonlinear distortion remains
+defined initial-data targets for a subsequent nonlinear        inside a bounded basin and whether the perturbed con-
+Einstein–matter calculation.                                   figuration returns toward the chosen reference state.
+  The full evolution would require a specified matter             This framework is intentionally modular. Once the ex-
+model and the coupled system                                   plicit toroidal–helical background and matter sector are
+                                                               fixed, the diagnostics introduced here can be evaluated
+                      Gµν = 8πTµν ,                    (22)    numerically without changing the logical structure of the
+                                                               stability test.
+together with the corresponding matter-field equations
+and constraint conditions.                                                      IX.     CONCLUSION
+   The present paper does not assume that bounded re-
+covery in the reduced perturbative model guarantees               We have defined a working framework for nonlinear he-
+bounded behavior in the full gravitational system. In-         lical perturbations on a toroidal–helical background us-
+stead, it identifies parameter sets for which the nonlinear    ing explicit control variables for amplitude, axial propa-
+Einstein–matter evolution can be tested under controlled       gation, azimuthal winding, characteristic frequency, and
+initial conditions.                                            mode structure.
+   For each candidate initial-data set, the next-stage anal-      The central outputs are not a predetermined claim of
+ysis should monitor at minimum:                                stability, but measurable regimes of nonlinear distortion,
+                                                               boundedness, excursion, and dynamical recovery. The
+   1. constraint violation,                                    resulting parameter map is designed to identify candi-
+                                                               date initial-data sets for subsequent nonlinear Einstein–
+                                                               matter evolution.
+   2. curvature growth,
+                                                                  The next step is to specify the full background fields
+                                                               and nonlinear evolution equations, then compute the re-
+   3. stress–energy consistency,                               covery and instability boundaries numerically.
+

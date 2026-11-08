@@ -1,0 +1,16 @@
+{
+  "sector": "stationary axisymmetric z-independent linearized harmonic-gauge phi-z twist",
+  "operator": "H'' - H'/r",
+  "equation": "H'' - H'/r = -16 pi G T_phi_z",
+  "manufactured_solution": "H(r) = 0.3 r^2 + 0.7 r^4",
+  "parameters": {"G": 0.2, "R_max": 2.0},
+  "boundary_conditions": ["H(0)=0 regular axis", "H(R_max)=H_exact(R_max)"],
+  "results": [
+    {"points": 41, "max_abs_error": 0.0012905619793579515, "observed_order": null},
+    {"points": 81, "max_abs_error": 0.00032206236442711145, "observed_order": 2.0025874434726116},
+    {"points": 161, "max_abs_error": 0.00008049002479970646, "observed_order": 2.000458175132937},
+    {"points": 321, "max_abs_error": 0.00002011954031044816, "observed_order": 2.0002126568811076}
+  ],
+  "acceptance": {"minimum_order": 1.9, "all_refinements_pass": true},
+  "scope_note": "This checkpoint validates numerical convergence for the independently derived restricted linearized twist equation only; it is not validation of nonlinear GR or of DEE as a complete physical theory."
+}

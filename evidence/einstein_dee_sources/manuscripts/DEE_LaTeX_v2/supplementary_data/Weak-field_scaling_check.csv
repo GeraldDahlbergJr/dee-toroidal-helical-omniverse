@@ -1,0 +1,7 @@
+quantity,unscaled,scaled_at_epsilon_1e-6
+min energy density,2.618579e-08,2.6185789999999997e-14
+min co-rotating NEC,3.711505e-08,3.711505e-14
+min counter-rotating NEC,1.687138e-08,1.687138e-14
+max |h_tt|,28.27993,2.827993e-05
+max |h_tphi|,73.37491,7.337491e-05
+max |h_phiphi|,1157.492,0.001157492

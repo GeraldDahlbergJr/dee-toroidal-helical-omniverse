@@ -1,0 +1,744 @@
+\textbf{Gerald T. Dahlberg Jr.}
+
+Independent Researcher, Sacramento, California, USA
+
+ORCID: {[}insert ORCID iD{]}\\
+Correspondence: {[}insert preferred email{]}
+
+\textbf{Version 1.0 --- Referee-Circulation Draft}
+
+This manuscript distinguishes derived results, numerical experiments,
+and hypotheses. The full nonlinear Einstein-matter evolution remains
+future work.
+
+\section{Abstract}\label{abstract}
+
+We formulate a coupled radial-response and toroidal-helical transport
+model intended to test whether a finite-separation equilibrium can arise
+dynamically rather than being imposed as a kinematic constraint. The
+model is built from a covariant action containing a nonlinear radial
+scalar, two transport phase fields, and a field-dependent kinetic
+mixing. We define a Dynamic Equilibrium Event (DEE) as a finite, locally
+stable stationary point of the radial sector under transport
+backreaction. For a minimal polynomial realization, we obtain a
+closed-form finite-separation branch and show that its radial stability
+follows directly from the equilibrium condition. We derive the matter
+stress-energy tensor and prove that its null contraction is nonnegative
+for every null vector whenever the two-field kinetic matrix is positive
+definite. We then study an explicit non-oscillatory transport
+configuration and solve the cylindrically symmetric linearized Einstein
+equations for a localized source. After a positive source rescaling of
+10\^{}-6, the largest metric perturbation is of order 10\^{}-3, while
+the tested co-rotating and counter-rotating null-energy contractions
+remain positive. Exploratory reduced-metric calculations are also
+reported to show why prescribing off-diagonal geometry without a
+compatible matter source can generate energy-condition violations. The
+present result is a consistent weak-field construction and a set of
+nonlinear initial-data targets; it is not yet a proof of global
+non-collapse in the full Einstein-matter system.
+
+\textbf{Keywords:} general relativity; stress-energy tensor; toroidal
+transport; helical transport; nonlinear stability; null energy
+condition; weak-field gravity
+
+\subsection{Classification of claims}\label{classification-of-claims}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Category
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Meaning in this paper
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Examples
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Derived result & Obtained from the stated action and assumptions. &
+Field equations; stress-energy tensor; finite branch; stability; NEC
+theorem. \\
+Numerical experiment & Computed in a reduced or weak-field model. &
+Dynamic collapse toy model; parameter scans; linearized cylindrical
+solve. \\
+Hypothesis & Proposed behavior requiring nonlinear verification. &
+Persistence of the DEE; finite curvature; global non-collapse. \\
+\end{longtable}
+
+\section{I. Introduction}\label{i.-introduction}
+
+Gravitational collapse is ordinarily analyzed by specifying a matter
+model, solving the Einstein equations, and determining whether trapped
+surfaces, horizons, or singular behavior form. A recurring difficulty in
+speculative non-collapse constructions is that positive separation is
+imposed directly through the geometry. Such a construction can
+demonstrate non-intersection by design but cannot establish that
+separation emerges from dynamics.
+
+The objective of this work is narrower and testable. We ask whether a
+radial collapse degree of freedom can be coupled to directed toroidal
+and helical transport so that a finite equilibrium branch appears as a
+solution of the field equations of an explicit matter model. We refer to
+the transition into such a state as a Dynamic Equilibrium Event. The
+term \textquotesingle event\textquotesingle{} denotes a dynamical
+transition, not a new causal boundary.
+
+Two transport regimes are distinguished. The first is a nonlinear radial
+response, represented by a scalar field whose effective force changes
+with its local state. The second is linear non-waveform transport:
+directed flow represented by constant or slowly varying field gradients
+rather than by a sinusoidal carrier.
+\textquotesingle Linear\textquotesingle{} therefore describes the
+transport profile, not the complete Einstein-matter equations, which
+remain nonlinear.
+
+The manuscript proceeds from a covariant action, derives the matter
+equations and stress tensor, solves a minimal finite-separation branch,
+and proves a null-energy condition for the matter sector. An explicit
+localized configuration is then used as a source for the linearized
+cylindrical Einstein equations. Earlier exploratory metric ansätze are
+retained only as diagnostic calculations, because they reveal how
+unsupported off-diagonal geometry may demand inadmissible stress-energy.
+
+The principal contribution is therefore not a claim of completed
+nonlinear non-collapse. It is an internally consistent weak-field
+framework that identifies the mathematical conditions a full nonlinear
+DEE solution must satisfy.
+
+\subsection{A. Main contributions}\label{a.-main-contributions}
+
+\begin{itemize}
+\item
+  A covariant three-field action separating radial nonlinear response
+  from toroidal and helical transport.
+\item
+  Closed-form existence and local-stability conditions for a
+  finite-separation DEE branch.
+\item
+  A positive-definite kinetic-matrix criterion that gives an analytical
+  NEC proof for every null direction.
+\item
+  An explicit non-waveform transport configuration with detailed angular
+  energy flux and stress.
+\item
+  A localized, linearized cylindrical Einstein solve satisfying the
+  weak-field requirement after positive rescaling.
+\item
+  A precise nonlinear verification program based on
+  constraint-satisfying initial data, curvature invariants, and full
+  null-cone testing.
+\end{itemize}
+
+\subsection{B. Scope and limitations}\label{b.-scope-and-limitations}
+
+This work does not present a global solution of the full nonlinear
+Einstein-matter equations. It does not prove avoidance of trapped
+surfaces or singularities, and it does not establish experimental
+realizability. The numerical values reported below are normalized
+exploratory values and require independent reproduction with a
+documented numerical code before journal submission. The weak-field
+solution should be understood as a consistency checkpoint and
+initial-data seed.
+
+\section{II. Conventions and geometric
+framework}\label{ii.-conventions-and-geometric-framework}
+
+We use metric signature (-,+,+,+) and units c=1.
+Newton\textquotesingle s constant G is retained where useful. Greek
+indices run over spacetime coordinates, and hatted Latin indices denote
+components in a local orthonormal frame. Repeated indices are summed.
+
+x\^{}μ = (t, r, φ, z). (1)
+
+The reduced cylindrical coordinates are used to develop and test the
+local mechanism. A global toroidal embedding would require periodic
+identification and additional regularity analysis; that extension is not
+assumed in the derivations below.
+
+The radial scalar ρ(x) represents the finite-separation or collapse
+coordinate. The phase fields Θ(x) and Ψ(x) represent toroidal and
+helical transport channels, respectively. The term phase does not
+require periodic wave propagation; only the gradients enter the action.
+
+\subsection{A. Dynamic Equilibrium
+Event}\label{a.-dynamic-equilibrium-event}
+
+A DEE is defined locally by a finite radial value at which the radial
+field is stationary and stable under small perturbations.
+
+ρ = ρ\_* \textgreater{} 0, ∇\_t ρ\textbar\_* = 0, ∇\_t∇\_t ρ\textbar\_*
+= 0. (2)
+
+For a homogeneous local reduction, stability requires a positive
+effective radial mass squared. In the full field problem this condition
+is necessary but not sufficient for global stability.
+
+\section{III. Covariant action and field
+equations}\label{iii.-covariant-action-and-field-equations}
+
+We consider Einstein gravity coupled to one radial scalar and two
+kinetically mixed transport scalars.
+
+S = ∫ d\^{}4x √(-g) {[} R/(16πG) - 1/2 (∇ρ)\^{}2 - V(ρ) - 1/2
+K\_Θ(ρ)(∇Θ)\^{}2 - 1/2 K\_Ψ(ρ)(∇Ψ)\^{}2 - Λ(ρ) ∇\_μΘ ∇\^{}μΨ {]}. (3)
+
+The functions K\_Θ, K\_Ψ, and Λ determine the transport response and
+kinetic mixing. This action is an ansatz: its consequences are derived
+exactly, but its microscopic origin is not specified.
+
+\subsection{A. Radial equation}\label{a.-radial-equation}
+
+□ρ - V\textquotesingle(ρ) - 1/2 K\_Θ\textquotesingle(ρ)(∇Θ)\^{}2 - 1/2
+K\_Ψ\textquotesingle(ρ)(∇Ψ)\^{}2 - Λ\textquotesingle(ρ)∇\_μΘ∇\^{}μΨ = 0.
+(4)
+
+The transport terms therefore modify the radial force through
+derivatives of the coupling functions. No centrifugal barrier is
+inserted separately.
+
+\subsection{B. Transport equations and
+currents}\label{b.-transport-equations-and-currents}
+
+∇\_μ {[}K\_Θ(ρ)∇\^{}μΘ + Λ(ρ)∇\^{}μΨ{]} = 0, (5)
+
+∇\_μ {[}K\_Ψ(ρ)∇\^{}μΨ + Λ(ρ)∇\^{}μΘ{]} = 0. (6)
+
+J\_Θ\^{}μ = K\_Θ∇\^{}μΘ + Λ∇\^{}μΨ, J\_Ψ\^{}μ = K\_Ψ∇\^{}μΨ + Λ∇\^{}μΘ.
+(7)
+
+Equations (5)-(7) define conserved directed transport currents. They
+permit monotonic transport profiles and do not require sinusoidal
+waveform solutions.
+
+\section{IV. Stress-energy tensor and angular
+stresses}\label{iv.-stress-energy-tensor-and-angular-stresses}
+
+Variation of the matter action with respect to the inverse metric gives
+
+T\_μν = ∇\_μρ∇\_νρ + K\_Θ∇\_μΘ∇\_νΘ + K\_Ψ∇\_μΨ∇\_νΨ + Λ(∇\_μΘ∇\_νΨ +
+∇\_μΨ∇\_νΘ) + g\_μν L\_m, (8)
+
+L\_m = -1/2(∇ρ)\^{}2 - V - 1/2K\_Θ(∇Θ)\^{}2 - 1/2K\_Ψ(∇Ψ)\^{}2 -
+Λ∇\_αΘ∇\^{}αΨ. (9)
+
+The sign in the final term of Eq. (8) follows from the definition T\_μν
+= -2 δ(√-g L\_m)/(√-g δg\^{}\{μν\}).
+
+\subsection{A. Local angular
+decomposition}\label{a.-local-angular-decomposition}
+
+T\_âb̂ = {[}{[}ε, q\_r, q\_φ, q\_z{]}, {[}q\_r, p\_r, π\_rφ, π\_rz{]},
+{[}q\_φ, π\_rφ, p\_φ, π\_φz{]}, {[}q\_z, π\_rz, π\_φz, p\_z{]}{]}. (10)
+
+The quantities most relevant to the counter-rotating null channel are
+the angular energy flux q\_φ, azimuthal pressure p\_φ, and
+radial-angular shear π\_rφ.
+
+q\_φ = T\_t̂φ̂, p\_φ = T\_φ̂φ̂, π\_rφ = T\_r̂φ̂, π\_φz = T\_φ̂ẑ. (11)
+
+\subsection{B. Directional null-energy
+condition}\label{b.-directional-null-energy-condition}
+
+For the co-rotating and counter-rotating local null vectors k\_±\^{}â =
+(1,0,±1,0), the null contraction is
+
+N\_± = T\_âb̂ k\_±\^{}â k\_±\^{}b̂ = ε + p\_φ ± 2q\_φ. (12)
+
+ε + p\_φ ≥ 2\textbar q\_φ\textbar{} (13)
+
+Equation (13) is necessary and sufficient for the NEC in both purely
+azimuthal null directions. It is not by itself sufficient for every null
+direction.
+
+\section{V. Minimal solvable DEE
+model}\label{v.-minimal-solvable-dee-model}
+
+To obtain an explicit finite branch, we choose the regular polynomial
+functions
+
+V(ρ) = λ\_V/4 (ρ\^{}2 - v\^{}2)\^{}2, (14)
+
+K\_Θ(ρ) = 1 + aρ\^{}2, K\_Ψ(ρ) = 1 + bρ\^{}2, Λ(ρ) = cρ\^{}2. (15)
+
+Here λ\_V\textgreater0, v\textgreater0, and a,b,c are dimensionful or
+dimensionless according to the normalization of ρ. In a complete
+dimensional treatment, a reference mass scale must be restored.
+
+X\_Θ=(∇Θ)\^{}2, X\_Ψ=(∇Ψ)\^{}2, X\_ΘΨ=∇\_μΘ∇\^{}μΨ. (16)
+
+\subsection{A. Finite-separation
+branch}\label{a.-finite-separation-branch}
+
+ρ\_* {[} λ\_V(ρ\_*\^{}2-v\^{}2) + aX\_Θ + bX\_Ψ + 2cX\_ΘΨ {]} = 0. (17)
+
+ρ\_*\^{}2 = v\^{}2 - {[}aX\_Θ+bX\_Ψ+2cX\_ΘΨ{]}/λ\_V. (18)
+
+The collapse branch is ρ\_*=0. A real positive finite branch exists when
+the right-hand side of Eq. (18) is strictly positive.
+
+aX\_Θ+bX\_Ψ+2cX\_ΘΨ \textless{} λ\_V v\^{}2. (19)
+
+\subsection{B. Radial stability}\label{b.-radial-stability}
+
+m\_eff\^{}2 = V\textquotesingle\textquotesingle(ρ\_*) +
+1/2K\_Θ\textquotesingle\textquotesingle X\_Θ +
+1/2K\_Ψ\textquotesingle\textquotesingle X\_Ψ +
+Λ\textquotesingle\textquotesingle X\_ΘΨ. (20)
+
+m\_eff\^{}2 = 2λ\_V ρ\_*\^{}2 \textgreater{} 0 for ρ\_*\textgreater0.
+(21)
+
+Thus every positive equilibrium in this minimal homogeneous reduction is
+locally stable in the radial scalar direction. Coupled metric and
+inhomogeneous perturbations remain to be tested.
+
+\subsection{C. Ghost-free kinetic
+sector}\label{c.-ghost-free-kinetic-sector}
+
+K(ρ) = {[}{[}K\_Θ, Λ{]}, {[}Λ, K\_Ψ{]}{]}. (22)
+
+K\_Θ\textgreater0, K\_Ψ\textgreater0, det K = K\_ΘK\_Ψ-Λ\^{}2
+\textgreater{} 0. (23)
+
+det K = 1+(a+b)ρ\^{}2+(ab-c\^{}2)ρ\^{}4. (24)
+
+A simple sufficient condition for global positivity in this polynomial
+family is a≥0, b≥0, and c\^{}2\textless ab.
+
+\section{VI. Explicit transport configurations and an NEC
+theorem}\label{vi.-explicit-transport-configurations-and-an-nec-theorem}
+
+We choose non-oscillatory linear-gradient configurations in a local
+cylindrical region:
+
+Θ = ω\_Θ t + m\_Θ φ + k\_Θ z, (25)
+
+Ψ = ω\_Ψ t + m\_Ψ φ + k\_Ψ z. (26)
+
+Single-valued scalar phases on a globally periodic angular coordinate
+would normally require integer winding numbers or an angular-valued
+field interpretation. Here m\_Θ and m\_Ψ are local winding parameters.
+
+∂\_âΘ = (ω\_Θ,0,m\_Θ/r,k\_Θ), ∂\_âΨ = (ω\_Ψ,0,m\_Ψ/r,k\_Ψ). (27)
+
+Let k\^{}â=(1,n\_r,n\_φ,n\_z), with n\_r\^{}2+n\_φ\^{}2+n\_z\^{}2=1.
+Define
+
+U\_Θ = k\^{}â∂\_âΘ, U\_Ψ = k\^{}â∂\_âΨ. (28)
+
+T\_âb̂ k\^{}â k\^{}b̂ = K\_Θ U\_Θ\^{}2 + K\_Ψ U\_Ψ\^{}2 + 2ΛU\_ΘU\_Ψ. (29)
+
+T\_kk = K\_Θ(U\_Θ + ΛU\_Ψ/K\_Θ)\^{}2 + (K\_Ψ-Λ\^{}2/K\_Θ)U\_Ψ\^{}2. (30)
+
+The metric-proportional Lagrangian term vanishes in the null
+contraction. Equations (23) and (30) therefore give the following
+result.
+
+\begin{quote}
+\textbf{Proposition 1.} For the matter action in Eq. (3), if the
+transport kinetic matrix is positive definite, then T\_μν k\^{}μ k\^{}ν
+≥ 0 for every null vector k\^{}μ. The radial scalar contributes an
+additional nonnegative square.
+\end{quote}
+
+\subsection{A. Illustrative normalized
+point}\label{a.-illustrative-normalized-point}
+
+For λ\_V=4, v=1, a=0.30, b=0.20, c=0.10, X\_Θ=0.60, X\_Ψ=0.40, and
+X\_ΘΨ=-0.20, Eq. (18) gives ρ\_*\^{}2=0.945 and ρ\_*≈0.972. The
+corresponding kinetic coefficients are K\_Θ≈1.2835, K\_Ψ≈1.189, and
+Λ≈0.0945, with det K≈1.52\textgreater0. This point is illustrative and
+not a fitted physical parameter set.
+
+\section{VII. Exploratory reduced-model
+studies}\label{vii.-exploratory-reduced-model-studies}
+
+The calculations in this section are numerical experiments. They
+motivated the action-derived construction but are not used as proofs.
+
+\subsection{A. Dynamic radial-collapse toy
+model}\label{a.-dynamic-radial-collapse-toy-model}
+
+ρ¨ = -γρ˙ - μ/(ρ+ε\_0)\^{}2 + L\^{}2/(ρ+ε\_0)\^{}3. (31)
+
+In normalized integrations, the L=0 trajectory reached a small collapse
+threshold, while positive L generated a finite-radius barrier. This
+established only that rotational support can oppose collapse in a
+mechanics toy model; it did not derive the support from general
+relativity.
+
+\subsection{B. Prescribed-metric
+diagnostics}\label{b.-prescribed-metric-diagnostics}
+
+Several reduced off-diagonal cylindrical metrics were tested by
+computing the inferred Einstein tensor and directly sampling
+T\_μνk\^{}μk\^{}ν. Those trials frequently violated the NEC,
+particularly for counter-rotating azimuthal null directions near the
+inner radius during the DEE switch-on. The diagnostic conclusion was
+that an off-diagonal metric should not be prescribed independently of a
+compatible matter source.
+
+A parameter search localized the most negative sampled null direction
+near the transition and primarily opposite the angular transport. This
+observation motivated the explicit matter-sector derivation and Eq.
+(13).
+
+\section{VIII. Linearized Einstein
+solution}\label{viii.-linearized-einstein-solution}
+
+We now solve for the weak gravitational field produced by the explicit
+matter model. Write
+
+g\_μν = η\_μν + h\_μν, \textbar h\_μν\textbar{} \textless\textless{} 1.
+(32)
+
+In harmonic gauge, the trace-reversed perturbation satisfies
+
+□ h̄\_μν = -16πG T\_μν. (33)
+
+For a stationary, translationally invariant cylindrical approximation
+with radial dependence only,
+
+(1/r) d/dr {[} r d h̄\_μν/dr {]} = -16πG T\_μν(r). (34)
+
+d h̄\_μν/dr = -(16πG/r) ∫\_0\^{}r s T\_μν(s) ds. (35)
+
+A Gaussian radial envelope is applied to the explicit field-gradient
+source to obtain a localized finite computational domain. This envelope
+is a numerical modeling choice and is not derived from Eq. (3); a
+self-consistent localized nonlinear field solution remains future work.
+
+\subsection{A. Source normalization and weak-field
+checkpoint}\label{a.-source-normalization-and-weak-field-checkpoint}
+
+The initial normalized source generated perturbations larger than unity,
+invalidating the linear approximation. Because Eqs. (33)-(35) are linear
+in the source, we introduced a positive overall amplitude ε\_s.
+
+T\_μν → ε\_s T\_μν, h\_μν → ε\_s h\_μν. (36)
+
+ε\_s = 10\^{}-6. (37)
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Diagnostic
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Scaled value
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Status
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Largest \textbar h\_μν\textbar{} & 1.16 × 10\^{}-3 & Weak-field pass \\
+Minimum co-rotating N\_+ & 3.71 × 10\^{}-14 & Positive \\
+Minimum counter-rotating N\_- & 1.69 × 10\^{}-14 & Positive \\
+Minimum sampled energy density & 2.62 × 10\^{}-14 & Positive \\
+\end{longtable}
+
+These values constitute the linearized Einstein-DEE consistency
+checkpoint. The reported digits reflect the exploratory computation and
+should not be interpreted as precision results.
+
+Linearized Einstein-DEE consistency test: PASS. (38)
+
+\subsection{B. Meaning of the pass}\label{b.-meaning-of-the-pass}
+
+The pass means that an explicit positive-definite matter source can
+generate a small cylindrical metric perturbation while maintaining
+positive tested directional NEC contractions. It does not prove that the
+result persists under full nonlinear evolution.
+
+\section{IX. Nonlinear initial-value
+problem}\label{ix.-nonlinear-initial-value-problem}
+
+The weak-field result supplies a seed for a nonlinear initial-data
+construction. On an initial spacelike slice,
+
+g\_μν(t\_0,r) = η\_μν + h\_μν(r), (39)
+
+∂\_t g\_μν(t\_0,r) = Ȧ\_DEE(t\_0) h\_μν\^{}(DEE)(r), (40)
+
+ρ(t\_0,r)=ρ\_*+δρ(r), ∂\_tρ(t\_0,r)=δρ̇(r), (41)
+
+with corresponding data for Θ and Ψ. These data must be adjusted or
+solved so that the Hamiltonian and momentum constraints hold.
+
+\^{}(3)R + K\^{}2 - K\_ijK\^{}ij = 16πG E, (42)
+
+D\_j(K\^{}ij - γ\^{}ijK) = 8πG S\^{}i. (43)
+
+\subsection{A. Nonlinear pass
+criteria}\label{a.-nonlinear-pass-criteria}
+
+ρ\_min(t) = min\_r ρ(t,r) \textgreater{} 0, (44)
+
+N\_min(t,r) = min\_\{k null\} T\_μν k\^{}μk\^{}ν ≥ 0, (45)
+
+R, R\_μνR\^{}μν, R\_αβγδR\^{}αβγδ remain finite, (46)
+
+constraint residuals remain convergent under resolution refinement. (47)
+
+Only after these conditions are demonstrated over a stated simulation
+interval can the finite-separation hypothesis be promoted to a nonlinear
+numerical result.
+
+\section{X. Discussion}\label{x.-discussion}
+
+The development above separates three questions that are often
+conflated. First, can a finite radial branch exist? Equation (18)
+answers yes within the model. Second, can that branch be locally stable?
+Equation (21) answers yes in the homogeneous radial sector. Third, can
+the supporting matter satisfy the NEC? Proposition 1 answers yes
+whenever the kinetic matrix is positive definite.
+
+Those statements do not settle the gravitational question. The Einstein
+equations can generate additional instabilities, constraint violations,
+trapped surfaces, or curvature growth. The weak-field calculation shows
+that there is no immediate inconsistency at sufficiently small source
+amplitude, but the nonlinear regime is where the central hypothesis must
+be tested.
+
+The distinction between nonlinear radial response and linear
+non-waveform transport is useful because it assigns different roles to
+the degrees of freedom. The radial scalar determines the local
+separation branch, while the transport gradients carry angular and
+helical momentum. Their coupling changes the radial effective force
+without requiring an independently postulated centrifugal term.
+
+\subsection{A. Relation to angular
+stress}\label{a.-relation-to-angular-stress}
+
+In the local orthonormal frame, the counter-rotating null direction is
+controlled by ε+p\_φ-2q\_φ. A prescribed metric shift can make q\_φ too
+large compared with the supporting energy and pressure. In the
+action-derived model, the full null contraction is instead the quadratic
+form in Eq. (29), and positive definiteness of the kinetic matrix
+protects every null direction.
+
+\subsection{B. Falsifiability}\label{b.-falsifiability}
+
+The framework can fail in several concrete ways: the initial constraints
+may have no regular solution in the desired parameter region; the finite
+branch may destabilize under coupled metric perturbations; the solution
+may develop trapped surfaces or divergent curvature; or the NEC may fail
+after nonlinear backreaction. Any of these outcomes would falsify the
+strong non-collapse hypothesis for the tested model.
+
+\section{XI. Status of results}\label{xi.-status-of-results}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Result
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Classification
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Status
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Field equations from Eq. (3) & Derived & Complete \\
+Stress-energy tensor & Derived & Complete \\
+Finite branch Eq. (18) & Derived & Complete within minimal model \\
+Radial stability Eq. (21) & Derived & Local homogeneous result \\
+NEC proposition & Derived & Complete for the stated matter action \\
+Dynamic collapse and metric scans & Numerical experiment &
+Exploratory \\
+Linearized cylindrical solution & Numerical experiment & Weak-field
+consistency pass \\
+Full nonlinear finite-separation evolution & Hypothesis & Not yet
+tested \\
+Global absence of singularities & Hypothesis & Not established \\
+\end{longtable}
+
+\section{XII. Conclusion}\label{xii.-conclusion}
+
+We have constructed a covariant coupled-field model in which a radial
+nonlinear degree of freedom interacts with toroidal and helical
+transport gradients. A minimal polynomial realization admits a
+closed-form finite branch, and every positive point on that branch is
+locally stable in the radial scalar sector. The matter stress tensor
+satisfies the NEC for all null directions whenever its kinetic matrix is
+positive definite. An explicit localized source produces a consistent
+cylindrical linearized Einstein response after a positive amplitude
+rescaling, with metric perturbations of order 10\^{}-3 and positive
+tested co- and counter-rotating directional NEC contractions.
+
+The present work therefore establishes a mathematically coherent
+weak-field DEE framework. It does not establish global non-collapse. The
+next decisive calculation is a constraint-preserving nonlinear
+Einstein-matter evolution that monitors the minimum separation, full
+null cone, curvature invariants, trapped-surface diagnostics, and
+convergence of the constraints.
+
+\section{Acknowledgments}\label{acknowledgments}
+
+The author used computational and language-model assistance during
+conceptual development, algebra checking, numerical prototyping, and
+manuscript organization. All scientific claims, interpretations, and
+responsibility for the submitted work remain with the author. The author
+should replace this statement as required by the target
+journal\textquotesingle s current disclosure policy.
+
+\section{Data and code availability}\label{data-and-code-availability}
+
+The exploratory numerical calculations described in this draft should be
+consolidated into a version-controlled repository before external
+circulation. A submission version should provide the complete source
+code, parameter files, software versions, convergence tests, and
+machine-readable output used to generate every numerical result.
+
+\section{Conflict of interest}\label{conflict-of-interest}
+
+The author declares no conflict of interest.
+
+\section{Appendix A: Variation of the
+action}\label{appendix-a-variation-of-the-action}
+
+This appendix records the essential variations. For a scalar f,
+δ{[}(∇f)\^{}2{]}=δg\^{}\{μν\}∇\_μf∇\_νf. The kinetic-mixing term varies
+symmetrically in Θ and Ψ. Integrating by parts and discarding boundary
+terms gives Eqs. (4)-(6).
+
+δS/δρ = 0 ⇒ Eq. (4), δS/δΘ = 0 ⇒ Eq. (5), δS/δΨ = 0 ⇒ Eq. (6). (A1)
+
+Metric variation gives Eq. (8). Before submission, the author should
+include the full line-by-line derivation and verify all sign conventions
+against the chosen definition of the Einstein tensor.
+
+\section{Appendix B: Proof of the NEC
+proposition}\label{appendix-b-proof-of-the-nec-proposition}
+
+For a null vector k\^{}μ, the metric-proportional term in Eq. (8)
+vanishes. Define u=(k·∇Θ, k·∇Ψ)\^{}T. The transport contribution is
+u\^{}T K u. The radial scalar contributes (k·∇ρ)\^{}2. If K is positive
+semidefinite, both terms are nonnegative; if K is positive definite, the
+transport term vanishes only when both projected gradients vanish.
+
+T\_μνk\^{}μk\^{}ν = (k·∇ρ)\^{}2 + u\^{}T K u ≥ 0. (B1)
+
+\section{Appendix C: Linearized cylindrical
+solver}\label{appendix-c-linearized-cylindrical-solver}
+
+For each component, Eq. (34) was integrated through the enclosed radial
+source. With a finite outer boundary R\_max and boundary condition
+h̄\_μν(R\_max)=0, the formal solution is
+
+h̄\_μν(r) = 16πG ∫\_r\^{}\{R\_max\} {[}1/s{]} {[}∫\_0\^{}s u T\_μν(u)
+du{]} ds. (C1)
+
+The numerical implementation used finite radial sampling and cumulative
+quadrature. The present draft reports only summary diagnostics. A
+referee version requires grid-refinement studies and independent
+residual evaluation of Eq. (34).
+
+\section{Appendix D: Symbol glossary}\label{appendix-d-symbol-glossary}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Symbol
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Meaning
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+ρ & Radial separation/collapse scalar \\
+Θ & Toroidal transport phase field \\
+Ψ & Helical transport phase field \\
+V(ρ) & Radial potential \\
+K\_Θ, K\_Ψ & Field-dependent transport kinetic coefficients \\
+Λ & Toroidal-helical kinetic mixing \\
+ρ\_* & Finite DEE equilibrium value \\
+m\_eff\^{}2 & Local radial perturbation mass squared \\
+q\_φ & Azimuthal energy flux \\
+p\_φ & Azimuthal pressure \\
+π\_rφ & Radial-angular shear stress \\
+N\_± & Co- and counter-rotating azimuthal null contractions \\
+h\_μν & Linear metric perturbation \\
+ε\_s & Positive source-amplitude scaling parameter \\
+\end{longtable}
+
+\section{References}\label{references}
+
+{[}1{]} A. Einstein, ``Die Grundlage der allgemeinen
+Relativitätstheorie,'' Ann. Phys. 49, 769 (1916).
+
+{[}2{]} R. M. Wald, General Relativity (University of Chicago Press,
+Chicago, 1984).
+
+{[}3{]} S. W. Hawking and G. F. R. Ellis, The Large Scale Structure of
+Space-Time (Cambridge University Press, Cambridge, 1973).
+
+{[}4{]} E. Poisson, A Relativist's Toolkit: The Mathematics of
+Black-Hole Mechanics (Cambridge University Press, Cambridge, 2004).
+
+{[}5{]} T. W. Baumgarte and S. L. Shapiro, Numerical Relativity: Solving
+Einstein's Equations on the Computer (Cambridge University Press,
+Cambridge, 2010).
+
+{[}6{]} M. Alcubierre, Introduction to 3+1 Numerical Relativity (Oxford
+University Press, Oxford, 2008).
+
+{[}7{]} L. H. Ford, ``Quantum coherence effects and the second law of
+thermodynamics,'' Proc. R. Soc. A 364, 227 (1978). {[}Energy-condition
+context; verify relevance before submission.{]}
+
+{[}8{]} P. Martín-Moruno and M. Visser, ``Classical and semi-classical
+energy conditions,'' in Wormholes, Warp Drives and Energy Conditions
+(Springer, 2017).
+
+{[}9{]} G. T. Dahlberg Jr., Dynamic Equilibrium Event and related
+preprints, Zenodo records {[}insert verified DOI list{]}.
+
+{[}10{]} Supplemental numerical repository {[}to be created and archived
+before submission{]}.
+
+\section{Internal referee checklist for Version
+1.1}\label{internal-referee-checklist-for-version-1.1}
+
+\begin{itemize}
+\item[$\square$]
+  Verify every sign in Eqs. (3)-(9) using a single stated convention.
+\item[$\square$]
+  Restore physical dimensions and introduce a reference mass/length
+  scale.
+\item[$\square$]
+  Resolve global angular-field single-valuedness and winding-number
+  conditions.
+\item[$\square$]
+  Provide complete numerical source code and reproducible environment.
+\item[$\square$]
+  Perform convergence and residual tests for the linearized solver.
+\item[$\square$]
+  Construct constraint-satisfying nonlinear initial data.
+\item[$\square$]
+  Add trapped-surface diagnostics to the nonlinear evolution plan.
+\item[$\square$]
+  Replace placeholder ORCID, email, DOI list, and repository references.
+\item[$\square$]
+  Obtain an independent technical read by a general-relativity
+  specialist.
+\item[$\square$]
+  Update journal-format and AI-assistance disclosures immediately before
+  submission.
+\end{itemize}

@@ -1,0 +1,255 @@
+{
+  "source": "manuscripts/DEE_LaTeX_v2/main.tex",
+  "equations": [
+    {
+      "tag": "1",
+      "line": 85,
+      "verbatim_tex": "\\begin{equation}\nx^\\mu=(t,r,\\phi,z)\n\\tag{1}\\label{eq:1}\n\\end{equation}"
+    },
+    {
+      "tag": "2",
+      "line": 101,
+      "verbatim_tex": "\\begin{equation}\n\\rho=\\rho_*>0,\\qquad \\nabla_t\\rho\\big|_*=0,\\qquad \\nabla_t\\nabla_t\\rho\\big|_*=0\n\\tag{2}\\label{eq:2}\n\\end{equation}"
+    },
+    {
+      "tag": "3",
+      "line": 114,
+      "verbatim_tex": "\\begin{equation}\nS=\\int d^4x\\sqrt{-g}\\left[\\frac{R}{16\\pi G}-\\frac12(\\nabla\\rho)^2-V(\\rho)-\\frac12K_\\Theta(\\rho)(\\nabla\\Theta)^2-\\frac12K_\\Psi(\\rho)(\\nabla\\Psi)^2-\\Lambda(\\rho)\\nabla_\\mu\\Theta\\nabla^\\mu\\Psi\\right]\n\\tag{3}\\label{eq:3}\n\\end{equation}"
+    },
+    {
+      "tag": "4",
+      "line": 124,
+      "verbatim_tex": "\\begin{equation}\n\\Box\\rho-V^{\\prime}(\\rho)-\\frac12K_\\Theta^{\\prime}(\\rho)(\\nabla\\Theta)^2-\\frac12K_\\Psi^{\\prime}(\\rho)(\\nabla\\Psi)^2-\\Lambda^{\\prime}(\\rho)\\nabla_\\mu\\Theta\\nabla^\\mu\\Psi=0\n\\tag{4}\\label{eq:4}\n\\end{equation}"
+    },
+    {
+      "tag": "5",
+      "line": 134,
+      "verbatim_tex": "\\begin{equation}\n\\nabla_\\mu\\left[K_\\Theta(\\rho)\\nabla^\\mu\\Theta+\\Lambda(\\rho)\\nabla^\\mu\\Psi\\right]=0\n\\tag{5}\\label{eq:5}\n\\end{equation}"
+    },
+    {
+      "tag": "6",
+      "line": 139,
+      "verbatim_tex": "\\begin{equation}\n\\nabla_\\mu\\left[K_\\Psi(\\rho)\\nabla^\\mu\\Psi+\\Lambda(\\rho)\\nabla^\\mu\\Theta\\right]=0\n\\tag{6}\\label{eq:6}\n\\end{equation}"
+    },
+    {
+      "tag": "7",
+      "line": 144,
+      "verbatim_tex": "\\begin{equation}\nJ_\\Theta^\\mu=K_\\Theta\\nabla^\\mu\\Theta+\\Lambda\\nabla^\\mu\\Psi,\\qquad J_\\Psi^\\mu=K_\\Psi\\nabla^\\mu\\Psi+\\Lambda\\nabla^\\mu\\Theta\n\\tag{7}\\label{eq:7}\n\\end{equation}"
+    },
+    {
+      "tag": "8",
+      "line": 157,
+      "verbatim_tex": "\\begin{equation}\nT_{\\mu\\nu}=\\nabla_\\mu\\rho\\nabla_\\nu\\rho+K_\\Theta\\nabla_\\mu\\Theta\\nabla_\\nu\\Theta+K_\\Psi\\nabla_\\mu\\Psi\\nabla_\\nu\\Psi+\\Lambda(\\nabla_\\mu\\Theta\\nabla_\\nu\\Psi+\\nabla_\\mu\\Psi\\nabla_\\nu\\Theta)+g_{\\mu\\nu}\\mathcal L_m\n\\tag{8}\\label{eq:8}\n\\end{equation}"
+    },
+    {
+      "tag": "9",
+      "line": 162,
+      "verbatim_tex": "\\begin{equation}\n\\mathcal L_m=-\\frac12(\\nabla\\rho)^2-V-\\frac12K_\\Theta(\\nabla\\Theta)^2-\\frac12K_\\Psi(\\nabla\\Psi)^2-\\Lambda\\nabla_\\alpha\\Theta\\nabla^\\alpha\\Psi\n\\tag{9}\\label{eq:9}\n\\end{equation}"
+    },
+    {
+      "tag": "10",
+      "line": 172,
+      "verbatim_tex": "\\begin{equation}\nT_{\\hat a\\hat b}=\\begin{pmatrix}\\varepsilon&q_r&q_\\phi&q_z\\\\q_r&p_r&\\pi_{r\\phi}&\\pi_{rz}\\\\q_\\phi&\\pi_{r\\phi}&p_\\phi&\\pi_{\\phi z}\\\\q_z&\\pi_{rz}&\\pi_{\\phi z}&p_z\\end{pmatrix}\n\\tag{10}\\label{eq:10}\n\\end{equation}"
+    },
+    {
+      "tag": "11",
+      "line": 180,
+      "verbatim_tex": "\\begin{equation}\nq_\\phi=T_{\\hat t\\hat\\phi},\\qquad p_\\phi=T_{\\hat\\phi\\hat\\phi},\\qquad \\pi_{r\\phi}=T_{\\hat r\\hat\\phi},\\qquad \\pi_{\\phi z}=T_{\\hat\\phi\\hat z}\n\\tag{11}\\label{eq:11}\n\\end{equation}"
+    },
+    {
+      "tag": "12",
+      "line": 190,
+      "verbatim_tex": "\\begin{equation}\n\\mathcal N_\\pm=T_{\\hat a\\hat b}k_\\pm^{\\hat a}k_\\pm^{\\hat b}=\\varepsilon+p_\\phi\\pm2q_\\phi\n\\tag{12}\\label{eq:12}\n\\end{equation}"
+    },
+    {
+      "tag": "13",
+      "line": 195,
+      "verbatim_tex": "\\begin{equation}\n\\varepsilon+p_\\phi\\geq2|q_\\phi|\n\\tag{13}\\label{eq:13}\n\\end{equation}"
+    },
+    {
+      "tag": "14",
+      "line": 208,
+      "verbatim_tex": "\\begin{equation}\nV(\\rho)=\\frac{\\lambda_V}{4}(\\rho^2-v^2)^2\n\\tag{14}\\label{eq:14}\n\\end{equation}"
+    },
+    {
+      "tag": "15",
+      "line": 213,
+      "verbatim_tex": "\\begin{equation}\nK_\\Theta(\\rho)=1+a\\rho^2,\\qquad K_\\Psi(\\rho)=1+b\\rho^2,\\qquad \\Lambda(\\rho)=c\\rho^2\n\\tag{15}\\label{eq:15}\n\\end{equation}"
+    },
+    {
+      "tag": "16",
+      "line": 221,
+      "verbatim_tex": "\\begin{equation}\nX_\\Theta=(\\nabla\\Theta)^2,\\qquad X_\\Psi=(\\nabla\\Psi)^2,\\qquad X_{\\Theta\\Psi}=\\nabla_\\mu\\Theta\\nabla^\\mu\\Psi\n\\tag{16}\\label{eq:16}\n\\end{equation}"
+    },
+    {
+      "tag": "17",
+      "line": 228,
+      "verbatim_tex": "\\begin{equation}\n\\rho_*\\left[\\lambda_V(\\rho_*^2-v^2)+aX_\\Theta+bX_\\Psi+2cX_{\\Theta\\Psi}\\right]=0\n\\tag{17}\\label{eq:17}\n\\end{equation}"
+    },
+    {
+      "tag": "18",
+      "line": 233,
+      "verbatim_tex": "\\begin{equation}\n\\rho_*^2=v^2-\\frac{aX_\\Theta+bX_\\Psi+2cX_{\\Theta\\Psi}}{\\lambda_V}\n\\tag{18}\\label{eq:18}\n\\end{equation}"
+    },
+    {
+      "tag": "19",
+      "line": 241,
+      "verbatim_tex": "\\begin{equation}\naX_\\Theta+bX_\\Psi+2cX_{\\Theta\\Psi}<\\lambda_Vv^2\n\\tag{19}\\label{eq:19}\n\\end{equation}"
+    },
+    {
+      "tag": "20",
+      "line": 248,
+      "verbatim_tex": "\\begin{equation}\nm_{\\rm eff}^2=V^{\\prime\\prime}(\\rho_*)+\\frac12K_\\Theta^{\\prime\\prime}X_\\Theta+\\frac12K_\\Psi^{\\prime\\prime}X_\\Psi+\\Lambda^{\\prime\\prime}X_{\\Theta\\Psi}\n\\tag{20}\\label{eq:20}\n\\end{equation}"
+    },
+    {
+      "tag": "21",
+      "line": 253,
+      "verbatim_tex": "\\begin{equation}\nm_{\\rm eff}^2=2\\lambda_V\\rho_*^2>0\\qquad(\\rho_*>0)\n\\tag{21}\\label{eq:21}\n\\end{equation}"
+    },
+    {
+      "tag": "22",
+      "line": 263,
+      "verbatim_tex": "\\begin{equation}\n\\mathbf K(\\rho)=\\begin{pmatrix}K_\\Theta&\\Lambda\\\\\\Lambda&K_\\Psi\\end{pmatrix}\n\\tag{22}\\label{eq:22}\n\\end{equation}"
+    },
+    {
+      "tag": "23",
+      "line": 268,
+      "verbatim_tex": "\\begin{equation}\nK_\\Theta>0,\\qquad K_\\Psi>0,\\qquad \\det\\mathbf K=K_\\Theta K_\\Psi-\\Lambda^2>0\n\\tag{23}\\label{eq:23}\n\\end{equation}"
+    },
+    {
+      "tag": "24",
+      "line": 273,
+      "verbatim_tex": "\\begin{equation}\n\\det\\mathbf K=1+(a+b)\\rho^2+(ab-c^2)\\rho^4\n\\tag{24}\\label{eq:24}\n\\end{equation}"
+    },
+    {
+      "tag": "25",
+      "line": 286,
+      "verbatim_tex": "\\begin{equation}\n\\Theta=\\omega_\\Theta t+m_\\Theta\\phi+k_\\Theta z\n\\tag{25}\\label{eq:25}\n\\end{equation}"
+    },
+    {
+      "tag": "26",
+      "line": 291,
+      "verbatim_tex": "\\begin{equation}\n\\Psi=\\omega_\\Psi t+m_\\Psi\\phi+k_\\Psi z\n\\tag{26}\\label{eq:26}\n\\end{equation}"
+    },
+    {
+      "tag": "27",
+      "line": 299,
+      "verbatim_tex": "\\begin{equation}\n\\partial_{\\hat a}\\Theta=(\\omega_\\Theta,0,m_\\Theta/r,k_\\Theta),\\qquad \\partial_{\\hat a}\\Psi=(\\omega_\\Psi,0,m_\\Psi/r,k_\\Psi)\n\\tag{27}\\label{eq:27}\n\\end{equation}"
+    },
+    {
+      "tag": "28",
+      "line": 307,
+      "verbatim_tex": "\\begin{equation}\nU_\\Theta=k^{\\hat a}\\partial_{\\hat a}\\Theta,\\qquad U_\\Psi=k^{\\hat a}\\partial_{\\hat a}\\Psi\n\\tag{28}\\label{eq:28}\n\\end{equation}"
+    },
+    {
+      "tag": "29",
+      "line": 312,
+      "verbatim_tex": "\\begin{equation}\nT_{\\hat a\\hat b}k^{\\hat a}k^{\\hat b}=K_\\Theta U_\\Theta^2+K_\\Psi U_\\Psi^2+2\\Lambda U_\\Theta U_\\Psi\n\\tag{29}\\label{eq:29}\n\\end{equation}"
+    },
+    {
+      "tag": "30",
+      "line": 317,
+      "verbatim_tex": "\\begin{equation}\nT_{kk}=K_\\Theta\\left(U_\\Theta+\\frac{\\Lambda}{K_\\Theta}U_\\Psi\\right)^2+\\left(K_\\Psi-\\frac{\\Lambda^2}{K_\\Theta}\\right)U_\\Psi^2\n\\tag{30}\\label{eq:30}\n\\end{equation}"
+    },
+    {
+      "tag": "31",
+      "line": 340,
+      "verbatim_tex": "\\begin{equation}\n\\ddot\\rho=-\\gamma\\dot\\rho-\\frac{\\mu}{(\\rho+\\epsilon_0)^2}+\\frac{L^2}{(\\rho+\\epsilon_0)^3}\n\\tag{31}\\label{eq:31}\n\\end{equation}"
+    },
+    {
+      "tag": "32",
+      "line": 361,
+      "verbatim_tex": "\\begin{equation}\ng_{\\mu\\nu}=\\eta_{\\mu\\nu}+h_{\\mu\\nu},\\qquad |h_{\\mu\\nu}|\\ll1\n\\tag{32}\\label{eq:32}\n\\end{equation}"
+    },
+    {
+      "tag": "33",
+      "line": 369,
+      "verbatim_tex": "\\begin{equation}\n\\Box\\bar h_{\\mu\\nu}=-16\\pi G T_{\\mu\\nu}\n\\tag{33}\\label{eq:33}\n\\end{equation}"
+    },
+    {
+      "tag": "34",
+      "line": 377,
+      "verbatim_tex": "\\begin{equation}\n\\frac1r\\frac{d}{dr}\\left(r\\frac{d\\bar h_{\\mu\\nu}}{dr}\\right)=-16\\pi G T_{\\mu\\nu}(r)\n\\tag{34}\\label{eq:34}\n\\end{equation}"
+    },
+    {
+      "tag": "35",
+      "line": 382,
+      "verbatim_tex": "\\begin{equation}\n\\frac{d\\bar h_{\\mu\\nu}}{dr}=-\\frac{16\\pi G}{r}\\int_0^r sT_{\\mu\\nu}(s)\\,ds\n\\tag{35}\\label{eq:35}\n\\end{equation}"
+    },
+    {
+      "tag": "36",
+      "line": 395,
+      "verbatim_tex": "\\begin{equation}\nT_{\\mu\\nu}\\rightarrow\\epsilon_sT_{\\mu\\nu},\\qquad h_{\\mu\\nu}\\rightarrow\\epsilon_sh_{\\mu\\nu}\n\\tag{36}\\label{eq:36}\n\\end{equation}"
+    },
+    {
+      "tag": "37",
+      "line": 400,
+      "verbatim_tex": "\\begin{equation}\n\\epsilon_s=10^{-6}\n\\tag{37}\\label{eq:37}\n\\end{equation}"
+    },
+    {
+      "tag": "38",
+      "line": 415,
+      "verbatim_tex": "\\begin{equation}\n\\boxed{\\text{Linearized Einstein--DEE consistency test: PASS}}\n\\tag{38}\\label{eq:38}\n\\end{equation}"
+    },
+    {
+      "tag": "39",
+      "line": 430,
+      "verbatim_tex": "\\begin{equation}\ng_{\\mu\\nu}(t_0,r)=\\eta_{\\mu\\nu}+h_{\\mu\\nu}(r)\n\\tag{39}\\label{eq:39}\n\\end{equation}"
+    },
+    {
+      "tag": "40",
+      "line": 435,
+      "verbatim_tex": "\\begin{equation}\n\\partial_tg_{\\mu\\nu}(t_0,r)=\\dot A_{\\rm DEE}(t_0)h_{\\mu\\nu}^{({\\rm DEE})}(r)\n\\tag{40}\\label{eq:40}\n\\end{equation}"
+    },
+    {
+      "tag": "41",
+      "line": 440,
+      "verbatim_tex": "\\begin{equation}\n\\rho(t_0,r)=\\rho_*+\\delta\\rho(r),\\qquad \\partial_t\\rho(t_0,r)=\\delta\\dot\\rho(r)\n\\tag{41}\\label{eq:41}\n\\end{equation}"
+    },
+    {
+      "tag": "42",
+      "line": 448,
+      "verbatim_tex": "\\begin{equation}\n{}^{(3)}R+K^2-K_{ij}K^{ij}=16\\pi GE\n\\tag{42}\\label{eq:42}\n\\end{equation}"
+    },
+    {
+      "tag": "43",
+      "line": 453,
+      "verbatim_tex": "\\begin{equation}\nD_j(K^{ij}-\\gamma^{ij}K)=8\\pi GS^i\n\\tag{43}\\label{eq:43}\n\\end{equation}"
+    },
+    {
+      "tag": "44",
+      "line": 460,
+      "verbatim_tex": "\\begin{equation}\n\\rho_{\\min}(t)=\\min_r\\rho(t,r)>0\n\\tag{44}\\label{eq:44}\n\\end{equation}"
+    },
+    {
+      "tag": "45",
+      "line": 465,
+      "verbatim_tex": "\\begin{equation}\n\\mathcal N_{\\min}(t,r)=\\min_{k\\ {\\rm null}}T_{\\mu\\nu}k^\\mu k^\\nu\\geq0\n\\tag{45}\\label{eq:45}\n\\end{equation}"
+    },
+    {
+      "tag": "46",
+      "line": 470,
+      "verbatim_tex": "\\begin{equation}\nR,\\qquad R_{\\mu\\nu}R^{\\mu\\nu},\\qquad R_{\\alpha\\beta\\gamma\\delta}R^{\\alpha\\beta\\gamma\\delta}\\quad\\text{remain finite}\n\\tag{46}\\label{eq:46}\n\\end{equation}"
+    },
+    {
+      "tag": "47",
+      "line": 475,
+      "verbatim_tex": "\\begin{equation}\n\\text{Constraint residuals remain convergent under resolution refinement.}\n\\tag{47}\\label{eq:47}\n\\end{equation}"
+    },
+    {
+      "tag": "A1",
+      "line": 548,
+      "verbatim_tex": "\\begin{equation}\n\\frac{\\delta S}{\\delta\\rho}=0\\Rightarrow\\text{Eq.~(4)},\\qquad \\frac{\\delta S}{\\delta\\Theta}=0\\Rightarrow\\text{Eq.~(5)},\\qquad \\frac{\\delta S}{\\delta\\Psi}=0\\Rightarrow\\text{Eq.~(6)}\n\\tag{A1}\\label{eq:A1}\n\\end{equation}"
+    },
+    {
+      "tag": "B1",
+      "line": 561,
+      "verbatim_tex": "\\begin{equation}\nT_{\\mu\\nu}k^\\mu k^\\nu=(k\\cdot\\nabla\\rho)^2+\\mathbf u^{\\mathsf T}\\mathbf K\\mathbf u\\geq0\n\\tag{B1}\\label{eq:B1}\n\\end{equation}"
+    },
+    {
+      "tag": "C1",
+      "line": 571,
+      "verbatim_tex": "\\begin{equation}\n\\bar h_{\\mu\\nu}(r)=16\\pi G\\int_r^{R_{\\max}}\\frac{ds}{s}\\left[\\int_0^s uT_{\\mu\\nu}(u)\\,du\\right]\n\\tag{C1}\\label{eq:C1}\n\\end{equation}"
+    }
+  ]
+}
