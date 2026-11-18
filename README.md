@@ -40,6 +40,16 @@ The repository is intended to develop reproducible computational demonstrations 
 7. OpenUSD scene representation
 8. NVIDIA Omniverse visualization
 
+## Run 43 — Frozen Numerical Baseline (Zenodo v1.0.0)
+
+[![Run 43 Zenodo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24330220.svg)](https://doi.org/10.5281/zenodo.24330220)
+
+**Gerald T. Dahlberg Jr. (2026).** *Einstein–DEE Run 43: Toroidal–Helical Perturbations, Frozen Numerical Baseline, and Computational Verification* (Version 1.0.0) [Software]. Zenodo. **DOI:** [10.5281/zenodo.24330220](https://doi.org/10.5281/zenodo.24330220).
+
+The deposited software and evidence record documents the Run 43 frozen numerical baseline, including **12 of 12 prescribed convergence checks passed**, a **minimum observed order of approximately 1.74085** against the threshold **p ≥ 1.5**, and archived solver checkpoints, multiresolution field data, and verification records. The October computational candidate and November frozen-baseline evidence are distinct archival components.
+
+These are results within the stated numerical verification protocol; they do **not** constitute full independent mathematical certification, peer review, or experimental validation of the Einstein–DEE theory.
+
 ## Associated Research
 
 This computational repository accompanies the following open-access theoretical work:
