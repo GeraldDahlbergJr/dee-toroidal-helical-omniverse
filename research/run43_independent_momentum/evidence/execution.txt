@@ -1,0 +1,52 @@
+{"timing": "base_derivatives_enter", "elapsed_s": 0.0004124519999777476}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.002369953999959762}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0024026629999980287}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.004133371999955671}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.004162846999975045}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.005464218999975401}
+{"timing": "base_gradients_enter", "elapsed_s": 0.005492260999972132}
+{"timing": "base_gradients_exit", "elapsed_s": 0.006907063999960883}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.006935486999964269}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.007125382999959129}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.007144331999995757}
+{"n": 8, "elapsed_s": 0.05192631900001743, "gmres": {"iterations": 8, "info": 0, "rhs_l2": 0.0001414453040311236, "residual_l2": 1.3003614885833854e-14, "residual_max": 3.9090553575127016e-15, "relative": 9.193387489889761e-11, "threshold": 1e-13}, "condition": 87.7318813364705, "quadrature_W_max": 7.2608079269875e-10}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.000859085000001869}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.002985470999988138}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.003021595999996407}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.004781789999981356}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.004850023000017245}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.006556175000014264}
+{"timing": "base_gradients_enter", "elapsed_s": 0.006592108999996071}
+{"timing": "base_gradients_exit", "elapsed_s": 0.008863323000014134}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.008900729999993473}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.009445291000020006}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.009478199999989556}
+{"n": 16, "elapsed_s": 0.16899985700001707, "gmres": {"iterations": 7, "info": 0, "rhs_l2": 7.288463826156059e-05, "residual_l2": 4.9659669737274504e-14, "residual_max": 9.156321107881192e-15, "relative": 6.813461783134766e-10, "threshold": 1e-13}, "condition": 410.6611692295667, "quadrature_W_max": 4.5870755941069445e-12}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.00515820700002223}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.00808386800002836}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.008114194000029329}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.011761583000009068}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.011790887000017847}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.019585339000002477}
+{"timing": "base_gradients_enter", "elapsed_s": 0.019769437000036305}
+{"timing": "base_gradients_exit", "elapsed_s": 0.032883910000009564}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.03293658900003038}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.03787584600001992}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.03791964200001985}
+{"n": 32, "elapsed_s": 0.7266953410000383, "gmres": {"iterations": 7, "info": 0, "rhs_l2": 3.683116879576445e-05, "residual_l2": 1.0885200881972275e-14, "residual_max": 1.0307332601864807e-15, "relative": 2.955431836098577e-10, "threshold": 1e-13}, "condition": 1823.604241077179, "quadrature_W_max": 2.826873866826167e-14}
+{"timing": "base_derivatives_enter", "elapsed_s": 0.03673834800002851}
+{"timing": "base_derivatives_exit", "elapsed_s": 0.07049564200002578}
+{"timing": "base_second_derivatives_enter", "elapsed_s": 0.0705542800000103}
+{"timing": "base_second_derivatives_exit", "elapsed_s": 0.0893389209999782}
+{"timing": "base_laplacian_enter", "elapsed_s": 0.08942112500000121}
+{"timing": "base_laplacian_exit", "elapsed_s": 0.15898798599999964}
+{"timing": "base_gradients_enter", "elapsed_s": 0.15904312899999695}
+{"timing": "base_gradients_exit", "elapsed_s": 0.2435679220000111}
+{"timing": "base_interior_laplacian_enter", "elapsed_s": 0.24362512800001923}
+{"timing": "base_interior_laplacian_exit", "elapsed_s": 0.2670254480000267}
+{"timing": "base_splu_skipped_candidate", "elapsed_s": 0.2670850169999994}
+{"n": 64, "elapsed_s": 3.7818830840000146, "gmres": {"iterations": 6, "info": 0, "rhs_l2": 1.8494644627186838e-05, "residual_l2": 3.5946503886800106e-14, "residual_max": 2.269961821871566e-15, "relative": 1.9436169016169853e-09, "threshold": 1e-13}, "condition": 7780.86985215111, "quadrature_W_max": 1.316666129694711e-16}
+
+Experiment exit 0
+Diagnostic-pair frozen audit exit 1
+Baseline frozen audit exit 0

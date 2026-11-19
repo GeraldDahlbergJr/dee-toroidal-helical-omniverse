@@ -1,0 +1,902 @@
+[
+  {
+    "pair": [
+      8,
+      16
+    ],
+    "differences": {
+      "archive": {
+        "interior": {
+          "W": {
+            "volume_weighted_rms": 1.3587131135776727e-06,
+            "max_vector_norm": 2.003215877570579e-06
+          },
+          "radial": {
+            "volume_weighted_rms": 0.002635152150654407,
+            "max_vector_norm": 0.005899676121242842
+          },
+          "angular": {
+            "volume_weighted_rms": 5.653398429239789e-05,
+            "max_vector_norm": 0.00011795268386113086
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.00034333804712098566,
+            "max_vector_norm": 0.0011491946836747642
+          }
+        },
+        "inner": {
+          "W": {
+            "volume_weighted_rms": 3.6417177630208085e-07,
+            "max_vector_norm": 4.863908444743976e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 0.0015099802207269857,
+            "max_vector_norm": 0.00179169554299143
+          },
+          "angular": {
+            "volume_weighted_rms": 3.4510371565098086e-05,
+            "max_vector_norm": 5.933346667266125e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.0007763663624667958,
+            "max_vector_norm": 0.0011491946836747642
+          }
+        },
+        "bulk": {
+          "W": {
+            "volume_weighted_rms": 1.520292150483433e-06,
+            "max_vector_norm": 2.003215877570579e-06
+          },
+          "radial": {
+            "volume_weighted_rms": 0.0030617369141032005,
+            "max_vector_norm": 0.005899676121242842
+          },
+          "angular": {
+            "volume_weighted_rms": 6.49175201816087e-05,
+            "max_vector_norm": 0.00011795268386113086
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.00023526894222252302,
+            "max_vector_norm": 0.0005700550697154044
+          }
+        },
+        "outer": {
+          "W": {
+            "volume_weighted_rms": 1.2699461162273709e-06,
+            "max_vector_norm": 1.6151639710354728e-06
+          },
+          "radial": {
+            "volume_weighted_rms": 0.0010937379277397908,
+            "max_vector_norm": 0.001386368838217071
+          },
+          "angular": {
+            "volume_weighted_rms": 3.248897212016692e-05,
+            "max_vector_norm": 5.231389610020655e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.0001253240407757367,
+            "max_vector_norm": 0.00015573321928139387
+          }
+        },
+        "first": {
+          "W": {
+            "volume_weighted_rms": 9.102819900014057e-08,
+            "max_vector_norm": 1.3570029959898277e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 0.0011738667635914353,
+            "max_vector_norm": 0.0012402379809646094
+          },
+          "angular": {
+            "volume_weighted_rms": 3.6484345710041545e-05,
+            "max_vector_norm": 5.933346667266125e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.0010267548016595653,
+            "max_vector_norm": 0.0011491946836747642
+          }
+        },
+        "last": {
+          "W": {
+            "volume_weighted_rms": 9.526824314773205e-07,
+            "max_vector_norm": 9.89173158391601e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 0.0008340310592557591,
+            "max_vector_norm": 0.0008679588754643017
+          },
+          "angular": {
+            "volume_weighted_rms": 2.0552745006291348e-05,
+            "max_vector_norm": 2.5288086590264926e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.00011900911659313735,
+            "max_vector_norm": 0.00013300300045497474
+          }
+        },
+        "inner_endpoint": {
+          "W": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "radial": {
+            "volume_weighted_rms": 0.05213989277053386,
+            "max_vector_norm": 0.05327511961438144
+          },
+          "angular": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.0028554111689210447,
+            "max_vector_norm": 0.0029547807797937193
+          }
+        },
+        "outer_endpoint": {
+          "W": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "radial": {
+            "volume_weighted_rms": 0.006911997954599844,
+            "max_vector_norm": 0.007128649650315518
+          },
+          "angular": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.0003956350771713792,
+            "max_vector_norm": 0.0004723647864427157
+          }
+        }
+      },
+      "candidate": {
+        "interior": {
+          "W": {
+            "volume_weighted_rms": 1.1384463506803396e-07,
+            "max_vector_norm": 2.7593481671130117e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 8.079945257137306e-05,
+            "max_vector_norm": 0.0002700340149927711
+          },
+          "angular": {
+            "volume_weighted_rms": 4.463907073119334e-05,
+            "max_vector_norm": 8.756233466119918e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 3.413329373852406e-05,
+            "max_vector_norm": 0.00014653847624522938
+          }
+        },
+        "inner": {
+          "W": {
+            "volume_weighted_rms": 5.95259239136571e-08,
+            "max_vector_norm": 1.0337643696759649e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 0.00015633076981442278,
+            "max_vector_norm": 0.0002700340149927711
+          },
+          "angular": {
+            "volume_weighted_rms": 4.5455219539364916e-05,
+            "max_vector_norm": 8.384493087055824e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 7.417221490313742e-05,
+            "max_vector_norm": 0.00014653847624522938
+          }
+        },
+        "bulk": {
+          "W": {
+            "volume_weighted_rms": 1.251006423219883e-07,
+            "max_vector_norm": 2.7593481671130117e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 5.052106337192371e-05,
+            "max_vector_norm": 0.0001108503874513821
+          },
+          "angular": {
+            "volume_weighted_rms": 5.0143415783158294e-05,
+            "max_vector_norm": 8.756233466119918e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 1.8439798177408107e-05,
+            "max_vector_norm": 4.498164483315558e-05
+          }
+        },
+        "outer": {
+          "W": {
+            "volume_weighted_rms": 1.1158251575725235e-07,
+            "max_vector_norm": 2.588520145815126e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 6.54515209894238e-05,
+            "max_vector_norm": 0.00014078300602361993
+          },
+          "angular": {
+            "volume_weighted_rms": 2.9505352852589554e-05,
+            "max_vector_norm": 5.3459769983207616e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 1.774364245571847e-05,
+            "max_vector_norm": 2.9710154082264412e-05
+          }
+        },
+        "first": {
+          "W": {
+            "volume_weighted_rms": 4.4917874554137595e-08,
+            "max_vector_norm": 5.4937931845581894e-08
+          },
+          "radial": {
+            "volume_weighted_rms": 0.00022416992558312057,
+            "max_vector_norm": 0.0002700340149927711
+          },
+          "angular": {
+            "volume_weighted_rms": 3.861064981410815e-05,
+            "max_vector_norm": 5.281724745296722e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.00010663665801944404,
+            "max_vector_norm": 0.00014653847624522938
+          }
+        },
+        "last": {
+          "W": {
+            "volume_weighted_rms": 8.740882731839655e-08,
+            "max_vector_norm": 1.7276914736433156e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 7.216642184795192e-05,
+            "max_vector_norm": 0.00014078300602361993
+          },
+          "angular": {
+            "volume_weighted_rms": 2.0496842631418784e-05,
+            "max_vector_norm": 3.1817892254059696e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 2.2649911018544836e-05,
+            "max_vector_norm": 2.9710154082264412e-05
+          }
+        },
+        "inner_endpoint": {
+          "W": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "radial": {
+            "volume_weighted_rms": 0.004858216004260813,
+            "max_vector_norm": 0.005320253466099584
+          },
+          "angular": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.0005931264405626827,
+            "max_vector_norm": 0.0007248217443660879
+          }
+        },
+        "outer_endpoint": {
+          "W": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "radial": {
+            "volume_weighted_rms": 0.00014367434418766748,
+            "max_vector_norm": 0.00019438657337724838
+          },
+          "angular": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "mixed": {
+            "volume_weighted_rms": 3.651249601417871e-05,
+            "max_vector_norm": 4.413458880178237e-05
+          }
+        }
+      }
+    }
+  },
+  {
+    "pair": [
+      16,
+      32
+    ],
+    "differences": {
+      "archive": {
+        "interior": {
+          "W": {
+            "volume_weighted_rms": 3.647154363932124e-07,
+            "max_vector_norm": 5.57968260058162e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 0.002803438001891528,
+            "max_vector_norm": 0.007982714005893145
+          },
+          "angular": {
+            "volume_weighted_rms": 1.8220463338446202e-05,
+            "max_vector_norm": 6.468731401298746e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.00023814568200432483,
+            "max_vector_norm": 0.0014752186689474327
+          }
+        },
+        "inner": {
+          "W": {
+            "volume_weighted_rms": 2.034923251358447e-07,
+            "max_vector_norm": 3.7376379104664115e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 0.004052728071302926,
+            "max_vector_norm": 0.007982714005893145
+          },
+          "angular": {
+            "volume_weighted_rms": 3.068465777809689e-05,
+            "max_vector_norm": 6.468731401298746e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.0006168479384157862,
+            "max_vector_norm": 0.0014752186689474327
+          }
+        },
+        "bulk": {
+          "W": {
+            "volume_weighted_rms": 4.2221201514180917e-07,
+            "max_vector_norm": 5.57968260058162e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 0.002949665040573054,
+            "max_vector_norm": 0.006494752652903423
+          },
+          "angular": {
+            "volume_weighted_rms": 1.773054315716696e-05,
+            "max_vector_norm": 3.110427194947292e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 5.433086043780174e-05,
+            "max_vector_norm": 0.00012940858867055698
+          }
+        },
+        "outer": {
+          "W": {
+            "volume_weighted_rms": 3.0420845585270235e-07,
+            "max_vector_norm": 4.284052368012559e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 0.0008817304120548344,
+            "max_vector_norm": 0.0016920520439390552
+          },
+          "angular": {
+            "volume_weighted_rms": 7.317460433780793e-06,
+            "max_vector_norm": 1.2965366614442753e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 3.643908895538174e-05,
+            "max_vector_norm": 6.395446543327796e-05
+          }
+        },
+        "first": {
+          "W": {
+            "volume_weighted_rms": 5.521816021401825e-08,
+            "max_vector_norm": 6.331834673944953e-08
+          },
+          "radial": {
+            "volume_weighted_rms": 0.001095349196370912,
+            "max_vector_norm": 0.001120099829115569
+          },
+          "angular": {
+            "volume_weighted_rms": 1.581492631550091e-05,
+            "max_vector_norm": 2.3274029442889022e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.0013444629890746469,
+            "max_vector_norm": 0.0014752186689474327
+          }
+        },
+        "last": {
+          "W": {
+            "volume_weighted_rms": 1.3789621485512612e-07,
+            "max_vector_norm": 1.4762730916130844e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 0.0006817819659807927,
+            "max_vector_norm": 0.0007327198174083092
+          },
+          "angular": {
+            "volume_weighted_rms": 2.605393076748101e-06,
+            "max_vector_norm": 3.3810157583203865e-06
+          },
+          "mixed": {
+            "volume_weighted_rms": 2.6058691269712496e-05,
+            "max_vector_norm": 2.865790221990909e-05
+          }
+        },
+        "inner_endpoint": {
+          "W": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "radial": {
+            "volume_weighted_rms": 0.010015506670294093,
+            "max_vector_norm": 0.010112728186929142
+          },
+          "angular": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.001943610948446572,
+            "max_vector_norm": 0.0021381545664616746
+          }
+        },
+        "outer_endpoint": {
+          "W": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "radial": {
+            "volume_weighted_rms": 0.006738455240058672,
+            "max_vector_norm": 0.0070919836097768
+          },
+          "angular": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.00014574754447721787,
+            "max_vector_norm": 0.00017613789778506272
+          }
+        }
+      },
+      "candidate": {
+        "interior": {
+          "W": {
+            "volume_weighted_rms": 5.75424764027115e-09,
+            "max_vector_norm": 1.5622216085937182e-08
+          },
+          "radial": {
+            "volume_weighted_rms": 1.884911982993764e-05,
+            "max_vector_norm": 7.180357104952517e-05
+          },
+          "angular": {
+            "volume_weighted_rms": 1.6028525721750865e-05,
+            "max_vector_norm": 8.004454079696467e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 5.1774302782549075e-06,
+            "max_vector_norm": 3.4920290064246925e-05
+          }
+        },
+        "inner": {
+          "W": {
+            "volume_weighted_rms": 5.9327477360184605e-09,
+            "max_vector_norm": 1.5622216085937182e-08
+          },
+          "radial": {
+            "volume_weighted_rms": 4.52021522132873e-05,
+            "max_vector_norm": 7.180357104952517e-05
+          },
+          "angular": {
+            "volume_weighted_rms": 3.820199673742505e-05,
+            "max_vector_norm": 8.004454079696467e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 1.2834331948472325e-05,
+            "max_vector_norm": 3.4920290064246925e-05
+          }
+        },
+        "bulk": {
+          "W": {
+            "volume_weighted_rms": 5.545832892322302e-09,
+            "max_vector_norm": 1.5211031670115068e-08
+          },
+          "radial": {
+            "volume_weighted_rms": 1.0135721891651517e-05,
+            "max_vector_norm": 2.9605809226074684e-05
+          },
+          "angular": {
+            "volume_weighted_rms": 8.593092427488119e-06,
+            "max_vector_norm": 2.2830400316821545e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 1.9347854201075466e-06,
+            "max_vector_norm": 4.124174618704236e-06
+          }
+        },
+        "outer": {
+          "W": {
+            "volume_weighted_rms": 6.131172384292517e-09,
+            "max_vector_norm": 1.5211031670115068e-08
+          },
+          "radial": {
+            "volume_weighted_rms": 8.454573812656903e-06,
+            "max_vector_norm": 2.510637829587972e-05
+          },
+          "angular": {
+            "volume_weighted_rms": 7.625663595699774e-06,
+            "max_vector_norm": 1.5114161137173972e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 1.751668161637968e-06,
+            "max_vector_norm": 3.837133110690241e-06
+          }
+        },
+        "first": {
+          "W": {
+            "volume_weighted_rms": 1.1553470568448311e-08,
+            "max_vector_norm": 1.5622216085937182e-08
+          },
+          "radial": {
+            "volume_weighted_rms": 3.841484079555925e-05,
+            "max_vector_norm": 5.2792030806860974e-05
+          },
+          "angular": {
+            "volume_weighted_rms": 6.268252871947336e-05,
+            "max_vector_norm": 8.004454079696467e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 2.894810298486648e-05,
+            "max_vector_norm": 3.4920290064246925e-05
+          }
+        },
+        "last": {
+          "W": {
+            "volume_weighted_rms": 3.988431129686432e-09,
+            "max_vector_norm": 8.510230275624859e-09
+          },
+          "radial": {
+            "volume_weighted_rms": 1.2689278201692689e-05,
+            "max_vector_norm": 2.510637829587972e-05
+          },
+          "angular": {
+            "volume_weighted_rms": 4.593718274944597e-06,
+            "max_vector_norm": 8.36409682884005e-06
+          },
+          "mixed": {
+            "volume_weighted_rms": 2.991928689209305e-06,
+            "max_vector_norm": 3.837133110690241e-06
+          }
+        },
+        "inner_endpoint": {
+          "W": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "radial": {
+            "volume_weighted_rms": 0.0019084890043635332,
+            "max_vector_norm": 0.0022005365290732816
+          },
+          "angular": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.00015096940594831108,
+            "max_vector_norm": 0.000215405588351239
+          }
+        },
+        "outer_endpoint": {
+          "W": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "radial": {
+            "volume_weighted_rms": 2.66144772273105e-05,
+            "max_vector_norm": 3.674596935668943e-05
+          },
+          "angular": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "mixed": {
+            "volume_weighted_rms": 5.634874443147544e-06,
+            "max_vector_norm": 7.2834892485899455e-06
+          }
+        }
+      }
+    }
+  },
+  {
+    "pair": [
+      32,
+      64
+    ],
+    "differences": {
+      "archive": {
+        "interior": {
+          "W": {
+            "volume_weighted_rms": 8.915033903353143e-08,
+            "max_vector_norm": 1.349697892179175e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 0.002150925511474895,
+            "max_vector_norm": 0.006890811281177011
+          },
+          "angular": {
+            "volume_weighted_rms": 5.916220345180863e-06,
+            "max_vector_norm": 3.078006603233286e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 8.611153567565546e-05,
+            "max_vector_norm": 0.0008285750991268212
+          }
+        },
+        "inner": {
+          "W": {
+            "volume_weighted_rms": 7.580432199569405e-08,
+            "max_vector_norm": 1.217285784685e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 0.003838665692003347,
+            "max_vector_norm": 0.006890811281177011
+          },
+          "angular": {
+            "volume_weighted_rms": 1.3622602078668259e-05,
+            "max_vector_norm": 3.078006603233286e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.00023279182036838156,
+            "max_vector_norm": 0.0008285750991268212
+          }
+        },
+        "bulk": {
+          "W": {
+            "volume_weighted_rms": 1.0239271728492373e-07,
+            "max_vector_norm": 1.349697892179175e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 0.0021500965664039617,
+            "max_vector_norm": 0.004779852649074238
+          },
+          "angular": {
+            "volume_weighted_rms": 4.17122198249421e-06,
+            "max_vector_norm": 7.186336032485105e-06
+          },
+          "mixed": {
+            "volume_weighted_rms": 1.4861840541923355e-05,
+            "max_vector_norm": 3.9199433327282946e-05
+          }
+        },
+        "outer": {
+          "W": {
+            "volume_weighted_rms": 7.096539243136061e-08,
+            "max_vector_norm": 1.0734213837269947e-07
+          },
+          "radial": {
+            "volume_weighted_rms": 0.0006185622441247061,
+            "max_vector_norm": 0.001413564294142879
+          },
+          "angular": {
+            "volume_weighted_rms": 1.6730935274628682e-06,
+            "max_vector_norm": 3.3119267454743786e-06
+          },
+          "mixed": {
+            "volume_weighted_rms": 9.137795967942712e-06,
+            "max_vector_norm": 1.6305662758505947e-05
+          }
+        },
+        "first": {
+          "W": {
+            "volume_weighted_rms": 1.4713635994305788e-08,
+            "max_vector_norm": 1.5869894786177367e-08
+          },
+          "radial": {
+            "volume_weighted_rms": 0.0016806448401074125,
+            "max_vector_norm": 0.0017290308214188037
+          },
+          "angular": {
+            "volume_weighted_rms": 4.795183865883718e-06,
+            "max_vector_norm": 6.27836510756795e-06
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.0007632751589633847,
+            "max_vector_norm": 0.0008285750991268212
+          }
+        },
+        "last": {
+          "W": {
+            "volume_weighted_rms": 1.7638481415059068e-08,
+            "max_vector_norm": 1.914195283419101e-08
+          },
+          "radial": {
+            "volume_weighted_rms": 0.0002896102118999737,
+            "max_vector_norm": 0.0003125708453125688
+          },
+          "angular": {
+            "volume_weighted_rms": 3.1571326883507926e-07,
+            "max_vector_norm": 4.2439217385960794e-07
+          },
+          "mixed": {
+            "volume_weighted_rms": 6.685441687604492e-06,
+            "max_vector_norm": 7.694577526290364e-06
+          }
+        },
+        "inner_endpoint": {
+          "W": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "radial": {
+            "volume_weighted_rms": 0.02308452737734339,
+            "max_vector_norm": 0.023888158113373928
+          },
+          "angular": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "mixed": {
+            "volume_weighted_rms": 0.0014218477534299332,
+            "max_vector_norm": 0.0015442354856945568
+          }
+        },
+        "outer_endpoint": {
+          "W": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "radial": {
+            "volume_weighted_rms": 0.002934658504963581,
+            "max_vector_norm": 0.003109024594374217
+          },
+          "angular": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "mixed": {
+            "volume_weighted_rms": 3.154064571965817e-05,
+            "max_vector_norm": 3.7813034254454415e-05
+          }
+        }
+      },
+      "candidate": {
+        "interior": {
+          "W": {
+            "volume_weighted_rms": 3.509351853141986e-10,
+            "max_vector_norm": 1.5788443464537155e-09
+          },
+          "radial": {
+            "volume_weighted_rms": 7.645354518452926e-06,
+            "max_vector_norm": 4.9709914604194485e-05
+          },
+          "angular": {
+            "volume_weighted_rms": 5.670219028246079e-06,
+            "max_vector_norm": 3.143446058669325e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 7.744944615099544e-07,
+            "max_vector_norm": 8.248131908108525e-06
+          }
+        },
+        "inner": {
+          "W": {
+            "volume_weighted_rms": 4.843417746190109e-10,
+            "max_vector_norm": 1.5788443464537155e-09
+          },
+          "radial": {
+            "volume_weighted_rms": 2.034441432799366e-05,
+            "max_vector_norm": 4.9709914604194485e-05
+          },
+          "angular": {
+            "volume_weighted_rms": 1.4534210727119373e-05,
+            "max_vector_norm": 3.143446058669325e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 2.0292126205752794e-06,
+            "max_vector_norm": 8.248131908108525e-06
+          }
+        },
+        "bulk": {
+          "W": {
+            "volume_weighted_rms": 2.875083591527524e-10,
+            "max_vector_norm": 7.732625611069196e-10
+          },
+          "radial": {
+            "volume_weighted_rms": 2.260354214960094e-06,
+            "max_vector_norm": 7.624441500239892e-06
+          },
+          "angular": {
+            "volume_weighted_rms": 2.4449770094627043e-06,
+            "max_vector_norm": 8.519911740055281e-06
+          },
+          "mixed": {
+            "volume_weighted_rms": 1.9613696241946464e-07,
+            "max_vector_norm": 2.916557737183647e-07
+          }
+        },
+        "outer": {
+          "W": {
+            "volume_weighted_rms": 3.7473686638477757e-10,
+            "max_vector_norm": 8.635721413441977e-10
+          },
+          "radial": {
+            "volume_weighted_rms": 1.2473252543552183e-06,
+            "max_vector_norm": 4.735613458399546e-06
+          },
+          "angular": {
+            "volume_weighted_rms": 2.0310666285089927e-06,
+            "max_vector_norm": 3.88160042480199e-06
+          },
+          "mixed": {
+            "volume_weighted_rms": 2.6806509925567033e-07,
+            "max_vector_norm": 6.628155887407322e-07
+          }
+        },
+        "first": {
+          "W": {
+            "volume_weighted_rms": 1.2070160257833398e-09,
+            "max_vector_norm": 1.5788443464537155e-09
+          },
+          "radial": {
+            "volume_weighted_rms": 5.594990557994824e-06,
+            "max_vector_norm": 7.913231548882585e-06
+          },
+          "angular": {
+            "volume_weighted_rms": 2.5840247857474098e-05,
+            "max_vector_norm": 3.143446058669325e-05
+          },
+          "mixed": {
+            "volume_weighted_rms": 6.6775912027546076e-06,
+            "max_vector_norm": 8.248131908108525e-06
+          }
+        },
+        "last": {
+          "W": {
+            "volume_weighted_rms": 2.1942365552666665e-10,
+            "max_vector_norm": 4.3026287423776957e-10
+          },
+          "radial": {
+            "volume_weighted_rms": 2.6487742246505883e-06,
+            "max_vector_norm": 4.735613458399546e-06
+          },
+          "angular": {
+            "volume_weighted_rms": 1.1465323214811045e-06,
+            "max_vector_norm": 2.1497064278745874e-06
+          },
+          "mixed": {
+            "volume_weighted_rms": 5.997983742228507e-07,
+            "max_vector_norm": 6.628155887407322e-07
+          }
+        },
+        "inner_endpoint": {
+          "W": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "radial": {
+            "volume_weighted_rms": 0.0006374539610887316,
+            "max_vector_norm": 0.0007535015761742531
+          },
+          "angular": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "mixed": {
+            "volume_weighted_rms": 2.9562010511517752e-05,
+            "max_vector_norm": 4.4743157722518655e-05
+          }
+        },
+        "outer_endpoint": {
+          "W": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "radial": {
+            "volume_weighted_rms": 5.682379639498778e-06,
+            "max_vector_norm": 7.827198561509414e-06
+          },
+          "angular": {
+            "volume_weighted_rms": 0.0,
+            "max_vector_norm": 0.0
+          },
+          "mixed": {
+            "volume_weighted_rms": 1.1464123104737166e-06,
+            "max_vector_norm": 1.4223411639377022e-06
+          }
+        }
+      }
+    }
+  }
+]

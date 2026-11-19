@@ -1,0 +1,19 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "base": "54183649dddf26f566b956d41618cec25b218212",
+  "sources": {
+    "research/run43_independent_momentum/experiment.py": "e4cae5a5eabb0da7ad7843aeb828af280ba550ee7aa3d209e13696b5b7acd639",
+    "research/validate_original_physics.py": "7153e04ae4c152717c17f1d32d517d58c1e18c84cb01d603d31844993538abc0",
+    "research/audit_run43_arrays.py": "945cb56e13514063aad18fe61012a1aae3dabb42fa019c8eb3a4b7b52c2592e8",
+    "research/run43_consistent_momentum.py": "bd9f25822fa108e6cc910c7e9ca5b28bce7d41bb4fe9fe68806c5488f127a9b9",
+    "reproduce/dee_stress_energy_3p1.py": "7a858cbe022e7a3004209c400bd19df0b917e6cc08c6bdd0c65d4f0884203865",
+    "reproduce/validate_toroidal_helical_dee_source.py": "e7bc16a4638b58ad1e77bfdfae5e8ad5044a9aa8c95cd77f07a0514e4e7c39d4",
+    "reproduce/diagnose_toroidal_boundary_convergence.py": "36516a8d6c20699b76d814b4b5cba15378ac78948e99cf53970e33388f3b6e68",
+    "reproduce/solve_toroidal_helical_coupled_constraints.py": "2123a456c63fb23f1c772d3c9656f29efe37e733847655114d97db84f6868eee",
+    "research/results/coordinated-replay-20261103-1831/baseline/executed_solver.py": "bd9f25822fa108e6cc910c7e9ca5b28bce7d41bb4fe9fe68806c5488f127a9b9",
+    "research/results/coordinated-replay-20261103-1831/baseline/settings.json": "92a213e9163949bc83d23aef307a4e010eecb194adb7258f0c4047b389b949b4"
+  }
+}
