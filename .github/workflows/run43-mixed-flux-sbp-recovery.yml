@@ -1,0 +1,67 @@
+name: Run43 physical mixed-flux SBP recovery gate
+on:
+  push:
+    branches:
+      - research/run43-mixed-flux-sbp-sat-recovery-20261120
+    paths:
+      - 'research/run43_mixed_flux_sbp_physical.py'
+      - 'research/run43_recovery/**'
+      - '.github/workflows/run43-mixed-flux-sbp-recovery.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  recovery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      DEE_SCALAR_ORDER: flux
+      DEE_PRECONDITIONER: fourier
+      DEE_EXPERIMENT: mixed-flux-sbp-physical-ci
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned dependencies
+        run: python -m pip install numpy==2.3.5 scipy==1.17.0
+      - name: Frozen checker immutable
+        run: |
+          test "$(git hash-object reproduce/diagnose_toroidal_boundary_convergence.py)" = 5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22
+      - name: Run unchanged unit regression suite
+        run: python -m unittest discover -s tests -v
+      - name: Execute physical-source 8 16 32 64 with SBP flux
+        id: solve
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          DEE_LEVELS=8,16,32,64 python research/run43_mixed_flux_sbp_physical.py 2>&1 | tee run43-sbp-solve.log
+      - name: Independently evaluate frozen twelve checks from arrays
+        if: steps.solve.outcome == 'success'
+        id: audit
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          python research/audit_run43_arrays.py research/results/mixed-flux-sbp-physical-ci 2>&1 | tee run43-sbp-frozen-audit.log
+      - name: Record statuses without concealing scientific failures
+        if: always()
+        run: |
+          printf 'solve=%s\naudit=%s\n' "${{ steps.solve.outcome }}" "${{ steps.audit.outcome }}" > run43-sbp-status.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: run43-sbp-physical-recovery-evidence
+          retention-days: 90
+          path: |
+            run43-sbp-*.log
+            run43-sbp-status.txt
+            research/results/mixed-flux-sbp-physical-ci/
+            research/run43_mixed_flux_sbp_physical.py
+      - name: Enforce no silent promotion
+        if: always()
+        run: |
+          test "${{ steps.solve.outcome }}" = success
+          test "${{ steps.audit.outcome }}" = success
