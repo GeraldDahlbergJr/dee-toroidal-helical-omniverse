@@ -1,0 +1,48 @@
+{
+  "base_commit": "6e0e9f867a4c0f27b34a0d930c3af336e984ff8b",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "pymetis": "2025.2.2",
+  "mpmath": "1.3.0",
+  "new_code_sha256": {
+    "measure.py": "f72c4887a2f45ba6004bd9677dff65d1dbc599790776597c9116cebdcadb00fb",
+    "operator_eval.py": "c82aac1e8d4b3e8cac3dc5096b328173399031d5843518d17b5fe329c0b65676",
+    "solve_levels.py": "bcee2755dce653dfcff618e30a913cf10c2ac11d91f36fc194bd3c570d1b2e1c"
+  },
+  "archive_and_code_sha256": {
+    "research/run43_reference/compare.py": "2d0192698a356ff62ba36888046d773b652ffaa1a9352caa4d134f645ef9f88b",
+    "research/run43_reference/reference.py": "b8468ae2a4ab2e9e61e92c2011dc681cc4f4d7d949c2d34103f93a50688a9364",
+    "research/run43_reference/verify.py": "28d94fcc77217638ecf1b4ef89a52d2742d3108b5b67123df1c68d5dfb925636",
+    "reproduce/dee_stress_energy_3p1.py": "7a858cbe022e7a3004209c400bd19df0b917e6cc08c6bdd0c65d4f0884203865",
+    "reproduce/diagnose_toroidal_boundary_convergence.py": "36516a8d6c20699b76d814b4b5cba15378ac78948e99cf53970e33388f3b6e68",
+    "reproduce/solve_toroidal_helical_coupled_constraints.py": "2123a456c63fb23f1c772d3c9656f29efe37e733847655114d97db84f6868eee",
+    "reproduce/validate_toroidal_helical_dee_source.py": "e7bc16a4638b58ad1e77bfdfae5e8ad5044a9aa8c95cd77f07a0514e4e7c39d4",
+    "research/audit_run43_arrays.py": "945cb56e13514063aad18fe61012a1aae3dabb42fa019c8eb3a4b7b52c2592e8",
+    "research/run43_consistent_momentum.py": "bd9f25822fa108e6cc910c7e9ca5b28bce7d41bb4fe9fe68806c5488f127a9b9",
+    "research/run43_hybrid/physical.py": "75aa9d43c71cb0d3a666edca7cf4262113417cd9751fd1b45d4dc3053917188a",
+    "research/run43_hybrid/row_diagnostics.py": "0a5fee1065816bef102c8986e277cf577b6d2c58f0f5970ad421823011a0f036",
+    "research/run43_hybrid/strong_diagnostics.py": "247c3d3a69c43309e8ce87b2c9b019cc07a68181a3564a9bb644209b34b23156",
+    "research/run43_mixed_flux_sbp_physical.py": "e60202bb22acdb578339aa2046eb146e569ddf38bec5edd82c1d7b0032ba50ca",
+    "research/run43_hybrid/restrict_finest.py": "83c94cde376c52cdf76bfa6b1c803d92b531ce110b3fe3cc20dbcea09e7ed495",
+    "research/run43_angular/analyze.py": "95f3dddb93b77436728111370b78844b952db1e63b3dd9ba8e2140e976623c8a",
+    "research/run43_angular/solve.py": "f0156b3be373597cb37627dc5f917f427016aefc2d00a833ef97a85808ea6e2b",
+    "research/run43_reference/results/Run43_Radial_Reference_Fields.zip": "8dcd1904f098b1e0748078f8fea63ce009c253dcb7f06b75be70004f3f97b4fa"
+  },
+  "hybrid_sha256": {
+    "8": "1116012b29a2d4071659cad1f637a85a41fc69fb3eeebf66812e4c9d055f9a44",
+    "16": "cfbc0407ddf91a4b0711521f7c42c68783adf496032baaf37bf2c9edb4b750f4",
+    "32": "bf4b3bc86fc416230c1d633ae6ba92a2dca09fbf0a215e4666d5e8c91f040e0e",
+    "64": "659764101a89c7fd82c7941223eb67957cf677156faf9a48e9cd3f3fbe0ad346"
+  },
+  "full_audit_sha256": "6c10d04f1ffbb9006b9544f8c2bb5669218a614f99d5e608db0d4fd6c4207de1",
+  "output_sha256": {
+    "floors.csv": "c6aae07faaccb7656c57b29728c98cf1f83721bf65860b228a5f117487f24808",
+    "histories.json": "e3db453e6ba8d8961d9ce0e5200952acc9e09bf64337e4f4aa473a679efb8a1c",
+    "hybrid-audit.json": "7913cae8aab7379a4079dec65e7444afcdcbbe447b3801e3cc0f6e86e4cfcc7d",
+    "orders.csv": "4f06c8a04a7c69b475ffaa341012ba7265650ad0d205eeab0962496200265eb6",
+    "pairs.csv": "76279ce0f3112f3be4960e093140955136c6281c38296dc20a8fa2d961c77bc7",
+    "radial_control.csv": "97e3fae519421683c601e2b8aafe8779cf611c46031e0c939d690cc817546c61",
+    "residuals.csv": "af930f809388335659233db63ce865ad9d34cc26959dfae7f563b86ff5c8cd4f"
+  }
+}
