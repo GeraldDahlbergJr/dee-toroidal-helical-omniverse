@@ -1,0 +1,27 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "sha256": {
+    "research/run43_reference/compare.py": "2d0192698a356ff62ba36888046d773b652ffaa1a9352caa4d134f645ef9f88b",
+    "research/run43_reference/reference.py": "b8468ae2a4ab2e9e61e92c2011dc681cc4f4d7d949c2d34103f93a50688a9364",
+    "research/run43_reference/verify.py": "28d94fcc77217638ecf1b4ef89a52d2742d3108b5b67123df1c68d5dfb925636",
+    "reproduce/dee_stress_energy_3p1.py": "7a858cbe022e7a3004209c400bd19df0b917e6cc08c6bdd0c65d4f0884203865",
+    "reproduce/diagnose_toroidal_boundary_convergence.py": "36516a8d6c20699b76d814b4b5cba15378ac78948e99cf53970e33388f3b6e68",
+    "reproduce/solve_toroidal_helical_coupled_constraints.py": "2123a456c63fb23f1c772d3c9656f29efe37e733847655114d97db84f6868eee",
+    "reproduce/validate_toroidal_helical_dee_source.py": "e7bc16a4638b58ad1e77bfdfae5e8ad5044a9aa8c95cd77f07a0514e4e7c39d4",
+    "research/audit_run43_arrays.py": "945cb56e13514063aad18fe61012a1aae3dabb42fa019c8eb3a4b7b52c2592e8",
+    "research/run43_consistent_momentum.py": "bd9f25822fa108e6cc910c7e9ca5b28bce7d41bb4fe9fe68806c5488f127a9b9",
+    "research/run43_hybrid/physical.py": "75aa9d43c71cb0d3a666edca7cf4262113417cd9751fd1b45d4dc3053917188a",
+    "research/run43_hybrid/row_diagnostics.py": "0a5fee1065816bef102c8986e277cf577b6d2c58f0f5970ad421823011a0f036",
+    "research/run43_hybrid/strong_diagnostics.py": "247c3d3a69c43309e8ce87b2c9b019cc07a68181a3564a9bb644209b34b23156",
+    "research/run43_mixed_flux_sbp_physical.py": "e60202bb22acdb578339aa2046eb146e569ddf38bec5edd82c1d7b0032ba50ca",
+    "research/run43_hybrid/restrict_finest.py": "83c94cde376c52cdf76bfa6b1c803d92b531ce110b3fe3cc20dbcea09e7ed495"
+  },
+  "hybrid_sha256": [
+    "1116012b29a2d4071659cad1f637a85a41fc69fb3eeebf66812e4c9d055f9a44",
+    "cfbc0407ddf91a4b0711521f7c42c68783adf496032baaf37bf2c9edb4b750f4",
+    "bf4b3bc86fc416230c1d633ae6ba92a2dca09fbf0a215e4666d5e8c91f040e0e",
+    "659764101a89c7fd82c7941223eb67957cf677156faf9a48e9cd3f3fbe0ad346"
+  ]
+}

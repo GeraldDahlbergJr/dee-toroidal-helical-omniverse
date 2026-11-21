@@ -1,0 +1,434 @@
+[
+  {
+    "n": 8,
+    "nr": 8,
+    "mms": {
+      "wall_curvature": -49.99999999999999,
+      "linear_residual": 1.8223463807715443e-14,
+      "max_node_error": 0.0004658539701971609,
+      "first_audit_row_error": 0.0004006474074516042
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "newton_steps": 3,
+        "vector_l2": 7.5973252378588165e-19,
+        "scalar_linf": 2.758404398991998e-13,
+        "change": 1.9943590054403607e-08
+      },
+      {
+        "iteration": 2,
+        "newton_steps": 2,
+        "vector_l2": 7.912014162223921e-19,
+        "scalar_linf": 7.453889935837843e-19,
+        "change": 1.8444989459409644e-17
+      }
+    ],
+    "sha256": "a265c74d18893e8673321fb3997dc6e7e64523531197e25aeb4394f003813512"
+  },
+  {
+    "n": 8,
+    "nr": 16,
+    "mms": {
+      "wall_curvature": -49.99999999999999,
+      "linear_residual": 6.207795779203621e-14,
+      "max_node_error": 6.330720438441073e-05,
+      "first_audit_row_error": 1.2223011798040417e-05
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "newton_steps": 3,
+        "vector_l2": 2.4087144473804053e-18,
+        "scalar_linf": 1.453979420044417e-13,
+        "change": 1.9944939851298686e-08
+      },
+      {
+        "iteration": 2,
+        "newton_steps": 2,
+        "vector_l2": 2.1531850052248363e-18,
+        "scalar_linf": 2.5783682914420902e-18,
+        "change": 1.8512752095189988e-17
+      }
+    ],
+    "sha256": "5fb917600e0f856539f052f3d41108a3a2c0e9aecd2920831adf549f57941a83"
+  },
+  {
+    "n": 8,
+    "nr": 32,
+    "mms": {
+      "wall_curvature": -49.99999999999999,
+      "linear_residual": 1.5069229052713432e-13,
+      "max_node_error": 2.4762860766358585e-06,
+      "first_audit_row_error": 3.044218321868186e-09
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "newton_steps": 3,
+        "vector_l2": 5.702645169739157e-18,
+        "scalar_linf": 7.958101544284016e-14,
+        "change": 1.994493418053169e-08
+      },
+      {
+        "iteration": 2,
+        "newton_steps": 2,
+        "vector_l2": 5.641101051476353e-18,
+        "scalar_linf": 5.8055638204809745e-18,
+        "change": 1.8577126599181315e-17
+      }
+    ],
+    "sha256": "eb83b06ec533b72e0fbdb1a51463d69a0f68c13d21371a0d656e03dc3877a0eb"
+  },
+  {
+    "n": 8,
+    "nr": 64,
+    "mms": {
+      "wall_curvature": -49.99999999999999,
+      "linear_residual": 4.4971967190671634e-13,
+      "max_node_error": 8.114007343795748e-08,
+      "first_audit_row_error": 1.3000933662965508e-11
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "newton_steps": 3,
+        "vector_l2": 1.6335863952023543e-17,
+        "scalar_linf": 4.769225108152558e-14,
+        "change": 1.9944934168930725e-08
+      },
+      {
+        "iteration": 2,
+        "newton_steps": 2,
+        "vector_l2": 1.64301919231035e-17,
+        "scalar_linf": 8.072223987333482e-18,
+        "change": 1.8597455389915418e-17
+      }
+    ],
+    "sha256": "32fe1be8ee55e99c6588b168bca6846bbf0dfbe42392a648aee3f0b5c511626f"
+  },
+  {
+    "n": 16,
+    "nr": 16,
+    "mms": {
+      "wall_curvature": -49.99999999999999,
+      "linear_residual": 4.1917984495769686e-14,
+      "max_node_error": 6.334689955467265e-05,
+      "first_audit_row_error": 5.48980402288457e-05
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "newton_steps": 3,
+        "vector_l2": 1.5637518982274827e-18,
+        "scalar_linf": 7.190095076942647e-14,
+        "change": 1.97429536915095e-08
+      },
+      {
+        "iteration": 2,
+        "newton_steps": 2,
+        "vector_l2": 1.5460441867659326e-18,
+        "scalar_linf": 1.4738373282224826e-18,
+        "change": 1.8953209227762224e-17
+      }
+    ],
+    "sha256": "d05d6038a2f9b3c43e9d95b05f06904344c784caca69a4ac22fbd29f06ef25ca"
+  },
+  {
+    "n": 16,
+    "nr": 32,
+    "mms": {
+      "wall_curvature": -49.99999999999999,
+      "linear_residual": 1.2321694027597783e-13,
+      "max_node_error": 2.476179558841274e-06,
+      "first_audit_row_error": 4.212848416784709e-07
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "newton_steps": 3,
+        "vector_l2": 4.33800432378166e-18,
+        "scalar_linf": 3.901887425899857e-14,
+        "change": 1.9742947777376385e-08
+      },
+      {
+        "iteration": 2,
+        "newton_steps": 2,
+        "vector_l2": 4.277263817006893e-18,
+        "scalar_linf": 2.0549019300389326e-18,
+        "change": 1.893288043702812e-17
+      }
+    ],
+    "sha256": "c09c00177a399671da57bb27a6da5cd7f5656cd2b3ba3b0a35463012e4452725"
+  },
+  {
+    "n": 16,
+    "nr": 64,
+    "mms": {
+      "wall_curvature": -49.99999999999999,
+      "linear_residual": 3.4966701458235995e-13,
+      "max_node_error": 8.113950900057176e-08,
+      "first_audit_row_error": 1.0484724199955053e-11
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "newton_steps": 3,
+        "vector_l2": 1.1860205970648314e-17,
+        "scalar_linf": 2.3536819601611622e-14,
+        "change": 1.974294776131664e-08
+      },
+      {
+        "iteration": 2,
+        "newton_steps": 2,
+        "vector_l2": 1.1701547236367922e-17,
+        "scalar_linf": 5.2075585597194385e-18,
+        "change": 1.897014988670731e-17
+      }
+    ],
+    "sha256": "087f76113ab6c91395e4de80b12ea4d2511eacdf3631bd312c9c9db5d49cc205"
+  },
+  {
+    "n": 16,
+    "nr": 128,
+    "mms": {
+      "wall_curvature": -49.99999999999999,
+      "linear_residual": 8.915661252493442e-13,
+      "max_node_error": 2.560018752539861e-09,
+      "first_audit_row_error": 1.2112533198660458e-13
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "newton_steps": 3,
+        "vector_l2": 3.288760962084478e-17,
+        "scalar_linf": 1.3011325618816037e-14,
+        "change": 1.974294776106253e-08
+      },
+      {
+        "iteration": 2,
+        "newton_steps": 2,
+        "vector_l2": 3.310491403378466e-17,
+        "scalar_linf": 1.2714176296523862e-17,
+        "change": 1.899386680923043e-17
+      }
+    ],
+    "sha256": "d4ce19b95386cb7d2c218883bcf1a6e4e10f15b14150a6e8967929c4c3d59b93"
+  },
+  {
+    "n": 32,
+    "nr": 32,
+    "mms": {
+      "wall_curvature": -49.99999999999999,
+      "linear_residual": 8.668302887010544e-14,
+      "max_node_error": 2.476149197794264e-06,
+      "first_audit_row_error": 2.299169447855798e-06
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "newton_steps": 3,
+        "vector_l2": 3.2871990213381716e-18,
+        "scalar_linf": 1.941572987454454e-14,
+        "change": 1.9689406153862584e-08
+      },
+      {
+        "iteration": 2,
+        "newton_steps": 2,
+        "vector_l2": 3.360497315756585e-18,
+        "scalar_linf": 1.593692490258966e-18,
+        "change": 1.9085346367533895e-17
+      }
+    ],
+    "sha256": "55ba0e8a0310038e9e11f7bebcce561256c3c2eec61b7e43db0eed94fd48bea5"
+  },
+  {
+    "n": 32,
+    "nr": 64,
+    "mms": {
+      "wall_curvature": -49.99999999999999,
+      "linear_residual": 2.3522038942673246e-13,
+      "max_node_error": 8.114093474897999e-08,
+      "first_audit_row_error": 8.493111963714384e-09
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "newton_steps": 3,
+        "vector_l2": 8.696115800264743e-18,
+        "scalar_linf": 1.1732065311105024e-14,
+        "change": 1.968940613596986e-08
+      },
+      {
+        "iteration": 2,
+        "newton_steps": 2,
+        "vector_l2": 8.585794127257022e-18,
+        "scalar_linf": 3.054824324272634e-18,
+        "change": 1.9122615817213084e-17
+      }
+    ],
+    "sha256": "b611d1cfb0333856bc39f6336595cf6db884778aa5833cf4862797456a335c83"
+  },
+  {
+    "n": 32,
+    "nr": 128,
+    "mms": {
+      "wall_curvature": -49.99999999999999,
+      "linear_residual": 6.418335031615926e-13,
+      "max_node_error": 2.560116452166028e-09,
+      "first_audit_row_error": 8.573697307667771e-14
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "newton_steps": 3,
+        "vector_l2": 2.446637968520473e-17,
+        "scalar_linf": 6.492147551701629e-15,
+        "change": 1.968940613569881e-08
+      },
+      {
+        "iteration": 2,
+        "newton_steps": 2,
+        "vector_l2": 2.4579012475432874e-17,
+        "scalar_linf": 6.419980344595563e-18,
+        "change": 1.909212263111193e-17
+      }
+    ],
+    "sha256": "a355a4e8efd0a365377ed659880f6d335df98f12d37b9c25b3617a85a3885e65"
+  },
+  {
+    "n": 32,
+    "nr": 256,
+    "mms": {
+      "wall_curvature": -49.99999999999999,
+      "linear_residual": 1.834305854335579e-12,
+      "max_node_error": 8.076139756951761e-11,
+      "first_audit_row_error": 8.978928711655954e-14
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "newton_steps": 3,
+        "vector_l2": 6.804232516774827e-17,
+        "scalar_linf": 3.4221325385529362e-15,
+        "change": 1.9689819109417617e-08
+      },
+      {
+        "iteration": 2,
+        "newton_steps": 2,
+        "vector_l2": 6.778704122678755e-17,
+        "scalar_linf": 1.5523572824329562e-17,
+        "change": 1.9105675158267998e-17
+      }
+    ],
+    "sha256": "210991205e6816f58ed9057a3dc482abf62db772be0e9285ae2c546b64c464d4"
+  },
+  {
+    "n": 64,
+    "nr": 64,
+    "mms": {
+      "wall_curvature": -49.99999999999999,
+      "linear_residual": 1.8636846962591562e-13,
+      "max_node_error": 8.114120331192964e-08,
+      "first_audit_row_error": 7.795629523854597e-08
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "newton_steps": 3,
+        "vector_l2": 7.09194188270424e-18,
+        "scalar_linf": 5.861567097854587e-15,
+        "change": 1.9675856312837726e-08
+      },
+      {
+        "iteration": 2,
+        "newton_steps": 2,
+        "vector_l2": 7.149367451223788e-18,
+        "scalar_linf": 2.3225643413712915e-18,
+        "change": 1.9119227685424067e-17
+      }
+    ],
+    "sha256": "f0bdb55abd6f7cf72d69ea66880ef43f2348aa518e38c1e85e41cac38dc9a4b6"
+  },
+  {
+    "n": 64,
+    "nr": 128,
+    "mms": {
+      "wall_curvature": -49.99999999999999,
+      "linear_residual": 5.013384774556368e-13,
+      "max_node_error": 2.5601122333185344e-09,
+      "first_audit_row_error": 1.4698037231752892e-10
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "newton_steps": 3,
+        "vector_l2": 1.968221703746498e-17,
+        "scalar_linf": 3.2443326996277333e-15,
+        "change": 1.9675856312526018e-08
+      },
+      {
+        "iteration": 2,
+        "newton_steps": 2,
+        "vector_l2": 1.9379578643685267e-17,
+        "scalar_linf": 3.602695822468556e-18,
+        "change": 1.910228702647898e-17
+      }
+    ],
+    "sha256": "fb6df660354b52e7d4b5ac882455fc6b7ac2895b036ff9622700a971cc34eea2"
+  },
+  {
+    "n": 64,
+    "nr": 256,
+    "mms": {
+      "wall_curvature": -49.99999999999999,
+      "linear_residual": 1.4039740153985386e-12,
+      "max_node_error": 8.030365261646466e-11,
+      "first_audit_row_error": 4.744815651491763e-14
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "newton_steps": 3,
+        "vector_l2": 5.37274259816535e-17,
+        "scalar_linf": 1.7103835607209811e-15,
+        "change": 1.9676342518894018e-08
+      },
+      {
+        "iteration": 2,
+        "newton_steps": 2,
+        "vector_l2": 5.379212703126186e-17,
+        "scalar_linf": 1.027008919700118e-17,
+        "change": 1.9132780212580136e-17
+      }
+    ],
+    "sha256": "5931e89a579d0017a7a986e7325c037b59a641fcc8fa8432d5855b251223067f"
+  },
+  {
+    "n": 64,
+    "nr": 512,
+    "mms": {
+      "wall_curvature": -49.99999999999999,
+      "linear_residual": 4.040041540063157e-12,
+      "max_node_error": 4.828581978699731e-12,
+      "first_audit_row_error": 1.8775259125192179e-13
+    },
+    "history": [
+      {
+        "iteration": 1,
+        "newton_steps": 3,
+        "vector_l2": 1.5532342856485274e-16,
+        "scalar_linf": 8.786851920646543e-16,
+        "change": 1.967646192654822e-08
+      },
+      {
+        "iteration": 2,
+        "newton_steps": 2,
+        "vector_l2": 1.5477487806010042e-16,
+        "scalar_linf": 1.914874148967996e-17,
+        "change": 1.918699032120441e-17
+      }
+    ],
+    "sha256": "a8f8ae5610f6ad9bfc33a277b6569c06887c551b2036b6a240f8cb778ed4bb4a"
+  }
+]
