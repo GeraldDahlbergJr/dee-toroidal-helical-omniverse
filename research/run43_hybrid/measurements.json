@@ -15,7 +15,8 @@
     "research/run43_hybrid/physical.py": "75aa9d43c71cb0d3a666edca7cf4262113417cd9751fd1b45d4dc3053917188a",
     "research/run43_hybrid/row_diagnostics.py": "0a5fee1065816bef102c8986e277cf577b6d2c58f0f5970ad421823011a0f036",
     "research/run43_hybrid/strong_diagnostics.py": "247c3d3a69c43309e8ce87b2c9b019cc07a68181a3564a9bb644209b34b23156",
-    "research/run43_mixed_flux_sbp_physical.py": "e60202bb22acdb578339aa2046eb146e569ddf38bec5edd82c1d7b0032ba50ca"
+    "research/run43_mixed_flux_sbp_physical.py": "e60202bb22acdb578339aa2046eb146e569ddf38bec5edd82c1d7b0032ba50ca",
+    "research/run43_hybrid/restrict_finest.py": "83c94cde376c52cdf76bfa6b1c803d92b531ce110b3fe3cc20dbcea09e7ed495"
   },
   "experiments": {
     "submitted": {
@@ -1380,6 +1381,26 @@
       "manufactured_last_rms": 147.13411257315417,
       "manufactured_bulk_rms": 0.025433794433711195,
       "tested_energy": 242991.15336532664
+    }
+  ],
+  "hybrid_finest_restriction": [
+    {
+      "n": 8,
+      "coarse_rms": 0.0011326739367733805,
+      "restricted_rms": 0.0011840811695968418,
+      "difference_rms": 0.00014528571578391897
+    },
+    {
+      "n": 16,
+      "coarse_rms": 0.0008150831281948279,
+      "restricted_rms": 0.0008091109317766734,
+      "difference_rms": 7.317812455753549e-05
+    },
+    {
+      "n": 32,
+      "coarse_rms": 0.0004424960001650378,
+      "restricted_rms": 0.00043203830613153027,
+      "difference_rms": 2.0250594156794397e-05
     }
   ]
 }

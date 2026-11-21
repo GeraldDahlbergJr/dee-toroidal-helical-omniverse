@@ -28,6 +28,8 @@ The hybrid stiffness symmetry defect was at most 7.11e−15 in maximum entry nor
 
 At N=64, the hybrid physical algebraic vector residual was 9.91e−17, the scalar interior residual maximum was 5.41e−11, and the largest displacement jump was 6.79e−10. Physical inner momentum RMS fell from 0.00329945 for the nodal transplant to 0.000203148 for the hybrid. Its first interior row still contributed 51.31% of the squared inner-band residual. The matched strong control recovered the same three outer checks. These data do not identify a unique leading coefficient in the inner physical residual or establish that weak wall enforcement caused the recovery. The original transplant's fixed-band behavior has a measured first-row mechanism. The remaining inner failure of the quadratic method requires separating physical-field discretization error from the frozen differentiation defect.
 
+Sampling the single N=64 hybrid solution on the 8, 16 and 32 grids gives inner RMS values 0.00118408, 0.000809111 and 0.000432038, using the corresponding coarse-grid physical weights. The RMS differences from the separately solved residual vectors are only 0.000145286, 0.0000731781 and 0.0000202506. The muted coarse-grid orders persist even with a common underlying discrete field. The finest solution has its own discretization error, so this diagnostic alone cannot establish the continuum contribution.
+
 ## Reproduction
 
 Run from repository root with Python 3.12, NumPy 2.3.5, SciPy 1.17.0 and mpmath 1.3.0. The original workflow used Python 3.12.16. The follow-up used 3.12.14. Both trial drivers require fresh output directories.
@@ -37,6 +39,7 @@ export OPENBLAS_NUM_THREADS=1
 python research/run43_hybrid/physical.py output-hybrid
 python research/run43_hybrid/physical.py --conforming output-control
 python research/run43_hybrid/row_diagnostics.py output-hybrid
+python research/run43_hybrid/restrict_finest.py output-hybrid
 python research/run43_hybrid/strong_diagnostics.py strong-probe.json
 python research/audit_run43_arrays.py output-hybrid
 python research/audit_run43_arrays.py output-control
