@@ -1,0 +1,28 @@
+{
+  "n": 32,
+  "sha256": "66840133ca96e4a2e948edcad64746d94c80462845e520ad219a93ce0c0ff87d",
+  "history": [
+    {
+      "momentum_linf": 1.2576745200831851e-15,
+      "momentum_l2": 1.125945114914966e-14,
+      "rhs_l2": 0.22204176622063182,
+      "H_linf": 2.0543700074426852e-10,
+      "W_change": 1.9726618820550243e-08,
+      "newton_steps": 1,
+      "psi_change": 0.00016681990670130986
+    },
+    {
+      "momentum_linf": 1.6245685352522798e-15,
+      "momentum_l2": 1.1596938754449653e-14,
+      "rhs_l2": 0.2220417662208186,
+      "H_linf": 1.14548093232969e-11,
+      "W_change": 2.8321393624394786e-17,
+      "newton_steps": 1,
+      "psi_change": 2.3647750424515834e-13
+    }
+  ],
+  "stability": {
+    "inverse_one_norm_estimate": 0.005608997735125317,
+    "condition_one_norm_estimate": 881.6418934801515
+  }
+}

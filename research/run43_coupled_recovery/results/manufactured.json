@@ -1,0 +1,317 @@
+[
+  {
+    "n": 8,
+    "cases": {
+      "homogeneous": {
+        "truncation": {
+          "inner_wall": 7.283929035178614,
+          "inner_first": 10.304037492809684,
+          "interior": 12.75019978157083,
+          "outer_first": 6.673171615720513,
+          "outer_wall": 27.865417424261686
+        },
+        "field_error": {
+          "inner_wall": 0.0,
+          "inner_first": 0.024483056664467255,
+          "interior": 0.04136143516523856,
+          "outer_first": 0.0158332384716913,
+          "outer_wall": 0.0
+        },
+        "discrete_recovery_linf": 1.5543122344752192e-15,
+        "continuous_solve": {
+          "momentum_linf": 1.7053025658242404e-12,
+          "momentum_l2": 5.990649454403278e-12,
+          "rhs_l2": 2529.264951377374
+        },
+        "discrete_solve": {
+          "momentum_linf": 1.9895196601282805e-12,
+          "momentum_l2": 5.7064515518355944e-12,
+          "rhs_l2": 2458.8928130103113
+        }
+      },
+      "lifted": {
+        "truncation": {
+          "inner_wall": 300.3323335829602,
+          "inner_first": 250.45504647950284,
+          "interior": 111.67218715354316,
+          "outer_first": 12.770612750171642,
+          "outer_wall": 18.7071075905885
+        },
+        "field_error": {
+          "inner_wall": 0.0,
+          "inner_first": 0.2478580023764605,
+          "interior": 0.2724086818252503,
+          "outer_first": 0.06610579500324282,
+          "outer_wall": 0.0
+        },
+        "discrete_recovery_linf": 1.9984014443252818e-15,
+        "continuous_solve": {
+          "momentum_linf": 2.1032064978498966e-12,
+          "momentum_l2": 6.0808293741394604e-12,
+          "rhs_l2": 5281.592765777881
+        },
+        "discrete_solve": {
+          "momentum_linf": 1.3642420526593924e-12,
+          "momentum_l2": 4.453986879380885e-12,
+          "rhs_l2": 4715.707935072658
+        }
+      }
+    },
+    "stability": {
+      "inverse_one_norm_estimate": 0.005508047351880471,
+      "condition_one_norm_estimate": 49.96425689445772
+    }
+  },
+  {
+    "n": 16,
+    "cases": {
+      "homogeneous": {
+        "truncation": {
+          "inner_wall": 3.408843312482494,
+          "inner_first": 2.3302665330566334,
+          "interior": 3.1432624046332194,
+          "outer_first": 1.292496626136227,
+          "outer_wall": 4.224935235607561
+        },
+        "field_error": {
+          "inner_wall": 0.0,
+          "inner_first": 0.003348738820276527,
+          "interior": 0.009486217492395557,
+          "outer_first": 0.0020157868265762995,
+          "outer_wall": 0.0
+        },
+        "discrete_recovery_linf": 4.551914400963142e-15,
+        "continuous_solve": {
+          "momentum_linf": 1.4438228390645236e-11,
+          "momentum_l2": 6.416733622224796e-11,
+          "rhs_l2": 5185.357232063214
+        },
+        "discrete_solve": {
+          "momentum_linf": 1.0402345651527867e-11,
+          "momentum_l2": 5.7427308082857014e-11,
+          "rhs_l2": 5148.370557978313
+        }
+      },
+      "lifted": {
+        "truncation": {
+          "inner_wall": 97.50671499325222,
+          "inner_first": 90.26176274731522,
+          "interior": 40.77654353612214,
+          "outer_first": 3.6949734512280052,
+          "outer_wall": 4.0819216029574195
+        },
+        "field_error": {
+          "inner_wall": 0.0,
+          "inner_first": 0.03622356422465218,
+          "interior": 0.0610010173563208,
+          "outer_first": 0.007470020036454937,
+          "outer_wall": 0.0
+        },
+        "discrete_recovery_linf": 5.329070518200751e-15,
+        "continuous_solve": {
+          "momentum_linf": 1.3812950783176348e-11,
+          "momentum_l2": 6.471101697730555e-11,
+          "rhs_l2": 23421.58126034058
+        },
+        "discrete_solve": {
+          "momentum_linf": 1.4438228390645236e-11,
+          "momentum_l2": 5.9318257866863e-11,
+          "rhs_l2": 23167.940331902915
+        }
+      }
+    },
+    "stability": {
+      "inverse_one_norm_estimate": 0.005601363445718305,
+      "condition_one_norm_estimate": 215.4276670542421
+    }
+  },
+  {
+    "n": 32,
+    "cases": {
+      "homogeneous": {
+        "truncation": {
+          "inner_wall": 1.20185321237971,
+          "inner_first": 0.7117787913226311,
+          "interior": 0.7685148519846812,
+          "outer_first": 0.2735266861873625,
+          "outer_wall": 0.6872222670185247
+        },
+        "field_error": {
+          "inner_wall": 0.0,
+          "inner_first": 0.000436367376819629,
+          "interior": 0.0022606022703085342,
+          "outer_first": 0.0002530366424870287,
+          "outer_wall": 0.0
+        },
+        "discrete_recovery_linf": 2.042810365310288e-14,
+        "continuous_solve": {
+          "momentum_linf": 7.253220246639103e-11,
+          "momentum_l2": 6.473867671304189e-10,
+          "rhs_l2": 10539.313953358354
+        },
+        "discrete_solve": {
+          "momentum_linf": 8.122924555209465e-11,
+          "momentum_l2": 6.20679722391154e-10,
+          "rhs_l2": 10520.393130811126
+        }
+      },
+      "lifted": {
+        "truncation": {
+          "inner_wall": 26.12076500195411,
+          "inner_first": 25.17013638104467,
+          "interior": 11.596551670530973,
+          "outer_first": 1.0882103253686202,
+          "outer_wall": 1.069393714651171
+        },
+        "field_error": {
+          "inner_wall": 0.0,
+          "inner_first": 0.005038306368270254,
+          "interior": 0.014345724461872433,
+          "outer_first": 0.0008824503553015995,
+          "outer_wall": 0.0
+        },
+        "discrete_recovery_linf": 1.787459069646502e-14,
+        "continuous_solve": {
+          "momentum_linf": 7.969447324285284e-11,
+          "momentum_l2": 6.430505197555509e-10,
+          "rhs_l2": 127445.4272684124
+        },
+        "discrete_solve": {
+          "momentum_linf": 8.060396794462577e-11,
+          "momentum_l2": 6.409181183747037e-10,
+          "rhs_l2": 127366.0234657212
+        }
+      }
+    },
+    "stability": {
+      "inverse_one_norm_estimate": 0.005608997735125317,
+      "condition_one_norm_estimate": 881.6418934801515
+    }
+  },
+  {
+    "n": 64,
+    "cases": {
+      "homogeneous": {
+        "truncation": {
+          "inner_wall": 0.3460509185486844,
+          "inner_first": 0.21868513278399768,
+          "interior": 0.19016348804392083,
+          "outer_first": 0.062209679139493906,
+          "outer_wall": 0.1251140143086602
+        },
+        "field_error": {
+          "inner_wall": 0.0,
+          "inner_first": 5.5622325500904385e-05,
+          "interior": 0.0005516535710325906,
+          "outer_first": 3.166466772659002e-05,
+          "outer_wall": 0.0
+        },
+        "discrete_recovery_linf": 3.6415315207705135e-14,
+        "continuous_solve": {
+          "momentum_linf": 4.3365844248910435e-10,
+          "momentum_l2": 6.8383877000183685e-09,
+          "rhs_l2": 21269.37206927295
+        },
+        "discrete_solve": {
+          "momentum_linf": 5.446736395242624e-10,
+          "momentum_l2": 6.969451063422821e-09,
+          "rhs_l2": 21259.802973738155
+        }
+      },
+      "lifted": {
+        "truncation": {
+          "inner_wall": 6.656242822718004,
+          "inner_first": 6.504901047203254,
+          "interior": 3.0395220450959184,
+          "outer_first": 0.2935526924269583,
+          "outer_wall": 0.2808536024372127
+        },
+        "field_error": {
+          "inner_wall": 0.0,
+          "inner_first": 0.0006715311429943138,
+          "interior": 0.0034876047745166236,
+          "outer_first": 0.00010775217080843267,
+          "outer_wall": 0.0
+        },
+        "discrete_recovery_linf": 4.529709940470639e-14,
+        "continuous_solve": {
+          "momentum_linf": 5.46265255252365e-10,
+          "momentum_l2": 6.7557110941530995e-09,
+          "rhs_l2": 721582.9660113188
+        },
+        "discrete_solve": {
+          "momentum_linf": 4.41161773778731e-10,
+          "momentum_l2": 6.3985952296853135e-09,
+          "rhs_l2": 721558.7080328965
+        }
+      }
+    },
+    "stability": {
+      "inverse_one_norm_estimate": 0.005613714079885406,
+      "condition_one_norm_estimate": 3579.4339329431164
+    }
+  },
+  {
+    "n": 128,
+    "cases": {
+      "homogeneous": {
+        "truncation": {
+          "inner_wall": 0.09224750752009635,
+          "inner_first": 0.06161677083987797,
+          "interior": 0.047398223614620975,
+          "outer_first": 0.014789948850913495,
+          "outer_wall": 0.025476467049149357
+        },
+        "field_error": {
+          "inner_wall": 0.0,
+          "inner_first": 7.0185927087657595e-06,
+          "interior": 0.0001362718782469644,
+          "outer_first": 3.95930245550127e-06,
+          "outer_wall": 0.0
+        },
+        "discrete_recovery_linf": 1.8340884366807586e-13,
+        "continuous_solve": {
+          "momentum_linf": 1.9578578758228105e-09,
+          "momentum_l2": 3.9891424607169184e-08,
+          "rhs_l2": 42740.58942822833
+        },
+        "discrete_solve": {
+          "momentum_linf": 1.9122126104775816e-09,
+          "momentum_l2": 3.9768711877026014e-08,
+          "rhs_l2": 42735.7773160855
+        }
+      },
+      "lifted": {
+        "truncation": {
+          "inner_wall": 1.6736121325118831,
+          "inner_first": 1.6436163333460407,
+          "interior": 0.7745023968259815,
+          "outer_first": 0.07594741489390883,
+          "outer_wall": 0.07230305823727443
+        },
+        "field_error": {
+          "inner_wall": 0.0,
+          "inner_first": 8.688995810037439e-05,
+          "interior": 0.0008606113845697581,
+          "outer_first": 1.3332221273722627e-05,
+          "outer_wall": 0.0
+        },
+        "discrete_recovery_linf": 1.7985612998927536e-13,
+        "continuous_solve": {
+          "momentum_linf": 2.053070602414664e-09,
+          "momentum_l2": 4.148622135604598e-08,
+          "rhs_l2": 4098139.3736266424
+        },
+        "discrete_solve": {
+          "momentum_linf": 2.220076567027718e-09,
+          "momentum_l2": 4.122044386072112e-08,
+          "rhs_l2": 4098131.6010695086
+        }
+      }
+    },
+    "stability": {
+      "inverse_one_norm_estimate": 0.005614334360637559,
+      "condition_one_norm_estimate": 14435.39162877741
+    }
+  }
+]
