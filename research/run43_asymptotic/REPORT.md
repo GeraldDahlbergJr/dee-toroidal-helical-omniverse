@@ -4,7 +4,7 @@
 
 The unchanged hybrid acceptance suite reproduced **9/12**. Its three failures are the inner-band momentum orders 0.474714, 0.881283, and 1.123133 for 8→16, 16→32, and 32→64, respectively, against $p\geq1.5$.
 
-Branch: `research/run43-angular-asymptotic-20261121`. Starting commit: `6e0e9f867a4c0f27b34a0d930c3af336e984ff8b`.
+Branch: `research/run43-angular-asymptotic-20261121`. Starting commit: `6e0e9f867a4c0f27b34a0d930c3af336e984ff8b`. Evidence commit: `9f9d79091f5aec929ed09c56158fc3c7abcb896f`.
 
 ## Fixed-grid comparison
 
