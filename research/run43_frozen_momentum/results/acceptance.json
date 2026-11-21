@@ -1,0 +1,958 @@
+{
+  "scores": {
+    "frozen": {
+      "passed": 9,
+      "total": 12
+    },
+    "compact_rr": {
+      "passed": 11,
+      "total": 12
+    },
+    "wall_rr_compact": {
+      "passed": 10,
+      "total": 12
+    },
+    "wall_rr_fourth": {
+      "passed": 10,
+      "total": 12
+    },
+    "fourth_rr": {
+      "passed": 11,
+      "total": 12
+    },
+    "product_rule_metric": {
+      "passed": 9,
+      "total": 12
+    },
+    "compact_rr_and_metric": {
+      "passed": 12,
+      "total": 12
+    }
+  },
+  "checks": [
+    {
+      "candidate": "frozen",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 0.47471350316757005,
+      "passed": false
+    },
+    {
+      "candidate": "frozen",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.740853905687726,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.0224195617246266,
+      "passed": false
+    },
+    {
+      "candidate": "compact_rr",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.740853905687726,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_compact",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 0.7968924450791702,
+      "passed": false
+    },
+    {
+      "candidate": "wall_rr_compact",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.740853905687726,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_fourth",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 0.7201854782949363,
+      "passed": false
+    },
+    {
+      "candidate": "wall_rr_fourth",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.740853905687726,
+      "passed": true
+    },
+    {
+      "candidate": "fourth_rr",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.0898869382404968,
+      "passed": false
+    },
+    {
+      "candidate": "fourth_rr",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.740853905687726,
+      "passed": true
+    },
+    {
+      "candidate": "product_rule_metric",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 0.7190038118480803,
+      "passed": false
+    },
+    {
+      "candidate": "product_rule_metric",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.740853905687726,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr_and_metric",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.868351511987515,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr_and_metric",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.740853905687726,
+      "passed": true
+    },
+    {
+      "candidate": "frozen",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.848164553125081,
+      "passed": true
+    },
+    {
+      "candidate": "frozen",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.745665891586605,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.8690089005196138,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.745665891586605,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_compact",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.8721169002033513,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_compact",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.745665891586605,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_fourth",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.8692581517964915,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_fourth",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.745665891586605,
+      "passed": true
+    },
+    {
+      "candidate": "fourth_rr",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.865336388582498,
+      "passed": true
+    },
+    {
+      "candidate": "fourth_rr",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.745665891586605,
+      "passed": true
+    },
+    {
+      "candidate": "product_rule_metric",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.7505148450171837,
+      "passed": true
+    },
+    {
+      "candidate": "product_rule_metric",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.745665891586605,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr_and_metric",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.7237310657764577,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr_and_metric",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        8,
+        16
+      ],
+      "order": 1.745665891586605,
+      "passed": true
+    },
+    {
+      "candidate": "frozen",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 0.8812827891746775,
+      "passed": false
+    },
+    {
+      "candidate": "frozen",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9298280843803455,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.5228731258273334,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9298280843803455,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_compact",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.3151575380625602,
+      "passed": false
+    },
+    {
+      "candidate": "wall_rr_compact",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9298280843803455,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_fourth",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.2594897462739045,
+      "passed": false
+    },
+    {
+      "candidate": "wall_rr_fourth",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9298280843803455,
+      "passed": true
+    },
+    {
+      "candidate": "fourth_rr",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.5832020004393732,
+      "passed": true
+    },
+    {
+      "candidate": "fourth_rr",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9298280843803455,
+      "passed": true
+    },
+    {
+      "candidate": "product_rule_metric",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 0.9326736714582012,
+      "passed": false
+    },
+    {
+      "candidate": "product_rule_metric",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9298280843803455,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr_and_metric",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.5680251535669063,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr_and_metric",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9298280843803455,
+      "passed": true
+    },
+    {
+      "candidate": "frozen",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9688080070117235,
+      "passed": true
+    },
+    {
+      "candidate": "frozen",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.963989654607297,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9765126531999857,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.963989654607297,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_compact",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9776754220303245,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_compact",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.963989654607297,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_fourth",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9783319969065758,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_fourth",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.963989654607297,
+      "passed": true
+    },
+    {
+      "candidate": "fourth_rr",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9767796580779535,
+      "passed": true
+    },
+    {
+      "candidate": "fourth_rr",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.963989654607297,
+      "passed": true
+    },
+    {
+      "candidate": "product_rule_metric",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.8183609014275168,
+      "passed": true
+    },
+    {
+      "candidate": "product_rule_metric",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.963989654607297,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr_and_metric",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.9194029000596893,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr_and_metric",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        16,
+        32
+      ],
+      "order": 1.963989654607297,
+      "passed": true
+    },
+    {
+      "candidate": "frozen",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.1231334410641458,
+      "passed": false
+    },
+    {
+      "candidate": "frozen",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9961755064118725,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.761333105962158,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9961755064118725,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_compact",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.6123261524435881,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_compact",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9961755064118725,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_fourth",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.5786694772983008,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_fourth",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9961755064118725,
+      "passed": true
+    },
+    {
+      "candidate": "fourth_rr",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.7950580970698073,
+      "passed": true
+    },
+    {
+      "candidate": "fourth_rr",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9961755064118725,
+      "passed": true
+    },
+    {
+      "candidate": "product_rule_metric",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.1644721401466465,
+      "passed": false
+    },
+    {
+      "candidate": "product_rule_metric",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9961755064118725,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr_and_metric",
+      "band": "inner_band",
+      "metric": "momentum",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.6296762744638114,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr_and_metric",
+      "band": "inner_band",
+      "metric": "hamiltonian",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9961755064118725,
+      "passed": true
+    },
+    {
+      "candidate": "frozen",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9916577923160272,
+      "passed": true
+    },
+    {
+      "candidate": "frozen",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 2.0183761347714664,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.998270153948968,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 2.0183761347714664,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_compact",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9989110709837812,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_compact",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 2.0183761347714664,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_fourth",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.999280398529821,
+      "passed": true
+    },
+    {
+      "candidate": "wall_rr_fourth",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 2.0183761347714664,
+      "passed": true
+    },
+    {
+      "candidate": "fourth_rr",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9984209173744671,
+      "passed": true
+    },
+    {
+      "candidate": "fourth_rr",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 2.0183761347714664,
+      "passed": true
+    },
+    {
+      "candidate": "product_rule_metric",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.785518013900036,
+      "passed": true
+    },
+    {
+      "candidate": "product_rule_metric",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 2.0183761347714664,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr_and_metric",
+      "band": "outer_band",
+      "metric": "momentum",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 1.9733696629943749,
+      "passed": true
+    },
+    {
+      "candidate": "compact_rr_and_metric",
+      "band": "outer_band",
+      "metric": "hamiltonian",
+      "pair": [
+        32,
+        64
+      ],
+      "order": 2.0183761347714664,
+      "passed": true
+    }
+  ]
+}
