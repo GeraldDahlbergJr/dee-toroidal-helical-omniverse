@@ -1,0 +1,538 @@
+{
+  "auditor": "run43-continuum-momentum-v1",
+  "threshold": 1.5,
+  "fields": {
+    "hybrid": {
+      "original_frozen_acceptance": {
+        "audit_git_blob": "5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22",
+        "passed": 9,
+        "total": 12,
+        "status": "FAIL",
+        "checks": [
+          {
+            "band": "inner_boundary_band",
+            "metric": "independent_flux_H",
+            "pair": [
+              8,
+              16
+            ],
+            "order": 1.740853905687726,
+            "passed": true
+          },
+          {
+            "band": "inner_boundary_band",
+            "metric": "independent_flux_H",
+            "pair": [
+              16,
+              32
+            ],
+            "order": 1.9298280843803455,
+            "passed": true
+          },
+          {
+            "band": "inner_boundary_band",
+            "metric": "independent_flux_H",
+            "pair": [
+              32,
+              64
+            ],
+            "order": 1.9961755064118725,
+            "passed": true
+          },
+          {
+            "band": "inner_boundary_band",
+            "metric": "independent_tensor_M_order2",
+            "pair": [
+              8,
+              16
+            ],
+            "order": 0.47471350316757005,
+            "passed": false
+          },
+          {
+            "band": "inner_boundary_band",
+            "metric": "independent_tensor_M_order2",
+            "pair": [
+              16,
+              32
+            ],
+            "order": 0.8812827891746775,
+            "passed": false
+          },
+          {
+            "band": "inner_boundary_band",
+            "metric": "independent_tensor_M_order2",
+            "pair": [
+              32,
+              64
+            ],
+            "order": 1.1231334410641458,
+            "passed": false
+          },
+          {
+            "band": "outer_boundary_band",
+            "metric": "independent_flux_H",
+            "pair": [
+              8,
+              16
+            ],
+            "order": 1.745665891586605,
+            "passed": true
+          },
+          {
+            "band": "outer_boundary_band",
+            "metric": "independent_flux_H",
+            "pair": [
+              16,
+              32
+            ],
+            "order": 1.963989654607297,
+            "passed": true
+          },
+          {
+            "band": "outer_boundary_band",
+            "metric": "independent_flux_H",
+            "pair": [
+              32,
+              64
+            ],
+            "order": 2.0183761347714664,
+            "passed": true
+          },
+          {
+            "band": "outer_boundary_band",
+            "metric": "independent_tensor_M_order2",
+            "pair": [
+              8,
+              16
+            ],
+            "order": 1.848164553125081,
+            "passed": true
+          },
+          {
+            "band": "outer_boundary_band",
+            "metric": "independent_tensor_M_order2",
+            "pair": [
+              16,
+              32
+            ],
+            "order": 1.9688080070117235,
+            "passed": true
+          },
+          {
+            "band": "outer_boundary_band",
+            "metric": "independent_tensor_M_order2",
+            "pair": [
+              32,
+              64
+            ],
+            "order": 1.9916577923160272,
+            "passed": true
+          }
+        ],
+        "scope": "Independent array re-evaluation of frozen numerical gate; not independent scientific replication or continuum proof."
+      },
+      "original_frozen_hamiltonian_checks": [
+        {
+          "band": "inner_boundary_band",
+          "metric": "independent_flux_H",
+          "pair": [
+            8,
+            16
+          ],
+          "order": 1.740853905687726,
+          "passed": true
+        },
+        {
+          "band": "inner_boundary_band",
+          "metric": "independent_flux_H",
+          "pair": [
+            16,
+            32
+          ],
+          "order": 1.9298280843803455,
+          "passed": true
+        },
+        {
+          "band": "inner_boundary_band",
+          "metric": "independent_flux_H",
+          "pair": [
+            32,
+            64
+          ],
+          "order": 1.9961755064118725,
+          "passed": true
+        },
+        {
+          "band": "outer_boundary_band",
+          "metric": "independent_flux_H",
+          "pair": [
+            8,
+            16
+          ],
+          "order": 1.745665891586605,
+          "passed": true
+        },
+        {
+          "band": "outer_boundary_band",
+          "metric": "independent_flux_H",
+          "pair": [
+            16,
+            32
+          ],
+          "order": 1.963989654607297,
+          "passed": true
+        },
+        {
+          "band": "outer_boundary_band",
+          "metric": "independent_flux_H",
+          "pair": [
+            32,
+            64
+          ],
+          "order": 2.0183761347714664,
+          "passed": true
+        }
+      ],
+      "new_auditor_diagnostic": {
+        "passed": 12,
+        "total": 12,
+        "momentum_checks": [
+          {
+            "band": "inner_band",
+            "pair": [
+              8,
+              16
+            ],
+            "order": 1.868351511987533,
+            "coarse_rms": 0.0004322579776754527,
+            "fine_rms": 0.00011838949545854826,
+            "passed": true
+          },
+          {
+            "band": "inner_band",
+            "pair": [
+              16,
+              32
+            ],
+            "order": 1.5680251535668224,
+            "coarse_rms": 0.00011838949545854826,
+            "fine_rms": 3.992919591403354e-05,
+            "passed": true
+          },
+          {
+            "band": "inner_band",
+            "pair": [
+              32,
+              64
+            ],
+            "order": 1.629676274463871,
+            "coarse_rms": 3.992919591403354e-05,
+            "fine_rms": 1.2903547436135848e-05,
+            "passed": true
+          },
+          {
+            "band": "outer_band",
+            "pair": [
+              8,
+              16
+            ],
+            "order": 1.7237310657764295,
+            "coarse_rms": 7.300402052107163e-05,
+            "fine_rms": 2.2103040692966207e-05,
+            "passed": true
+          },
+          {
+            "band": "outer_band",
+            "pair": [
+              16,
+              32
+            ],
+            "order": 1.9194029000597816,
+            "coarse_rms": 2.2103040692966207e-05,
+            "fine_rms": 5.843246082361748e-06,
+            "passed": true
+          },
+          {
+            "band": "outer_band",
+            "pair": [
+              32,
+              64
+            ],
+            "order": 1.9733696629922344,
+            "coarse_rms": 5.843246082361748e-06,
+            "fine_rms": 1.4880266710392215e-06,
+            "passed": true
+          }
+        ],
+        "interpretation": "Uses six original frozen Hamiltonian checks."
+      }
+    },
+    "coupled": {
+      "original_frozen_acceptance": {
+        "audit_git_blob": "5e4e54e1e1d84b785c4e66eac9b4d7fffdc43e22",
+        "passed": 9,
+        "total": 12,
+        "status": "FAIL",
+        "checks": [
+          {
+            "band": "inner_boundary_band",
+            "metric": "independent_flux_H",
+            "pair": [
+              8,
+              16
+            ],
+            "order": 1.7408478955910296,
+            "passed": true
+          },
+          {
+            "band": "inner_boundary_band",
+            "metric": "independent_flux_H",
+            "pair": [
+              16,
+              32
+            ],
+            "order": 1.9298256880888396,
+            "passed": true
+          },
+          {
+            "band": "inner_boundary_band",
+            "metric": "independent_flux_H",
+            "pair": [
+              32,
+              64
+            ],
+            "order": 1.9961751989774936,
+            "passed": true
+          },
+          {
+            "band": "inner_boundary_band",
+            "metric": "independent_tensor_M_order2",
+            "pair": [
+              8,
+              16
+            ],
+            "order": 0.8554549675371407,
+            "passed": false
+          },
+          {
+            "band": "inner_boundary_band",
+            "metric": "independent_tensor_M_order2",
+            "pair": [
+              16,
+              32
+            ],
+            "order": 0.9718266206072044,
+            "passed": false
+          },
+          {
+            "band": "inner_boundary_band",
+            "metric": "independent_tensor_M_order2",
+            "pair": [
+              32,
+              64
+            ],
+            "order": 1.1276531183120733,
+            "passed": false
+          },
+          {
+            "band": "outer_boundary_band",
+            "metric": "independent_flux_H",
+            "pair": [
+              8,
+              16
+            ],
+            "order": 1.7456641952955718,
+            "passed": true
+          },
+          {
+            "band": "outer_boundary_band",
+            "metric": "independent_flux_H",
+            "pair": [
+              16,
+              32
+            ],
+            "order": 1.9639893418341379,
+            "passed": true
+          },
+          {
+            "band": "outer_boundary_band",
+            "metric": "independent_flux_H",
+            "pair": [
+              32,
+              64
+            ],
+            "order": 2.0183765893190877,
+            "passed": true
+          },
+          {
+            "band": "outer_boundary_band",
+            "metric": "independent_tensor_M_order2",
+            "pair": [
+              8,
+              16
+            ],
+            "order": 1.8601345911751683,
+            "passed": true
+          },
+          {
+            "band": "outer_boundary_band",
+            "metric": "independent_tensor_M_order2",
+            "pair": [
+              16,
+              32
+            ],
+            "order": 1.969037398073785,
+            "passed": true
+          },
+          {
+            "band": "outer_boundary_band",
+            "metric": "independent_tensor_M_order2",
+            "pair": [
+              32,
+              64
+            ],
+            "order": 1.9903001545558532,
+            "passed": true
+          }
+        ],
+        "scope": "Independent array re-evaluation of frozen numerical gate; not independent scientific replication or continuum proof."
+      },
+      "original_frozen_hamiltonian_checks": [
+        {
+          "band": "inner_boundary_band",
+          "metric": "independent_flux_H",
+          "pair": [
+            8,
+            16
+          ],
+          "order": 1.7408478955910296,
+          "passed": true
+        },
+        {
+          "band": "inner_boundary_band",
+          "metric": "independent_flux_H",
+          "pair": [
+            16,
+            32
+          ],
+          "order": 1.9298256880888396,
+          "passed": true
+        },
+        {
+          "band": "inner_boundary_band",
+          "metric": "independent_flux_H",
+          "pair": [
+            32,
+            64
+          ],
+          "order": 1.9961751989774936,
+          "passed": true
+        },
+        {
+          "band": "outer_boundary_band",
+          "metric": "independent_flux_H",
+          "pair": [
+            8,
+            16
+          ],
+          "order": 1.7456641952955718,
+          "passed": true
+        },
+        {
+          "band": "outer_boundary_band",
+          "metric": "independent_flux_H",
+          "pair": [
+            16,
+            32
+          ],
+          "order": 1.9639893418341379,
+          "passed": true
+        },
+        {
+          "band": "outer_boundary_band",
+          "metric": "independent_flux_H",
+          "pair": [
+            32,
+            64
+          ],
+          "order": 2.0183765893190877,
+          "passed": true
+        }
+      ],
+      "new_auditor_diagnostic": {
+        "passed": 6,
+        "total": 12,
+        "momentum_checks": [
+          {
+            "band": "inner_band",
+            "pair": [
+              8,
+              16
+            ],
+            "order": -2.2110391622865384,
+            "coarse_rms": 1.7157594546842264e-17,
+            "fine_rms": 7.944114775905171e-17,
+            "passed": false
+          },
+          {
+            "band": "inner_band",
+            "pair": [
+              16,
+              32
+            ],
+            "order": -2.1865137008584177,
+            "coarse_rms": 7.944114775905171e-17,
+            "fine_rms": 3.6161939900261886e-16,
+            "passed": false
+          },
+          {
+            "band": "inner_band",
+            "pair": [
+              32,
+              64
+            ],
+            "order": -2.3721085905769823,
+            "coarse_rms": 3.6161939900261886e-16,
+            "fine_rms": 1.8720936009662838e-15,
+            "passed": false
+          },
+          {
+            "band": "outer_band",
+            "pair": [
+              8,
+              16
+            ],
+            "order": -1.8522839842717607,
+            "coarse_rms": 1.111225137594951e-17,
+            "fine_rms": 4.0123156983350974e-17,
+            "passed": false
+          },
+          {
+            "band": "outer_band",
+            "pair": [
+              16,
+              32
+            ],
+            "order": -2.3003431388444637,
+            "coarse_rms": 4.0123156983350974e-17,
+            "fine_rms": 1.976366036943023e-16,
+            "passed": false
+          },
+          {
+            "band": "outer_band",
+            "pair": [
+              32,
+              64
+            ],
+            "order": -2.2093484561354875,
+            "coarse_rms": 1.976366036943023e-16,
+            "fine_rms": 9.140028254683441e-16,
+            "passed": false
+          }
+        ],
+        "interpretation": "Threshold arithmetic only. The coupled solver shares the v1 stencil, so its roundoff-scale v1 residual orders are not interpretable as convergence."
+      }
+    }
+  }
+}
