@@ -1,0 +1,14 @@
+# Data availability and source references
+
+## Proposed Physical Review D data availability statement
+
+The November 3 Run 43 benchmark fields at four resolutions, solver snapshot, checkpoints, numerical reports, and SHA-256 manifest are available in the coordinated-replay directory of the repository at commit `ff07102de88a4b63686a4f71f9fa851602ef7e0b) [1]. The coupled recovery arrays, archived hybrid RMS values, native-resolution radial reference archive, v1 comparison data and v2 diagnostic code and results are available at the pinned revisions in Ref. [2]. We reproduced the historical frozen gate from the November 3 baseline and the coupled recovery arrays and independently recomputed the hybrid orders from archived RMS values. The hybrid and 4N reference raw arrays were unavailable in the inspected archives. Their stated comparisons use archived numerical summaries, and fresh reproduction from original inputs requires the digest-matched files. The separate Zenodo software deposit [3] contains the October candidate, November 2 stabilized-flux evidence and an index to the November 3 files. The pre-submission technical review is available in Ref. [4].
+
+## Verified bibliography entries for reconciliation
+
+1. Gerald T. Dahlberg Jr., *Run 43 coordinated original-source replay* (GitHub, 2026), full commit `ff07102de88a4b63686a4f71f9fa851602ef7e0b`, subtree `research/results/coordinated-replay-20261103-1831`. [Archived Git source and evidence](https://github.com/GeraldDahlbergJr/dee-toroidal-helical-omniverse/tree/ff07102de88a4b63686a4f71f9fa851602ef7e0b/research/results/coordinated-replay-20261103-1831).
+2. Gerald T. Dahlberg Jr., *Run 43 coupled-recovery and auditor evidence* (GitHub, 2026), full commits `a86b8f046908f852722d1d034f4e0711d5fc9466` and `19a0e7f94a16d759761a5fe55470263b837c9adf`, respectively. [Coupled recovery](https://github.com/GeraldDahlbergJr/dee-toroidal-helical-omniverse/tree/a86b8f046908f852722d1d034f4e0711d5fc9466/research/run43_coupled_recovery) · [Auditor evidence](https://github.com/GeraldDahlbergJr/dee-toroidal-helical-omniverse/tree/19a0e7f94a16d759761a5fe55470263b837c9adf/research).
+3. Gerald T. Dahlberg Jr., *Einstein–DEE Run 43: Toroidal–Helical Perturbations, Frozen Numerical Baseline, and Computational Verification*, version 1.0.0 (Zenodo, 2026). [DOI 10.5281/zenodo.24330220](https://doi.org/10.5281/zenodo.24330220).
+4. Gerald Ted Dahlberg Jr. (depositor), *Run 43 Pre-Submission Technical Review — Boundary Truncation and Operator Consistency in a Toroidal Einstein–Matter System* (Zenodo, 2026). [DOI 10.5281/zenodo.24430854](https://doi.org/10.5281/zenodo.24430854).
+
+The original manuscript bibliography and in-text citations remain unavailable. Apply final journal citation numbering after the manuscript is recovered and checked.
