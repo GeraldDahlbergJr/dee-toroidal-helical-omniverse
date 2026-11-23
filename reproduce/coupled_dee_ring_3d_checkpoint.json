@@ -1,0 +1,133 @@
+{
+  "scope": "full spatial-tensor 3-D periodic ADM evolution of smooth helical-scalar ring; short fixed-gauge test",
+  "parameters": {
+    "G": 0.005,
+    "L": 8.0,
+    "t_end": 0.12,
+    "cfl": 0.2
+  },
+  "runs": [
+    {
+      "n": 12,
+      "steps": 1,
+      "dt": 0.12,
+      "conformal_initial": {
+        "n": 12,
+        "iterations": 3,
+        "hamiltonian_rms": 5.928109497834858e-15,
+        "hamiltonian_max": 1.7438903206418773e-14,
+        "psi_min": 0.9999885085568176,
+        "psi_max": 1.0000393711381859,
+        "rho_min": 0.9771675979026238,
+        "kinetic_det_min": 1.5230158053491176,
+        "k": -0.006237141280159576,
+        "momentum_max": 0.0
+      },
+      "initial": {
+        "hamiltonian_l2": 2.8851873951021102e-05,
+        "momentum_l2": 2.971270550897941e-19,
+        "hamiltonian_max": 0.0002770478780886449,
+        "momentum_max": 1.3010442613438304e-18,
+        "rho_min": 0.9771675979026238,
+        "metric_eigenvalue_min": 0.9999540350195841,
+        "transport_det_min": 1.5230158053491178,
+        "curvature_scalar_max_abs": 0.00044097863839500425
+      },
+      "final": {
+        "hamiltonian_l2": 2.9112143862796667e-05,
+        "momentum_l2": 3.1060922829593884e-06,
+        "hamiltonian_max": 0.00028784990730412074,
+        "momentum_max": 3.44626485192215e-05,
+        "rho_min": 0.9787864153503815,
+        "metric_eigenvalue_min": 1.0004530324085015,
+        "transport_det_min": 1.524901812193896,
+        "curvature_scalar_max_abs": 0.00045879887453651407
+      }
+    },
+    {
+      "n": 24,
+      "steps": 2,
+      "dt": 0.06,
+      "conformal_initial": {
+        "n": 24,
+        "iterations": 3,
+        "hamiltonian_rms": 2.13766923794478e-14,
+        "hamiltonian_max": 8.124864035686727e-14,
+        "psi_min": 0.9999845141346039,
+        "psi_max": 1.0000510910711446,
+        "rho_min": 0.9750000063193206,
+        "kinetic_det_min": 1.520496901864012,
+        "k": -0.007303121999214121,
+        "momentum_max": 0.0
+      },
+      "initial": {
+        "hamiltonian_l2": 1.6273181665078385e-05,
+        "momentum_l2": 1.373218554752943e-18,
+        "hamiltonian_max": 0.00017144472358166126,
+        "momentum_max": 4.553649124439119e-18,
+        "rho_min": 0.9750000063193206,
+        "metric_eigenvalue_min": 0.9999380579772728,
+        "transport_det_min": 1.520496901864012,
+        "curvature_scalar_max_abs": 0.0008649387814298417
+      },
+      "final": {
+        "hamiltonian_l2": 1.421068127190552e-05,
+        "momentum_l2": 3.9867586236191074e-06,
+        "hamiltonian_max": 0.00014795724834939952,
+        "momentum_max": 6.842496820723744e-05,
+        "rho_min": 0.9772341605675479,
+        "metric_eigenvalue_min": 1.0005223453498173,
+        "transport_det_min": 1.5230932730364573,
+        "curvature_scalar_max_abs": 0.000939454175713653
+      }
+    },
+    {
+      "n": 48,
+      "steps": 4,
+      "dt": 0.03,
+      "conformal_initial": {
+        "n": 48,
+        "iterations": 3,
+        "hamiltonian_rms": 8.635290921642851e-14,
+        "hamiltonian_max": 3.238588393229998e-13,
+        "psi_min": 0.9999826437969085,
+        "psi_max": 1.0000569224268523,
+        "rho_min": 0.9750000063193206,
+        "kinetic_det_min": 1.520496901864012,
+        "k": -0.007753016621303291,
+        "momentum_max": 0.0
+      },
+      "initial": {
+        "hamiltonian_l2": 8.65395731975963e-06,
+        "momentum_l2": 2.7602219873278958e-18,
+        "hamiltonian_max": 0.00013899106509352777,
+        "momentum_max": 9.107311483768038e-18,
+        "rho_min": 0.9750000063193206,
+        "metric_eigenvalue_min": 0.9999305769950397,
+        "transport_det_min": 1.520496901864012,
+        "curvature_scalar_max_abs": 0.0010717767200729958
+      },
+      "final": {
+        "hamiltonian_l2": 4.608124755092421e-06,
+        "momentum_l2": 2.637800081681274e-06,
+        "hamiltonian_max": 4.924946220872693e-05,
+        "momentum_max": 6.286975085518804e-05,
+        "rho_min": 0.9774866800095697,
+        "metric_eigenvalue_min": 1.0005508602371058,
+        "transport_det_min": 1.523387226344559,
+        "curvature_scalar_max_abs": 0.0011787652272300332
+      }
+    }
+  ],
+  "adjacent_resolution_max_errors": [
+    0.016451048409228078,
+    0.012784441886296162
+  ],
+  "observed_order": 0.36379034833581375,
+  "gates": {
+    "hamiltonian_refines": true,
+    "momentum_refines": false,
+    "metric_positive": true,
+    "finite_branch": true
+  }
+}
